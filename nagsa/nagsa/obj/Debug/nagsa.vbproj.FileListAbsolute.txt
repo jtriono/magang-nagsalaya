@@ -1,2 +1,3 @@
 C:\Users\Jeffrin\Documents\Visual Studio 2012\Projects\nagsa\nagsa\bin\Debug\nagsa.exe.config
 C:\Users\windows\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\bin\Debug\nagsa.exe.config
+C:\Users\Jeffrin\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\bin\Debug\nagsa.exe.config
