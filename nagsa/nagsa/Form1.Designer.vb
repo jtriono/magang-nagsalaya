@@ -22,31 +22,29 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.DocumentViewer1 = New DevExpress.XtraPrinting.Preview.DocumentViewer()
         Me.SuspendLayout()
         '
-        'CheckBox1
+        'DocumentViewer1
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(97, 67)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(81, 17)
-        Me.CheckBox1.TabIndex = 0
-        Me.CheckBox1.Text = "CheckBox1"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.DocumentViewer1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DocumentViewer1.IsMetric = True
+        Me.DocumentViewer1.Location = New System.Drawing.Point(0, 0)
+        Me.DocumentViewer1.Name = "DocumentViewer1"
+        Me.DocumentViewer1.Size = New System.Drawing.Size(284, 261)
+        Me.DocumentViewer1.TabIndex = 0
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 261)
-        Me.Controls.Add(Me.CheckBox1)
+        Me.Controls.Add(Me.DocumentViewer1)
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
-    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
+    Friend WithEvents DocumentViewer1 As DevExpress.XtraPrinting.Preview.DocumentViewer
 
 End Class
