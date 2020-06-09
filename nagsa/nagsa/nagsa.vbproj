@@ -79,11 +79,29 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Customer.Designer.vb">
+      <DependentUpon>Customer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Customer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Penjualan.Designer.vb">
+      <DependentUpon>Form Penjualan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Penjualan.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formutama.Designer.vb">
+      <DependentUpon>Formutama.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formutama.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -101,10 +119,37 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Pembelian.Designer.vb">
+      <DependentUpon>Pembelian.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier.Designer.vb">
+      <DependentUpon>Supplier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tambah Barang.Designer.vb">
+      <DependentUpon>Tambah Barang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tambah Barang.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Customer.resx">
+      <DependentUpon>Customer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Penjualan.resx">
+      <DependentUpon>Form Penjualan.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formutama.resx">
+      <DependentUpon>Formutama.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -112,6 +157,15 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian.resx">
+      <DependentUpon>Pembelian.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier.resx">
+      <DependentUpon>Supplier.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tambah Barang.resx">
+      <DependentUpon>Tambah Barang.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
