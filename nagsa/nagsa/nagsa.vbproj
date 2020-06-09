@@ -79,6 +79,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Barang.Designer.vb">
+      <DependentUpon>Barang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Barang.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Customer.Designer.vb">
       <DependentUpon>Customer.vb</DependentUpon>
     </Compile>
@@ -102,6 +108,30 @@
       <DependentUpon>Formutama.vb</DependentUpon>
     </Compile>
     <Compile Include="Formutama.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hutang Piutang.Designer.vb">
+      <DependentUpon>Hutang Piutang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Hutang Piutang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="K.Designer.vb">
+      <DependentUpon>K.vb</DependentUpon>
+    </Compile>
+    <Compile Include="K.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan.Designer.vb">
+      <DependentUpon>Laporan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master.Designer.vb">
+      <DependentUpon>Master.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -137,8 +167,17 @@
     <Compile Include="Tambah Barang.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Utility.Designer.vb">
+      <DependentUpon>Utility.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Utility.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Barang.resx">
+      <DependentUpon>Barang.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Customer.resx">
       <DependentUpon>Customer.vb</DependentUpon>
     </EmbeddedResource>
@@ -150,6 +189,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formutama.resx">
       <DependentUpon>Formutama.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hutang Piutang.resx">
+      <DependentUpon>Hutang Piutang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="K.resx">
+      <DependentUpon>K.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan.resx">
+      <DependentUpon>Laporan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master.resx">
+      <DependentUpon>Master.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -166,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tambah Barang.resx">
       <DependentUpon>Tambah Barang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utility.resx">
+      <DependentUpon>Utility.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

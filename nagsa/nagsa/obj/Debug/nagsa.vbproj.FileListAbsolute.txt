@@ -5,7 +5,6 @@ C:\Users\windows\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\bin\Debug\nagsa.e
 C:\Users\windows\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\bin\Debug\nagsa.pdb
 C:\Users\windows\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\bin\Debug\nagsa.xml
 C:\Users\windows\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.Formpenjualan.resources
-C:\Users\windows\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.Form1.resources
 C:\Users\windows\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.Formutama.resources
 C:\Users\windows\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.Resources.resources
 C:\Users\windows\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\obj\Debug\nagsa.vbproj.GenerateResource.Cache
@@ -34,3 +33,10 @@ C:\Users\Jeffrin\Desktop\coba\nagsa\nagsa\obj\Debug\WindowsApplication1.Formsupp
 C:\Users\Jeffrin\Desktop\coba\nagsa\nagsa\obj\Debug\WindowsApplication1.Formtambahbarang.resources
 C:\Users\Jeffrin\Desktop\coba\nagsa\nagsa\obj\Debug\nagsa.vbproj.GenerateResource.Cache
 C:\Users\Jeffrin\Desktop\coba\nagsa\nagsa\obj\Debug\nagsa.exe.licenses
+C:\Users\windows\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.Formbarang.resources
+C:\Users\windows\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.Formlogin.resources
+C:\Users\windows\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.Formhutangpiutang.resources
+C:\Users\windows\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.formk.resources
+C:\Users\windows\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.Formlaporan.resources
+C:\Users\windows\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.Formmaster.resources
+C:\Users\windows\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.Formutility.resources

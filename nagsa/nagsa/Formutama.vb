@@ -19,9 +19,35 @@
     Private Sub btncustomer_Click(sender As Object, e As EventArgs) Handles btncustomer.Click
         Formcustomer.ShowDialog()
     End Sub
-
-    
     Private Sub Formutama_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         Formlogin.Visible = True
+    End Sub
+
+    Private Sub btnbarang_Click(sender As Object, e As EventArgs) Handles btnbarang.Click
+        Formbarang.ShowDialog()
+    End Sub
+
+    Private Sub btnk_Click(sender As Object, e As EventArgs) Handles btnk.Click
+        formk.ShowDialog()
+    End Sub
+
+    Private Sub btnmaster_Click(sender As Object, e As EventArgs) Handles btnmaster.Click
+        Formmaster.ShowDialog()
+
+    End Sub
+
+    Private Sub btnhutangpiutang_Click(sender As Object, e As EventArgs) Handles btnhutangpiutang.Click
+        Formhutangpiutang.ShowDialog()
+
+    End Sub
+
+    Private Sub btnlaporan_Click(sender As Object, e As EventArgs) Handles btnlaporan.Click
+        Formlaporan.ShowDialog()
+
+    End Sub
+
+    Private Sub btnutility_Click(sender As Object, e As EventArgs) Handles btnutility.Click
+        Formutility.ShowDialog()
+
     End Sub
 End Class
