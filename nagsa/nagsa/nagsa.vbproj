@@ -91,11 +91,11 @@
     <Compile Include="Form Penjualan.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="Formlogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="Formlogin.Designer.vb">
+      <DependentUpon>Formlogin.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formutama.Designer.vb">
@@ -145,8 +145,8 @@
     <EmbeddedResource Include="Form Penjualan.resx">
       <DependentUpon>Form Penjualan.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="Formlogin.resx">
+      <DependentUpon>Formlogin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formutama.resx">
       <DependentUpon>Formutama.vb</DependentUpon>

@@ -19,4 +19,9 @@
     Private Sub btncustomer_Click(sender As Object, e As EventArgs) Handles btncustomer.Click
         Formcustomer.ShowDialog()
     End Sub
+
+    
+    Private Sub Formutama_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        Formlogin.Visible = True
+    End Sub
 End Class
