@@ -61,17 +61,16 @@ Partial Class Formutama
         Me.SemuaBarangToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PerSupplierToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LaporanPenjualanPerBarangToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PerBarangToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SemuaBarangToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PerCustomerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DaftarSupplierToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DaftarCustomerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DaftarHargaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PenjualanPertanggalPPnToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RekapPerNotaPPnToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UtilityToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PerBarangToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SemuaBarangToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PerCustomerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PPnToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NonPPnToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RekapPerNotaPPnToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PPnToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.NonPPnToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReturPenjualanHarianToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -86,6 +85,7 @@ Partial Class Formutama
         Me.BayarHutangSupplierToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.LaporanJurnalHarianUmumToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LaporanJurnalHarianKhususKasBankToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UtilityToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReindexToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UsernamePasswordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.IsiKeteranganToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -343,19 +343,19 @@ Partial Class Formutama
         'PerBarangToolStripMenuItem
         '
         Me.PerBarangToolStripMenuItem.Name = "PerBarangToolStripMenuItem"
-        Me.PerBarangToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PerBarangToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.PerBarangToolStripMenuItem.Text = "Per-Barang"
         '
         'SemuaBarangToolStripMenuItem
         '
         Me.SemuaBarangToolStripMenuItem.Name = "SemuaBarangToolStripMenuItem"
-        Me.SemuaBarangToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SemuaBarangToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.SemuaBarangToolStripMenuItem.Text = "Semua Barang"
         '
         'PerSupplierToolStripMenuItem
         '
         Me.PerSupplierToolStripMenuItem.Name = "PerSupplierToolStripMenuItem"
-        Me.PerSupplierToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PerSupplierToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.PerSupplierToolStripMenuItem.Text = "Per-Supplier"
         '
         'LaporanPenjualanPerBarangToolStripMenuItem
@@ -364,6 +364,24 @@ Partial Class Formutama
         Me.LaporanPenjualanPerBarangToolStripMenuItem.Name = "LaporanPenjualanPerBarangToolStripMenuItem"
         Me.LaporanPenjualanPerBarangToolStripMenuItem.Size = New System.Drawing.Size(282, 22)
         Me.LaporanPenjualanPerBarangToolStripMenuItem.Text = "Laporan Penjualan Per-Barang"
+        '
+        'PerBarangToolStripMenuItem1
+        '
+        Me.PerBarangToolStripMenuItem1.Name = "PerBarangToolStripMenuItem1"
+        Me.PerBarangToolStripMenuItem1.Size = New System.Drawing.Size(150, 22)
+        Me.PerBarangToolStripMenuItem1.Text = "Per-Barang"
+        '
+        'SemuaBarangToolStripMenuItem1
+        '
+        Me.SemuaBarangToolStripMenuItem1.Name = "SemuaBarangToolStripMenuItem1"
+        Me.SemuaBarangToolStripMenuItem1.Size = New System.Drawing.Size(150, 22)
+        Me.SemuaBarangToolStripMenuItem1.Text = "Semua Barang"
+        '
+        'PerCustomerToolStripMenuItem
+        '
+        Me.PerCustomerToolStripMenuItem.Name = "PerCustomerToolStripMenuItem"
+        Me.PerCustomerToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.PerCustomerToolStripMenuItem.Text = "Per-Customer"
         '
         'DaftarSupplierToolStripMenuItem
         '
@@ -390,6 +408,18 @@ Partial Class Formutama
         Me.PenjualanPertanggalPPnToolStripMenuItem.Size = New System.Drawing.Size(282, 22)
         Me.PenjualanPertanggalPPnToolStripMenuItem.Text = "Penjualan Pertanggal"
         '
+        'PPnToolStripMenuItem
+        '
+        Me.PPnToolStripMenuItem.Name = "PPnToolStripMenuItem"
+        Me.PPnToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
+        Me.PPnToolStripMenuItem.Text = "PPn"
+        '
+        'NonPPnToolStripMenuItem
+        '
+        Me.NonPPnToolStripMenuItem.Name = "NonPPnToolStripMenuItem"
+        Me.NonPPnToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
+        Me.NonPPnToolStripMenuItem.Text = "Non PPn"
+        '
         'RekapPerNotaPPnToolStripMenuItem
         '
         Me.RekapPerNotaPPnToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PPnToolStripMenuItem1, Me.NonPPnToolStripMenuItem1})
@@ -397,53 +427,16 @@ Partial Class Formutama
         Me.RekapPerNotaPPnToolStripMenuItem.Size = New System.Drawing.Size(282, 22)
         Me.RekapPerNotaPPnToolStripMenuItem.Text = "Rekap Per Nota(PPn)"
         '
-        'UtilityToolStripMenuItem
-        '
-        Me.UtilityToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReindexToolStripMenuItem, Me.UsernamePasswordToolStripMenuItem, Me.IsiKeteranganToolStripMenuItem, Me.ResetDatabaseToolStripMenuItem, Me.RepairToolStripMenuItem, Me.RubahNoFakturToolStripMenuItem, Me.PerbaikiNomerNotaToolStripMenuItem})
-        Me.UtilityToolStripMenuItem.Name = "UtilityToolStripMenuItem"
-        Me.UtilityToolStripMenuItem.Size = New System.Drawing.Size(50, 20)
-        Me.UtilityToolStripMenuItem.Text = "Utility"
-        '
-        'PerBarangToolStripMenuItem1
-        '
-        Me.PerBarangToolStripMenuItem1.Name = "PerBarangToolStripMenuItem1"
-        Me.PerBarangToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
-        Me.PerBarangToolStripMenuItem1.Text = "Per-Barang"
-        '
-        'SemuaBarangToolStripMenuItem1
-        '
-        Me.SemuaBarangToolStripMenuItem1.Name = "SemuaBarangToolStripMenuItem1"
-        Me.SemuaBarangToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
-        Me.SemuaBarangToolStripMenuItem1.Text = "Semua Barang"
-        '
-        'PerCustomerToolStripMenuItem
-        '
-        Me.PerCustomerToolStripMenuItem.Name = "PerCustomerToolStripMenuItem"
-        Me.PerCustomerToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.PerCustomerToolStripMenuItem.Text = "Per-Customer"
-        '
-        'PPnToolStripMenuItem
-        '
-        Me.PPnToolStripMenuItem.Name = "PPnToolStripMenuItem"
-        Me.PPnToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.PPnToolStripMenuItem.Text = "PPn"
-        '
-        'NonPPnToolStripMenuItem
-        '
-        Me.NonPPnToolStripMenuItem.Name = "NonPPnToolStripMenuItem"
-        Me.NonPPnToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.NonPPnToolStripMenuItem.Text = "Non PPn"
-        '
         'PPnToolStripMenuItem1
         '
         Me.PPnToolStripMenuItem1.Name = "PPnToolStripMenuItem1"
-        Me.PPnToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.PPnToolStripMenuItem1.Size = New System.Drawing.Size(121, 22)
         Me.PPnToolStripMenuItem1.Text = "PPn"
         '
         'NonPPnToolStripMenuItem1
         '
         Me.NonPPnToolStripMenuItem1.Name = "NonPPnToolStripMenuItem1"
-        Me.NonPPnToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.NonPPnToolStripMenuItem1.Size = New System.Drawing.Size(121, 22)
         Me.NonPPnToolStripMenuItem1.Text = "Non PPn"
         '
         'ReturPenjualanHarianToolStripMenuItem
@@ -517,6 +510,13 @@ Partial Class Formutama
         Me.LaporanJurnalHarianKhususKasBankToolStripMenuItem.Name = "LaporanJurnalHarianKhususKasBankToolStripMenuItem"
         Me.LaporanJurnalHarianKhususKasBankToolStripMenuItem.Size = New System.Drawing.Size(282, 22)
         Me.LaporanJurnalHarianKhususKasBankToolStripMenuItem.Text = "Laporan Jurnal Harian/Khusus Kas Bank"
+        '
+        'UtilityToolStripMenuItem
+        '
+        Me.UtilityToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReindexToolStripMenuItem, Me.UsernamePasswordToolStripMenuItem, Me.IsiKeteranganToolStripMenuItem, Me.ResetDatabaseToolStripMenuItem, Me.RepairToolStripMenuItem, Me.RubahNoFakturToolStripMenuItem, Me.PerbaikiNomerNotaToolStripMenuItem})
+        Me.UtilityToolStripMenuItem.Name = "UtilityToolStripMenuItem"
+        Me.UtilityToolStripMenuItem.Size = New System.Drawing.Size(50, 20)
+        Me.UtilityToolStripMenuItem.Text = "Utility"
         '
         'ReindexToolStripMenuItem
         '

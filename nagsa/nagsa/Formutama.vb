@@ -26,4 +26,10 @@
     Private Sub btnbarang_Click(sender As Object, e As EventArgs) Handles btnbarang.Click
         Formbarang.ShowDialog()
     End Sub
+
+    Private Sub Formutama_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        dtpwaktu.Value = DateTime.Now
+
+        dtpwaktu.Enabled = False
+    End Sub
 End Class
