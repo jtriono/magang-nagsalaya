@@ -97,6 +97,12 @@
     <Compile Include="Form Penjualan.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formtambahcust.Designer.vb">
+      <DependentUpon>Formtambahcust.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formtambahcust.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formlogin.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form Penjualan.resx">
       <DependentUpon>Form Penjualan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formtambahcust.resx">
+      <DependentUpon>Formtambahcust.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlogin.resx">
       <DependentUpon>Formlogin.vb</DependentUpon>
