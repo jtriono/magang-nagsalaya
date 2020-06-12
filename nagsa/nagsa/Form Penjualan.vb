@@ -6,6 +6,7 @@
         Label2.Font = New Font(Label2.Font.FontFamily, 15)
         Label3.Font = New Font(Label3.Font.FontFamily, 15)
         no_nota.Font = New Font(no_nota.Font.FontFamily, 15)
+        tbno_nota.Font = New Font(tbno_nota.Font.FontFamily, 15)
         tbno_pajak.Font = New Font(tbno_pajak.Font.FontFamily, 15)
         Label4.Font = New Font(Label4.Font.FontFamily, 11)
         dtppilihtanggal.Font = New Font(dtppilihtanggal.Font.FontFamily, 11)
@@ -17,5 +18,9 @@
 
         dtpjatuh_tempo.Value = DateTime.Now
         dtppilihtanggal.Value = DateTime.Now
+
+        tbsatuan.Enabled = False
+        tbnamabarang.Enabled = False
+        tbtotalrp.Enabled = False
     End Sub
 End Class
