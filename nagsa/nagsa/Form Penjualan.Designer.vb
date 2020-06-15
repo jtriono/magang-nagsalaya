@@ -105,7 +105,7 @@ Partial Class Formpenjualan
         '
         'tbno_nota
         '
-        Me.tbno_nota.Location = New System.Drawing.Point(173, 12)
+        Me.tbno_nota.Location = New System.Drawing.Point(164, 12)
         Me.tbno_nota.Name = "tbno_nota"
         Me.tbno_nota.Size = New System.Drawing.Size(100, 21)
         Me.tbno_nota.TabIndex = 24

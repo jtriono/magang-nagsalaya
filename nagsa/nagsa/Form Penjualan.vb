@@ -1,4 +1,10 @@
-﻿Public Class Formpenjualan
+﻿Imports MySql.Data.MySqlClient
+Public Class Formpenjualan
+    Dim connect As New MySqlConnection("server=localhost;uid=root;pwd=admin;database=database apotek;port=3306")
+    Dim command As New MySqlCommand
+    Dim adapter As New MySqlDataAdapter
+    Dim simpan As String
+    Dim dt As New DataTable
 
     Private Sub Formpenjualan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Label1.Font = New Font(Label1.Font.FontFamily, 30)
@@ -22,5 +28,12 @@
         tbsatuan.Enabled = False
         tbnamabarang.Enabled = False
         tbtotalrp.Enabled = False
+        tbno_nota.Enabled = False
+
+
+    End Sub
+
+    Private Sub btnkoreksi_Click(sender As Object, e As EventArgs) Handles btnkoreksi.Click
+        tbno_nota.Enabled = True
     End Sub
 End Class
