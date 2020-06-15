@@ -25,6 +25,7 @@ Partial Class Formpenjualan
         Me.Label1 = New System.Windows.Forms.Label()
         Me.tbtotalharga = New System.Windows.Forms.TextBox()
         Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
+        Me.tbno_nota = New System.Windows.Forms.TextBox()
         Me.dtpjatuh_tempo = New System.Windows.Forms.DateTimePicker()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.tbkode_cust = New System.Windows.Forms.TextBox()
@@ -56,7 +57,11 @@ Partial Class Formpenjualan
         Me.tbtotalrp = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.dgvdetailbarang = New System.Windows.Forms.DataGridView()
-        Me.tbno_nota = New System.Windows.Forms.TextBox()
+        Me.btnubah = New System.Windows.Forms.Button()
+        Me.btnhapus = New System.Windows.Forms.Button()
+        Me.btnprint = New System.Windows.Forms.Button()
+        Me.btnsimpan = New System.Windows.Forms.Button()
+        Me.btnkoreksi = New System.Windows.Forms.Button()
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl1.SuspendLayout()
         CType(Me.dgvdetailbarang, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -97,6 +102,14 @@ Partial Class Formpenjualan
         Me.PanelControl1.Name = "PanelControl1"
         Me.PanelControl1.Size = New System.Drawing.Size(1026, 150)
         Me.PanelControl1.TabIndex = 2
+        '
+        'tbno_nota
+        '
+        Me.tbno_nota.Location = New System.Drawing.Point(173, 12)
+        Me.tbno_nota.Name = "tbno_nota"
+        Me.tbno_nota.Size = New System.Drawing.Size(100, 21)
+        Me.tbno_nota.TabIndex = 24
+        Me.tbno_nota.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'dtpjatuh_tempo
         '
@@ -362,19 +375,61 @@ Partial Class Formpenjualan
         Me.dgvdetailbarang.Size = New System.Drawing.Size(1018, 210)
         Me.dgvdetailbarang.TabIndex = 23
         '
-        'tbno_nota
+        'btnubah
         '
-        Me.tbno_nota.Location = New System.Drawing.Point(173, 12)
-        Me.tbno_nota.Name = "tbno_nota"
-        Me.tbno_nota.Size = New System.Drawing.Size(100, 21)
-        Me.tbno_nota.TabIndex = 24
-        Me.tbno_nota.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.btnubah.Location = New System.Drawing.Point(16, 590)
+        Me.btnubah.Name = "btnubah"
+        Me.btnubah.Size = New System.Drawing.Size(83, 47)
+        Me.btnubah.TabIndex = 24
+        Me.btnubah.Text = "Ubah"
+        Me.btnubah.UseVisualStyleBackColor = True
+        '
+        'btnhapus
+        '
+        Me.btnhapus.Location = New System.Drawing.Point(122, 590)
+        Me.btnhapus.Name = "btnhapus"
+        Me.btnhapus.Size = New System.Drawing.Size(81, 47)
+        Me.btnhapus.TabIndex = 25
+        Me.btnhapus.Text = "Hapus"
+        Me.btnhapus.UseVisualStyleBackColor = True
+        '
+        'btnprint
+        '
+        Me.btnprint.Location = New System.Drawing.Point(848, 590)
+        Me.btnprint.Name = "btnprint"
+        Me.btnprint.Size = New System.Drawing.Size(81, 47)
+        Me.btnprint.TabIndex = 26
+        Me.btnprint.Text = "Print Nota"
+        Me.btnprint.UseVisualStyleBackColor = True
+        '
+        'btnsimpan
+        '
+        Me.btnsimpan.Location = New System.Drawing.Point(952, 590)
+        Me.btnsimpan.Name = "btnsimpan"
+        Me.btnsimpan.Size = New System.Drawing.Size(82, 47)
+        Me.btnsimpan.TabIndex = 27
+        Me.btnsimpan.Text = "Simpan"
+        Me.btnsimpan.UseVisualStyleBackColor = True
+        '
+        'btnkoreksi
+        '
+        Me.btnkoreksi.Location = New System.Drawing.Point(741, 590)
+        Me.btnkoreksi.Name = "btnkoreksi"
+        Me.btnkoreksi.Size = New System.Drawing.Size(82, 47)
+        Me.btnkoreksi.TabIndex = 28
+        Me.btnkoreksi.Text = "Koreksi Nota"
+        Me.btnkoreksi.UseVisualStyleBackColor = True
         '
         'Formpenjualan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1051, 665)
+        Me.Controls.Add(Me.btnkoreksi)
+        Me.Controls.Add(Me.btnsimpan)
+        Me.Controls.Add(Me.btnprint)
+        Me.Controls.Add(Me.btnhapus)
+        Me.Controls.Add(Me.btnubah)
         Me.Controls.Add(Me.dgvdetailbarang)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.tbtotalrp)
@@ -444,4 +499,9 @@ Partial Class Formpenjualan
     Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents dgvdetailbarang As System.Windows.Forms.DataGridView
     Friend WithEvents tbno_nota As System.Windows.Forms.TextBox
+    Friend WithEvents btnubah As System.Windows.Forms.Button
+    Friend WithEvents btnhapus As System.Windows.Forms.Button
+    Friend WithEvents btnprint As System.Windows.Forms.Button
+    Friend WithEvents btnsimpan As System.Windows.Forms.Button
+    Friend WithEvents btnkoreksi As System.Windows.Forms.Button
 End Class
