@@ -3,8 +3,10 @@ Public Class Formpenjualan
     Dim connect As New MySqlConnection("server=localhost;uid=root;pwd=admin;database=apotik;port=3306")
     Dim command As New MySqlCommand
     Dim adapter As New MySqlDataAdapter
-    Dim simpan As String
+    Dim query As String
     Dim dt As New DataTable
+    Dim autogenerate As String
+
 
     Private Sub Formpenjualan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Label1.Font = New Font(Label1.Font.FontFamily, 30)
@@ -25,12 +27,32 @@ Public Class Formpenjualan
         dtpjatuh_tempo.Value = DateTime.Now
         dtppilihtanggal.Value = DateTime.Now
 
-        tbsatuan.Enabled = False
         tbnamabarang.Enabled = False
         tbtotalrp.Enabled = False
         tbno_nota.Enabled = False
 
-
+        Try
+            autogenerate = ""
+            dt = New DataTable
+            query = "select no_pajak from penjualan"
+            command = New MySqlCommand(query, connect)
+            adapter = New MySqlDataAdapter(command)
+            adapter.Fill(dt)
+            If dt.Rows.Count < 10 Then
+                autogenerate = autogenerate + "00000" + (dt.Rows.Count + 1).ToString
+            ElseIf dt.Rows.Count < 100 Then
+                autogenerate = autogenerate + "0000" + (dt.Rows.Count + 1).ToString
+            ElseIf dt.Rows.Count < 1000 Then
+                autogenerate = autogenerate + "000" + (dt.Rows.Count + 1).ToString
+            ElseIf dt.Rows.Count < 10000 Then
+                autogenerate = autogenerate + "00" + (dt.Rows.Count + 1).ToString
+            ElseIf dt.Rows.Count < 100000 Then
+                autogenerate = autogenerate + "0" + (dt.Rows.Count + 1).ToString
+            End If
+            tbno_nota.Text = autogenerate
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 
     Private Sub btnkoreksi_Click(sender As Object, e As EventArgs) Handles btnkoreksi.Click

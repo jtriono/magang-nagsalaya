@@ -39,7 +39,6 @@ Partial Class Formpenjualan
         Me.Label7 = New System.Windows.Forms.Label()
         Me.tbkodebarang = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.tbsatuan = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.tbnamabarang = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -62,6 +61,8 @@ Partial Class Formpenjualan
         Me.btnprint = New System.Windows.Forms.Button()
         Me.btnsimpan = New System.Windows.Forms.Button()
         Me.btnkoreksi = New System.Windows.Forms.Button()
+        Me.btn_tambah = New System.Windows.Forms.Button()
+        Me.cbsatuan = New System.Windows.Forms.ComboBox()
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl1.SuspendLayout()
         CType(Me.dgvdetailbarang, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -221,14 +222,6 @@ Partial Class Formpenjualan
         Me.Label8.TabIndex = 5
         Me.Label8.Text = "Satuan"
         '
-        'tbsatuan
-        '
-        Me.tbsatuan.Location = New System.Drawing.Point(61, 271)
-        Me.tbsatuan.Name = "tbsatuan"
-        Me.tbsatuan.Size = New System.Drawing.Size(100, 20)
-        Me.tbsatuan.TabIndex = 6
-        Me.tbsatuan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
         'Label9
         '
         Me.Label9.AutoSize = True
@@ -352,7 +345,7 @@ Partial Class Formpenjualan
         '
         'tbtotalrp
         '
-        Me.tbtotalrp.Location = New System.Drawing.Point(914, 271)
+        Me.tbtotalrp.Location = New System.Drawing.Point(914, 233)
         Me.tbtotalrp.Name = "tbtotalrp"
         Me.tbtotalrp.Size = New System.Drawing.Size(125, 20)
         Me.tbtotalrp.TabIndex = 21
@@ -361,7 +354,7 @@ Partial Class Formpenjualan
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(857, 274)
+        Me.Label16.Location = New System.Drawing.Point(857, 236)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(51, 13)
         Me.Label16.TabIndex = 22
@@ -420,11 +413,30 @@ Partial Class Formpenjualan
         Me.btnkoreksi.Text = "Koreksi Nota"
         Me.btnkoreksi.UseVisualStyleBackColor = True
         '
+        'btn_tambah
+        '
+        Me.btn_tambah.Location = New System.Drawing.Point(914, 265)
+        Me.btn_tambah.Name = "btn_tambah"
+        Me.btn_tambah.Size = New System.Drawing.Size(98, 31)
+        Me.btn_tambah.TabIndex = 29
+        Me.btn_tambah.Text = "Tambah"
+        Me.btn_tambah.UseVisualStyleBackColor = True
+        '
+        'cbsatuan
+        '
+        Me.cbsatuan.FormattingEnabled = True
+        Me.cbsatuan.Location = New System.Drawing.Point(60, 271)
+        Me.cbsatuan.Name = "cbsatuan"
+        Me.cbsatuan.Size = New System.Drawing.Size(121, 21)
+        Me.cbsatuan.TabIndex = 25
+        '
         'Formpenjualan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1051, 665)
+        Me.Controls.Add(Me.cbsatuan)
+        Me.Controls.Add(Me.btn_tambah)
         Me.Controls.Add(Me.btnkoreksi)
         Me.Controls.Add(Me.btnsimpan)
         Me.Controls.Add(Me.btnprint)
@@ -447,7 +459,6 @@ Partial Class Formpenjualan
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.tbnamabarang)
         Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.tbsatuan)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.tbkodebarang)
         Me.Controls.Add(Me.Label7)
@@ -480,7 +491,6 @@ Partial Class Formpenjualan
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents tbkodebarang As System.Windows.Forms.TextBox
     Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents tbsatuan As System.Windows.Forms.TextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents tbnamabarang As System.Windows.Forms.TextBox
     Friend WithEvents Label10 As System.Windows.Forms.Label
@@ -504,4 +514,6 @@ Partial Class Formpenjualan
     Friend WithEvents btnprint As System.Windows.Forms.Button
     Friend WithEvents btnsimpan As System.Windows.Forms.Button
     Friend WithEvents btnkoreksi As System.Windows.Forms.Button
+    Friend WithEvents btn_tambah As System.Windows.Forms.Button
+    Friend WithEvents cbsatuan As System.Windows.Forms.ComboBox
 End Class
