@@ -33,7 +33,6 @@ Partial Class Formpenjualan
         Me.tbno_pajak = New System.Windows.Forms.TextBox()
         Me.dtppilihtanggal = New System.Windows.Forms.DateTimePicker()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.no_nota = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -96,7 +95,6 @@ Partial Class Formpenjualan
         Me.PanelControl1.Controls.Add(Me.tbno_pajak)
         Me.PanelControl1.Controls.Add(Me.dtppilihtanggal)
         Me.PanelControl1.Controls.Add(Me.Label4)
-        Me.PanelControl1.Controls.Add(Me.no_nota)
         Me.PanelControl1.Controls.Add(Me.Label3)
         Me.PanelControl1.Controls.Add(Me.Label2)
         Me.PanelControl1.Location = New System.Drawing.Point(13, 67)
@@ -106,9 +104,9 @@ Partial Class Formpenjualan
         '
         'tbno_nota
         '
-        Me.tbno_nota.Location = New System.Drawing.Point(164, 12)
+        Me.tbno_nota.Location = New System.Drawing.Point(126, 12)
         Me.tbno_nota.Name = "tbno_nota"
-        Me.tbno_nota.Size = New System.Drawing.Size(100, 21)
+        Me.tbno_nota.Size = New System.Drawing.Size(138, 21)
         Me.tbno_nota.TabIndex = 24
         Me.tbno_nota.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -169,15 +167,6 @@ Partial Class Formpenjualan
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Tanggal"
         '
-        'no_nota
-        '
-        Me.no_nota.AutoSize = True
-        Me.no_nota.Location = New System.Drawing.Point(123, 15)
-        Me.no_nota.Name = "no_nota"
-        Me.no_nota.Size = New System.Drawing.Size(25, 13)
-        Me.no_nota.TabIndex = 2
-        Me.no_nota.Text = "817"
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -237,6 +226,7 @@ Partial Class Formpenjualan
         Me.tbnamabarang.Name = "tbnamabarang"
         Me.tbnamabarang.Size = New System.Drawing.Size(195, 20)
         Me.tbnamabarang.TabIndex = 8
+        Me.tbnamabarang.Text = "0"
         Me.tbnamabarang.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label10
@@ -324,6 +314,7 @@ Partial Class Formpenjualan
         Me.tbdisc.Name = "tbdisc"
         Me.tbdisc.Size = New System.Drawing.Size(71, 20)
         Me.tbdisc.TabIndex = 18
+        Me.tbdisc.Text = "0"
         Me.tbdisc.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label15
@@ -341,6 +332,7 @@ Partial Class Formpenjualan
         Me.tbhargadisc.Name = "tbhargadisc"
         Me.tbhargadisc.Size = New System.Drawing.Size(100, 20)
         Me.tbhargadisc.TabIndex = 20
+        Me.tbhargadisc.Text = "0"
         Me.tbhargadisc.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'tbtotalrp
@@ -349,6 +341,7 @@ Partial Class Formpenjualan
         Me.tbtotalrp.Name = "tbtotalrp"
         Me.tbtotalrp.Size = New System.Drawing.Size(125, 20)
         Me.tbtotalrp.TabIndex = 21
+        Me.tbtotalrp.Text = "0"
         Me.tbtotalrp.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label16
@@ -480,7 +473,6 @@ Partial Class Formpenjualan
     Friend WithEvents PanelControl1 As DevExpress.XtraEditors.PanelControl
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents no_nota As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents dtppilihtanggal As System.Windows.Forms.DateTimePicker
     Friend WithEvents tbno_pajak As System.Windows.Forms.TextBox

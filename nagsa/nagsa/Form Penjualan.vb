@@ -13,7 +13,6 @@ Public Class Formpenjualan
         tbtotalharga.Font = New Font(tbtotalharga.Font.FontFamily, 30)
         Label2.Font = New Font(Label2.Font.FontFamily, 15)
         Label3.Font = New Font(Label3.Font.FontFamily, 15)
-        no_nota.Font = New Font(no_nota.Font.FontFamily, 15)
         tbno_nota.Font = New Font(tbno_nota.Font.FontFamily, 15)
         tbno_pajak.Font = New Font(tbno_pajak.Font.FontFamily, 15)
         Label4.Font = New Font(Label4.Font.FontFamily, 11)
@@ -39,15 +38,17 @@ Public Class Formpenjualan
             adapter = New MySqlDataAdapter(command)
             adapter.Fill(dt)
             If dt.Rows.Count < 10 Then
-                autogenerate = autogenerate + "00000" + (dt.Rows.Count + 1).ToString
+                autogenerate = autogenerate + "81700000" + (dt.Rows.Count + 1).ToString
             ElseIf dt.Rows.Count < 100 Then
-                autogenerate = autogenerate + "0000" + (dt.Rows.Count + 1).ToString
+                autogenerate = autogenerate + "8170000" + (dt.Rows.Count + 1).ToString
             ElseIf dt.Rows.Count < 1000 Then
-                autogenerate = autogenerate + "000" + (dt.Rows.Count + 1).ToString
+                autogenerate = autogenerate + "817000" + (dt.Rows.Count + 1).ToString
             ElseIf dt.Rows.Count < 10000 Then
-                autogenerate = autogenerate + "00" + (dt.Rows.Count + 1).ToString
+                autogenerate = autogenerate + "81700" + (dt.Rows.Count + 1).ToString
             ElseIf dt.Rows.Count < 100000 Then
-                autogenerate = autogenerate + "0" + (dt.Rows.Count + 1).ToString
+                autogenerate = autogenerate + "8170" + (dt.Rows.Count + 1).ToString
+            ElseIf dt.Rows.Count < 1000000 Then
+                autogenerate = autogenerate + "817" + (dt.Rows.Count + 1).ToString
             End If
             tbno_nota.Text = autogenerate
         Catch ex As Exception
@@ -57,5 +58,22 @@ Public Class Formpenjualan
 
     Private Sub btnkoreksi_Click(sender As Object, e As EventArgs) Handles btnkoreksi.Click
         tbno_nota.Enabled = True
+    End Sub
+
+    Private Sub btn_tambah_Click(sender As Object, e As EventArgs) Handles btn_tambah.Click
+        Try
+            dt = New DataTable
+            query = "insert into detail_penjualan('" + tbkodebarang.Text + "','" + tbno_nota.Text + "','" + tbbatch.Text + "','" + tb_ed.Text + "','" + cbsatuan.Text + "','" + tbhargajual.Text + "','" + tbjumlah.Text + "','" + tbdisc.Text + "','" + tbhargadisc.Text + "','" + tbtotalrp.Text + "','" + tbnamabarang.Text + "')"
+
+            connect.Open()
+            command = New MySqlCommand(query, connect)
+            command.ExecuteNonQuery()
+            connect.Close()
+            MessageBox.Show("Data Berhasil Masuk")
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            connect.Close()
+        End Try
+
     End Sub
 End Class
