@@ -6,7 +6,7 @@ Public Class Formpenjualan
     Dim query As String
     Dim dt As New DataTable
     Dim autogenerate As String
-
+    Dim ds As New DataSet
 
 
     Private Sub Formpenjualan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -75,6 +75,19 @@ Public Class Formpenjualan
             connect.Close()
         End Try
 
+        Try
+            query = "select * from detail_penjualan where no_nota_penjualan = '" + tbno_nota.Text + "'"
+            connect.Open()
+            adapter = New MySqlDataAdapter(query, connect)
+            ds = New DataSet
+            ds.Clear()
+            adapter.Fill(ds, "kode_barang")
+            connect.Close()
+            dgvdetailbarang.DataSource = ds
+            dgvdetailbarang.DataMember = "kode_barang"
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Private Sub btnsimpan_Click(sender As Object, e As EventArgs) Handles btnsimpan.Click
