@@ -8,6 +8,7 @@ Public Class Formpenjualan
     Dim autogenerate As String
 
 
+
     Private Sub Formpenjualan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Label1.Font = New Font(Label1.Font.FontFamily, 30)
         tbtotalharga.Font = New Font(tbtotalharga.Font.FontFamily, 30)
@@ -63,7 +64,23 @@ Public Class Formpenjualan
     Private Sub btn_tambah_Click(sender As Object, e As EventArgs) Handles btn_tambah.Click
         Try
             dt = New DataTable
-            query = "insert into detail_penjualan('" + tbkodebarang.Text + "','" + tbno_nota.Text + "','" + tbbatch.Text + "','" + tb_ed.Text + "','" + cbsatuan.Text + "','" + tbhargajual.Text + "','" + tbjumlah.Text + "','" + tbdisc.Text + "','" + tbhargadisc.Text + "','" + tbtotalrp.Text + "','" + tbnamabarang.Text + "')"
+            query = "insert into detail_penjualan values('" + tbkodebarang.Text + "','" + tbno_nota.Text + "','" + tbbatch.Text + "','" + tb_ed.Text + "','" + cbsatuan.Text + "','" + tbhargajual.Text + "','" + tbjumlah.Text + "','" + tbdisc.Text + "','" + tbhargadisc.Text + "','" + tbtotalrp.Text + "','" + tbnamabarang.Text + "')"
+
+            connect.Open()
+            command = New MySqlCommand(query, connect)
+            command.ExecuteNonQuery()
+            connect.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            connect.Close()
+        End Try
+
+    End Sub
+
+    Private Sub btnsimpan_Click(sender As Object, e As EventArgs) Handles btnsimpan.Click
+        Try
+            dt = New DataTable
+            query = "insert into penjualan values('" + tbno_nota.Text + "','" + tbno_pajak.Text + "','" + dtppilihtanggal.Text + "','" + tbkode_cust.Text + "','" + dtpjatuh_tempo.Text + "','" + tbtotalharga.Text + "')"
 
             connect.Open()
             command = New MySqlCommand(query, connect)
@@ -74,6 +91,5 @@ Public Class Formpenjualan
             MsgBox(ex.Message)
             connect.Close()
         End Try
-
     End Sub
 End Class

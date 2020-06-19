@@ -226,7 +226,6 @@ Partial Class Formpenjualan
         Me.tbnamabarang.Name = "tbnamabarang"
         Me.tbnamabarang.Size = New System.Drawing.Size(195, 20)
         Me.tbnamabarang.TabIndex = 8
-        Me.tbnamabarang.Text = "0"
         Me.tbnamabarang.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label10
