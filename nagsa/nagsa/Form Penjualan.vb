@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Formpenjualan
-    Dim connect As New MySqlConnection("server=localhost;uid=root;pwd=admin;database=apotik;port=3306")
+    Dim connect As New MySqlConnection("server=localhost;uid=root;pwd=;database=apotik;port=3306")
     Dim command As New MySqlCommand
     Dim adapter As New MySqlDataAdapter
     Dim query As String
@@ -105,4 +105,6 @@ Public Class Formpenjualan
             connect.Close()
         End Try
     End Sub
+
+   
 End Class

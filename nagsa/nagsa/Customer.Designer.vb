@@ -22,21 +22,21 @@ Partial Class Formcustomer
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgvcustomer = New System.Windows.Forms.DataGridView()
         Me.Buttoncari = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.tbcari = New System.Windows.Forms.TextBox()
         Me.bttambah = New System.Windows.Forms.Button()
         Me.Buttonhapus = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvcustomer, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'DataGridView1
+        'dgvcustomer
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(29, 52)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(572, 203)
-        Me.DataGridView1.TabIndex = 0
+        Me.dgvcustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvcustomer.Location = New System.Drawing.Point(29, 52)
+        Me.dgvcustomer.Name = "dgvcustomer"
+        Me.dgvcustomer.Size = New System.Drawing.Size(572, 203)
+        Me.dgvcustomer.TabIndex = 0
         '
         'Buttoncari
         '
@@ -47,12 +47,12 @@ Partial Class Formcustomer
         Me.Buttoncari.Text = "Cari"
         Me.Buttoncari.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'tbcari
         '
-        Me.TextBox1.Location = New System.Drawing.Point(29, 20)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(469, 20)
-        Me.TextBox1.TabIndex = 2
+        Me.tbcari.Location = New System.Drawing.Point(29, 20)
+        Me.tbcari.Name = "tbcari"
+        Me.tbcari.Size = New System.Drawing.Size(469, 20)
+        Me.tbcari.TabIndex = 2
         '
         'bttambah
         '
@@ -79,19 +79,19 @@ Partial Class Formcustomer
         Me.ClientSize = New System.Drawing.Size(644, 334)
         Me.Controls.Add(Me.Buttonhapus)
         Me.Controls.Add(Me.bttambah)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.tbcari)
         Me.Controls.Add(Me.Buttoncari)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.dgvcustomer)
         Me.Name = "Formcustomer"
         Me.Text = "Customer"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvcustomer, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents dgvcustomer As System.Windows.Forms.DataGridView
     Friend WithEvents Buttoncari As System.Windows.Forms.Button
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents tbcari As System.Windows.Forms.TextBox
     Friend WithEvents bttambah As System.Windows.Forms.Button
     Friend WithEvents Buttonhapus As System.Windows.Forms.Button
 End Class
