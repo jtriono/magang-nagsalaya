@@ -65,11 +65,11 @@ Public Class Formpenjualan
         Try
             dt = New DataTable
             query = "insert into detail_penjualan values('" + tbkodebarang.Text + "','" + tbno_nota.Text + "','" + tbbatch.Text + "','" + tb_ed.Text + "','" + cbsatuan.Text + "','" + tbhargajual.Text + "','" + tbjumlah.Text + "','" + tbdisc.Text + "','" + tbhargadisc.Text + "','" + tbtotalrp.Text + "','" + tbnamabarang.Text + "')"
+
             connect.Open()
             command = New MySqlCommand(query, connect)
             command.ExecuteNonQuery()
             connect.Close()
-
             tbkodebarang.Text = " "
             tbnamabarang.Text = " "
             tbbatch.Text = " "
