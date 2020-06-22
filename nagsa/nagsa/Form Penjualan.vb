@@ -70,16 +70,6 @@ Public Class Formpenjualan
             command = New MySqlCommand(query, connect)
             command.ExecuteNonQuery()
             connect.Close()
-            tbkodebarang.Text = " "
-            tbnamabarang.Text = " "
-            tbbatch.Text = " "
-            tb_ed.Text = " "
-            tbtotalrp.Text = "0"
-            cbsatuan.Text = " "
-            tbhargajual.Text = "0"
-            tbjumlah.Text = "0"
-            tbdisc.Text = "0"
-            tbhargadisc.Text = "0"
         Catch ex As Exception
             MsgBox(ex.Message)
             connect.Close()
@@ -104,32 +94,12 @@ Public Class Formpenjualan
         Try
             dt = New DataTable
             query = "insert into penjualan values('" + tbno_nota.Text + "','" + tbno_pajak.Text + "','" + dtppilihtanggal.Text + "','" + tbkode_cust.Text + "','" + dtpjatuh_tempo.Text + "','" + tbtotalharga.Text + "')"
+
             connect.Open()
             command = New MySqlCommand(query, connect)
             command.ExecuteNonQuery()
             connect.Close()
             MessageBox.Show("Data Berhasil Masuk")
-
-            autogenerate = ""
-            dt = New DataTable
-            query = "select no_pajak from penjualan"
-            command = New MySqlCommand(query, connect)
-            adapter = New MySqlDataAdapter(command)
-            adapter.Fill(dt)
-            If dt.Rows.Count < 10 Then
-                autogenerate = autogenerate + "81700000" + (dt.Rows.Count + 1).ToString
-            ElseIf dt.Rows.Count < 100 Then
-                autogenerate = autogenerate + "8170000" + (dt.Rows.Count + 1).ToString
-            ElseIf dt.Rows.Count < 1000 Then
-                autogenerate = autogenerate + "817000" + (dt.Rows.Count + 1).ToString
-            ElseIf dt.Rows.Count < 10000 Then
-                autogenerate = autogenerate + "81700" + (dt.Rows.Count + 1).ToString
-            ElseIf dt.Rows.Count < 100000 Then
-                autogenerate = autogenerate + "8170" + (dt.Rows.Count + 1).ToString
-            ElseIf dt.Rows.Count < 1000000 Then
-                autogenerate = autogenerate + "817" + (dt.Rows.Count + 1).ToString
-            End If
-            tbno_nota.Text = autogenerate
         Catch ex As Exception
             MsgBox(ex.Message)
             connect.Close()
