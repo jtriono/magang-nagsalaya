@@ -5,6 +5,7 @@ Public Class Formpenjualan
     Dim adapter As New MySqlDataAdapter
     Dim query As String
     Dim dt As New DataTable
+    Dim dt2 As New DataTable
     Dim autogenerate As String
     Dim ds As New DataSet
 
@@ -130,6 +131,11 @@ Public Class Formpenjualan
                 autogenerate = autogenerate + "817" + (dt.Rows.Count + 1).ToString
             End If
             tbno_nota.Text = autogenerate
+            tbtotalharga.Text = "0"
+            tbno_pajak.Text = " "
+            tbkode_cust.Text = " "
+            dtpjatuh_tempo.Value = DateTime.Now
+            dtppilihtanggal.Value = DateTime.Now
         Catch ex As Exception
             MsgBox(ex.Message)
             connect.Close()
@@ -137,4 +143,20 @@ Public Class Formpenjualan
     End Sub
 
    
+    Private Sub tbno_nota_TextChanged(sender As Object, e As EventArgs) Handles tbno_nota.TextChanged
+        Try
+            dt2 = New DataTable
+            query = "select no_nota_penjualan, no_pajak, tanggal_penjualan, kode_customer, tanggal_jt_penjualan, total_harga_penjualan from penjualan where no_nota_penjualan = '" + tbno_nota.Text + "'"
+            command = New MySqlCommand(query, connect)
+            adapter = New MySqlDataAdapter(command)
+            adapter.Fill(dt2)
+            tbno_pajak.Text = dt2.Rows(0).Item("no_pajak")
+            dtppilihtanggal.Value = dt2.Rows(0).Item("tanggal_penjualan").ToString
+            tbkode_cust.Text = dt2.Rows(0).Item("kode_customer")
+            dtpjatuh_tempo.Value = dt2.Rows(0).Item("tanggal_jt_penjualan").ToString
+            tbtotalharga.Text = dt2.Rows(0).Item("total_harga_penjualan").ToString
+        Catch ex As Exception
+
+        End Try
+    End Sub
 End Class
