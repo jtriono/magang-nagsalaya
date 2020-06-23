@@ -31,6 +31,7 @@ Public Class Formpenjualan
         tbnamabarang.Enabled = False
         tbtotalrp.Enabled = False
         tbno_nota.Enabled = False
+        tbtotalharga.Enabled = False
 
         Try
             autogenerate = ""

@@ -117,6 +117,12 @@
     <Compile Include="Formutama.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Isi Supplier.Designer.vb">
+      <DependentUpon>Isi Supplier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Isi Supplier.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -169,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formutama.resx">
       <DependentUpon>Formutama.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Isi Supplier.resx">
+      <DependentUpon>Isi Supplier.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">

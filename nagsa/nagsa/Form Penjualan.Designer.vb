@@ -357,7 +357,7 @@ Partial Class Formpenjualan
         Me.dgvdetailbarang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvdetailbarang.Location = New System.Drawing.Point(16, 322)
         Me.dgvdetailbarang.Name = "dgvdetailbarang"
-        Me.dgvdetailbarang.Size = New System.Drawing.Size(1018, 210)
+        Me.dgvdetailbarang.Size = New System.Drawing.Size(1018, 234)
         Me.dgvdetailbarang.TabIndex = 23
         '
         'btnubah
