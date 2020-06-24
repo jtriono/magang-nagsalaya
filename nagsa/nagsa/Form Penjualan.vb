@@ -36,7 +36,7 @@ Public Class Formpenjualan
         Try
             autogenerate = ""
             dt = New DataTable
-            query = "select no_pajak from penjualan"
+            query = "select no_nota_penjualan from penjualan"
             command = New MySqlCommand(query, connect)
             adapter = New MySqlDataAdapter(command)
             adapter.Fill(dt)
@@ -93,12 +93,12 @@ Public Class Formpenjualan
             adapter = New MySqlDataAdapter(query, connect)
             ds = New DataSet
             ds.Clear()
-            adapter.Fill(ds, "kode_barang")
+            adapter.Fill(ds)
             connect.Close()
             dgvdetailbarang.DataSource = ds
-            dgvdetailbarang.DataMember = "kode_barang"
         Catch ex As Exception
-
+            MsgBox(ex.Message)
+            connect.Close()
         End Try
     End Sub
 

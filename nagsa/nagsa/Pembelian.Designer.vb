@@ -27,7 +27,7 @@ Partial Class Formpembelian
         Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
         Me.dtp_jt = New System.Windows.Forms.DateTimePicker()
         Me.dtptanggal = New System.Windows.Forms.DateTimePicker()
-        Me.tb_nosupplier = New System.Windows.Forms.TextBox()
+        Me.tb_kodesupplier = New System.Windows.Forms.TextBox()
         Me.tb_nonota = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -45,13 +45,13 @@ Partial Class Formpembelian
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.tb_hargabeli = New System.Windows.Forms.TextBox()
+        Me.tb_jumlah = New System.Windows.Forms.TextBox()
+        Me.tbdisc = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.tb_harga = New System.Windows.Forms.TextBox()
         Me.btn_tambah = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgv_barangbeli = New System.Windows.Forms.DataGridView()
         Me.btnubah = New System.Windows.Forms.Button()
         Me.btnhapus = New System.Windows.Forms.Button()
         Me.btnsimpan = New System.Windows.Forms.Button()
@@ -60,7 +60,7 @@ Partial Class Formpembelian
         Me.cb_satuan = New System.Windows.Forms.ComboBox()
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgv_barangbeli, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -85,7 +85,7 @@ Partial Class Formpembelian
         '
         Me.PanelControl1.Controls.Add(Me.dtp_jt)
         Me.PanelControl1.Controls.Add(Me.dtptanggal)
-        Me.PanelControl1.Controls.Add(Me.tb_nosupplier)
+        Me.PanelControl1.Controls.Add(Me.tb_kodesupplier)
         Me.PanelControl1.Controls.Add(Me.tb_nonota)
         Me.PanelControl1.Controls.Add(Me.Label5)
         Me.PanelControl1.Controls.Add(Me.Label4)
@@ -110,13 +110,13 @@ Partial Class Formpembelian
         Me.dtptanggal.Size = New System.Drawing.Size(200, 21)
         Me.dtptanggal.TabIndex = 9
         '
-        'tb_nosupplier
+        'tb_kodesupplier
         '
-        Me.tb_nosupplier.Location = New System.Drawing.Point(234, 95)
-        Me.tb_nosupplier.Name = "tb_nosupplier"
-        Me.tb_nosupplier.Size = New System.Drawing.Size(108, 21)
-        Me.tb_nosupplier.TabIndex = 8
-        Me.tb_nosupplier.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.tb_kodesupplier.Location = New System.Drawing.Point(234, 95)
+        Me.tb_kodesupplier.Name = "tb_kodesupplier"
+        Me.tb_kodesupplier.Size = New System.Drawing.Size(108, 21)
+        Me.tb_kodesupplier.TabIndex = 8
+        Me.tb_kodesupplier.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'tb_nonota
         '
@@ -266,29 +266,29 @@ Partial Class Formpembelian
         Me.Label13.TabIndex = 21
         Me.Label13.Text = "Discount"
         '
-        'TextBox2
+        'tb_hargabeli
         '
-        Me.TextBox2.Location = New System.Drawing.Point(275, 295)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 23
-        Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.tb_hargabeli.Location = New System.Drawing.Point(275, 295)
+        Me.tb_hargabeli.Name = "tb_hargabeli"
+        Me.tb_hargabeli.Size = New System.Drawing.Size(100, 20)
+        Me.tb_hargabeli.TabIndex = 23
+        Me.tb_hargabeli.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
-        'TextBox3
+        'tb_jumlah
         '
-        Me.TextBox3.Location = New System.Drawing.Point(448, 295)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(66, 20)
-        Me.TextBox3.TabIndex = 24
-        Me.TextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.tb_jumlah.Location = New System.Drawing.Point(448, 295)
+        Me.tb_jumlah.Name = "tb_jumlah"
+        Me.tb_jumlah.Size = New System.Drawing.Size(66, 20)
+        Me.tb_jumlah.TabIndex = 24
+        Me.tb_jumlah.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
-        'TextBox4
+        'tbdisc
         '
-        Me.TextBox4.Location = New System.Drawing.Point(595, 295)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(85, 20)
-        Me.TextBox4.TabIndex = 25
-        Me.TextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.tbdisc.Location = New System.Drawing.Point(595, 295)
+        Me.tbdisc.Name = "tbdisc"
+        Me.tbdisc.Size = New System.Drawing.Size(85, 20)
+        Me.tbdisc.TabIndex = 25
+        Me.tbdisc.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label14
         '
@@ -299,13 +299,13 @@ Partial Class Formpembelian
         Me.Label14.TabIndex = 26
         Me.Label14.Text = "Total Harga"
         '
-        'TextBox5
+        'tb_harga
         '
-        Me.TextBox5.Location = New System.Drawing.Point(776, 295)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox5.TabIndex = 27
-        Me.TextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.tb_harga.Location = New System.Drawing.Point(776, 295)
+        Me.tb_harga.Name = "tb_harga"
+        Me.tb_harga.Size = New System.Drawing.Size(100, 20)
+        Me.tb_harga.TabIndex = 27
+        Me.tb_harga.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'btn_tambah
         '
@@ -316,13 +316,13 @@ Partial Class Formpembelian
         Me.btn_tambah.Text = "Tambah"
         Me.btn_tambah.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'dgv_barangbeli
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(16, 353)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(967, 210)
-        Me.DataGridView1.TabIndex = 29
+        Me.dgv_barangbeli.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv_barangbeli.Location = New System.Drawing.Point(16, 353)
+        Me.dgv_barangbeli.Name = "dgv_barangbeli"
+        Me.dgv_barangbeli.Size = New System.Drawing.Size(967, 210)
+        Me.dgv_barangbeli.TabIndex = 29
         '
         'btnubah
         '
@@ -388,13 +388,13 @@ Partial Class Formpembelian
         Me.Controls.Add(Me.btnsimpan)
         Me.Controls.Add(Me.btnhapus)
         Me.Controls.Add(Me.btnubah)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.dgv_barangbeli)
         Me.Controls.Add(Me.btn_tambah)
-        Me.Controls.Add(Me.TextBox5)
+        Me.Controls.Add(Me.tb_harga)
         Me.Controls.Add(Me.Label14)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.tbdisc)
+        Me.Controls.Add(Me.tb_jumlah)
+        Me.Controls.Add(Me.tb_hargabeli)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label11)
@@ -415,7 +415,7 @@ Partial Class Formpembelian
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelControl1.ResumeLayout(False)
         Me.PanelControl1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgv_barangbeli, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -425,7 +425,7 @@ Partial Class Formpembelian
     Friend WithEvents PanelControl1 As DevExpress.XtraEditors.PanelControl
     Friend WithEvents dtp_jt As System.Windows.Forms.DateTimePicker
     Friend WithEvents dtptanggal As System.Windows.Forms.DateTimePicker
-    Friend WithEvents tb_nosupplier As System.Windows.Forms.TextBox
+    Friend WithEvents tb_kodesupplier As System.Windows.Forms.TextBox
     Friend WithEvents tb_nonota As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
@@ -443,13 +443,13 @@ Partial Class Formpembelian
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents Label13 As System.Windows.Forms.Label
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
+    Friend WithEvents tb_hargabeli As System.Windows.Forms.TextBox
+    Friend WithEvents tb_jumlah As System.Windows.Forms.TextBox
+    Friend WithEvents tbdisc As System.Windows.Forms.TextBox
     Friend WithEvents Label14 As System.Windows.Forms.Label
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
+    Friend WithEvents tb_harga As System.Windows.Forms.TextBox
     Friend WithEvents btn_tambah As System.Windows.Forms.Button
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents dgv_barangbeli As System.Windows.Forms.DataGridView
     Friend WithEvents btnubah As System.Windows.Forms.Button
     Friend WithEvents btnhapus As System.Windows.Forms.Button
     Friend WithEvents btnsimpan As System.Windows.Forms.Button
