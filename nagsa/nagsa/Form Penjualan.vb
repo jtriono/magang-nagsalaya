@@ -7,7 +7,9 @@ Public Class Formpenjualan
     Dim dt As New DataTable
     Dim dt2 As New DataTable
     Dim autogenerate As String
+    Dim harga As Integer = 0
     Dim ds As New DataSet
+
 
 
     Private Sub Formpenjualan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -56,6 +58,7 @@ Public Class Formpenjualan
             tbno_nota.Text = autogenerate
         Catch ex As Exception
             MsgBox(ex.Message)
+            connect.Close()
         End Try
     End Sub
 
@@ -66,7 +69,7 @@ Public Class Formpenjualan
     Private Sub btn_tambah_Click(sender As Object, e As EventArgs) Handles btn_tambah.Click
         Try
             dt = New DataTable
-            query = "insert into detail_penjualan values('" + tbkodebarang.Text + "','" + tbno_nota.Text + "','" + tbbatch.Text + "','" + tb_ed.Text + "','" + cbsatuan.Text + "','" + tbhargajual.Text + "','" + tbjumlah.Text + "','" + tbdisc.Text + "','" + tbhargadisc.Text + "','" + tbtotalrp.Text + "','" + tbnamabarang.Text + "')"
+            query = "insert into detail_penjualan values('" + tbkodebarang.Text + "','" + tbno_nota.Text + "','" + tbbatch.Text + "','" + tb_ed.Text + "','" + cbsatuan.Text + "','" + tbhargajual.Text + "','" + tbjumlah.Text + "','" + tbdisc.Text + "','" + tbtotalrp.Text + "','" + tbnamabarang.Text + "')"
             connect.Open()
             command = New MySqlCommand(query, connect)
             command.ExecuteNonQuery()
@@ -81,7 +84,8 @@ Public Class Formpenjualan
             tbhargajual.Text = "0"
             tbjumlah.Text = "0"
             tbdisc.Text = "0"
-            tbhargadisc.Text = "0"
+            harga = harga + CInt(tbtotalrp.Text)
+            tbtotalharga.Text = harga
         Catch ex As Exception
             MsgBox(ex.Message)
             connect.Close()
@@ -137,6 +141,7 @@ Public Class Formpenjualan
             tbkode_cust.Text = " "
             dtpjatuh_tempo.Value = DateTime.Now
             dtppilihtanggal.Value = DateTime.Now
+            harga = 0
         Catch ex As Exception
             MsgBox(ex.Message)
             connect.Close()
@@ -157,7 +162,44 @@ Public Class Formpenjualan
             dtpjatuh_tempo.Value = dt2.Rows(0).Item("tanggal_jt_penjualan").ToString
             tbtotalharga.Text = dt2.Rows(0).Item("total_harga_penjualan").ToString
         Catch ex As Exception
-
+            MsgBox(ex.Message)
+            connect.Close()
         End Try
+
+        Try
+            query = "select * from detail_penjualan where no_nota_penjualan = '" + tbno_nota.Text + "'"
+            connect.Open()
+            adapter = New MySqlDataAdapter(query, connect)
+            ds = New DataSet
+            ds.Clear()
+            adapter.Fill(ds)
+            connect.Close()
+            dgvdetailbarang.DataSource = ds
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            connect.Close()
+        End Try
+    End Sub
+
+    Private Sub tbkodebarang_TextChanged(sender As Object, e As EventArgs) Handles tbkodebarang.TextChanged
+        Try
+            dt2 = New DataTable
+            query = "select itemid, nama, hargajual, nobatch, expiredate, satuan from barang where itemid = '" + tbkodebarang.Text + "'"
+            command = New MySqlCommand(query, connect)
+            adapter = New MySqlDataAdapter(command)
+            adapter.Fill(dt2)
+            tbnamabarang.Text = dt2.Rows(0).Item("nama")
+            tbhargajual.Text = dt2.Rows(0).Item("hargajual")
+            tbbatch.Text = dt2.Rows(0).Item("nobatch")
+            tb_ed.Text = dt2.Rows(0).Item("expiredate")
+            cbsatuan.Text = dt2.Rows(0).Item("satuan")
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            connect.Close()
+        End Try
+    End Sub
+
+    Private Sub tbdisc_TextChanged(sender As Object, e As EventArgs) Handles tbdisc.TextChanged
+        tbtotalrp.Text = CInt(tbhargajual.Text) - (CInt(tbhargajual.Text) * (CInt(tbdisc.Text) / 100))
     End Sub
 End Class

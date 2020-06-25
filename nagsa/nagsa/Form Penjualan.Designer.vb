@@ -50,8 +50,6 @@ Partial Class Formpenjualan
         Me.tbjumlah = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.tbdisc = New System.Windows.Forms.TextBox()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.tbhargadisc = New System.Windows.Forms.TextBox()
         Me.tbtotalrp = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.dgvdetailbarang = New System.Windows.Forms.DataGridView()
@@ -316,27 +314,9 @@ Partial Class Formpenjualan
         Me.tbdisc.Text = "0"
         Me.tbdisc.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(669, 274)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(48, 13)
-        Me.Label15.TabIndex = 19
-        Me.Label15.Text = "Disc Rp."
-        '
-        'tbhargadisc
-        '
-        Me.tbhargadisc.Location = New System.Drawing.Point(723, 271)
-        Me.tbhargadisc.Name = "tbhargadisc"
-        Me.tbhargadisc.Size = New System.Drawing.Size(100, 20)
-        Me.tbhargadisc.TabIndex = 20
-        Me.tbhargadisc.Text = "0"
-        Me.tbhargadisc.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
         'tbtotalrp
         '
-        Me.tbtotalrp.Location = New System.Drawing.Point(914, 233)
+        Me.tbtotalrp.Location = New System.Drawing.Point(733, 271)
         Me.tbtotalrp.Name = "tbtotalrp"
         Me.tbtotalrp.Size = New System.Drawing.Size(125, 20)
         Me.tbtotalrp.TabIndex = 21
@@ -346,7 +326,7 @@ Partial Class Formpenjualan
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(857, 236)
+        Me.Label16.Location = New System.Drawing.Point(676, 274)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(51, 13)
         Me.Label16.TabIndex = 22
@@ -407,9 +387,9 @@ Partial Class Formpenjualan
         '
         'btn_tambah
         '
-        Me.btn_tambah.Location = New System.Drawing.Point(914, 265)
+        Me.btn_tambah.Location = New System.Drawing.Point(915, 234)
         Me.btn_tambah.Name = "btn_tambah"
-        Me.btn_tambah.Size = New System.Drawing.Size(98, 31)
+        Me.btn_tambah.Size = New System.Drawing.Size(98, 59)
         Me.btn_tambah.TabIndex = 29
         Me.btn_tambah.Text = "Tambah"
         Me.btn_tambah.UseVisualStyleBackColor = True
@@ -437,8 +417,6 @@ Partial Class Formpenjualan
         Me.Controls.Add(Me.dgvdetailbarang)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.tbtotalrp)
-        Me.Controls.Add(Me.tbhargadisc)
-        Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.tbdisc)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.tbjumlah)
@@ -494,8 +472,6 @@ Partial Class Formpenjualan
     Friend WithEvents tbjumlah As System.Windows.Forms.TextBox
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents tbdisc As System.Windows.Forms.TextBox
-    Friend WithEvents Label15 As System.Windows.Forms.Label
-    Friend WithEvents tbhargadisc As System.Windows.Forms.TextBox
     Friend WithEvents tbtotalrp As System.Windows.Forms.TextBox
     Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents dgvdetailbarang As System.Windows.Forms.DataGridView
