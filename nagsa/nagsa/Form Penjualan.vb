@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Formpenjualan
-    Dim connect As New MySqlConnection("server=localhost;uid=root;pwd=;database=apotik;port=3306")
+    Dim connect As New MySqlConnection("server=localhost;uid=root;pwd=admin;database=apotik;port=3306")
     Dim command As New MySqlCommand
     Dim adapter As New MySqlDataAdapter
     Dim query As String
@@ -201,5 +201,21 @@ Public Class Formpenjualan
 
     Private Sub tbdisc_TextChanged(sender As Object, e As EventArgs) Handles tbdisc.TextChanged
         tbtotalrp.Text = CInt(tbhargajual.Text) - (CInt(tbhargajual.Text) * (CInt(tbdisc.Text) / 100))
+    End Sub
+
+    Private Sub btnhapus_Click(sender As Object, e As EventArgs) Handles btnhapus.Click
+        Try
+            dt = New DataTable
+            query = "update detail_penjualan set `delete` = 1 where kode_barang = '" + dgvdetailbarang.CurrentRow.Cells(1).Value.ToString + "'"
+            If MessageBox.Show("Yakin akan melakukan delete?", "Konfirmasi", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
+                connect.Open()
+                command = New MySqlCommand(query, connect)
+                command.ExecuteNonQuery()
+                connect.Close()
+                MessageBox.Show("Data Berhasil Dihapus")
+            End If
+        Catch ex As Exception
+
+        End Try
     End Sub
 End Class

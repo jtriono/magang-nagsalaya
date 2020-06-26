@@ -1,0 +1,214 @@
+-- MySQL Administrator dump 1.4
+--
+-- ------------------------------------------------------
+-- Server version	5.0.18-nt
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+--
+-- Create schema apotik
+--
+
+CREATE DATABASE IF NOT EXISTS apotik;
+USE apotik;
+
+--
+-- Definition of table `barang`
+--
+
+DROP TABLE IF EXISTS `barang`;
+CREATE TABLE `barang` (
+  `itemid` varchar(45) NOT NULL,
+  `nama` varchar(45) NOT NULL,
+  `hargabeli` int(10) unsigned NOT NULL,
+  `hargajual` int(10) unsigned NOT NULL,
+  `stokakhir` int(10) unsigned NOT NULL,
+  `nobatch` varchar(45) NOT NULL,
+  `expiredate` varchar(45) NOT NULL,
+  `satuan` varchar(45) NOT NULL,
+  PRIMARY KEY  (`itemid`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `barang`
+--
+
+/*!40000 ALTER TABLE `barang` DISABLE KEYS */;
+INSERT INTO `barang` (`itemid`,`nama`,`hargabeli`,`hargajual`,`stokakhir`,`nobatch`,`expiredate`,`satuan`) VALUES 
+ ('I00001','a',0,0,0,'a','a','a');
+/*!40000 ALTER TABLE `barang` ENABLE KEYS */;
+
+
+--
+-- Definition of table `customer`
+--
+
+DROP TABLE IF EXISTS `customer`;
+CREATE TABLE `customer` (
+  `customerid` varchar(45) NOT NULL,
+  `nama` varchar(45) NOT NULL,
+  `alamat` varchar(45) NOT NULL,
+  `kota` varchar(45) NOT NULL,
+  `telpon` varchar(45) NOT NULL,
+  `npwp` varchar(45) NOT NULL,
+  PRIMARY KEY  (`customerid`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `customer`
+--
+
+/*!40000 ALTER TABLE `customer` DISABLE KEYS */;
+INSERT INTO `customer` (`customerid`,`nama`,`alamat`,`kota`,`telpon`,`npwp`) VALUES 
+ ('C00001','a','a','a','a','a'),
+ ('C00002','a','a','a','a','a'),
+ ('C00003','a','a','a','a','a'),
+ ('C00004','s','s','s','s','s'),
+ ('C00005','s','s','s','s','s'),
+ ('C00006','a','a','aa','z','z');
+/*!40000 ALTER TABLE `customer` ENABLE KEYS */;
+
+
+--
+-- Definition of table `detail_pembelian`
+--
+
+DROP TABLE IF EXISTS `detail_pembelian`;
+CREATE TABLE `detail_pembelian` (
+  `kode_barang_pembelian` varchar(45) NOT NULL,
+  `no_nota_pembelian` varchar(45) NOT NULL,
+  `batch_pembelian` varchar(45) NOT NULL,
+  `expired_date` datetime NOT NULL,
+  `satuan` varchar(45) NOT NULL,
+  `harga_beli` int(10) unsigned NOT NULL,
+  `jumlah_barang` int(10) unsigned NOT NULL,
+  `discount_percent` int(10) unsigned zerofill NOT NULL,
+  `total_harga` int(10) unsigned NOT NULL,
+  `nama_barang` varchar(45) NOT NULL,
+  `delete` int(10) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`kode_barang_pembelian`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `detail_pembelian`
+--
+
+/*!40000 ALTER TABLE `detail_pembelian` DISABLE KEYS */;
+/*!40000 ALTER TABLE `detail_pembelian` ENABLE KEYS */;
+
+
+--
+-- Definition of table `detail_penjualan`
+--
+
+DROP TABLE IF EXISTS `detail_penjualan`;
+CREATE TABLE `detail_penjualan` (
+  `kode_barang` varchar(45) NOT NULL,
+  `no_nota_penjualan` varchar(45) NOT NULL,
+  `batch` varchar(45) NOT NULL,
+  `expired_date` datetime NOT NULL,
+  `satuan` varchar(45) NOT NULL,
+  `harga_jual` int(11) NOT NULL,
+  `jumlah_barang` int(11) NOT NULL,
+  `discount_percent` int(11) NOT NULL,
+  `total_harga` int(11) NOT NULL,
+  `nama_barang` varchar(45) NOT NULL,
+  `delete` int(10) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`kode_barang`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `detail_penjualan`
+--
+
+/*!40000 ALTER TABLE `detail_penjualan` DISABLE KEYS */;
+/*!40000 ALTER TABLE `detail_penjualan` ENABLE KEYS */;
+
+
+--
+-- Definition of table `pembelian`
+--
+
+DROP TABLE IF EXISTS `pembelian`;
+CREATE TABLE `pembelian` (
+  `no_nota_pembelian` varchar(45) NOT NULL,
+  `tanggal_pembelian` datetime NOT NULL,
+  `kode_supplier` varchar(45) NOT NULL,
+  `tanggal_jt_pembelian` datetime NOT NULL,
+  `total_harga_pembelian` int(10) unsigned NOT NULL,
+  `delete` int(10) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`no_nota_pembelian`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `pembelian`
+--
+
+/*!40000 ALTER TABLE `pembelian` DISABLE KEYS */;
+/*!40000 ALTER TABLE `pembelian` ENABLE KEYS */;
+
+
+--
+-- Definition of table `penjualan`
+--
+
+DROP TABLE IF EXISTS `penjualan`;
+CREATE TABLE `penjualan` (
+  `no_nota_penjualan` varchar(45) NOT NULL,
+  `no_pajak` varchar(45) NOT NULL,
+  `tanggal_penjualan` datetime NOT NULL,
+  `kode_customer` varchar(45) NOT NULL,
+  `tanggal_jt_penjualan` datetime NOT NULL,
+  `total_harga_penjualan` int(11) NOT NULL,
+  `delete` int(10) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`no_nota_penjualan`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `penjualan`
+--
+
+/*!40000 ALTER TABLE `penjualan` DISABLE KEYS */;
+/*!40000 ALTER TABLE `penjualan` ENABLE KEYS */;
+
+
+--
+-- Definition of table `userid`
+--
+
+DROP TABLE IF EXISTS `userid`;
+CREATE TABLE `userid` (
+  `username` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  PRIMARY KEY  (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `userid`
+--
+
+/*!40000 ALTER TABLE `userid` DISABLE KEYS */;
+INSERT INTO `userid` (`username`,`password`) VALUES 
+ ('admin','1234'),
+ ('MOKO','1234');
+/*!40000 ALTER TABLE `userid` ENABLE KEYS */;
+
+
+
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

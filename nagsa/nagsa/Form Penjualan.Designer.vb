@@ -53,7 +53,6 @@ Partial Class Formpenjualan
         Me.tbtotalrp = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.dgvdetailbarang = New System.Windows.Forms.DataGridView()
-        Me.btnubah = New System.Windows.Forms.Button()
         Me.btnhapus = New System.Windows.Forms.Button()
         Me.btnprint = New System.Windows.Forms.Button()
         Me.btnsimpan = New System.Windows.Forms.Button()
@@ -340,18 +339,9 @@ Partial Class Formpenjualan
         Me.dgvdetailbarang.Size = New System.Drawing.Size(1018, 234)
         Me.dgvdetailbarang.TabIndex = 23
         '
-        'btnubah
-        '
-        Me.btnubah.Location = New System.Drawing.Point(16, 590)
-        Me.btnubah.Name = "btnubah"
-        Me.btnubah.Size = New System.Drawing.Size(83, 47)
-        Me.btnubah.TabIndex = 24
-        Me.btnubah.Text = "Ubah"
-        Me.btnubah.UseVisualStyleBackColor = True
-        '
         'btnhapus
         '
-        Me.btnhapus.Location = New System.Drawing.Point(122, 590)
+        Me.btnhapus.Location = New System.Drawing.Point(22, 590)
         Me.btnhapus.Name = "btnhapus"
         Me.btnhapus.Size = New System.Drawing.Size(81, 47)
         Me.btnhapus.TabIndex = 25
@@ -413,7 +403,6 @@ Partial Class Formpenjualan
         Me.Controls.Add(Me.btnsimpan)
         Me.Controls.Add(Me.btnprint)
         Me.Controls.Add(Me.btnhapus)
-        Me.Controls.Add(Me.btnubah)
         Me.Controls.Add(Me.dgvdetailbarang)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.tbtotalrp)
@@ -476,7 +465,6 @@ Partial Class Formpenjualan
     Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents dgvdetailbarang As System.Windows.Forms.DataGridView
     Friend WithEvents tbno_nota As System.Windows.Forms.TextBox
-    Friend WithEvents btnubah As System.Windows.Forms.Button
     Friend WithEvents btnhapus As System.Windows.Forms.Button
     Friend WithEvents btnprint As System.Windows.Forms.Button
     Friend WithEvents btnsimpan As System.Windows.Forms.Button
