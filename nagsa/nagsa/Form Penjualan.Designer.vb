@@ -59,6 +59,7 @@ Partial Class Formpenjualan
         Me.btnkoreksi = New System.Windows.Forms.Button()
         Me.btn_tambah = New System.Windows.Forms.Button()
         Me.cbsatuan = New System.Windows.Forms.ComboBox()
+        Me.btncari = New System.Windows.Forms.Button()
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl1.SuspendLayout()
         CType(Me.dgvdetailbarang, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -195,7 +196,7 @@ Partial Class Formpenjualan
         '
         Me.tbkodebarang.Location = New System.Drawing.Point(88, 234)
         Me.tbkodebarang.Name = "tbkodebarang"
-        Me.tbkodebarang.Size = New System.Drawing.Size(100, 20)
+        Me.tbkodebarang.Size = New System.Drawing.Size(93, 20)
         Me.tbkodebarang.TabIndex = 4
         Me.tbkodebarang.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -392,11 +393,21 @@ Partial Class Formpenjualan
         Me.cbsatuan.Size = New System.Drawing.Size(121, 21)
         Me.cbsatuan.TabIndex = 25
         '
+        'btncari
+        '
+        Me.btncari.Location = New System.Drawing.Point(187, 232)
+        Me.btncari.Name = "btncari"
+        Me.btncari.Size = New System.Drawing.Size(25, 23)
+        Me.btncari.TabIndex = 30
+        Me.btncari.Text = "V"
+        Me.btncari.UseVisualStyleBackColor = True
+        '
         'Formpenjualan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1051, 665)
+        Me.Controls.Add(Me.btncari)
         Me.Controls.Add(Me.cbsatuan)
         Me.Controls.Add(Me.btn_tambah)
         Me.Controls.Add(Me.btnkoreksi)
@@ -471,4 +482,5 @@ Partial Class Formpenjualan
     Friend WithEvents btnkoreksi As System.Windows.Forms.Button
     Friend WithEvents btn_tambah As System.Windows.Forms.Button
     Friend WithEvents cbsatuan As System.Windows.Forms.ComboBox
+    Friend WithEvents btncari As System.Windows.Forms.Button
 End Class

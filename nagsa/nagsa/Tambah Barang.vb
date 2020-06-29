@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Formtambahbarang
-    Dim conn As New MySqlConnection("server=localhost;uid=root;pwd=;database=apotik")
+    Dim conn As New MySqlConnection("server=localhost;uid=root;pwd=admin;database=apotik")
     Dim comm As New MySqlCommand
     Dim adapt As New MySqlDataAdapter
     Dim query As String
@@ -38,6 +38,4 @@ Public Class Formtambahbarang
     Private Sub btbatal_Click(sender As Object, e As EventArgs) Handles btbatal.Click
         Me.Close()
     End Sub
-
-
 End Class

@@ -148,7 +148,44 @@ Public Class Formpenjualan
         End Try
     End Sub
 
-   
+    Private Sub tbdisc_TextChanged(sender As Object, e As EventArgs) Handles tbdisc.TextChanged
+        tbtotalrp.Text = CInt(tbhargajual.Text) - (CInt(tbhargajual.Text) * (CInt(tbdisc.Text) / 100))
+    End Sub
+
+    Private Sub btnhapus_Click(sender As Object, e As EventArgs) Handles btnhapus.Click
+        Try
+            dt = New DataTable
+            query = "update detail_penjualan set `delete` = 1 where kode_barang = '" + dgvdetailbarang.CurrentRow.Cells(1).Value.ToString + "'"
+            If MessageBox.Show("Yakin akan melakukan delete?", "Konfirmasi", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
+                connect.Open()
+                command = New MySqlCommand(query, connect)
+                command.ExecuteNonQuery()
+                connect.Close()
+                MessageBox.Show("Data Berhasil Dihapus")
+            End If
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub btncari_Click(sender As Object, e As EventArgs) Handles btncari.Click
+        Try
+            dt2 = New DataTable
+            query = "select itemid, nama, hargajual, nobatch, expiredate, satuan from barang where itemid = '" + tbkodebarang.Text + "'"
+            command = New MySqlCommand(query, connect)
+            adapter = New MySqlDataAdapter(command)
+            adapter.Fill(dt2)
+            tbnamabarang.Text = dt2.Rows(0).Item("nama")
+            tbhargajual.Text = dt2.Rows(0).Item("hargajual")
+            tbbatch.Text = dt2.Rows(0).Item("nobatch")
+            tb_ed.Text = dt2.Rows(0).Item("expiredate")
+            cbsatuan.Text = dt2.Rows(0).Item("satuan")
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            connect.Close()
+        End Try
+    End Sub
+
     Private Sub tbno_nota_TextChanged(sender As Object, e As EventArgs) Handles tbno_nota.TextChanged
         Try
             dt2 = New DataTable
@@ -178,44 +215,6 @@ Public Class Formpenjualan
         Catch ex As Exception
             MsgBox(ex.Message)
             connect.Close()
-        End Try
-    End Sub
-
-    Private Sub tbkodebarang_TextChanged(sender As Object, e As EventArgs) Handles tbkodebarang.TextChanged
-        Try
-            dt2 = New DataTable
-            query = "select itemid, nama, hargajual, nobatch, expiredate, satuan from barang where itemid = '" + tbkodebarang.Text + "'"
-            command = New MySqlCommand(query, connect)
-            adapter = New MySqlDataAdapter(command)
-            adapter.Fill(dt2)
-            tbnamabarang.Text = dt2.Rows(0).Item("nama")
-            tbhargajual.Text = dt2.Rows(0).Item("hargajual")
-            tbbatch.Text = dt2.Rows(0).Item("nobatch")
-            tb_ed.Text = dt2.Rows(0).Item("expiredate")
-            cbsatuan.Text = dt2.Rows(0).Item("satuan")
-        Catch ex As Exception
-            MsgBox(ex.Message)
-            connect.Close()
-        End Try
-    End Sub
-
-    Private Sub tbdisc_TextChanged(sender As Object, e As EventArgs) Handles tbdisc.TextChanged
-        tbtotalrp.Text = CInt(tbhargajual.Text) - (CInt(tbhargajual.Text) * (CInt(tbdisc.Text) / 100))
-    End Sub
-
-    Private Sub btnhapus_Click(sender As Object, e As EventArgs) Handles btnhapus.Click
-        Try
-            dt = New DataTable
-            query = "update detail_penjualan set `delete` = 1 where kode_barang = '" + dgvdetailbarang.CurrentRow.Cells(1).Value.ToString + "'"
-            If MessageBox.Show("Yakin akan melakukan delete?", "Konfirmasi", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
-                connect.Open()
-                command = New MySqlCommand(query, connect)
-                command.ExecuteNonQuery()
-                connect.Close()
-                MessageBox.Show("Data Berhasil Dihapus")
-            End If
-        Catch ex As Exception
-
         End Try
     End Sub
 End Class
