@@ -60,6 +60,7 @@ Partial Class Formpenjualan
         Me.btn_tambah = New System.Windows.Forms.Button()
         Me.cbsatuan = New System.Windows.Forms.ComboBox()
         Me.btncari = New System.Windows.Forms.Button()
+        Me.tbhargadisc = New System.Windows.Forms.TextBox()
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl1.SuspendLayout()
         CType(Me.dgvdetailbarang, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -281,7 +282,7 @@ Partial Class Formpenjualan
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(387, 274)
+        Me.Label13.Location = New System.Drawing.Point(374, 274)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(40, 13)
         Me.Label13.TabIndex = 15
@@ -289,7 +290,7 @@ Partial Class Formpenjualan
         '
         'tbjumlah
         '
-        Me.tbjumlah.Location = New System.Drawing.Point(433, 271)
+        Me.tbjumlah.Location = New System.Drawing.Point(420, 272)
         Me.tbjumlah.Name = "tbjumlah"
         Me.tbjumlah.Size = New System.Drawing.Size(66, 20)
         Me.tbjumlah.TabIndex = 16
@@ -299,7 +300,7 @@ Partial Class Formpenjualan
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(524, 274)
+        Me.Label14.Location = New System.Drawing.Point(512, 275)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(39, 13)
         Me.Label14.TabIndex = 17
@@ -307,7 +308,7 @@ Partial Class Formpenjualan
         '
         'tbdisc
         '
-        Me.tbdisc.Location = New System.Drawing.Point(569, 271)
+        Me.tbdisc.Location = New System.Drawing.Point(557, 271)
         Me.tbdisc.Name = "tbdisc"
         Me.tbdisc.Size = New System.Drawing.Size(71, 20)
         Me.tbdisc.TabIndex = 18
@@ -316,9 +317,9 @@ Partial Class Formpenjualan
         '
         'tbtotalrp
         '
-        Me.tbtotalrp.Location = New System.Drawing.Point(733, 271)
+        Me.tbtotalrp.Location = New System.Drawing.Point(807, 271)
         Me.tbtotalrp.Name = "tbtotalrp"
-        Me.tbtotalrp.Size = New System.Drawing.Size(125, 20)
+        Me.tbtotalrp.Size = New System.Drawing.Size(85, 20)
         Me.tbtotalrp.TabIndex = 21
         Me.tbtotalrp.Text = "0"
         Me.tbtotalrp.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -326,7 +327,7 @@ Partial Class Formpenjualan
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(676, 274)
+        Me.Label16.Location = New System.Drawing.Point(750, 275)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(51, 13)
         Me.Label16.TabIndex = 22
@@ -402,11 +403,21 @@ Partial Class Formpenjualan
         Me.btncari.Text = "V"
         Me.btncari.UseVisualStyleBackColor = True
         '
+        'tbhargadisc
+        '
+        Me.tbhargadisc.Location = New System.Drawing.Point(646, 271)
+        Me.tbhargadisc.Name = "tbhargadisc"
+        Me.tbhargadisc.Size = New System.Drawing.Size(71, 20)
+        Me.tbhargadisc.TabIndex = 31
+        Me.tbhargadisc.Text = "0"
+        Me.tbhargadisc.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
         'Formpenjualan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1051, 665)
+        Me.Controls.Add(Me.tbhargadisc)
         Me.Controls.Add(Me.btncari)
         Me.Controls.Add(Me.cbsatuan)
         Me.Controls.Add(Me.btn_tambah)
@@ -483,4 +494,5 @@ Partial Class Formpenjualan
     Friend WithEvents btn_tambah As System.Windows.Forms.Button
     Friend WithEvents cbsatuan As System.Windows.Forms.ComboBox
     Friend WithEvents btncari As System.Windows.Forms.Button
+    Friend WithEvents tbhargadisc As System.Windows.Forms.TextBox
 End Class

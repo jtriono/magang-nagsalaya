@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Formlogin
-    Dim conn As New MySqlConnection("server=localhost;uid=root;pwd=;database=apotik")
+    Dim conn As New MySqlConnection("server=localhost;uid=root;pwd=admin;database=apotik")
     Dim comm As New MySqlCommand
     Dim adapt As New MySqlDataAdapter
     Dim query As String
@@ -30,6 +30,10 @@ Public Class Formlogin
         If e.KeyCode = Keys.Enter Then
             btlogin.PerformClick()
         End If
+
+    End Sub
+
+    Private Sub Formlogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class
