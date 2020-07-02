@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Formpenjualan
-    Dim connect As New MySqlConnection("server=localhost;uid=root;pwd=;database=apotik;port=3306")
+    Dim connect As New MySqlConnection("server=localhost;uid=root;pwd=admin;database=apotik;port=3306")
     Dim command As New MySqlCommand
     Dim adapter As New MySqlDataAdapter
     Dim query As String
@@ -37,6 +37,11 @@ Public Class Formpenjualan
         tbtotalrp.Enabled = False
         tbno_nota.Enabled = False
         tbtotalharga.Enabled = False
+
+        tbno_pajak.Text = ""
+        tbkode_cust.Text = ""
+        tbtotalharga.Text = "0"
+
 
         Try
             autogenerate = ""
@@ -77,7 +82,7 @@ Public Class Formpenjualan
 
         Try
             dt.Clear()
-            harga = "select sum(total_harga) from detail_penjualan where `delete` = 0"
+            harga = "select sum(total_harga) from detail_penjualan where no_nota_penjualan = '" + tbno_nota.Text + "' and `delete` = 0"
             command = New MySqlCommand(harga, connect)
             adapter = New MySqlDataAdapter(command)
             adapter.Fill(dt)
@@ -115,7 +120,7 @@ Public Class Formpenjualan
 
         Try
             dt.Clear()
-            harga = "select sum(total_harga) from detail_penjualan where `delete` = 0"
+            harga = "select sum(total_harga) from detail_penjualan where no_nota_penjualan = '" + tbno_nota.Text + "' and `delete` = 0"
             command = New MySqlCommand(harga, connect)
             adapter = New MySqlDataAdapter(command)
             adapter.Fill(dt)
@@ -209,7 +214,7 @@ Public Class Formpenjualan
     Private Sub btnhapus_Click(sender As Object, e As EventArgs) Handles btnhapus.Click
         Try
             dt = New DataTable
-            query = "update detail_penjualan set `delete` = 1 where kode_barang = '" + dgvdetailbarang.CurrentRow.Cells(1).Value.ToString + "'"
+            query = "update detail_penjualan set `delete` = 1 where kode_barang = '" + dgvdetailbarang.SelectedRows.ToString + "'"
             If MessageBox.Show("Yakin akan melakukan delete?", "Konfirmasi", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
                 connect.Open()
                 command = New MySqlCommand(query, connect)
@@ -234,7 +239,7 @@ Public Class Formpenjualan
 
         Try
             dt.Clear()
-            harga = "select sum(total_harga) from detail_penjualan where `delete` = 0"
+            harga = "select sum(total_harga) from detail_penjualan where no_nota_penjualan = '" + tbno_nota.Text + "' and `delete` = 0"
             command = New MySqlCommand(harga, connect)
             adapter = New MySqlDataAdapter(command)
             adapter.Fill(dt)
@@ -282,19 +287,19 @@ Public Class Formpenjualan
             connect.Close()
         End Try
 
-        Try
-            query = "select * from detail_penjualan where no_nota_penjualan = '" + tbno_nota.Text + "'"
-            connect.Open()
-            adapter = New MySqlDataAdapter(query, connect)
-            dt3 = New DataTable
-            dt3.Clear()
-            adapter.Fill(dt3)
-            connect.Close()
-            dgvdetailbarang.DataSource = dt3
-        Catch ex As Exception
-            MsgBox(ex.Message)
-            connect.Close()
-        End Try
+        'Try
+        '    query = "select * from detail_penjualan where no_nota_penjualan = '" + tbno_nota.Text + "'"
+        '    connect.Open()
+        '    adapter = New MySqlDataAdapter(query, connect)
+        '    dt3 = New DataTable
+        '    dt3.Clear()
+        '    adapter.Fill(dt3)
+        '    connect.Close()
+        '    dgvdetailbarang.DataSource = dt3
+        'Catch ex As Exception
+        '    MsgBox(ex.Message)
+        '    connect.Close()
+        'End Try
 
         Try
             dt3.Clear()
@@ -309,7 +314,7 @@ Public Class Formpenjualan
 
         Try
             dt.Clear()
-            harga = "select sum(total_harga) from detail_penjualan where `delete` = 0"
+            harga = "select sum(total_harga) from detail_penjualan where no_nota_penjualan = '" + tbno_nota.Text + "' and `delete` = 0"
             command = New MySqlCommand(harga, connect)
             adapter = New MySqlDataAdapter(command)
             adapter.Fill(dt)

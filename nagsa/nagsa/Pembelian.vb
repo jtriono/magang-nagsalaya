@@ -1,13 +1,17 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Formpembelian
-    Dim connect As New MySqlConnection("server=localhost;uid=root;pwd=;database=apotik;port=3306")
+    Dim connect As New MySqlConnection("server=localhost;uid=root;pwd=admin;database=apotik;port=3306")
     Dim command As New MySqlCommand
     Dim adapter As New MySqlDataAdapter
     Dim query As String
     Dim dt As New DataTable
     Dim dt2 As New DataTable
     Dim autogenerate As String
-    Dim ds As New DataSet
+    Dim harga As String
+    Dim harga2 As Integer = 0
+    Dim harga3 As Integer = 0
+    Dim dt3 As New DataTable
+    Dim numtakenout As String
 
     Private Sub Formpembelian_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Label1.Font = New Font(Label1.Font.FontFamily, 30)
@@ -27,6 +31,8 @@ Public Class Formpembelian
         tb_totalharga.Enabled = False
         tb_nonota.Enabled = False
         tbnamabarang.Enabled = False
+
+        tb_kodesupplier.Text = ""
 
         Try
             autogenerate = ""
@@ -52,10 +58,44 @@ Public Class Formpembelian
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
+
+        Try
+            dt3.Clear()
+            query = "select * from detail_pembelian where no_nota_pembelian = '" + tb_nonota.Text + "' and `delete` = 0"
+            command = New MySqlCommand(query, connect)
+            adapter = New MySqlDataAdapter(command)
+            adapter.Fill(dt3)
+            dgv_barangbeli.DataSource = dt3
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+        Try
+            dt.Clear()
+            harga = "select sum(total_harga) from detail_penjualan where no_nota_pembelian = '" + tb_nonota.Text + "' and  `delete` = 0"
+            command = New MySqlCommand(harga, connect)
+            adapter = New MySqlDataAdapter(command)
+            adapter.Fill(dt)
+            tb_totalharga.Text = dt.Rows(0).Item("sum(total_harga)")
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Private Sub btn_supplier_Click(sender As Object, e As EventArgs) Handles btn_supplier.Click
-        formIsi_Supplier.ShowDialog()
+        Formsupplier.pilihsupplier = True
+        Formsupplier.ShowDialog()
+        tb_kodesupplier.Text = Formsupplier.itemtest
+        Try
+            dt2 = New DataTable
+            query = "select supplierid from supplier where supplierid = '" + tb_kodesupplier.Text + "'"
+            command = New MySqlCommand(query, connect)
+            adapter = New MySqlDataAdapter(command)
+            adapter.Fill(dt2)
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            connect.Close()
+        End Try
     End Sub
 
     Private Sub btnsimpan_Click(sender As Object, e As EventArgs) Handles btnsimpan.Click
@@ -96,6 +136,18 @@ Public Class Formpembelian
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
+
+        Try
+            dt3.Clear()
+            query = "select * from detail_pembelian where no_nota_pembelian = '" + tb_nonota.Text + "' and `delete` = 0"
+            adapter = New MySqlDataAdapter(query, connect)
+            adapter = New MySqlDataAdapter(command)
+            adapter.Fill(dt3)
+            dgv_barangbeli.DataSource = dt3
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            connect.Close()
+        End Try
     End Sub
 
     Private Sub btn_koreksi_Click(sender As Object, e As EventArgs) Handles btn_koreksi.Click
@@ -126,17 +178,140 @@ Public Class Formpembelian
         End Try
 
         Try
-            query = "select * from detail_pembelian where no_nota_pembelian = '" + tb_nonota.Text + "'"
-            connect.Open()
+            dt3.Clear()
+            query = "select * from detail_pembelian where no_nota_pembelian = '" + tb_nonota.Text + "' and `delete` = 0"
             adapter = New MySqlDataAdapter(query, connect)
-            ds = New DataSet
-            ds.Clear()
-            adapter.Fill(ds)
-            connect.Close()
-            dgv_barangbeli.DataSource = ds
+            adapter = New MySqlDataAdapter(command)
+            adapter.Fill(dt3)
+            dgv_barangbeli.DataSource = dt3
         Catch ex As Exception
             MsgBox(ex.Message)
             connect.Close()
         End Try
+
+        Try
+            dt.Clear()
+            harga = "select sum(total_harga) from detail_penjualan where no_nota_pembelian = '" + tb_nonota.Text + "' and  `delete` = 0"
+            command = New MySqlCommand(harga, connect)
+            adapter = New MySqlDataAdapter(command)
+            adapter.Fill(dt)
+            tb_totalharga.Text = dt.Rows(0).Item("sum(total_harga)")
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub tb_nonota_TextChanged(sender As Object, e As EventArgs) Handles tb_nonota.TextChanged
+        Try
+            dt2 = New DataTable
+            query = "select no_nota_pembelian, tanggal_pembelian, kode_supplier, tanggal_jt_pembelian, total_harga_pembelian from pembelian where no_nota_pembelian = '" + tb_nonota.Text + "'"
+            command = New MySqlCommand(query, connect)
+            adapter = New MySqlDataAdapter(command)
+            adapter.Fill(dt2)
+            dtptanggal.Value = dt2.Rows(0).Item("tanggal_pembelian").ToString
+            tb_kodesupplier.Text = dt2.Rows(0).Item("kode_supplier")
+            dtp_jt.Value = dt2.Rows(0).Item("tanggal_jt_pembelian").ToString
+            tb_totalharga.Text = dt2.Rows(0).Item("total_harga_pembelian").ToString
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            connect.Close()
+        End Try
+
+        'Try
+        '    query = "select * from detail_pembelian where no_nota_pembelian = '" + tb_nonota.Text + "'"
+        '    connect.Open()
+        '    adapter = New MySqlDataAdapter(query, connect)
+        '    dt3 = New DataTable
+        '    dt3.Clear()
+        '    adapter.Fill(dt3)
+        '    connect.Close()
+        '    dgv_barangbeli.DataSource = dt3
+        'Catch ex As Exception
+        '    MsgBox(ex.Message)
+        '    connect.Close()
+        'End Try
+
+        Try
+            dt3.Clear()
+            query = "select * from detail_pembelian where no_nota_pembelian = '" + tb_nonota.Text + "' and `delete` = 0"
+            command = New MySqlCommand(query, connect)
+            adapter = New MySqlDataAdapter(command)
+            adapter.Fill(dt3)
+            dgv_barangbeli.DataSource = dt3
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+        Try
+            dt.Clear()
+            harga = "select sum(total_harga) from detail_penjualan where no_nota_pembelian = '" + tb_nonota.Text + "' and  `delete` = 0"
+            command = New MySqlCommand(harga, connect)
+            adapter = New MySqlDataAdapter(command)
+            adapter.Fill(dt)
+            tb_totalharga.Text = dt.Rows(0).Item("sum(total_harga)")
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub tb_jumlah_TextChanged(sender As Object, e As EventArgs) Handles tb_jumlah.TextChanged
+        Try
+            harga2 = 0
+            If harga2 = 0 Then
+                harga2 = CInt(tb_hargabeli.Text) * CInt(tb_jumlah.Text)
+            Else
+                harga2 = 0
+                harga2 = CInt(tb_hargabeli.Text) * CInt(tb_jumlah.Text)
+            End If
+            tb_harga.Text = harga2
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub tbdisc_TextChanged(sender As Object, e As EventArgs) Handles tbdisc.TextChanged
+        Try
+            harga3 = 0
+            If tb_harga.Text = harga2 Then
+                harga3 = (CInt(tb_harga.Text) * (CInt(tbdisc.Text) / 100))
+            ElseIf tb_harga.Text <> harga2 Then
+                harga3 = 0
+                tb_harga.Text = harga2
+                harga3 = (CInt(tb_harga.Text) * (CInt(tbdisc.Text) / 100))
+            End If
+            tbhargadisc.Text = harga3
+            harga3 = 0
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub tbhargadisc_TextChanged(sender As Object, e As EventArgs) Handles tbhargadisc.TextChanged
+        tb_harga.Text = CInt(tb_harga.Text) - CInt(tbhargadisc.Text)
+    End Sub
+
+    Private Sub btncari_Click(sender As Object, e As EventArgs) Handles btncari.Click
+        Formbarang.pilihbarang = True
+        Formbarang.ShowDialog()
+        tbkodebarang.Text = Formbarang.itemtest
+        Try
+            dt2 = New DataTable
+            query = "select itemid, nama, hargabeli, nobatch, expiredate, satuan from barang where itemid = '" + tbkodebarang.Text + "'"
+            command = New MySqlCommand(query, connect)
+            adapter = New MySqlDataAdapter(command)
+            adapter.Fill(dt2)
+            tbnamabarang.Text = dt2.Rows(0).Item("nama")
+            tb_hargabeli.Text = dt2.Rows(0).Item("hargabeli")
+            tbbatch.Text = dt2.Rows(0).Item("nobatch")
+            tb_ed.Text = dt2.Rows(0).Item("expiredate")
+            cb_satuan.Text = dt2.Rows(0).Item("satuan")
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            connect.Close()
+        End Try
+    End Sub
+
+    Private Sub btnhapus_Click(sender As Object, e As EventArgs) Handles btnhapus.Click
+
     End Sub
 End Class

@@ -52,12 +52,13 @@ Partial Class Formpembelian
         Me.tb_harga = New System.Windows.Forms.TextBox()
         Me.btn_tambah = New System.Windows.Forms.Button()
         Me.dgv_barangbeli = New System.Windows.Forms.DataGridView()
-        Me.btnubah = New System.Windows.Forms.Button()
         Me.btnhapus = New System.Windows.Forms.Button()
         Me.btnsimpan = New System.Windows.Forms.Button()
         Me.btn_koreksi = New System.Windows.Forms.Button()
         Me.btn_supplier = New System.Windows.Forms.Button()
         Me.cb_satuan = New System.Windows.Forms.ComboBox()
+        Me.tbhargadisc = New System.Windows.Forms.TextBox()
+        Me.btncari = New System.Windows.Forms.Button()
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl1.SuspendLayout()
         CType(Me.dgv_barangbeli, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -175,7 +176,7 @@ Partial Class Formpembelian
         '
         Me.tbkodebarang.Location = New System.Drawing.Point(88, 257)
         Me.tbkodebarang.Name = "tbkodebarang"
-        Me.tbkodebarang.Size = New System.Drawing.Size(108, 20)
+        Me.tbkodebarang.Size = New System.Drawing.Size(88, 20)
         Me.tbkodebarang.TabIndex = 11
         Me.tbkodebarang.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -242,7 +243,7 @@ Partial Class Formpembelian
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(176, 298)
+        Me.Label11.Location = New System.Drawing.Point(158, 298)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(93, 13)
         Me.Label11.TabIndex = 19
@@ -251,7 +252,7 @@ Partial Class Formpembelian
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(402, 298)
+        Me.Label12.Location = New System.Drawing.Point(349, 298)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(40, 13)
         Me.Label12.TabIndex = 20
@@ -260,7 +261,7 @@ Partial Class Formpembelian
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(540, 298)
+        Me.Label13.Location = New System.Drawing.Point(487, 298)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(49, 13)
         Me.Label13.TabIndex = 21
@@ -268,26 +269,29 @@ Partial Class Formpembelian
         '
         'tb_hargabeli
         '
-        Me.tb_hargabeli.Location = New System.Drawing.Point(275, 295)
+        Me.tb_hargabeli.Location = New System.Drawing.Point(257, 295)
         Me.tb_hargabeli.Name = "tb_hargabeli"
-        Me.tb_hargabeli.Size = New System.Drawing.Size(100, 20)
+        Me.tb_hargabeli.Size = New System.Drawing.Size(68, 20)
         Me.tb_hargabeli.TabIndex = 23
+        Me.tb_hargabeli.Text = "0"
         Me.tb_hargabeli.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'tb_jumlah
         '
-        Me.tb_jumlah.Location = New System.Drawing.Point(448, 295)
+        Me.tb_jumlah.Location = New System.Drawing.Point(395, 295)
         Me.tb_jumlah.Name = "tb_jumlah"
         Me.tb_jumlah.Size = New System.Drawing.Size(66, 20)
         Me.tb_jumlah.TabIndex = 24
+        Me.tb_jumlah.Text = "0"
         Me.tb_jumlah.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'tbdisc
         '
-        Me.tbdisc.Location = New System.Drawing.Point(595, 295)
+        Me.tbdisc.Location = New System.Drawing.Point(542, 295)
         Me.tbdisc.Name = "tbdisc"
-        Me.tbdisc.Size = New System.Drawing.Size(85, 20)
+        Me.tbdisc.Size = New System.Drawing.Size(64, 20)
         Me.tbdisc.TabIndex = 25
+        Me.tbdisc.Text = "0"
         Me.tbdisc.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label14
@@ -305,6 +309,7 @@ Partial Class Formpembelian
         Me.tb_harga.Name = "tb_harga"
         Me.tb_harga.Size = New System.Drawing.Size(100, 20)
         Me.tb_harga.TabIndex = 27
+        Me.tb_harga.Text = "0"
         Me.tb_harga.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'btn_tambah
@@ -324,18 +329,9 @@ Partial Class Formpembelian
         Me.dgv_barangbeli.Size = New System.Drawing.Size(967, 210)
         Me.dgv_barangbeli.TabIndex = 29
         '
-        'btnubah
-        '
-        Me.btnubah.Location = New System.Drawing.Point(16, 584)
-        Me.btnubah.Name = "btnubah"
-        Me.btnubah.Size = New System.Drawing.Size(75, 53)
-        Me.btnubah.TabIndex = 30
-        Me.btnubah.Text = "Ubah"
-        Me.btnubah.UseVisualStyleBackColor = True
-        '
         'btnhapus
         '
-        Me.btnhapus.Location = New System.Drawing.Point(110, 584)
+        Me.btnhapus.Location = New System.Drawing.Point(16, 584)
         Me.btnhapus.Name = "btnhapus"
         Me.btnhapus.Size = New System.Drawing.Size(75, 53)
         Me.btnhapus.TabIndex = 31
@@ -374,20 +370,39 @@ Partial Class Formpembelian
         Me.cb_satuan.FormattingEnabled = True
         Me.cb_satuan.Location = New System.Drawing.Point(60, 295)
         Me.cb_satuan.Name = "cb_satuan"
-        Me.cb_satuan.Size = New System.Drawing.Size(94, 21)
+        Me.cb_satuan.Size = New System.Drawing.Size(76, 21)
         Me.cb_satuan.TabIndex = 35
+        '
+        'tbhargadisc
+        '
+        Me.tbhargadisc.Location = New System.Drawing.Point(621, 295)
+        Me.tbhargadisc.Name = "tbhargadisc"
+        Me.tbhargadisc.Size = New System.Drawing.Size(71, 20)
+        Me.tbhargadisc.TabIndex = 36
+        Me.tbhargadisc.Text = "0"
+        Me.tbhargadisc.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'btncari
+        '
+        Me.btncari.Location = New System.Drawing.Point(182, 255)
+        Me.btncari.Name = "btncari"
+        Me.btncari.Size = New System.Drawing.Size(26, 23)
+        Me.btncari.TabIndex = 37
+        Me.btncari.Text = "V"
+        Me.btncari.UseVisualStyleBackColor = True
         '
         'Formpembelian
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(995, 660)
+        Me.Controls.Add(Me.btncari)
+        Me.Controls.Add(Me.tbhargadisc)
         Me.Controls.Add(Me.cb_satuan)
         Me.Controls.Add(Me.btn_supplier)
         Me.Controls.Add(Me.btn_koreksi)
         Me.Controls.Add(Me.btnsimpan)
         Me.Controls.Add(Me.btnhapus)
-        Me.Controls.Add(Me.btnubah)
         Me.Controls.Add(Me.dgv_barangbeli)
         Me.Controls.Add(Me.btn_tambah)
         Me.Controls.Add(Me.tb_harga)
@@ -450,10 +465,11 @@ Partial Class Formpembelian
     Friend WithEvents tb_harga As System.Windows.Forms.TextBox
     Friend WithEvents btn_tambah As System.Windows.Forms.Button
     Friend WithEvents dgv_barangbeli As System.Windows.Forms.DataGridView
-    Friend WithEvents btnubah As System.Windows.Forms.Button
     Friend WithEvents btnhapus As System.Windows.Forms.Button
     Friend WithEvents btnsimpan As System.Windows.Forms.Button
     Friend WithEvents btn_koreksi As System.Windows.Forms.Button
     Friend WithEvents btn_supplier As System.Windows.Forms.Button
     Friend WithEvents cb_satuan As System.Windows.Forms.ComboBox
+    Friend WithEvents tbhargadisc As System.Windows.Forms.TextBox
+    Friend WithEvents btncari As System.Windows.Forms.Button
 End Class
