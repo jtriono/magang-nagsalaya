@@ -81,3 +81,7 @@ C:\Users\windows\Documents\GitHub\magang-nagsalaya\testnagsalaya\nagsa\obj\Debug
 C:\Users\windows\Documents\GitHub\magang-nagsalaya\testnagsalaya\nagsa\obj\Debug\WindowsApplication1.Formtambahbarang.resources
 C:\Users\windows\Documents\GitHub\magang-nagsalaya\testnagsalaya\nagsa\obj\Debug\nagsa.vbproj.GenerateResource.Cache
 C:\Users\windows\Documents\GitHub\magang-nagsalaya\testnagsalaya\nagsa\obj\Debug\nagsa.exe.licenses
+C:\Users\Jeffrin\Desktop\magang-nagsalaya\testnagsalaya\nagsa\bin\Debug\nagsa.exe.config
+C:\Users\Jeffrin\Desktop\magang-nagsalaya\testnagsalaya\nagsa\obj\Debug\nagsa.exe
+C:\Users\Jeffrin\Desktop\magang-nagsalaya\testnagsalaya\nagsa\obj\Debug\nagsa.xml
+C:\Users\Jeffrin\Desktop\magang-nagsalaya\testnagsalaya\nagsa\obj\Debug\nagsa.pdb

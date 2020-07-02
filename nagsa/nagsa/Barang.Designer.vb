@@ -31,6 +31,7 @@ Partial Class Formbarang
         'dgvbarang
         '
         Me.dgvbarang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvbarang.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.dgvbarang.Location = New System.Drawing.Point(12, 24)
         Me.dgvbarang.Name = "dgvbarang"
         Me.dgvbarang.Size = New System.Drawing.Size(736, 287)

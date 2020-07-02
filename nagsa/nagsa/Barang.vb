@@ -1,12 +1,14 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Formbarang
-    Dim conn As New MySqlConnection("server=localhost;uid=root;pwd=admin;database=apotik")
+    Dim conn As New MySqlConnection("server=localhost;uid=root;pwd=;database=apotik")
     Dim comm As New MySqlCommand
     Dim adapt As New MySqlDataAdapter
     Dim query As String
-    Dim tampungbarang As New DataTable
+    Public itemtest As String
+    Public pilihbarang As Boolean = False
+
     Private Sub Formbarang_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        tampungbarang.Clear()
+        Dim tampungbarang As New DataTable
         query = "select * from barang"
         comm = New MySqlCommand(query, conn)
         adapt = New MySqlDataAdapter(comm)
@@ -17,4 +19,14 @@ Public Class Formbarang
     Private Sub bttambah_Click(sender As Object, e As EventArgs) Handles bttambah.Click
         Formtambahbarang.ShowDialog()
     End Sub
+
+    Private Sub dgvbarang_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvbarang.CellContentDoubleClick
+        If pilihbarang = True Then
+            itemtest = dgvbarang.Rows(e.RowIndex).Cells(0).Value.ToString
+            pilihbarang = False
+            Me.Close()
+
+        End If
+    End Sub
+
 End Class

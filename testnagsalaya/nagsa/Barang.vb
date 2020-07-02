@@ -23,4 +23,6 @@ Public Class Formbarang
         Me.Close()
     End Sub
 
+   
+   
 End Class

@@ -55,7 +55,7 @@ Public Class Formpembelian
     End Sub
 
     Private Sub btn_supplier_Click(sender As Object, e As EventArgs) Handles btn_supplier.Click
-        Isi_Supplier.ShowDialog()
+        formIsi_Supplier.ShowDialog()
     End Sub
 
     Private Sub btnsimpan_Click(sender As Object, e As EventArgs) Handles btnsimpan.Click
