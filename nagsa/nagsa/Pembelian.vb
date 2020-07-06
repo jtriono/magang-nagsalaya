@@ -12,6 +12,7 @@ Public Class Formpembelian
     Dim harga3 As Integer = 0
     Dim dt3 As New DataTable
     Dim numtakenout As String
+    Dim pilih As String
 
     Private Sub Formpembelian_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Label1.Font = New Font(Label1.Font.FontFamily, 30)
@@ -101,7 +102,7 @@ Public Class Formpembelian
     Private Sub btnsimpan_Click(sender As Object, e As EventArgs) Handles btnsimpan.Click
         Try
             dt = New DataTable
-            query = "insert into pembelian values('" + tb_nonota.Text + "','" + dtptanggal.Text + "','" + tb_kodesupplier.Text + "','" + dtp_jt.Text + "','" + tb_totalharga.Text + "')"
+            query = "insert into pembelian values('" + tb_nonota.Text + "','" + dtptanggal.Value.ToString("yyyy-MM-dd") + "','" + tb_kodesupplier.Text + "','" + dtp_jt.Value.ToString("yyyy-MM-dd") + "','" + tb_totalharga.Text + "',0)"
             connect.Open()
             command = New MySqlCommand(query, connect)
             command.ExecuteNonQuery()
@@ -157,7 +158,7 @@ Public Class Formpembelian
     Private Sub btn_tambah_Click(sender As Object, e As EventArgs) Handles btn_tambah.Click
         Try
             dt = New DataTable
-            query = "insert into detail_pembelian values('" + tbkodebarang.Text + "','" + tb_nonota.Text + "','" + tbbatch.Text + "','" + tb_ed.Text + "','" + cb_satuan.Text + "','" + tb_hargabeli.Text + "','" + tb_jumlah.Text + "','" + tbdisc.Text + "','" + tb_harga.Text + "','" + tbnamabarang.Text + "')"
+            query = "insert into detail_pembelian values('" + tbkodebarang.Text + "','" + tb_nonota.Text + "','" + tbbatch.Text + "','" + tb_ed.Text + "','" + cb_satuan.Text + "','" + tb_hargabeli.Text + "','" + tb_jumlah.Text + "','" + tbdisc.Text + "','" + tb_harga.Text + "','" + tbnamabarang.Text + "',0)"
             connect.Open()
             command = New MySqlCommand(query, connect)
             command.ExecuteNonQuery()
@@ -312,6 +313,44 @@ Public Class Formpembelian
     End Sub
 
     Private Sub btnhapus_Click(sender As Object, e As EventArgs) Handles btnhapus.Click
+        Try
+            dt = New DataTable
+            query = "update detail_pembelian set `delete` = 1 where kode_barang_pembelian = '" + pilih + "'"
+            If MessageBox.Show("Yakin akan melakukan delete?", "Konfirmasi", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
+                connect.Open()
+                command = New MySqlCommand(query, connect)
+                command.ExecuteNonQuery()
+                connect.Close()
+                MessageBox.Show("Data Berhasil Dihapus")
+            End If
+        Catch ex As Exception
 
+        End Try
+
+        Try
+            dt3.Clear()
+            query = "select * from detail_pembelian where no_nota_pembelian = '" + tb_nonota.Text + "' and `delete` = 0"
+            command = New MySqlCommand(query, connect)
+            adapter = New MySqlDataAdapter(command)
+            adapter.Fill(dt3)
+            dgv_barangbeli.DataSource = dt3
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+        Try
+            dt.Clear()
+            harga = "select sum(total_harga) from detail_pembelian where no_nota_pembelian = '" + tb_nonota.Text + "' and `delete` = 0"
+            command = New MySqlCommand(harga, connect)
+            adapter = New MySqlDataAdapter(command)
+            adapter.Fill(dt)
+            tb_totalharga.Text = dt.Rows(0).Item("sum(total_harga)")
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub dgv_barangbeli_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_barangbeli.CellContentClick
+        pilih = dgv_barangbeli.Rows(e.RowIndex).Cells(0).Value.ToString
     End Sub
 End Class
