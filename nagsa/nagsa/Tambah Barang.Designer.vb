@@ -26,7 +26,6 @@ Partial Class Formtambahbarang
         Me.bttambah = New System.Windows.Forms.Button()
         Me.tbstok = New System.Windows.Forms.TextBox()
         Me.tbsatuan = New System.Windows.Forms.TextBox()
-        Me.tbexpire = New System.Windows.Forms.TextBox()
         Me.tbbatch = New System.Windows.Forms.TextBox()
         Me.tbhjual = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -38,6 +37,7 @@ Partial Class Formtambahbarang
         Me.tbhbeli = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.tbnama = New System.Windows.Forms.TextBox()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.SuspendLayout()
         '
         'btbatal
@@ -71,13 +71,6 @@ Partial Class Formtambahbarang
         Me.tbsatuan.Name = "tbsatuan"
         Me.tbsatuan.Size = New System.Drawing.Size(388, 20)
         Me.tbsatuan.TabIndex = 28
-        '
-        'tbexpire
-        '
-        Me.tbexpire.Location = New System.Drawing.Point(86, 131)
-        Me.tbexpire.Name = "tbexpire"
-        Me.tbexpire.Size = New System.Drawing.Size(388, 20)
-        Me.tbexpire.TabIndex = 27
         '
         'tbbatch
         '
@@ -170,16 +163,25 @@ Partial Class Formtambahbarang
         Me.tbnama.Size = New System.Drawing.Size(388, 20)
         Me.tbnama.TabIndex = 16
         '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker1.Location = New System.Drawing.Point(86, 129)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(388, 20)
+        Me.DateTimePicker1.TabIndex = 32
+        Me.DateTimePicker1.Value = New Date(2020, 7, 3, 0, 0, 0, 0)
+        '
         'Formtambahbarang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(516, 274)
+        Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.btbatal)
         Me.Controls.Add(Me.bttambah)
         Me.Controls.Add(Me.tbstok)
         Me.Controls.Add(Me.tbsatuan)
-        Me.Controls.Add(Me.tbexpire)
         Me.Controls.Add(Me.tbbatch)
         Me.Controls.Add(Me.tbhjual)
         Me.Controls.Add(Me.Label7)
@@ -201,7 +203,6 @@ Partial Class Formtambahbarang
     Friend WithEvents bttambah As System.Windows.Forms.Button
     Friend WithEvents tbstok As System.Windows.Forms.TextBox
     Friend WithEvents tbsatuan As System.Windows.Forms.TextBox
-    Friend WithEvents tbexpire As System.Windows.Forms.TextBox
     Friend WithEvents tbbatch As System.Windows.Forms.TextBox
     Friend WithEvents tbhjual As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
@@ -213,4 +214,5 @@ Partial Class Formtambahbarang
     Friend WithEvents tbhbeli As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents tbnama As System.Windows.Forms.TextBox
+    Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
 End Class

@@ -27,7 +27,7 @@ Public Class formIsi_Supplier
             autoid = autoid + "S" + (tampungsupp.Rows.Count + 1).ToString
         End If
 
-        query = "insert into supplier values('" + autoid + "','" + tbnama.Text + "','" + tbalamat.Text + "','" + tbkota.Text + "','" + tbtelpon.Text + "','" + tbhutang.Text + "')"
+        query = "insert into supplier values('" + autoid + "','" + tbnama.Text + "','" + tbalamat.Text + "','" + tbkota.Text + "','" + tbtelpon.Text + "','" + tbhutang.Text + "','0')"
         conn.Open()
         comm = New MySqlCommand(query, conn)
         comm.ExecuteNonQuery()

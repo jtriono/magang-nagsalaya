@@ -25,6 +25,8 @@ Partial Class Formbarang
         Me.dgvbarang = New System.Windows.Forms.DataGridView()
         Me.bthapus = New System.Windows.Forms.Button()
         Me.bttambah = New System.Windows.Forms.Button()
+        Me.textboxcari = New System.Windows.Forms.TextBox()
+        Me.buttoncari = New System.Windows.Forms.Button()
         CType(Me.dgvbarang, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -32,14 +34,14 @@ Partial Class Formbarang
         '
         Me.dgvbarang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvbarang.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
-        Me.dgvbarang.Location = New System.Drawing.Point(12, 24)
+        Me.dgvbarang.Location = New System.Drawing.Point(12, 42)
         Me.dgvbarang.Name = "dgvbarang"
         Me.dgvbarang.Size = New System.Drawing.Size(736, 287)
         Me.dgvbarang.TabIndex = 5
         '
         'bthapus
         '
-        Me.bthapus.Location = New System.Drawing.Point(93, 317)
+        Me.bthapus.Location = New System.Drawing.Point(93, 335)
         Me.bthapus.Name = "bthapus"
         Me.bthapus.Size = New System.Drawing.Size(75, 23)
         Me.bthapus.TabIndex = 4
@@ -48,18 +50,36 @@ Partial Class Formbarang
         '
         'bttambah
         '
-        Me.bttambah.Location = New System.Drawing.Point(12, 317)
+        Me.bttambah.Location = New System.Drawing.Point(12, 335)
         Me.bttambah.Name = "bttambah"
         Me.bttambah.Size = New System.Drawing.Size(75, 23)
         Me.bttambah.TabIndex = 3
         Me.bttambah.Text = "Tambah"
         Me.bttambah.UseVisualStyleBackColor = True
         '
+        'textboxcari
+        '
+        Me.textboxcari.Location = New System.Drawing.Point(12, 16)
+        Me.textboxcari.Name = "textboxcari"
+        Me.textboxcari.Size = New System.Drawing.Size(655, 20)
+        Me.textboxcari.TabIndex = 6
+        '
+        'buttoncari
+        '
+        Me.buttoncari.Location = New System.Drawing.Point(673, 14)
+        Me.buttoncari.Name = "buttoncari"
+        Me.buttoncari.Size = New System.Drawing.Size(75, 23)
+        Me.buttoncari.TabIndex = 7
+        Me.buttoncari.Text = "Cari"
+        Me.buttoncari.UseVisualStyleBackColor = True
+        '
         'Formbarang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(783, 370)
+        Me.Controls.Add(Me.buttoncari)
+        Me.Controls.Add(Me.textboxcari)
         Me.Controls.Add(Me.dgvbarang)
         Me.Controls.Add(Me.bthapus)
         Me.Controls.Add(Me.bttambah)
@@ -67,9 +87,12 @@ Partial Class Formbarang
         Me.Text = "Barang"
         CType(Me.dgvbarang, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents dgvbarang As System.Windows.Forms.DataGridView
     Friend WithEvents bthapus As System.Windows.Forms.Button
     Friend WithEvents bttambah As System.Windows.Forms.Button
+    Friend WithEvents textboxcari As System.Windows.Forms.TextBox
+    Friend WithEvents buttoncari As System.Windows.Forms.Button
 End Class

@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Formtambahbarang
-    Dim conn As New MySqlConnection("server=localhost;uid=root;pwd=admin;database=apotik")
+    Dim conn As New MySqlConnection("server=localhost;uid=root;pwd=;database=apotik")
     Dim comm As New MySqlCommand
     Dim adapt As New MySqlDataAdapter
     Dim query As String
@@ -26,7 +26,7 @@ Public Class Formtambahbarang
             autoid = autoid + "I" + (tampungitem.Rows.Count + 1).ToString
         End If
 
-        query = "insert into barang values('" + autoid + "','" + tbnama.Text + "','" + tbhbeli.Text + "','" + tbhjual.Text + "','" + tbstok.Text + "','" + tbbatch.Text + "','" + tbexpire.Text + "','" + tbsatuan.Text + "')"
+        query = "insert into barang values('" + autoid + "','" + tbnama.Text + "','" + tbhbeli.Text + "','" + tbhjual.Text + "','" + tbstok.Text + "','" + tbbatch.Text + "','" + DateTimePicker1.Value + "','" + tbsatuan.Text + "','0')"
         conn.Open()
         comm = New MySqlCommand(query, conn)
         comm.ExecuteNonQuery()
@@ -37,5 +37,10 @@ Public Class Formtambahbarang
 
     Private Sub btbatal_Click(sender As Object, e As EventArgs) Handles btbatal.Click
         Me.Close()
+    End Sub
+
+    Private Sub Formtambahbarang_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        Formbarang.textboxcari.Text = ""
+        Formbarang.buttoncari.PerformClick()
     End Sub
 End Class

@@ -27,7 +27,7 @@ Partial Class Formsupplier
         Me.textboxcari = New System.Windows.Forms.TextBox()
         Me.btncari = New System.Windows.Forms.Button()
         Me.btntambah = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnhapus = New System.Windows.Forms.Button()
         CType(Me.dgvsupplier, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -74,21 +74,21 @@ Partial Class Formsupplier
         Me.btntambah.Text = "Tambah"
         Me.btntambah.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnhapus
         '
-        Me.Button2.Location = New System.Drawing.Point(93, 299)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 5
-        Me.Button2.Text = "Hapus"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnhapus.Location = New System.Drawing.Point(93, 299)
+        Me.btnhapus.Name = "btnhapus"
+        Me.btnhapus.Size = New System.Drawing.Size(75, 23)
+        Me.btnhapus.TabIndex = 5
+        Me.btnhapus.Text = "Hapus"
+        Me.btnhapus.UseVisualStyleBackColor = True
         '
         'Formsupplier
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(641, 330)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.btnhapus)
         Me.Controls.Add(Me.btntambah)
         Me.Controls.Add(Me.btncari)
         Me.Controls.Add(Me.textboxcari)
@@ -106,5 +106,5 @@ Partial Class Formsupplier
     Friend WithEvents textboxcari As System.Windows.Forms.TextBox
     Friend WithEvents btncari As System.Windows.Forms.Button
     Friend WithEvents btntambah As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents btnhapus As System.Windows.Forms.Button
 End Class

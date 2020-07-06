@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Formpenjualan
-    Dim connect As New MySqlConnection("server=localhost;uid=root;pwd=admin;database=apotik;port=3306")
+    Dim connect As New MySqlConnection("server=localhost;uid=root;pwd=;database=apotik;port=3306")
     Dim command As New MySqlCommand
     Dim adapter As New MySqlDataAdapter
     Dim query As String
@@ -12,6 +12,7 @@ Public Class Formpenjualan
     Dim harga3 As Integer = 0
     Dim dt3 As New DataTable
     Dim numtakenout As String
+    Dim pilih As String
 
 
 
@@ -214,7 +215,7 @@ Public Class Formpenjualan
     Private Sub btnhapus_Click(sender As Object, e As EventArgs) Handles btnhapus.Click
         Try
             dt = New DataTable
-            query = "update detail_penjualan set `delete` = 1 where kode_barang = '" + dgvdetailbarang.SelectedRows.ToString + "'"
+            query = "update detail_penjualan set `delete` = 1 where kode_barang = '" + pilih + "'"
             If MessageBox.Show("Yakin akan melakukan delete?", "Konfirmasi", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
                 connect.Open()
                 command = New MySqlCommand(query, connect)
@@ -341,5 +342,9 @@ Public Class Formpenjualan
 
     Private Sub tbhargadisc_TextChanged(sender As Object, e As EventArgs) Handles tbhargadisc.TextChanged
         tbtotalrp.Text = CInt(tbtotalrp.Text) - CInt(tbhargadisc.Text)
+    End Sub
+
+    Private Sub dgvdetailbarang_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvdetailbarang.CellContentClick
+        pilih = dgvdetailbarang.Rows(e.RowIndex).Cells(0).Value.ToString
     End Sub
 End Class

@@ -29,7 +29,7 @@ Public Class Formtambahcust
             autoid = autoid + "C" + (tampungcust.Rows.Count + 1).ToString
         End If
 
-        query = "insert into customer values('" + autoid + "','" + tbnama.Text + "','" + tbalamat.Text + "','" + Tbkota.Text + "','" + Tbnotelp.Text + "','" + Tbnpwp.Text + "')"
+        query = "insert into customer values('" + autoid + "','" + tbnama.Text + "','" + tbalamat.Text + "','" + Tbkota.Text + "','" + Tbnotelp.Text + "','" + Tbnpwp.Text + "','0')"
         conn.Open()
         comm = New MySqlCommand(query, conn)
         comm.ExecuteNonQuery()
