@@ -6,7 +6,7 @@ Public Class Formtambahbarang
     Dim query As String
     Dim tampungitem As New DataTable
     Dim autoid As String
-
+    Dim datevalue As String
     Private Sub bttambah_Click(sender As Object, e As EventArgs) Handles bttambah.Click
         autoid = ""
         tampungitem = New DataTable
@@ -25,8 +25,9 @@ Public Class Formtambahbarang
         ElseIf tampungitem.Rows.Count < 99999 Then
             autoid = autoid + "I" + (tampungitem.Rows.Count + 1).ToString
         End If
-
-        query = "insert into barang values('" + autoid + "','" + tbnama.Text + "','" + tbhbeli.Text + "','" + tbhjual.Text + "','" + tbstok.Text + "','" + tbbatch.Text + "','" + DateTimePicker1.Value + "','" + tbsatuan.Text + "','0')"
+        datevalue = dtpexpire.Value.Date.ToString("yyyy-MM-dd")
+        datevalue = datevalue.Replace("/", "-")
+        query = "insert into barang values('" + autoid + "','" + tbnama.Text + "','" + tbhbeli.Text + "','" + tbhjual.Text + "','" + tbstok.Text + "','" + tbbatch.Text + "','" + datevalue + "','" + tbsatuan.Text + "','0')"
         conn.Open()
         comm = New MySqlCommand(query, conn)
         comm.ExecuteNonQuery()
@@ -42,5 +43,10 @@ Public Class Formtambahbarang
     Private Sub Formtambahbarang_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         Formbarang.textboxcari.Text = ""
         Formbarang.buttoncari.PerformClick()
+    End Sub
+
+    
+    Private Sub Formtambahbarang_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        dtpexpire.CustomFormat = "yyyy-MM-dd"
     End Sub
 End Class

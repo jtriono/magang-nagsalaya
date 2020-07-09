@@ -37,7 +37,7 @@ Partial Class Formtambahbarang
         Me.tbhbeli = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.tbnama = New System.Windows.Forms.TextBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.dtpexpire = New System.Windows.Forms.DateTimePicker()
         Me.SuspendLayout()
         '
         'btbatal
@@ -163,21 +163,22 @@ Partial Class Formtambahbarang
         Me.tbnama.Size = New System.Drawing.Size(388, 20)
         Me.tbnama.TabIndex = 16
         '
-        'DateTimePicker1
+        'dtpexpire
         '
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(86, 129)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(388, 20)
-        Me.DateTimePicker1.TabIndex = 32
-        Me.DateTimePicker1.Value = New Date(2020, 7, 3, 0, 0, 0, 0)
+        Me.dtpexpire.CustomFormat = "yyyy-MM-dd"
+        Me.dtpexpire.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtpexpire.Location = New System.Drawing.Point(86, 129)
+        Me.dtpexpire.Name = "dtpexpire"
+        Me.dtpexpire.Size = New System.Drawing.Size(388, 20)
+        Me.dtpexpire.TabIndex = 32
+        Me.dtpexpire.Value = New Date(2020, 7, 3, 0, 0, 0, 0)
         '
         'Formtambahbarang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(516, 274)
-        Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.dtpexpire)
         Me.Controls.Add(Me.btbatal)
         Me.Controls.Add(Me.bttambah)
         Me.Controls.Add(Me.tbstok)
@@ -214,5 +215,5 @@ Partial Class Formtambahbarang
     Friend WithEvents tbhbeli As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents tbnama As System.Windows.Forms.TextBox
-    Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents dtpexpire As System.Windows.Forms.DateTimePicker
 End Class

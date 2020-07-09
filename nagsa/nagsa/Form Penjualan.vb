@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Formpenjualan
-    Dim connect As New MySqlConnection("server=localhost;uid=root;pwd=admin;database=apotik;port=3306")
+    Dim connect As New MySqlConnection("server=localhost;uid=root;pwd=;database=apotik;port=3306")
     Dim command As New MySqlCommand
     Dim adapter As New MySqlDataAdapter
     Dim query As String
@@ -89,7 +89,7 @@ Public Class Formpenjualan
             adapter.Fill(dt)
             tbtotalharga.Text = dt.Rows(0).Item("sum(total_harga)")
         Catch ex As Exception
-
+            MsgBox(ex.Message)
         End Try
     End Sub
 
@@ -208,7 +208,7 @@ Public Class Formpenjualan
             tbhargadisc.Text = harga3
             harga3 = 0
         Catch ex As Exception
-
+            MsgBox(ex.Message)
         End Try
     End Sub
 
@@ -228,6 +228,18 @@ Public Class Formpenjualan
         End Try
 
         Try
+            dt.Clear()
+            harga = "select sum(total_harga) from detail_penjualan where no_nota_penjualan = '" + tbno_nota.Text + "' and `delete` = 0"
+            command = New MySqlCommand(harga, connect)
+            adapter = New MySqlDataAdapter(command)
+            adapter.Fill(dt)
+            tbtotalharga.Text = dt.Rows(0).Item("sum(total_harga)")
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+
+        Try
             dt3.Clear()
             query = "select * from detail_penjualan where no_nota_penjualan = '" + tbno_nota.Text + "' and `delete` = 0"
             command = New MySqlCommand(query, connect)
@@ -238,16 +250,7 @@ Public Class Formpenjualan
             MsgBox(ex.Message)
         End Try
 
-        Try
-            dt.Clear()
-            harga = "select sum(total_harga) from detail_penjualan where no_nota_penjualan = '" + tbno_nota.Text + "' and `delete` = 0"
-            command = New MySqlCommand(harga, connect)
-            adapter = New MySqlDataAdapter(command)
-            adapter.Fill(dt)
-            tbtotalharga.Text = dt.Rows(0).Item("sum(total_harga)")
-        Catch ex As Exception
-
-        End Try
+       
     End Sub
 
     Private Sub btncari_Click(sender As Object, e As EventArgs) Handles btncari.Click
@@ -321,8 +324,9 @@ Public Class Formpenjualan
             adapter.Fill(dt)
             tbtotalharga.Text = dt.Rows(0).Item("sum(total_harga)")
         Catch ex As Exception
-
+            MsgBox(ex.Message)
         End Try
+
     End Sub
 
     Private Sub tbjumlah_TextChanged(sender As Object, e As EventArgs) Handles tbjumlah.TextChanged
@@ -336,7 +340,7 @@ Public Class Formpenjualan
             End If
             tbtotalrp.Text = harga2
         Catch ex As Exception
-
+            MsgBox(ex.Message)
         End Try
     End Sub
 
@@ -347,4 +351,6 @@ Public Class Formpenjualan
     Private Sub dgvdetailbarang_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvdetailbarang.CellContentClick
         pilih = dgvdetailbarang.Rows(e.RowIndex).Cells(0).Value.ToString
     End Sub
+
+    
 End Class
