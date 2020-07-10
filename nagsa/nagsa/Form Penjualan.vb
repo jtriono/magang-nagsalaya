@@ -213,7 +213,6 @@ Public Class Formpenjualan
     End Sub
 
     Private Sub btnhapus_Click(sender As Object, e As EventArgs) Handles btnhapus.Click
-        Try
             dt = New DataTable
             query = "update detail_penjualan set `delete` = 1 where kode_barang = '" + pilih + "'"
             If MessageBox.Show("Yakin akan melakukan delete?", "Konfirmasi", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
@@ -223,34 +222,28 @@ Public Class Formpenjualan
                 connect.Close()
                 MessageBox.Show("Data Berhasil Dihapus")
             End If
-        Catch ex As Exception
-
-        End Try
-
-        Try
-            dt.Clear()
-            harga = "select sum(total_harga) from detail_penjualan where no_nota_penjualan = '" + tbno_nota.Text + "' and `delete` = 0"
-            command = New MySqlCommand(harga, connect)
-            adapter = New MySqlDataAdapter(command)
-            adapter.Fill(dt)
-            tbtotalharga.Text = dt.Rows(0).Item("sum(total_harga)")
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
-
-
-        Try
-            dt3.Clear()
-            query = "select * from detail_penjualan where no_nota_penjualan = '" + tbno_nota.Text + "' and `delete` = 0"
-            command = New MySqlCommand(query, connect)
-            adapter = New MySqlDataAdapter(command)
-            adapter.Fill(dt3)
-            dgvdetailbarang.DataSource = dt3
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
-
        
+
+
+        dt.Clear()
+        harga = "select sum(total_harga) from detail_penjualan where no_nota_penjualan = '" + tbno_nota.Text + "' and `delete` = 0"
+        command = New MySqlCommand(harga, connect)
+        adapter = New MySqlDataAdapter(command)
+        adapter.Fill(dt)
+        tbtotalharga.Text = dt.Rows(0).Item("sum(total_harga)")
+
+
+
+
+        dt3.Clear()
+        query = "select * from detail_penjualan where no_nota_penjualan = '" + tbno_nota.Text + "' and `delete` = 0"
+        command = New MySqlCommand(query, connect)
+        adapter = New MySqlDataAdapter(command)
+        adapter.Fill(dt3)
+        dgvdetailbarang.DataSource = dt3
+        
+
+
     End Sub
 
     Private Sub btncari_Click(sender As Object, e As EventArgs) Handles btncari.Click

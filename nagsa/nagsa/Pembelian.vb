@@ -178,28 +178,23 @@ Public Class Formpembelian
             connect.Close()
         End Try
 
-        Try
-            dt.Clear()
-            harga = "select sum(total_harga) from detail_pembelian where no_nota_pembelian = '" + tb_nonota.Text + "' and  `delete` = 0"
-            command = New MySqlCommand(harga, connect)
-            adapter = New MySqlDataAdapter(command)
-            adapter.Fill(dt)
-            tb_totalharga.Text = dt.Rows(0).Item("sum(total_harga)")
-        Catch ex As Exception
 
-        End Try
+        dt.Clear()
+        harga = "select sum(total_harga) from detail_pembelian where no_nota_pembelian = '" + tb_nonota.Text + "' and  `delete` = 0"
+        command = New MySqlCommand(harga, connect)
+        adapter = New MySqlDataAdapter(command)
+        adapter.Fill(dt)
+        tb_totalharga.Text = dt.Rows(0).Item("sum(total_harga)")
 
-        Try
-            dt3.Clear()
-            query = "select * from detail_pembelian where no_nota_pembelian = '" + tb_nonota.Text + "' and `delete` = 0"
-            adapter = New MySqlDataAdapter(query, connect)
-            adapter = New MySqlDataAdapter(command)
-            adapter.Fill(dt3)
-            dgv_barangbeli.DataSource = dt3
-        Catch ex As Exception
-            MsgBox(ex.Message)
-            connect.Close()
-        End Try
+
+
+        dt3.Clear()
+        query = "select * from detail_pembelian where no_nota_pembelian = '" + tb_nonota.Text + "' and `delete` = 0"
+        command = New MySqlCommand(query, connect)
+        adapter = New MySqlDataAdapter(command)
+        adapter.Fill(dt3)
+        dgv_barangbeli.DataSource = dt3
+
 
     End Sub
 
@@ -300,41 +295,36 @@ Public Class Formpembelian
     End Sub
 
     Private Sub btnhapus_Click(sender As Object, e As EventArgs) Handles btnhapus.Click
-        Try
-            dt = New DataTable
-            query = "update detail_pembelian set `delete` = 1 where kode_barang_pembelian = '" + pilih + "'"
-            If MessageBox.Show("Yakin akan melakukan delete?", "Konfirmasi", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
-                connect.Open()
-                command = New MySqlCommand(query, connect)
-                command.ExecuteNonQuery()
-                connect.Close()
-                MessageBox.Show("Data Berhasil Dihapus")
-            End If
-        Catch ex As Exception
 
-        End Try
-
-        Try
-            dt3.Clear()
-            query = "select * from detail_pembelian where no_nota_pembelian = '" + tb_nonota.Text + "' and `delete` = 0"
+        dt = New DataTable
+        query = "update detail_pembelian set `delete` = 1 where kode_barang_pembelian = '" + pilih + "'"
+        If MessageBox.Show("Yakin akan melakukan delete?", "Konfirmasi", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
+            connect.Open()
             command = New MySqlCommand(query, connect)
-            adapter = New MySqlDataAdapter(command)
-            adapter.Fill(dt3)
-            dgv_barangbeli.DataSource = dt3
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
+            command.ExecuteNonQuery()
+            connect.Close()
+            MessageBox.Show("Data Berhasil Dihapus")
+        End If
 
-        Try
-            dt.Clear()
-            harga = "select sum(total_harga) from detail_pembelian where no_nota_pembelian = '" + tb_nonota.Text + "' and `delete` = 0"
-            command = New MySqlCommand(harga, connect)
-            adapter = New MySqlDataAdapter(command)
-            adapter.Fill(dt)
-            tb_totalharga.Text = dt.Rows(0).Item("sum(total_harga)")
-        Catch ex As Exception
 
-        End Try
+
+        dt3.Clear()
+        query = "select * from detail_pembelian where no_nota_pembelian = '" + tb_nonota.Text + "' and `delete` = 0"
+        command = New MySqlCommand(query, connect)
+        adapter = New MySqlDataAdapter(command)
+        adapter.Fill(dt3)
+        dgv_barangbeli.DataSource = dt3
+
+
+
+
+        dt.Clear()
+        harga = "select sum(total_harga) from detail_pembelian where no_nota_pembelian = '" + tb_nonota.Text + "' and `delete` = 0"
+        command = New MySqlCommand(harga, connect)
+        adapter = New MySqlDataAdapter(command)
+        adapter.Fill(dt)
+        tb_totalharga.Text = dt.Rows(0).Item("sum(total_harga)")
+
     End Sub
 
     Private Sub dgv_barangbeli_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_barangbeli.CellContentClick
