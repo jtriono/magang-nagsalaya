@@ -75,9 +75,9 @@ Partial Class Formpembelian
         '
         'tb_totalharga
         '
-        Me.tb_totalharga.Location = New System.Drawing.Point(769, 10)
+        Me.tb_totalharga.Location = New System.Drawing.Point(621, 10)
         Me.tb_totalharga.Name = "tb_totalharga"
-        Me.tb_totalharga.Size = New System.Drawing.Size(214, 20)
+        Me.tb_totalharga.Size = New System.Drawing.Size(362, 20)
         Me.tb_totalharga.TabIndex = 1
         Me.tb_totalharga.Text = "0"
         Me.tb_totalharga.TextAlign = System.Windows.Forms.HorizontalAlignment.Right

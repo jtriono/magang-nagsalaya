@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Formpembelian
-    Dim connect As New MySqlConnection("server=localhost;uid=root;pwd=admin;database=apotik;port=3306")
+    Dim connect As New MySqlConnection("server=localhost;uid=root;pwd=;database=apotik;port=3306")
     Dim command As New MySqlCommand
     Dim adapter As New MySqlDataAdapter
     Dim query As String
@@ -179,6 +179,17 @@ Public Class Formpembelian
         End Try
 
         Try
+            dt.Clear()
+            harga = "select sum(total_harga) from detail_pembelian where no_nota_pembelian = '" + tb_nonota.Text + "' and  `delete` = 0"
+            command = New MySqlCommand(harga, connect)
+            adapter = New MySqlDataAdapter(command)
+            adapter.Fill(dt)
+            tb_totalharga.Text = dt.Rows(0).Item("sum(total_harga)")
+        Catch ex As Exception
+
+        End Try
+
+        Try
             dt3.Clear()
             query = "select * from detail_pembelian where no_nota_pembelian = '" + tb_nonota.Text + "' and `delete` = 0"
             adapter = New MySqlDataAdapter(query, connect)
@@ -190,16 +201,6 @@ Public Class Formpembelian
             connect.Close()
         End Try
 
-        Try
-            dt.Clear()
-            harga = "select sum(total_harga) from detail_penjualan where no_nota_pembelian = '" + tb_nonota.Text + "' and  `delete` = 0"
-            command = New MySqlCommand(harga, connect)
-            adapter = New MySqlDataAdapter(command)
-            adapter.Fill(dt)
-            tb_totalharga.Text = dt.Rows(0).Item("sum(total_harga)")
-        Catch ex As Exception
-
-        End Try
     End Sub
 
     Private Sub tb_nonota_TextChanged(sender As Object, e As EventArgs) Handles tb_nonota.TextChanged
@@ -217,20 +218,6 @@ Public Class Formpembelian
             MsgBox(ex.Message)
             connect.Close()
         End Try
-
-        'Try
-        '    query = "select * from detail_pembelian where no_nota_pembelian = '" + tb_nonota.Text + "'"
-        '    connect.Open()
-        '    adapter = New MySqlDataAdapter(query, connect)
-        '    dt3 = New DataTable
-        '    dt3.Clear()
-        '    adapter.Fill(dt3)
-        '    connect.Close()
-        '    dgv_barangbeli.DataSource = dt3
-        'Catch ex As Exception
-        '    MsgBox(ex.Message)
-        '    connect.Close()
-        'End Try
 
         Try
             dt3.Clear()

@@ -291,20 +291,6 @@ Public Class Formpenjualan
             connect.Close()
         End Try
 
-        'Try
-        '    query = "select * from detail_penjualan where no_nota_penjualan = '" + tbno_nota.Text + "'"
-        '    connect.Open()
-        '    adapter = New MySqlDataAdapter(query, connect)
-        '    dt3 = New DataTable
-        '    dt3.Clear()
-        '    adapter.Fill(dt3)
-        '    connect.Close()
-        '    dgvdetailbarang.DataSource = dt3
-        'Catch ex As Exception
-        '    MsgBox(ex.Message)
-        '    connect.Close()
-        'End Try
-
         Try
             dt3.Clear()
             query = "select * from detail_penjualan where no_nota_penjualan = '" + tbno_nota.Text + "' and `delete` = 0"
