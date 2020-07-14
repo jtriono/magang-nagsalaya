@@ -53,7 +53,6 @@ Partial Class Formutama
         Me.DetailStokToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.KartuStokBarangToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NilaiStokBarangToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ProfitPenjualanHarianToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LaporanPembelianPerBarangToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PerBarangToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SemuaBarangToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -64,25 +63,16 @@ Partial Class Formutama
         Me.PerCustomerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DaftarSupplierToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DaftarCustomerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DaftarHargaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PenjualanPertanggalPPnToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PPnToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NonPPnToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RekapPerNotaPPnToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PPnToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NonPPnToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReturPenjualanHarianToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PembelianPerTanggalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PembelianPerNotaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RekapPembelianSupplierToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RekapDetailPembelianSupplierToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReturPembelianHarianToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PiutangPelangganToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BayarPiutangCustomerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HutangSupplierToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BayarHutangSupplierToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LaporanJurnalHarianUmumToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LaporanJurnalHarianKhususKasBankToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UtilityToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReindexToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UsernamePasswordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -105,7 +95,7 @@ Partial Class Formutama
         '
         'btnpembelian
         '
-        Me.btnpembelian.Location = New System.Drawing.Point(12, 180)
+        Me.btnpembelian.Location = New System.Drawing.Point(12, 190)
         Me.btnpembelian.Name = "btnpembelian"
         Me.btnpembelian.Size = New System.Drawing.Size(198, 120)
         Me.btnpembelian.TabIndex = 1
@@ -123,7 +113,7 @@ Partial Class Formutama
         '
         'btnsupplier
         '
-        Me.btnsupplier.Location = New System.Drawing.Point(263, 180)
+        Me.btnsupplier.Location = New System.Drawing.Point(263, 190)
         Me.btnsupplier.Name = "btnsupplier"
         Me.btnsupplier.Size = New System.Drawing.Size(198, 120)
         Me.btnsupplier.TabIndex = 3
@@ -132,7 +122,7 @@ Partial Class Formutama
         '
         'btncustomer
         '
-        Me.btncustomer.Location = New System.Drawing.Point(512, 180)
+        Me.btncustomer.Location = New System.Drawing.Point(512, 190)
         Me.btncustomer.Name = "btncustomer"
         Me.btncustomer.Size = New System.Drawing.Size(198, 120)
         Me.btncustomer.TabIndex = 4
@@ -284,7 +274,7 @@ Partial Class Formutama
         '
         'LaporanToolStripMenuItem
         '
-        Me.LaporanToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DetailStokToolStripMenuItem, Me.KartuStokBarangToolStripMenuItem, Me.NilaiStokBarangToolStripMenuItem, Me.ProfitPenjualanHarianToolStripMenuItem, Me.LaporanPembelianPerBarangToolStripMenuItem, Me.LaporanPenjualanPerBarangToolStripMenuItem, Me.DaftarSupplierToolStripMenuItem, Me.DaftarCustomerToolStripMenuItem, Me.DaftarHargaToolStripMenuItem, Me.PenjualanPertanggalPPnToolStripMenuItem, Me.RekapPerNotaPPnToolStripMenuItem, Me.ReturPenjualanHarianToolStripMenuItem, Me.PembelianPerTanggalToolStripMenuItem, Me.PembelianPerNotaToolStripMenuItem, Me.RekapPembelianSupplierToolStripMenuItem, Me.RekapDetailPembelianSupplierToolStripMenuItem, Me.ReturPembelianHarianToolStripMenuItem, Me.PiutangPelangganToolStripMenuItem, Me.BayarPiutangCustomerToolStripMenuItem, Me.HutangSupplierToolStripMenuItem, Me.BayarHutangSupplierToolStripMenuItem1, Me.LaporanJurnalHarianUmumToolStripMenuItem, Me.LaporanJurnalHarianKhususKasBankToolStripMenuItem})
+        Me.LaporanToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DetailStokToolStripMenuItem, Me.KartuStokBarangToolStripMenuItem, Me.NilaiStokBarangToolStripMenuItem, Me.LaporanPembelianPerBarangToolStripMenuItem, Me.LaporanPenjualanPerBarangToolStripMenuItem, Me.DaftarSupplierToolStripMenuItem, Me.DaftarCustomerToolStripMenuItem, Me.PenjualanPertanggalPPnToolStripMenuItem, Me.RekapPerNotaPPnToolStripMenuItem, Me.ReturPenjualanHarianToolStripMenuItem, Me.PembelianPerTanggalToolStripMenuItem, Me.PembelianPerNotaToolStripMenuItem, Me.ReturPembelianHarianToolStripMenuItem, Me.PiutangPelangganToolStripMenuItem, Me.BayarPiutangCustomerToolStripMenuItem, Me.HutangSupplierToolStripMenuItem, Me.BayarHutangSupplierToolStripMenuItem1})
         Me.LaporanToolStripMenuItem.Name = "LaporanToolStripMenuItem"
         Me.LaporanToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
         Me.LaporanToolStripMenuItem.Text = "Laporan"
@@ -292,32 +282,26 @@ Partial Class Formutama
         'DetailStokToolStripMenuItem
         '
         Me.DetailStokToolStripMenuItem.Name = "DetailStokToolStripMenuItem"
-        Me.DetailStokToolStripMenuItem.Size = New System.Drawing.Size(282, 22)
+        Me.DetailStokToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
         Me.DetailStokToolStripMenuItem.Text = "Detail Stok"
         '
         'KartuStokBarangToolStripMenuItem
         '
         Me.KartuStokBarangToolStripMenuItem.Name = "KartuStokBarangToolStripMenuItem"
-        Me.KartuStokBarangToolStripMenuItem.Size = New System.Drawing.Size(282, 22)
+        Me.KartuStokBarangToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
         Me.KartuStokBarangToolStripMenuItem.Text = "Kartu Stok Barang"
         '
         'NilaiStokBarangToolStripMenuItem
         '
         Me.NilaiStokBarangToolStripMenuItem.Name = "NilaiStokBarangToolStripMenuItem"
-        Me.NilaiStokBarangToolStripMenuItem.Size = New System.Drawing.Size(282, 22)
+        Me.NilaiStokBarangToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
         Me.NilaiStokBarangToolStripMenuItem.Text = "Nilai Stok Barang"
-        '
-        'ProfitPenjualanHarianToolStripMenuItem
-        '
-        Me.ProfitPenjualanHarianToolStripMenuItem.Name = "ProfitPenjualanHarianToolStripMenuItem"
-        Me.ProfitPenjualanHarianToolStripMenuItem.Size = New System.Drawing.Size(282, 22)
-        Me.ProfitPenjualanHarianToolStripMenuItem.Text = "Profit Penjualan Harian"
         '
         'LaporanPembelianPerBarangToolStripMenuItem
         '
         Me.LaporanPembelianPerBarangToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PerBarangToolStripMenuItem, Me.SemuaBarangToolStripMenuItem, Me.PerSupplierToolStripMenuItem})
         Me.LaporanPembelianPerBarangToolStripMenuItem.Name = "LaporanPembelianPerBarangToolStripMenuItem"
-        Me.LaporanPembelianPerBarangToolStripMenuItem.Size = New System.Drawing.Size(282, 22)
+        Me.LaporanPembelianPerBarangToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
         Me.LaporanPembelianPerBarangToolStripMenuItem.Text = "Laporan Pembelian"
         '
         'PerBarangToolStripMenuItem
@@ -342,7 +326,7 @@ Partial Class Formutama
         '
         Me.LaporanPenjualanPerBarangToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PerBarangToolStripMenuItem1, Me.SemuaBarangToolStripMenuItem1, Me.PerCustomerToolStripMenuItem})
         Me.LaporanPenjualanPerBarangToolStripMenuItem.Name = "LaporanPenjualanPerBarangToolStripMenuItem"
-        Me.LaporanPenjualanPerBarangToolStripMenuItem.Size = New System.Drawing.Size(282, 22)
+        Me.LaporanPenjualanPerBarangToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
         Me.LaporanPenjualanPerBarangToolStripMenuItem.Text = "Laporan Penjualan Per-Barang"
         '
         'PerBarangToolStripMenuItem1
@@ -366,130 +350,74 @@ Partial Class Formutama
         'DaftarSupplierToolStripMenuItem
         '
         Me.DaftarSupplierToolStripMenuItem.Name = "DaftarSupplierToolStripMenuItem"
-        Me.DaftarSupplierToolStripMenuItem.Size = New System.Drawing.Size(282, 22)
+        Me.DaftarSupplierToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
         Me.DaftarSupplierToolStripMenuItem.Text = "Daftar Supplier"
         '
         'DaftarCustomerToolStripMenuItem
         '
         Me.DaftarCustomerToolStripMenuItem.Name = "DaftarCustomerToolStripMenuItem"
-        Me.DaftarCustomerToolStripMenuItem.Size = New System.Drawing.Size(282, 22)
+        Me.DaftarCustomerToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
         Me.DaftarCustomerToolStripMenuItem.Text = "Daftar Customer"
-        '
-        'DaftarHargaToolStripMenuItem
-        '
-        Me.DaftarHargaToolStripMenuItem.Name = "DaftarHargaToolStripMenuItem"
-        Me.DaftarHargaToolStripMenuItem.Size = New System.Drawing.Size(282, 22)
-        Me.DaftarHargaToolStripMenuItem.Text = "Daftar Harga"
         '
         'PenjualanPertanggalPPnToolStripMenuItem
         '
-        Me.PenjualanPertanggalPPnToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PPnToolStripMenuItem, Me.NonPPnToolStripMenuItem})
         Me.PenjualanPertanggalPPnToolStripMenuItem.Name = "PenjualanPertanggalPPnToolStripMenuItem"
-        Me.PenjualanPertanggalPPnToolStripMenuItem.Size = New System.Drawing.Size(282, 22)
+        Me.PenjualanPertanggalPPnToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
         Me.PenjualanPertanggalPPnToolStripMenuItem.Text = "Penjualan Pertanggal"
-        '
-        'PPnToolStripMenuItem
-        '
-        Me.PPnToolStripMenuItem.Name = "PPnToolStripMenuItem"
-        Me.PPnToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
-        Me.PPnToolStripMenuItem.Text = "PPn"
-        '
-        'NonPPnToolStripMenuItem
-        '
-        Me.NonPPnToolStripMenuItem.Name = "NonPPnToolStripMenuItem"
-        Me.NonPPnToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
-        Me.NonPPnToolStripMenuItem.Text = "Non PPn"
         '
         'RekapPerNotaPPnToolStripMenuItem
         '
-        Me.RekapPerNotaPPnToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PPnToolStripMenuItem1, Me.NonPPnToolStripMenuItem1})
         Me.RekapPerNotaPPnToolStripMenuItem.Name = "RekapPerNotaPPnToolStripMenuItem"
-        Me.RekapPerNotaPPnToolStripMenuItem.Size = New System.Drawing.Size(282, 22)
-        Me.RekapPerNotaPPnToolStripMenuItem.Text = "Rekap Per Nota(PPn)"
-        '
-        'PPnToolStripMenuItem1
-        '
-        Me.PPnToolStripMenuItem1.Name = "PPnToolStripMenuItem1"
-        Me.PPnToolStripMenuItem1.Size = New System.Drawing.Size(121, 22)
-        Me.PPnToolStripMenuItem1.Text = "PPn"
-        '
-        'NonPPnToolStripMenuItem1
-        '
-        Me.NonPPnToolStripMenuItem1.Name = "NonPPnToolStripMenuItem1"
-        Me.NonPPnToolStripMenuItem1.Size = New System.Drawing.Size(121, 22)
-        Me.NonPPnToolStripMenuItem1.Text = "Non PPn"
+        Me.RekapPerNotaPPnToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
+        Me.RekapPerNotaPPnToolStripMenuItem.Text = "Rekap Per Nota"
         '
         'ReturPenjualanHarianToolStripMenuItem
         '
         Me.ReturPenjualanHarianToolStripMenuItem.Name = "ReturPenjualanHarianToolStripMenuItem"
-        Me.ReturPenjualanHarianToolStripMenuItem.Size = New System.Drawing.Size(282, 22)
+        Me.ReturPenjualanHarianToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
         Me.ReturPenjualanHarianToolStripMenuItem.Text = "Retur Penjualan Harian"
         '
         'PembelianPerTanggalToolStripMenuItem
         '
         Me.PembelianPerTanggalToolStripMenuItem.Name = "PembelianPerTanggalToolStripMenuItem"
-        Me.PembelianPerTanggalToolStripMenuItem.Size = New System.Drawing.Size(282, 22)
+        Me.PembelianPerTanggalToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
         Me.PembelianPerTanggalToolStripMenuItem.Text = "Pembelian PerTanggal"
         '
         'PembelianPerNotaToolStripMenuItem
         '
         Me.PembelianPerNotaToolStripMenuItem.Name = "PembelianPerNotaToolStripMenuItem"
-        Me.PembelianPerNotaToolStripMenuItem.Size = New System.Drawing.Size(282, 22)
+        Me.PembelianPerNotaToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
         Me.PembelianPerNotaToolStripMenuItem.Text = "Pembelian PerNota"
-        '
-        'RekapPembelianSupplierToolStripMenuItem
-        '
-        Me.RekapPembelianSupplierToolStripMenuItem.Name = "RekapPembelianSupplierToolStripMenuItem"
-        Me.RekapPembelianSupplierToolStripMenuItem.Size = New System.Drawing.Size(282, 22)
-        Me.RekapPembelianSupplierToolStripMenuItem.Text = "Rekap Pembelian Supplier"
-        '
-        'RekapDetailPembelianSupplierToolStripMenuItem
-        '
-        Me.RekapDetailPembelianSupplierToolStripMenuItem.Name = "RekapDetailPembelianSupplierToolStripMenuItem"
-        Me.RekapDetailPembelianSupplierToolStripMenuItem.Size = New System.Drawing.Size(282, 22)
-        Me.RekapDetailPembelianSupplierToolStripMenuItem.Text = "Rekap Detail Pembelian Supplier"
         '
         'ReturPembelianHarianToolStripMenuItem
         '
         Me.ReturPembelianHarianToolStripMenuItem.Name = "ReturPembelianHarianToolStripMenuItem"
-        Me.ReturPembelianHarianToolStripMenuItem.Size = New System.Drawing.Size(282, 22)
+        Me.ReturPembelianHarianToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
         Me.ReturPembelianHarianToolStripMenuItem.Text = "Retur Pembelian Harian"
         '
         'PiutangPelangganToolStripMenuItem
         '
         Me.PiutangPelangganToolStripMenuItem.Name = "PiutangPelangganToolStripMenuItem"
-        Me.PiutangPelangganToolStripMenuItem.Size = New System.Drawing.Size(282, 22)
+        Me.PiutangPelangganToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
         Me.PiutangPelangganToolStripMenuItem.Text = "Piutang Customer"
         '
         'BayarPiutangCustomerToolStripMenuItem
         '
         Me.BayarPiutangCustomerToolStripMenuItem.Name = "BayarPiutangCustomerToolStripMenuItem"
-        Me.BayarPiutangCustomerToolStripMenuItem.Size = New System.Drawing.Size(282, 22)
+        Me.BayarPiutangCustomerToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
         Me.BayarPiutangCustomerToolStripMenuItem.Text = "Bayar Piutang Customer"
         '
         'HutangSupplierToolStripMenuItem
         '
         Me.HutangSupplierToolStripMenuItem.Name = "HutangSupplierToolStripMenuItem"
-        Me.HutangSupplierToolStripMenuItem.Size = New System.Drawing.Size(282, 22)
+        Me.HutangSupplierToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
         Me.HutangSupplierToolStripMenuItem.Text = "Hutang Supplier"
         '
         'BayarHutangSupplierToolStripMenuItem1
         '
         Me.BayarHutangSupplierToolStripMenuItem1.Name = "BayarHutangSupplierToolStripMenuItem1"
-        Me.BayarHutangSupplierToolStripMenuItem1.Size = New System.Drawing.Size(282, 22)
+        Me.BayarHutangSupplierToolStripMenuItem1.Size = New System.Drawing.Size(234, 22)
         Me.BayarHutangSupplierToolStripMenuItem1.Text = "Bayar Hutang Supplier"
-        '
-        'LaporanJurnalHarianUmumToolStripMenuItem
-        '
-        Me.LaporanJurnalHarianUmumToolStripMenuItem.Name = "LaporanJurnalHarianUmumToolStripMenuItem"
-        Me.LaporanJurnalHarianUmumToolStripMenuItem.Size = New System.Drawing.Size(282, 22)
-        Me.LaporanJurnalHarianUmumToolStripMenuItem.Text = "Laporan Jurnal Harian/Umum"
-        '
-        'LaporanJurnalHarianKhususKasBankToolStripMenuItem
-        '
-        Me.LaporanJurnalHarianKhususKasBankToolStripMenuItem.Name = "LaporanJurnalHarianKhususKasBankToolStripMenuItem"
-        Me.LaporanJurnalHarianKhususKasBankToolStripMenuItem.Size = New System.Drawing.Size(282, 22)
-        Me.LaporanJurnalHarianKhususKasBankToolStripMenuItem.Text = "Laporan Jurnal Harian/Khusus Kas Bank"
         '
         'UtilityToolStripMenuItem
         '
@@ -594,7 +522,6 @@ Partial Class Formutama
     Friend WithEvents DetailStokToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents KartuStokBarangToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents NilaiStokBarangToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ProfitPenjualanHarianToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents LaporanPembelianPerBarangToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PerBarangToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SemuaBarangToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
@@ -602,28 +529,19 @@ Partial Class Formutama
     Friend WithEvents LaporanPenjualanPerBarangToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DaftarSupplierToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DaftarCustomerToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents DaftarHargaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PenjualanPertanggalPPnToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents RekapPerNotaPPnToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PerBarangToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SemuaBarangToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PerCustomerToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents PPnToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents NonPPnToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents PPnToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents NonPPnToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ReturPenjualanHarianToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PembelianPerTanggalToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PembelianPerNotaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents RekapPembelianSupplierToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents RekapDetailPembelianSupplierToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ReturPembelianHarianToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PiutangPelangganToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents BayarPiutangCustomerToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents HutangSupplierToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents BayarHutangSupplierToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents LaporanJurnalHarianUmumToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents LaporanJurnalHarianKhususKasBankToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ReindexToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents UsernamePasswordToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents IsiKeteranganToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem

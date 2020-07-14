@@ -130,8 +130,7 @@ Public Class Formpembelian
             End If
             tb_nonota.Text = autogenerate
             tb_totalharga.Text = "0"
-            tb_nonota.Text = " "
-            tb_kodesupplier.Text = " "
+            tb_kodesupplier.Text = ""
             dtp_jt.Value = DateTime.Now
             dtptanggal.Value = DateTime.Now
         Catch ex As Exception
