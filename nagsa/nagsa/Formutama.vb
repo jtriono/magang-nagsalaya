@@ -32,4 +32,12 @@
 
         dtpwaktu.Enabled = False
     End Sub
+
+    Private Sub ReturPenjualanToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReturPenjualanToolStripMenuItem.Click
+        Retur_Penjualan.ShowDialog()
+    End Sub
+
+    Private Sub ReturnPembelianToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReturnPembelianToolStripMenuItem.Click
+        Retur_Pembelian.ShowDialog()
+    End Sub
 End Class

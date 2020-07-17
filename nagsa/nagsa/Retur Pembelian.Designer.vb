@@ -36,7 +36,6 @@ Partial Class Retur_Pembelian
         Me.Label9 = New System.Windows.Forms.Label()
         Me.tbkodebarang = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.btncaripembelian = New System.Windows.Forms.Button()
         Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
         Me.tbno_nota = New System.Windows.Forms.TextBox()
         Me.tbkode_supplier = New System.Windows.Forms.TextBox()
@@ -184,15 +183,6 @@ Partial Class Retur_Pembelian
         Me.Label7.TabIndex = 44
         Me.Label7.Text = "Kode Barang"
         '
-        'btncaripembelian
-        '
-        Me.btncaripembelian.Location = New System.Drawing.Point(856, 95)
-        Me.btncaripembelian.Name = "btncaripembelian"
-        Me.btncaripembelian.Size = New System.Drawing.Size(92, 83)
-        Me.btncaripembelian.TabIndex = 43
-        Me.btncaripembelian.Text = "Pembelian"
-        Me.btncaripembelian.UseVisualStyleBackColor = True
-        '
         'PanelControl1
         '
         Me.PanelControl1.Controls.Add(Me.tbno_nota)
@@ -203,7 +193,7 @@ Partial Class Retur_Pembelian
         Me.PanelControl1.Controls.Add(Me.Label2)
         Me.PanelControl1.Location = New System.Drawing.Point(11, 71)
         Me.PanelControl1.Name = "PanelControl1"
-        Me.PanelControl1.Size = New System.Drawing.Size(743, 135)
+        Me.PanelControl1.Size = New System.Drawing.Size(936, 135)
         Me.PanelControl1.TabIndex = 42
         '
         'tbno_nota
@@ -252,9 +242,9 @@ Partial Class Retur_Pembelian
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(6, 15)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(50, 13)
+        Me.Label2.Size = New System.Drawing.Size(54, 13)
         Me.Label2.TabIndex = 0
-        Me.Label2.Text = "No. Nota"
+        Me.Label2.Text = "No. Retur"
         '
         'tbtotalharga
         '
@@ -381,7 +371,6 @@ Partial Class Retur_Pembelian
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.tbkodebarang)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.btncaripembelian)
         Me.Controls.Add(Me.PanelControl1)
         Me.Controls.Add(Me.tbtotalharga)
         Me.Controls.Add(Me.Label1)
@@ -409,7 +398,6 @@ Partial Class Retur_Pembelian
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents tbkodebarang As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents btncaripembelian As System.Windows.Forms.Button
     Friend WithEvents PanelControl1 As DevExpress.XtraEditors.PanelControl
     Friend WithEvents tbno_nota As System.Windows.Forms.TextBox
     Friend WithEvents tbkode_supplier As System.Windows.Forms.TextBox

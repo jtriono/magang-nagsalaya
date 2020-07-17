@@ -31,7 +31,6 @@ Partial Class Retur_Penjualan
         Me.dtppilihtanggal = New System.Windows.Forms.DateTimePicker()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.btncaripenjualan = New System.Windows.Forms.Button()
         Me.tbkodebarang = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.tbnamabarang = New System.Windows.Forms.TextBox()
@@ -84,7 +83,7 @@ Partial Class Retur_Penjualan
         Me.PanelControl1.Controls.Add(Me.Label2)
         Me.PanelControl1.Location = New System.Drawing.Point(12, 75)
         Me.PanelControl1.Name = "PanelControl1"
-        Me.PanelControl1.Size = New System.Drawing.Size(743, 135)
+        Me.PanelControl1.Size = New System.Drawing.Size(936, 135)
         Me.PanelControl1.TabIndex = 3
         '
         'tbno_nota
@@ -133,18 +132,9 @@ Partial Class Retur_Penjualan
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(6, 15)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(50, 13)
+        Me.Label2.Size = New System.Drawing.Size(54, 13)
         Me.Label2.TabIndex = 0
-        Me.Label2.Text = "No. Nota"
-        '
-        'btncaripenjualan
-        '
-        Me.btncaripenjualan.Location = New System.Drawing.Point(857, 99)
-        Me.btncaripenjualan.Name = "btncaripenjualan"
-        Me.btncaripenjualan.Size = New System.Drawing.Size(92, 83)
-        Me.btncaripenjualan.TabIndex = 4
-        Me.btncaripenjualan.Text = "Penjualan"
-        Me.btncaripenjualan.UseVisualStyleBackColor = True
+        Me.Label2.Text = "No. Retur"
         '
         'tbkodebarang
         '
@@ -339,7 +329,6 @@ Partial Class Retur_Penjualan
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.tbkodebarang)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.btncaripenjualan)
         Me.Controls.Add(Me.PanelControl1)
         Me.Controls.Add(Me.tbtotalharga)
         Me.Controls.Add(Me.Label1)
@@ -362,7 +351,6 @@ Partial Class Retur_Penjualan
     Friend WithEvents dtppilihtanggal As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents btncaripenjualan As System.Windows.Forms.Button
     Friend WithEvents tbkodebarang As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents tbnamabarang As System.Windows.Forms.TextBox
