@@ -167,6 +167,18 @@
     <Compile Include="Pembelian.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Retur Pembelian.Designer.vb">
+      <DependentUpon>Retur Pembelian.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Retur Pembelian.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Retur Penjualan.Designer.vb">
+      <DependentUpon>Retur Penjualan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Retur Penjualan.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Supplier.Designer.vb">
       <DependentUpon>Supplier.vb</DependentUpon>
     </Compile>
@@ -211,6 +223,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pembelian.resx">
       <DependentUpon>Pembelian.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Retur Pembelian.resx">
+      <DependentUpon>Retur Pembelian.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Retur Penjualan.resx">
+      <DependentUpon>Retur Penjualan.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Supplier.resx">
       <DependentUpon>Supplier.vb</DependentUpon>

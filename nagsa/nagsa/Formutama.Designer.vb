@@ -32,7 +32,6 @@ Partial Class Formutama
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.KToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TandaTerimaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PembelianToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReturPenjualanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReturnPembelianToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InputJurnalHarianUmumToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -157,7 +156,7 @@ Partial Class Formutama
         '
         'KToolStripMenuItem
         '
-        Me.KToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TandaTerimaToolStripMenuItem, Me.PembelianToolStripMenuItem, Me.ReturPenjualanToolStripMenuItem, Me.ReturnPembelianToolStripMenuItem, Me.InputJurnalHarianUmumToolStripMenuItem, Me.InputJurnalHarianKhususKasBankToolStripMenuItem})
+        Me.KToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TandaTerimaToolStripMenuItem, Me.ReturPenjualanToolStripMenuItem, Me.ReturnPembelianToolStripMenuItem, Me.InputJurnalHarianUmumToolStripMenuItem, Me.InputJurnalHarianKhususKasBankToolStripMenuItem})
         Me.KToolStripMenuItem.Name = "KToolStripMenuItem"
         Me.KToolStripMenuItem.Size = New System.Drawing.Size(26, 20)
         Me.KToolStripMenuItem.Text = "K"
@@ -167,12 +166,6 @@ Partial Class Formutama
         Me.TandaTerimaToolStripMenuItem.Name = "TandaTerimaToolStripMenuItem"
         Me.TandaTerimaToolStripMenuItem.Size = New System.Drawing.Size(267, 22)
         Me.TandaTerimaToolStripMenuItem.Text = "Tanda Terima"
-        '
-        'PembelianToolStripMenuItem
-        '
-        Me.PembelianToolStripMenuItem.Name = "PembelianToolStripMenuItem"
-        Me.PembelianToolStripMenuItem.Size = New System.Drawing.Size(267, 22)
-        Me.PembelianToolStripMenuItem.Text = "Pembelian"
         '
         'ReturPenjualanToolStripMenuItem
         '
@@ -500,7 +493,6 @@ Partial Class Formutama
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents KToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TandaTerimaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents PembelianToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ReturPenjualanToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ReturnPembelianToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents InputJurnalHarianUmumToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
