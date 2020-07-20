@@ -80,6 +80,7 @@ Partial Class Formutama
         Me.RepairToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RubahNoFakturToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PerbaikiNomerNotaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btnlogout = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -130,7 +131,7 @@ Partial Class Formutama
         '
         'dtpwaktu
         '
-        Me.dtpwaktu.Location = New System.Drawing.Point(594, 366)
+        Me.dtpwaktu.Location = New System.Drawing.Point(12, 366)
         Me.dtpwaktu.Name = "dtpwaktu"
         Me.dtpwaktu.Size = New System.Drawing.Size(116, 20)
         Me.dtpwaktu.TabIndex = 5
@@ -461,11 +462,21 @@ Partial Class Formutama
         Me.PerbaikiNomerNotaToolStripMenuItem.Size = New System.Drawing.Size(203, 22)
         Me.PerbaikiNomerNotaToolStripMenuItem.Text = "Perbaiki Nomer Nota"
         '
+        'btnlogout
+        '
+        Me.btnlogout.Location = New System.Drawing.Point(635, 366)
+        Me.btnlogout.Name = "btnlogout"
+        Me.btnlogout.Size = New System.Drawing.Size(75, 23)
+        Me.btnlogout.TabIndex = 12
+        Me.btnlogout.Text = "Log Out"
+        Me.btnlogout.UseVisualStyleBackColor = True
+        '
         'Formutama
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(722, 398)
+        Me.Controls.Add(Me.btnlogout)
         Me.Controls.Add(Me.btnbarang)
         Me.Controls.Add(Me.dtpwaktu)
         Me.Controls.Add(Me.btncustomer)
@@ -541,4 +552,5 @@ Partial Class Formutama
     Friend WithEvents RepairToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents RubahNoFakturToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PerbaikiNomerNotaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents btnlogout As System.Windows.Forms.Button
 End Class

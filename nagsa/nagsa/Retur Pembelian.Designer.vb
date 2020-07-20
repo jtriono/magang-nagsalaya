@@ -30,7 +30,7 @@ Partial Class Retur_Pembelian
         Me.Label14 = New System.Windows.Forms.Label()
         Me.tbjumlah = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.tbhargajual = New System.Windows.Forms.TextBox()
+        Me.tbhargabeli = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.tbnamabarang = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -131,23 +131,23 @@ Partial Class Retur_Pembelian
         Me.Label13.TabIndex = 50
         Me.Label13.Text = "Jumlah"
         '
-        'tbhargajual
+        'tbhargabeli
         '
-        Me.tbhargajual.Location = New System.Drawing.Point(81, 258)
-        Me.tbhargajual.Name = "tbhargajual"
-        Me.tbhargajual.Size = New System.Drawing.Size(100, 20)
-        Me.tbhargajual.TabIndex = 49
-        Me.tbhargajual.Text = "0"
-        Me.tbhargajual.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.tbhargabeli.Location = New System.Drawing.Point(81, 258)
+        Me.tbhargabeli.Name = "tbhargabeli"
+        Me.tbhargabeli.Size = New System.Drawing.Size(100, 20)
+        Me.tbhargabeli.TabIndex = 49
+        Me.tbhargabeli.Text = "0"
+        Me.tbhargabeli.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label12
         '
         Me.Label12.AutoSize = True
         Me.Label12.Location = New System.Drawing.Point(17, 261)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(58, 13)
+        Me.Label12.Size = New System.Drawing.Size(56, 13)
         Me.Label12.TabIndex = 48
-        Me.Label12.Text = "Harga Jual"
+        Me.Label12.Text = "Harga Beli"
         '
         'tbnamabarang
         '
@@ -365,7 +365,7 @@ Partial Class Retur_Pembelian
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.tbjumlah)
         Me.Controls.Add(Me.Label13)
-        Me.Controls.Add(Me.tbhargajual)
+        Me.Controls.Add(Me.tbhargabeli)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.tbnamabarang)
         Me.Controls.Add(Me.Label9)
@@ -392,7 +392,7 @@ Partial Class Retur_Pembelian
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents tbjumlah As System.Windows.Forms.TextBox
     Friend WithEvents Label13 As System.Windows.Forms.Label
-    Friend WithEvents tbhargajual As System.Windows.Forms.TextBox
+    Friend WithEvents tbhargabeli As System.Windows.Forms.TextBox
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents tbnamabarang As System.Windows.Forms.TextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label

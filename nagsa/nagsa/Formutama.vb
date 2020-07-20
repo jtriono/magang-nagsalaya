@@ -40,4 +40,8 @@
     Private Sub ReturnPembelianToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReturnPembelianToolStripMenuItem.Click
         Retur_Pembelian.ShowDialog()
     End Sub
+
+    Private Sub btnlogout_Click(sender As Object, e As EventArgs) Handles btnlogout.Click
+        Me.Close()
+    End Sub
 End Class
