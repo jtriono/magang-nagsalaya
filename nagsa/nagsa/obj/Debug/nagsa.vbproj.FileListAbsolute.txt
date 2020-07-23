@@ -99,3 +99,5 @@ C:\Users\Jeffrin\Desktop\apotikdb\magang-nagsalaya\nagsa\nagsa\obj\Debug\nagsa.v
 C:\Users\Jeffrin\Desktop\apotikdb\magang-nagsalaya\nagsa\nagsa\obj\Debug\nagsa.exe.licenses
 C:\Users\windows\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.Retur_Pembelian.resources
 C:\Users\windows\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.Retur_Penjualan.resources
+C:\Users\Jeffrin\Desktop\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.Retur_Pembelian.resources
+C:\Users\Jeffrin\Desktop\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.Retur_Penjualan.resources

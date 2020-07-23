@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Formpenjualan
-    Dim connect As New MySqlConnection("server=localhost;uid=root;pwd=admin;database=apotik;port=3306")
+    Dim connect As New MySqlConnection("server=localhost;uid=root;pwd=;database=apotik;port=3306")
     Dim command As New MySqlCommand
     Dim adapter As New MySqlDataAdapter
     Dim query As String
@@ -100,7 +100,7 @@ Public Class Formpenjualan
     Private Sub btn_tambah_Click(sender As Object, e As EventArgs) Handles btn_tambah.Click
         Try
             dt = New DataTable
-            query = "insert into detail_penjualan values('" + tbkodebarang.Text + "','" + tbno_nota.Text + "','" + tbbatch.Text + "','" + tb_ed.Text + "','" + cbsatuan.Text + "','" + tbhargajual.Text + "','" + tbjumlah.Text + "','" + tbdisc.Text + "','" + tbtotalrp.Text + "','" + tbnamabarang.Text + "', 0)"
+            query = "insert into detail_penjualan values('" + tbkodebarang.Text + "','" + tbno_nota.Text + "','" + tbbatch.Text + "','" + tb_ed.Text + "','" + cbsatuan.Text + "','" + tbhargajual.Text + "','" + tbjumlah.Text + "','" + tbdisc.Text + "','" + tbtotalrp.Text + "','" + tbnamabarang.Text + "', 0,0)"
             connect.Open()
             command = New MySqlCommand(query, connect)
             command.ExecuteNonQuery()

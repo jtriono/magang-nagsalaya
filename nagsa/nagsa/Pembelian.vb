@@ -102,7 +102,7 @@ Public Class Formpembelian
     Private Sub btnsimpan_Click(sender As Object, e As EventArgs) Handles btnsimpan.Click
         Try
             dt = New DataTable
-            query = "insert into pembelian values('" + tb_nonota.Text + "','" + dtptanggal.Value.ToString("yyyy-MM-dd") + "','" + tb_kodesupplier.Text + "','" + dtp_jt.Value.ToString("yyyy-MM-dd") + "','" + tb_totalharga.Text + "',0)"
+            query = "insert into pembelian values('" + tb_nonota.Text + "','" + dtptanggal.Value.ToString("yyyy-MM-dd") + "','" + tb_kodesupplier.Text + "','" + dtp_jt.Value.ToString("yyyy-MM-dd") + "','" + tb_totalharga.Text + "',0,0)"
             connect.Open()
             command = New MySqlCommand(query, connect)
             command.ExecuteNonQuery()
@@ -157,7 +157,7 @@ Public Class Formpembelian
     Private Sub btn_tambah_Click(sender As Object, e As EventArgs) Handles btn_tambah.Click
         Try
             dt = New DataTable
-            query = "insert into detail_pembelian values('" + tbkodebarang.Text + "','" + tb_nonota.Text + "','" + tbbatch.Text + "','" + tb_ed.Text + "','" + cb_satuan.Text + "','" + tb_hargabeli.Text + "','" + tb_jumlah.Text + "','" + tbdisc.Text + "','" + tb_harga.Text + "','" + tbnamabarang.Text + "',0)"
+            query = "insert into detail_pembelian values('" + tbkodebarang.Text + "','" + tb_nonota.Text + "','" + tbbatch.Text + "','" + tb_ed.Text + "','" + cb_satuan.Text + "','" + tb_hargabeli.Text + "','" + tb_jumlah.Text + "','" + tbdisc.Text + "','" + tb_harga.Text + "','" + tbnamabarang.Text + "',0,0)"
             connect.Open()
             command = New MySqlCommand(query, connect)
             command.ExecuteNonQuery()
@@ -177,23 +177,29 @@ Public Class Formpembelian
             connect.Close()
         End Try
 
+        Try
+            dt.Clear()
+            harga = "select sum(total_harga) from detail_pembelian where no_nota_pembelian = '" + tb_nonota.Text + "' and  `delete` = 0"
+            command = New MySqlCommand(harga, connect)
+            adapter = New MySqlDataAdapter(command)
+            adapter.Fill(dt)
+            tb_totalharga.Text = dt.Rows(0).Item("sum(total_harga)")
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            connect.Close()
+        End Try
 
-        dt.Clear()
-        harga = "select sum(total_harga) from detail_pembelian where no_nota_pembelian = '" + tb_nonota.Text + "' and  `delete` = 0"
-        command = New MySqlCommand(harga, connect)
-        adapter = New MySqlDataAdapter(command)
-        adapter.Fill(dt)
-        tb_totalharga.Text = dt.Rows(0).Item("sum(total_harga)")
-
-
-
-        dt3.Clear()
-        query = "select * from detail_pembelian where no_nota_pembelian = '" + tb_nonota.Text + "' and `delete` = 0"
-        command = New MySqlCommand(query, connect)
-        adapter = New MySqlDataAdapter(command)
-        adapter.Fill(dt3)
-        dgv_barangbeli.DataSource = dt3
-
+        Try
+            dt3.Clear()
+            query = "select * from detail_pembelian where no_nota_pembelian = '" + tb_nonota.Text + "' and `delete` = 0"
+            command = New MySqlCommand(query, connect)
+            adapter = New MySqlDataAdapter(command)
+            adapter.Fill(dt3)
+            dgv_barangbeli.DataSource = dt3
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            connect.Close()
+        End Try
 
     End Sub
 
