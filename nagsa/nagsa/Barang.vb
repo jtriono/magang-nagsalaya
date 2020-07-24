@@ -10,7 +10,7 @@ Public Class Formbarang
     Dim pilihdgv As String
     Private Sub Formbarang_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         tampungbarang = New DataTable
-        query = "select * from barang where `delete`=0"
+        query = "select * from barang where `delete`=0 and stokakhir > 0"
         comm = New MySqlCommand(query, conn)
         adapt = New MySqlDataAdapter(comm)
         adapt.Fill(tampungbarang)
@@ -33,14 +33,14 @@ Public Class Formbarang
     Private Sub buttoncari_Click(sender As Object, e As EventArgs) Handles buttoncari.Click
         If textboxcari.Text = "" Then
             tampungbarang.Clear()
-            query = "select * from barang where `delete`=0"
+            query = "select * from barang where `delete`=0 and stokakhir>0"
             comm = New MySqlCommand(query, conn)
             adapt = New MySqlDataAdapter(comm)
             adapt.Fill(tampungbarang)
             dgvbarang.DataSource = tampungbarang
         Else
             tampungbarang.Clear()
-            query = "select * from barang where nama like '%" + textboxcari.Text + "%'"
+            query = "select * from barang where nama like '%" + textboxcari.Text + "%' and `delete`=0 and stokakhir>0"
             comm = New MySqlCommand(query, conn)
             adapt = New MySqlDataAdapter(comm)
             adapt.Fill(tampungbarang)

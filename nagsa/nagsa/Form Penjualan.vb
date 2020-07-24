@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Formpenjualan
-    Dim connect As New MySqlConnection("server=localhost;uid=root;pwd=admin;database=apotik;port=3306")
+    Dim connect As New MySqlConnection("server=localhost;uid=root;pwd=;database=apotik;port=3306")
     Dim command As New MySqlCommand
     Dim adapter As New MySqlDataAdapter
     Dim query As String
@@ -13,7 +13,7 @@ Public Class Formpenjualan
     Dim dt3 As New DataTable
     Dim numtakenout As String
     Dim pilih As String
-
+    Dim simpanjumlahstok As String
 
 
     Private Sub Formpenjualan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -100,24 +100,30 @@ Public Class Formpenjualan
     Private Sub btn_tambah_Click(sender As Object, e As EventArgs) Handles btn_tambah.Click
         Try
             dt = New DataTable
-            query = "insert into detail_penjualan values('" + tbkodebarang.Text + "','" + tbno_nota.Text + "','" + tbbatch.Text + "','" + tb_ed.Text + "','" + cbsatuan.Text + "','" + tbhargajual.Text + "','" + tbjumlah.Text + "','" + tbdisc.Text + "','" + tbtotalrp.Text + "','" + tbnamabarang.Text + "', 0)"
+            query = "insert into detail_penjualan values('" + tbkodebarang.Text + "','" + tbno_nota.Text + "','" + tbbatch.Text + "','" + tb_ed.Text + "','" + cbsatuan.Text + "','" + tbhargajual.Text + "','" + tbjumlah.Text + "','" + tbdisc.Text + "','" + tbtotalrp.Text + "','" + tbnamabarang.Text + "', 0,0)"
             connect.Open()
             command = New MySqlCommand(query, connect)
             command.ExecuteNonQuery()
             connect.Close()
-            tbkodebarang.Text = " "
-            tbnamabarang.Text = " "
-            tbbatch.Text = " "
-            tb_ed.Text = " "
-            tbtotalrp.Text = "0"
-            cbsatuan.Text = " "
-            tbhargajual.Text = "0"
-            tbjumlah.Text = "0"
-            tbdisc.Text = "0"
         Catch ex As Exception
             MsgBox(ex.Message)
             connect.Close()
         End Try
+
+        query = "update barang set stokakhir=stokakhir - '" + tbjumlah.Text + "' where itemid='" + tbkodebarang.Text + "'"
+        connect.Open()
+        command = New MySqlCommand(query, connect)
+        command.ExecuteNonQuery()
+        connect.Close()
+        tbkodebarang.Text = " "
+        tbnamabarang.Text = " "
+        tbbatch.Text = " "
+        tb_ed.Text = " "
+        tbtotalrp.Text = "0"
+        cbsatuan.Text = " "
+        tbhargajual.Text = "0"
+        tbjumlah.Text = "0"
+        tbdisc.Text = "0"
 
         Try
             dt.Clear()
@@ -141,6 +147,7 @@ Public Class Formpenjualan
             MsgBox(ex.Message)
         End Try
 
+        
     End Sub
 
     Private Sub btnsimpan_Click(sender As Object, e As EventArgs) Handles btnsimpan.Click
@@ -213,15 +220,31 @@ Public Class Formpenjualan
     End Sub
 
     Private Sub btnhapus_Click(sender As Object, e As EventArgs) Handles btnhapus.Click
-            dt = New DataTable
+
+        If MessageBox.Show("Yakin akan melakukan delete?", "Konfirmasi", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
+            dt.Clear()
+            query = "select sum(jumlah_barang) from detail_penjualan where kode_barang='" + pilih + "' and no_nota_penjualan='" + tbno_nota.Text + "' and `delete`=0"
+            command = New MySqlCommand(query, connect)
+            adapter = New MySqlDataAdapter(command)
+            adapter.Fill(dt)
+            simpanjumlahstok = dt.Rows(0).Item("sum(jumlah_barang)")
+
+
             query = "update detail_penjualan set `delete` = 1 where kode_barang = '" + pilih + "'"
-            If MessageBox.Show("Yakin akan melakukan delete?", "Konfirmasi", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
-                connect.Open()
-                command = New MySqlCommand(query, connect)
-                command.ExecuteNonQuery()
-                connect.Close()
-                MessageBox.Show("Data Berhasil Dihapus")
-            End If
+            connect.Open()
+            command = New MySqlCommand(query, connect)
+            command.ExecuteNonQuery()
+            connect.Close()
+
+            
+            query = "update barang set stokakhir=stokakhir+'" + simpanjumlahstok + "' where itemid='" + pilih + "'"
+            connect.Open()
+            command = New MySqlCommand(query, connect)
+            command.ExecuteNonQuery()
+            connect.Close()
+
+            MessageBox.Show("Data Berhasil Dihapus")
+        End If
        
 
 
@@ -265,6 +288,7 @@ Public Class Formpenjualan
             MsgBox(ex.Message)
             connect.Close()
         End Try
+
     End Sub
 
     Private Sub tbno_nota_TextChanged(sender As Object, e As EventArgs) Handles tbno_nota.TextChanged
@@ -329,6 +353,7 @@ Public Class Formpenjualan
 
     Private Sub dgvdetailbarang_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvdetailbarang.CellContentClick
         pilih = dgvdetailbarang.Rows(e.RowIndex).Cells(0).Value.ToString
+
     End Sub
 
     
