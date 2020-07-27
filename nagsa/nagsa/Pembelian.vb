@@ -168,7 +168,6 @@ Public Class Formpembelian
             connect.Close()
         End Try
 
-<<<<<<< HEAD
         query = "update barang set stokakhir=stokakhir + '" + tb_jumlah.Text + "' where itemid='" + tbkodebarang.Text + "'"
         connect.Open()
         command = New MySqlCommand(query, connect)
@@ -184,8 +183,6 @@ Public Class Formpembelian
         tbdisc.Text = "0"
         tb_harga.Text = "0"
 
-=======
->>>>>>> ecf052f678512c08aa4138006215d517827321a6
         Try
             dt.Clear()
             harga = "select sum(total_harga) from detail_pembelian where no_nota_pembelian = '" + tb_nonota.Text + "' and  `delete` = 0"
@@ -318,7 +315,7 @@ Public Class Formpembelian
             command = New MySqlCommand(query, connect)
             adapter = New MySqlDataAdapter(command)
             adapter.Fill(dt)
-            simpanjumlahstok = dt.Rows(0).Item("sum(jumlah_barang)")
+            simpanjumlahstok = dt.Rows(0).Item("sum(jumlah_barang)").ToString
 
 
 

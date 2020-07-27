@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Retur_Pembelian
-    Dim connect As New MySqlConnection("server=localhost;uid=root;pwd=admin;database=apotik;port=3306")
+    Dim connect As New MySqlConnection("server=localhost;uid=root;pwd=;database=apotik;port=3306")
     Dim command As New MySqlCommand
     Dim adapter As New MySqlDataAdapter
     Dim query As String
@@ -11,6 +11,8 @@ Public Class Retur_Pembelian
     Dim harga2 As Integer = 0
     Dim harga3 As Integer = 0
     Dim dt3 As New DataTable
+    Dim dt4 As New DataTable
+    Dim dt5 As New DataTable
     Dim numtakenout As String
     Dim pilih As String
     Dim masuk As String
@@ -60,7 +62,7 @@ Public Class Retur_Pembelian
 
         Try
             dt.Clear()
-            harga = "select sum(total_harga) from detail_retur_beli where no_nota_pembelian = '" + tbnopembelian.Text + "' and `delete` = 0"
+            harga = "select sum(total_harga) from detail_retur_beli where no_nota_pembelian = '" + tbnopembelian.Text + "' and `delete` = 0 and retur = 1"
             command = New MySqlCommand(harga, connect)
             adapter = New MySqlDataAdapter(command)
             adapter.Fill(dt)
@@ -71,7 +73,7 @@ Public Class Retur_Pembelian
 
         Try
             dt3.Clear()
-            query = "select * from detail_retur_beli where no_nota_pembelian = '" + tbnopembelian.Text + "' and `delete` = 0"
+            query = "select * from detail_retur_beli where no_nota_pembelian = '" + tbnopembelian.Text + "' and `delete` = 0 and retur = 1"
             command = New MySqlCommand(query, connect)
             adapter = New MySqlDataAdapter(command)
             adapter.Fill(dt3)
@@ -88,7 +90,7 @@ Public Class Retur_Pembelian
     Private Sub btn_tambah_Click(sender As Object, e As EventArgs) Handles btn_tambah.Click
         Try
             dt = New DataTable
-            query = "insert into detail_retur_beli where kode_barang = '" + masuk + "'"
+            query = "update detail_pembelian set retur = 1 where no_nota_pembelian = '" + tbnopembelian.Text + "' and kode_barang_pembelian = '" + masuk + "'"
             connect.Open()
             command = New MySqlCommand(query, connect)
             command.ExecuteNonQuery()
@@ -98,16 +100,10 @@ Public Class Retur_Pembelian
             connect.Close()
         End Try
 
-        dt = New DataTable
-        query = "update detail_pembelian set `delete` = 1 where kode_barang_pembelian = '" + masuk + "'"
-        connect.Open()
-        command = New MySqlCommand(query, connect)
-        command.ExecuteNonQuery()
-        connect.Close()
 
         Try
             dt.Clear()
-            harga = "select sum(total_harga) from detail_retur_beli where no_nota_pembelian = '" + tbnopembelian.Text + "' and `delete` = 0"
+            harga = "select sum(total_harga) from detail_pembelian where no_nota_pembelian = '" + tbnopembelian.Text + "' and `delete` = 0 and retur = 1"
             command = New MySqlCommand(harga, connect)
             adapter = New MySqlDataAdapter(command)
             adapter.Fill(dt)
@@ -117,12 +113,12 @@ Public Class Retur_Pembelian
         End Try
 
         Try
-            dt3.Clear()
-            query = "select * from detail_retur_beli where no_nota_pembelian = '" + tbnopembelian.Text + "' and `delete` = 0"
+            dt5.Clear()
+            query = "select * from detail_pembelian where no_nota_pembelian = '" + tbnopembelian.Text + "' and `delete` = 0 and retur = 1"
             command = New MySqlCommand(query, connect)
             adapter = New MySqlDataAdapter(command)
-            adapter.Fill(dt3)
-            dgvreturbeli.DataSource = dt3
+            adapter.Fill(dt5)
+            dgvreturbeli.DataSource = dt5
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -204,7 +200,7 @@ Public Class Retur_Pembelian
 
         Try
             dt.Clear()
-            harga = "select sum(total_harga) from detail_retur_beli where no_nota_pembelian = '" + tbnopembelian.Text + "' and `delete` = 0"
+            harga = "select sum(total_harga) from detail_retur_beli where no_nota_pembelian = '" + tbnopembelian.Text + "' and `delete` = 0 and retur = 1"
             command = New MySqlCommand(harga, connect)
             adapter = New MySqlDataAdapter(command)
             adapter.Fill(dt)
@@ -215,7 +211,7 @@ Public Class Retur_Pembelian
 
         Try
             dt3.Clear()
-            query = "select * from detail_retur_beli where no_nota_pembelian = '" + tbnopembelian.Text + "' and `delete` = 0"
+            query = "select * from detail_retur_beli where no_nota_pembelian = '" + tbnopembelian.Text + "' and `delete` = 0 and retur = 1"
             command = New MySqlCommand(query, connect)
             adapter = New MySqlDataAdapter(command)
             adapter.Fill(dt3)
@@ -242,7 +238,7 @@ Public Class Retur_Pembelian
 
     Private Sub btnhapus_Click(sender As Object, e As EventArgs) Handles btnhapus.Click
         dt = New DataTable
-        query = "update detail_retur_beli set `delete` = 1 where kode_barang = '" + pilih + "'"
+        query = "update detail_pembelian set retur = 0 where kode_barang_pembelian = '" + pilih + "'"
         If MessageBox.Show("Yakin akan melakukan delete?", "Konfirmasi", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
             connect.Open()
             command = New MySqlCommand(query, connect)
@@ -253,20 +249,26 @@ Public Class Retur_Pembelian
 
 
         dt.Clear()
-        harga = "select sum(total_harga) from detail_retur_beli where no_nota_pembelian = '" + tbnopembelian.Text + "' and `delete` = 0"
+        harga = "select sum(total_harga) from detail_pembelian where no_nota_pembelian = '" + tbnopembelian.Text + "' and `delete` = 0 and retur = 1"
         command = New MySqlCommand(harga, connect)
         adapter = New MySqlDataAdapter(command)
         adapter.Fill(dt)
-        tbtotalharga.Text = dt.Rows(0).Item("sum(total_harga)")
+        tbtotalharga.Text = dt.Rows(0).Item("sum(total_harga)").ToString
 
 
         dt3.Clear()
-        query = "select * from detail_retur_beli where no_nota_pembelian = '" + tbnopembelian.Text + "' and `delete` = 0"
+        query = "select * from detail_pembelian where no_nota_pembelian = '" + tbnopembelian.Text + "' and `delete` = 0 and retur = 1"
         command = New MySqlCommand(query, connect)
         adapter = New MySqlDataAdapter(command)
         adapter.Fill(dt3)
         dgvreturbeli.DataSource = dt3
 
+        dt4.Clear()
+        query = "select * from detail_pembelian where no_nota_pembelian ='" + tbnopembelian.Text + "' and `delete` = 0 and retur = 0"
+        command = New MySqlCommand(query, connect)
+        adapter = New MySqlDataAdapter(command)
+        adapter.Fill(dt4)
+        dgvdetailbarang.DataSource = dt4
     End Sub
 
     Private Sub dgvreturbeli_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvreturbeli.CellContentClick
@@ -275,12 +277,12 @@ Public Class Retur_Pembelian
 
     Private Sub btncari_Click(sender As Object, e As EventArgs) Handles btncari.Click
         Try
-            dt3.Clear()
+            dt4.Clear()
             query = "select * from detail_pembelian where no_nota_pembelian ='" + tbnopembelian.Text + "' and `delete` = 0 and retur = 0"
             command = New MySqlCommand(query, connect)
             adapter = New MySqlDataAdapter(command)
-            adapter.Fill(dt3)
-            dgvdetailbarang.DataSource = dt3
+            adapter.Fill(dt4)
+            dgvdetailbarang.DataSource = dt4
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try

@@ -25,6 +25,9 @@ Partial Class Retur_Penjualan
         Me.Label1 = New System.Windows.Forms.Label()
         Me.tbtotalharga = New System.Windows.Forms.TextBox()
         Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
+        Me.btncari = New System.Windows.Forms.Button()
+        Me.tbnopenjualan = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.tbno_nota = New System.Windows.Forms.TextBox()
         Me.tbkode_cust = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -37,10 +40,7 @@ Partial Class Retur_Penjualan
         Me.btnkoreksi = New System.Windows.Forms.Button()
         Me.btnsimpan = New System.Windows.Forms.Button()
         Me.btnprint = New System.Windows.Forms.Button()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.tbnopenjualan = New System.Windows.Forms.TextBox()
         Me.dgvreturjual = New System.Windows.Forms.DataGridView()
-        Me.btncari = New System.Windows.Forms.Button()
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl1.SuspendLayout()
         CType(Me.dgvdetailbarang, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -81,9 +81,35 @@ Partial Class Retur_Penjualan
         Me.PanelControl1.Size = New System.Drawing.Size(936, 135)
         Me.PanelControl1.TabIndex = 3
         '
+        'btncari
+        '
+        Me.btncari.Location = New System.Drawing.Point(330, 50)
+        Me.btncari.Name = "btncari"
+        Me.btncari.Size = New System.Drawing.Size(75, 23)
+        Me.btncari.TabIndex = 27
+        Me.btncari.Text = "Cari"
+        Me.btncari.UseVisualStyleBackColor = True
+        '
+        'tbnopenjualan
+        '
+        Me.tbnopenjualan.Location = New System.Drawing.Point(203, 51)
+        Me.tbnopenjualan.Name = "tbnopenjualan"
+        Me.tbnopenjualan.Size = New System.Drawing.Size(121, 21)
+        Me.tbnopenjualan.TabIndex = 26
+        Me.tbnopenjualan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(6, 54)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(96, 13)
+        Me.Label3.TabIndex = 25
+        Me.Label3.Text = "No Nota Penjualan"
+        '
         'tbno_nota
         '
-        Me.tbno_nota.Location = New System.Drawing.Point(126, 12)
+        Me.tbno_nota.Location = New System.Drawing.Point(203, 12)
         Me.tbno_nota.Name = "tbno_nota"
         Me.tbno_nota.Size = New System.Drawing.Size(138, 21)
         Me.tbno_nota.TabIndex = 24
@@ -91,7 +117,7 @@ Partial Class Retur_Penjualan
         '
         'tbkode_cust
         '
-        Me.tbkode_cust.Location = New System.Drawing.Point(126, 87)
+        Me.tbkode_cust.Location = New System.Drawing.Point(203, 87)
         Me.tbkode_cust.Name = "tbkode_cust"
         Me.tbkode_cust.Size = New System.Drawing.Size(121, 21)
         Me.tbkode_cust.TabIndex = 7
@@ -108,7 +134,7 @@ Partial Class Retur_Penjualan
         '
         'dtppilihtanggal
         '
-        Me.dtppilihtanggal.Location = New System.Drawing.Point(777, 12)
+        Me.dtppilihtanggal.Location = New System.Drawing.Point(711, 9)
         Me.dtppilihtanggal.Name = "dtppilihtanggal"
         Me.dtppilihtanggal.Size = New System.Drawing.Size(154, 21)
         Me.dtppilihtanggal.TabIndex = 4
@@ -116,7 +142,7 @@ Partial Class Retur_Penjualan
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(726, 15)
+        Me.Label4.Location = New System.Drawing.Point(569, 15)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(45, 13)
         Me.Label4.TabIndex = 3
@@ -185,23 +211,6 @@ Partial Class Retur_Penjualan
         Me.btnprint.Text = "Print Nota"
         Me.btnprint.UseVisualStyleBackColor = True
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(6, 54)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(96, 13)
-        Me.Label3.TabIndex = 25
-        Me.Label3.Text = "No Nota Penjualan"
-        '
-        'tbnopenjualan
-        '
-        Me.tbnopenjualan.Location = New System.Drawing.Point(126, 51)
-        Me.tbnopenjualan.Name = "tbnopenjualan"
-        Me.tbnopenjualan.Size = New System.Drawing.Size(121, 21)
-        Me.tbnopenjualan.TabIndex = 26
-        Me.tbnopenjualan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
         'dgvreturjual
         '
         Me.dgvreturjual.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -210,15 +219,6 @@ Partial Class Retur_Penjualan
         Me.dgvreturjual.Name = "dgvreturjual"
         Me.dgvreturjual.Size = New System.Drawing.Size(937, 204)
         Me.dgvreturjual.TabIndex = 45
-        '
-        'btncari
-        '
-        Me.btncari.Location = New System.Drawing.Point(253, 50)
-        Me.btncari.Name = "btncari"
-        Me.btncari.Size = New System.Drawing.Size(75, 23)
-        Me.btncari.TabIndex = 27
-        Me.btncari.Text = "Cari"
-        Me.btncari.UseVisualStyleBackColor = True
         '
         'Retur_Penjualan
         '

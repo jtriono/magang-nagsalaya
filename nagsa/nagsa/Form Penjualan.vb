@@ -227,7 +227,7 @@ Public Class Formpenjualan
             command = New MySqlCommand(query, connect)
             adapter = New MySqlDataAdapter(command)
             adapter.Fill(dt)
-            simpanjumlahstok = dt.Rows(0).Item("sum(jumlah_barang)")
+            simpanjumlahstok = dt.Rows(0).Item("sum(jumlah_barang)").ToString
 
 
             query = "update detail_penjualan set `delete` = 1 where kode_barang = '" + pilih + "'"

@@ -34,8 +34,6 @@ Partial Class Formutama
         Me.TandaTerimaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReturPenjualanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReturnPembelianToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.InputJurnalHarianUmumToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.InputJurnalHarianKhususKasBankToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MasterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataRecoveryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataGolonganToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -157,7 +155,7 @@ Partial Class Formutama
         '
         'KToolStripMenuItem
         '
-        Me.KToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TandaTerimaToolStripMenuItem, Me.ReturPenjualanToolStripMenuItem, Me.ReturnPembelianToolStripMenuItem, Me.InputJurnalHarianUmumToolStripMenuItem, Me.InputJurnalHarianKhususKasBankToolStripMenuItem})
+        Me.KToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TandaTerimaToolStripMenuItem, Me.ReturPenjualanToolStripMenuItem, Me.ReturnPembelianToolStripMenuItem})
         Me.KToolStripMenuItem.Name = "KToolStripMenuItem"
         Me.KToolStripMenuItem.Size = New System.Drawing.Size(26, 20)
         Me.KToolStripMenuItem.Text = "K"
@@ -165,32 +163,20 @@ Partial Class Formutama
         'TandaTerimaToolStripMenuItem
         '
         Me.TandaTerimaToolStripMenuItem.Name = "TandaTerimaToolStripMenuItem"
-        Me.TandaTerimaToolStripMenuItem.Size = New System.Drawing.Size(267, 22)
+        Me.TandaTerimaToolStripMenuItem.Size = New System.Drawing.Size(168, 22)
         Me.TandaTerimaToolStripMenuItem.Text = "Tanda Terima"
         '
         'ReturPenjualanToolStripMenuItem
         '
         Me.ReturPenjualanToolStripMenuItem.Name = "ReturPenjualanToolStripMenuItem"
-        Me.ReturPenjualanToolStripMenuItem.Size = New System.Drawing.Size(267, 22)
+        Me.ReturPenjualanToolStripMenuItem.Size = New System.Drawing.Size(168, 22)
         Me.ReturPenjualanToolStripMenuItem.Text = "Return Penjualan"
         '
         'ReturnPembelianToolStripMenuItem
         '
         Me.ReturnPembelianToolStripMenuItem.Name = "ReturnPembelianToolStripMenuItem"
-        Me.ReturnPembelianToolStripMenuItem.Size = New System.Drawing.Size(267, 22)
+        Me.ReturnPembelianToolStripMenuItem.Size = New System.Drawing.Size(168, 22)
         Me.ReturnPembelianToolStripMenuItem.Text = "Return Pembelian"
-        '
-        'InputJurnalHarianUmumToolStripMenuItem
-        '
-        Me.InputJurnalHarianUmumToolStripMenuItem.Name = "InputJurnalHarianUmumToolStripMenuItem"
-        Me.InputJurnalHarianUmumToolStripMenuItem.Size = New System.Drawing.Size(267, 22)
-        Me.InputJurnalHarianUmumToolStripMenuItem.Text = "Input Jurnal Harian/Umum"
-        '
-        'InputJurnalHarianKhususKasBankToolStripMenuItem
-        '
-        Me.InputJurnalHarianKhususKasBankToolStripMenuItem.Name = "InputJurnalHarianKhususKasBankToolStripMenuItem"
-        Me.InputJurnalHarianKhususKasBankToolStripMenuItem.Size = New System.Drawing.Size(267, 22)
-        Me.InputJurnalHarianKhususKasBankToolStripMenuItem.Text = "Input Jurnal Harian/Khusus Kas Bank"
         '
         'MasterToolStripMenuItem
         '
@@ -506,8 +492,6 @@ Partial Class Formutama
     Friend WithEvents TandaTerimaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ReturPenjualanToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ReturnPembelianToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents InputJurnalHarianUmumToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents InputJurnalHarianKhususKasBankToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MasterToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DataRecoveryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DataGolonganToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem

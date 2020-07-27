@@ -24,6 +24,9 @@ Partial Class Retur_Pembelian
     Private Sub InitializeComponent()
         Me.btn_tambah = New System.Windows.Forms.Button()
         Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
+        Me.btncari = New System.Windows.Forms.Button()
+        Me.tbnopembelian = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.tbno_nota = New System.Windows.Forms.TextBox()
         Me.tbkode_supplier = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -37,10 +40,7 @@ Partial Class Retur_Pembelian
         Me.btnsimpan = New System.Windows.Forms.Button()
         Me.btnprint = New System.Windows.Forms.Button()
         Me.btnhapus = New System.Windows.Forms.Button()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.tbnopembelian = New System.Windows.Forms.TextBox()
         Me.dgvreturbeli = New System.Windows.Forms.DataGridView()
-        Me.btncari = New System.Windows.Forms.Button()
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl1.SuspendLayout()
         CType(Me.dgvdetailbarang, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -72,9 +72,35 @@ Partial Class Retur_Pembelian
         Me.PanelControl1.Size = New System.Drawing.Size(936, 135)
         Me.PanelControl1.TabIndex = 42
         '
+        'btncari
+        '
+        Me.btncari.Location = New System.Drawing.Point(331, 49)
+        Me.btncari.Name = "btncari"
+        Me.btncari.Size = New System.Drawing.Size(75, 23)
+        Me.btncari.TabIndex = 27
+        Me.btncari.Text = "Cari"
+        Me.btncari.UseVisualStyleBackColor = True
+        '
+        'tbnopembelian
+        '
+        Me.tbnopembelian.Location = New System.Drawing.Point(204, 50)
+        Me.tbnopembelian.Name = "tbnopembelian"
+        Me.tbnopembelian.Size = New System.Drawing.Size(121, 21)
+        Me.tbnopembelian.TabIndex = 26
+        Me.tbnopembelian.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(571, 15)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(45, 13)
+        Me.Label3.TabIndex = 25
+        Me.Label3.Text = "Tanggal"
+        '
         'tbno_nota
         '
-        Me.tbno_nota.Location = New System.Drawing.Point(126, 12)
+        Me.tbno_nota.Location = New System.Drawing.Point(204, 12)
         Me.tbno_nota.Name = "tbno_nota"
         Me.tbno_nota.Size = New System.Drawing.Size(138, 21)
         Me.tbno_nota.TabIndex = 24
@@ -82,7 +108,7 @@ Partial Class Retur_Pembelian
         '
         'tbkode_supplier
         '
-        Me.tbkode_supplier.Location = New System.Drawing.Point(126, 87)
+        Me.tbkode_supplier.Location = New System.Drawing.Point(204, 87)
         Me.tbkode_supplier.Name = "tbkode_supplier"
         Me.tbkode_supplier.Size = New System.Drawing.Size(121, 21)
         Me.tbkode_supplier.TabIndex = 7
@@ -99,7 +125,7 @@ Partial Class Retur_Pembelian
         '
         'dtppilihtanggal
         '
-        Me.dtppilihtanggal.Location = New System.Drawing.Point(777, 12)
+        Me.dtppilihtanggal.Location = New System.Drawing.Point(712, 12)
         Me.dtppilihtanggal.Name = "dtppilihtanggal"
         Me.dtppilihtanggal.Size = New System.Drawing.Size(154, 21)
         Me.dtppilihtanggal.TabIndex = 4
@@ -185,23 +211,6 @@ Partial Class Retur_Pembelian
         Me.btnhapus.Text = "Hapus"
         Me.btnhapus.UseVisualStyleBackColor = True
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(726, 18)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(45, 13)
-        Me.Label3.TabIndex = 25
-        Me.Label3.Text = "Tanggal"
-        '
-        'tbnopembelian
-        '
-        Me.tbnopembelian.Location = New System.Drawing.Point(126, 50)
-        Me.tbnopembelian.Name = "tbnopembelian"
-        Me.tbnopembelian.Size = New System.Drawing.Size(121, 21)
-        Me.tbnopembelian.TabIndex = 26
-        Me.tbnopembelian.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
         'dgvreturbeli
         '
         Me.dgvreturbeli.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -210,15 +219,6 @@ Partial Class Retur_Pembelian
         Me.dgvreturbeli.Name = "dgvreturbeli"
         Me.dgvreturbeli.Size = New System.Drawing.Size(937, 205)
         Me.dgvreturbeli.TabIndex = 63
-        '
-        'btncari
-        '
-        Me.btncari.Location = New System.Drawing.Point(253, 49)
-        Me.btncari.Name = "btncari"
-        Me.btncari.Size = New System.Drawing.Size(75, 23)
-        Me.btncari.TabIndex = 27
-        Me.btncari.Text = "Cari"
-        Me.btncari.UseVisualStyleBackColor = True
         '
         'Retur_Pembelian
         '
