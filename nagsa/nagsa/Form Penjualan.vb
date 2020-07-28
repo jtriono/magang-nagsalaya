@@ -151,55 +151,60 @@ Public Class Formpenjualan
     End Sub
 
     Private Sub btnsimpan_Click(sender As Object, e As EventArgs) Handles btnsimpan.Click
-        Try
-            dt = New DataTable
-            query = "insert into penjualan values('" + tbno_nota.Text + "','" + tbno_pajak.Text + "','" + dtppilihtanggal.Value.ToString("yyyy-MM-dd") + "','" + tbkode_cust.Text + "','" + dtpjatuh_tempo.Value.ToString("yyyy-MM-dd").ToString + "','" + tbtotalharga.Text + "',0)"
-            connect.Open()
-            command = New MySqlCommand(query, connect)
-            command.ExecuteNonQuery()
-            connect.Close()
-            MessageBox.Show("Data Berhasil Masuk")
+        If tbkode_cust.Text = "" Or tbno_pajak.Text = "" Then
+            MessageBox.Show("Lengkapi data terlebih dahulu")
+        Else
 
-            autogenerate = ""
-            dt = New DataTable
-            query = "select no_pajak from penjualan"
-            command = New MySqlCommand(query, connect)
-            adapter = New MySqlDataAdapter(command)
-            adapter.Fill(dt)
-            If dt.Rows.Count < 10 Then
-                autogenerate = autogenerate + "81700000" + (dt.Rows.Count + 1).ToString
-            ElseIf dt.Rows.Count < 100 Then
-                autogenerate = autogenerate + "8170000" + (dt.Rows.Count + 1).ToString
-            ElseIf dt.Rows.Count < 1000 Then
-                autogenerate = autogenerate + "817000" + (dt.Rows.Count + 1).ToString
-            ElseIf dt.Rows.Count < 10000 Then
-                autogenerate = autogenerate + "81700" + (dt.Rows.Count + 1).ToString
-            ElseIf dt.Rows.Count < 100000 Then
-                autogenerate = autogenerate + "8170" + (dt.Rows.Count + 1).ToString
-            ElseIf dt.Rows.Count < 1000000 Then
-                autogenerate = autogenerate + "817" + (dt.Rows.Count + 1).ToString
-            End If
-            tbno_nota.Text = autogenerate
-            tbtotalharga.Text = "0"
-            tbno_pajak.Text = " "
-            tbkode_cust.Text = " "
-            dtpjatuh_tempo.Value = DateTime.Now
-            dtppilihtanggal.Value = DateTime.Now
-        Catch ex As Exception
-            MsgBox(ex.Message)
-            connect.Close()
-        End Try
+            Try
+                dt = New DataTable
+                query = "insert into penjualan values('" + tbno_nota.Text + "','" + tbno_pajak.Text + "','" + dtppilihtanggal.Value.ToString("yyyy-MM-dd") + "','" + tbkode_cust.Text + "','" + dtpjatuh_tempo.Value.ToString("yyyy-MM-dd").ToString + "','" + tbtotalharga.Text + "',0)"
+                connect.Open()
+                command = New MySqlCommand(query, connect)
+                command.ExecuteNonQuery()
+                connect.Close()
+                MessageBox.Show("Data Berhasil Masuk")
 
-        Try
-            dt3.Clear()
-            query = "select * from detail_penjualan where no_nota_penjualan = '" + tbno_nota.Text + "' and `delete` = 0"
-            command = New MySqlCommand(query, connect)
-            adapter = New MySqlDataAdapter(command)
-            adapter.Fill(dt3)
-            dgvdetailbarang.DataSource = dt3
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
+                autogenerate = ""
+                dt = New DataTable
+                query = "select no_pajak from penjualan"
+                command = New MySqlCommand(query, connect)
+                adapter = New MySqlDataAdapter(command)
+                adapter.Fill(dt)
+                If dt.Rows.Count < 10 Then
+                    autogenerate = autogenerate + "81700000" + (dt.Rows.Count + 1).ToString
+                ElseIf dt.Rows.Count < 100 Then
+                    autogenerate = autogenerate + "8170000" + (dt.Rows.Count + 1).ToString
+                ElseIf dt.Rows.Count < 1000 Then
+                    autogenerate = autogenerate + "817000" + (dt.Rows.Count + 1).ToString
+                ElseIf dt.Rows.Count < 10000 Then
+                    autogenerate = autogenerate + "81700" + (dt.Rows.Count + 1).ToString
+                ElseIf dt.Rows.Count < 100000 Then
+                    autogenerate = autogenerate + "8170" + (dt.Rows.Count + 1).ToString
+                ElseIf dt.Rows.Count < 1000000 Then
+                    autogenerate = autogenerate + "817" + (dt.Rows.Count + 1).ToString
+                End If
+                tbno_nota.Text = autogenerate
+                tbtotalharga.Text = "0"
+                tbno_pajak.Text = " "
+                tbkode_cust.Text = " "
+                dtpjatuh_tempo.Value = DateTime.Now
+                dtppilihtanggal.Value = DateTime.Now
+            Catch ex As Exception
+                MsgBox(ex.Message)
+                connect.Close()
+            End Try
+
+            Try
+                dt3.Clear()
+                query = "select * from detail_penjualan where no_nota_penjualan = '" + tbno_nota.Text + "' and `delete` = 0"
+                command = New MySqlCommand(query, connect)
+                adapter = New MySqlDataAdapter(command)
+                adapter.Fill(dt3)
+                dgvdetailbarang.DataSource = dt3
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        End If
     End Sub
 
     Private Sub tbdisc_TextChanged(sender As Object, e As EventArgs) Handles tbdisc.TextChanged
