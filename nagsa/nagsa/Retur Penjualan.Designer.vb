@@ -136,7 +136,7 @@ Partial Class Retur_Penjualan
         '
         Me.dtppilihtanggal.Location = New System.Drawing.Point(711, 9)
         Me.dtppilihtanggal.Name = "dtppilihtanggal"
-        Me.dtppilihtanggal.Size = New System.Drawing.Size(154, 21)
+        Me.dtppilihtanggal.Size = New System.Drawing.Size(220, 21)
         Me.dtppilihtanggal.TabIndex = 4
         '
         'Label4

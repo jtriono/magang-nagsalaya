@@ -127,7 +127,7 @@ Partial Class Retur_Pembelian
         '
         Me.dtppilihtanggal.Location = New System.Drawing.Point(712, 12)
         Me.dtppilihtanggal.Name = "dtppilihtanggal"
-        Me.dtppilihtanggal.Size = New System.Drawing.Size(154, 21)
+        Me.dtppilihtanggal.Size = New System.Drawing.Size(219, 21)
         Me.dtppilihtanggal.TabIndex = 4
         '
         'Label4

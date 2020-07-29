@@ -44,4 +44,12 @@
     Private Sub btnlogout_Click(sender As Object, e As EventArgs) Handles btnlogout.Click
         Me.Close()
     End Sub
+
+    Private Sub DataSuppliersToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DataSuppliersToolStripMenuItem.Click
+        Formsupplier.ShowDialog()
+    End Sub
+
+    Private Sub DataCustomerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DataCustomerToolStripMenuItem.Click
+        Formcustomer.ShowDialog()
+    End Sub
 End Class
