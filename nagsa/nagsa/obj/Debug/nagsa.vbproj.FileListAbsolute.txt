@@ -101,3 +101,6 @@ C:\Users\windows\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\obj\Debug\Windows
 C:\Users\windows\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.Retur_Penjualan.resources
 C:\Users\Jeffrin\Desktop\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.Retur_Pembelian.resources
 C:\Users\Jeffrin\Desktop\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.Retur_Penjualan.resources
+C:\Users\Jeffrin\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\obj\Debug\nagsa.exe
+C:\Users\Jeffrin\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\obj\Debug\nagsa.xml
+C:\Users\Jeffrin\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\obj\Debug\nagsa.pdb

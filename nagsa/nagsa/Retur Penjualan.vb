@@ -262,6 +262,11 @@ Public Class Retur_Penjualan
             MessageBox.Show("Data Berhasil Dihapus")
         End If
 
+        query = "delete from detail_retur_jual where kode_barang='" + dt4.Rows(simpandetail).Item(0) + "' and no_nota_penjualan='" + dt4.Rows(simpandetail).Item(1) + "'"
+        connect.Open()
+        command = New MySqlCommand(query, connect)
+        command.ExecuteNonQuery()
+        connect.Close()
 
             dt.Clear()
         harga = "select sum(total_harga) from detail_penjualan where no_nota_penjualan = '" + tbnopenjualan.Text + "' and `delete` = 0 and retur = 1"
@@ -284,6 +289,7 @@ Public Class Retur_Penjualan
         adapter = New MySqlDataAdapter(command)
         adapter.Fill(dt4)
         dgvdetailbarang.DataSource = dt4
+
     End Sub
 
     Private Sub dgvreturjual_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvreturjual.CellContentClick

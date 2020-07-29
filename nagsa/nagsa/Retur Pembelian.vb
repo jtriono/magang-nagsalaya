@@ -16,6 +16,8 @@ Public Class Retur_Pembelian
     Dim numtakenout As String
     Dim pilih As String
     Dim masuk As String
+    Dim simpandetail As String
+
 
     Private Sub Retur_Pembelian_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Label1.Font = New Font(Label1.Font.FontFamily, 30)
@@ -100,6 +102,17 @@ Public Class Retur_Pembelian
             connect.Close()
         End Try
 
+        Dim baliktanggal As String = dt4.Rows(simpandetail).Item(3)
+        Dim tahun As String = baliktanggal.Substring(6, 4)
+        Dim bulan As String = baliktanggal.Substring(3, 2)
+        Dim tgl As String = baliktanggal.Substring(0, 2)
+        Dim tglbaru As String = tahun + "-" + bulan + "-" + tgl
+
+        query = "insert into detail_retur_beli values('" + dt4.Rows(simpandetail).Item(0) + "','" + dt4.Rows(simpandetail).Item(1) + "','" + dt4.Rows(simpandetail).Item(2) + "','" + tglbaru + "','" + dt4.Rows(simpandetail).Item(4) + "','" + dt4.Rows(simpandetail).Item(5).ToString + "','" + dt4.Rows(simpandetail).Item(6).ToString + "','" + dt4.Rows(simpandetail).Item(7).ToString + "','" + dt4.Rows(simpandetail).Item(8).ToString + "','" + dt4.Rows(simpandetail).Item(9) + "',0,1)"
+        connect.Open()
+        command = New MySqlCommand(query, connect)
+        command.ExecuteNonQuery()
+        connect.Close()
 
         Try
             dt.Clear()
@@ -234,6 +247,7 @@ Public Class Retur_Pembelian
 
     Private Sub dgvdetailbarang_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvdetailbarang.CellContentClick
         masuk = dgvdetailbarang.Rows(e.RowIndex).Cells(0).Value.ToString
+        simpandetail = dgvdetailbarang.CurrentRow.Index
     End Sub
 
     Private Sub btnhapus_Click(sender As Object, e As EventArgs) Handles btnhapus.Click
@@ -247,6 +261,11 @@ Public Class Retur_Pembelian
             MessageBox.Show("Data Berhasil Dihapus")
         End If
 
+        query = "delete from detail_retur_beli where kode_barang='" + dt4.Rows(simpandetail).Item(0) + "' and no_nota_pembelian='" + dt4.Rows(simpandetail).Item(1) + "'"
+        connect.Open()
+        command = New MySqlCommand(query, connect)
+        command.ExecuteNonQuery()
+        connect.Close()
 
         dt.Clear()
         harga = "select sum(total_harga) from detail_pembelian where no_nota_pembelian = '" + tbnopembelian.Text + "' and `delete` = 0 and retur = 1"
@@ -278,6 +297,12 @@ Public Class Retur_Pembelian
     Private Sub btncari_Click(sender As Object, e As EventArgs) Handles btncari.Click
         Try
             dt4.Clear()
+            query = "select * from pembelian where no_nota_pembelian='" + tbnopembelian.Text + "' and `delete`=0"
+            command = New MySqlCommand(query, connect)
+            adapter = New MySqlDataAdapter(command)
+            adapter.Fill(dt4)
+            tbkode_supplier.Text = dt4.Rows(0).Item("kode_supplier").ToString
+            dt4 = New DataTable
             query = "select * from detail_pembelian where no_nota_pembelian ='" + tbnopembelian.Text + "' and `delete` = 0 and retur = 0"
             command = New MySqlCommand(query, connect)
             adapter = New MySqlDataAdapter(command)
