@@ -52,4 +52,12 @@
     Private Sub DataCustomerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DataCustomerToolStripMenuItem.Click
         Formcustomer.ShowDialog()
     End Sub
+
+    Private Sub BayarHutangCustomerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BayarHutangCustomerToolStripMenuItem.Click
+        Form_Bayar_Piutang.ShowDialog()
+    End Sub
+
+    Private Sub BayarHutangSupplierToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BayarHutangSupplierToolStripMenuItem.Click
+        Form_Bayar_Hutang.ShowDialog()
+    End Sub
 End Class

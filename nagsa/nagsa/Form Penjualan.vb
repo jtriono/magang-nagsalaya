@@ -360,6 +360,5 @@ Public Class Formpenjualan
         pilih = dgvdetailbarang.Rows(e.RowIndex).Cells(0).Value.ToString
 
     End Sub
-
     
 End Class
