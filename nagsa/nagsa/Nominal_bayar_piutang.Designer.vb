@@ -27,6 +27,7 @@ Partial Class Nominal_bayar_piutang
         Me.Label2 = New System.Windows.Forms.Label()
         Me.tbharga = New System.Windows.Forms.TextBox()
         Me.btnbayar = New System.Windows.Forms.Button()
+        Me.btnbatal = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'tbinputbayar
@@ -70,11 +71,21 @@ Partial Class Nominal_bayar_piutang
         Me.btnbayar.Text = "Bayar"
         Me.btnbayar.UseVisualStyleBackColor = True
         '
+        'btnbatal
+        '
+        Me.btnbatal.Location = New System.Drawing.Point(15, 100)
+        Me.btnbatal.Name = "btnbatal"
+        Me.btnbatal.Size = New System.Drawing.Size(75, 23)
+        Me.btnbatal.TabIndex = 5
+        Me.btnbatal.Text = "Batal"
+        Me.btnbatal.UseVisualStyleBackColor = True
+        '
         'Nominal_bayar_piutang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(352, 143)
+        Me.Controls.Add(Me.btnbatal)
         Me.Controls.Add(Me.btnbayar)
         Me.Controls.Add(Me.tbharga)
         Me.Controls.Add(Me.Label2)
@@ -91,4 +102,5 @@ Partial Class Nominal_bayar_piutang
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents tbharga As System.Windows.Forms.TextBox
     Friend WithEvents btnbayar As System.Windows.Forms.Button
+    Friend WithEvents btnbatal As System.Windows.Forms.Button
 End Class

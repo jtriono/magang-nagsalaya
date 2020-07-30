@@ -26,7 +26,7 @@ Partial Class Form_Bayar_Piutang
         Me.tbnamacust = New System.Windows.Forms.TextBox()
         Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
         Me.btncari = New System.Windows.Forms.Button()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.dtptanggal = New System.Windows.Forms.DateTimePicker()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.btnmasukharga = New System.Windows.Forms.Button()
@@ -54,7 +54,7 @@ Partial Class Form_Bayar_Piutang
         'PanelControl1
         '
         Me.PanelControl1.Controls.Add(Me.btncari)
-        Me.PanelControl1.Controls.Add(Me.DateTimePicker1)
+        Me.PanelControl1.Controls.Add(Me.dtptanggal)
         Me.PanelControl1.Controls.Add(Me.Label2)
         Me.PanelControl1.Controls.Add(Me.Label1)
         Me.PanelControl1.Controls.Add(Me.tbnamacust)
@@ -72,12 +72,12 @@ Partial Class Form_Bayar_Piutang
         Me.btncari.Text = "Cari"
         Me.btncari.UseVisualStyleBackColor = True
         '
-        'DateTimePicker1
+        'dtptanggal
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(114, 47)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(195, 21)
-        Me.DateTimePicker1.TabIndex = 3
+        Me.dtptanggal.Location = New System.Drawing.Point(114, 47)
+        Me.dtptanggal.Name = "dtptanggal"
+        Me.dtptanggal.Size = New System.Drawing.Size(195, 21)
+        Me.dtptanggal.TabIndex = 3
         '
         'Label2
         '
@@ -91,14 +91,14 @@ Partial Class Form_Bayar_Piutang
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(16, 125)
+        Me.DataGridView1.Location = New System.Drawing.Point(16, 116)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(638, 219)
         Me.DataGridView1.TabIndex = 3
         '
         'btnmasukharga
         '
-        Me.btnmasukharga.Location = New System.Drawing.Point(569, 371)
+        Me.btnmasukharga.Location = New System.Drawing.Point(569, 357)
         Me.btnmasukharga.Name = "btnmasukharga"
         Me.btnmasukharga.Size = New System.Drawing.Size(85, 50)
         Me.btnmasukharga.TabIndex = 5
@@ -109,7 +109,7 @@ Partial Class Form_Bayar_Piutang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(666, 433)
+        Me.ClientSize = New System.Drawing.Size(666, 419)
         Me.Controls.Add(Me.btnmasukharga)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.PanelControl1)
@@ -125,7 +125,7 @@ Partial Class Form_Bayar_Piutang
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents tbnamacust As System.Windows.Forms.TextBox
     Friend WithEvents PanelControl1 As DevExpress.XtraEditors.PanelControl
-    Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents dtptanggal As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents btncari As System.Windows.Forms.Button
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView

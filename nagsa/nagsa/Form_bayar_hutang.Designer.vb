@@ -24,10 +24,10 @@ Partial Class Form_Bayar_Hutang
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.tbnamasupplier = New System.Windows.Forms.TextBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.btncari = New System.Windows.Forms.Button()
+        Me.dtptanggal = New System.Windows.Forms.DateTimePicker()
+        Me.tbnamasupplier = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.btnmasukharga = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -47,7 +47,7 @@ Partial Class Form_Bayar_Hutang
         'PanelControl1
         '
         Me.PanelControl1.Controls.Add(Me.btncari)
-        Me.PanelControl1.Controls.Add(Me.DateTimePicker1)
+        Me.PanelControl1.Controls.Add(Me.dtptanggal)
         Me.PanelControl1.Controls.Add(Me.tbnamasupplier)
         Me.PanelControl1.Controls.Add(Me.Label2)
         Me.PanelControl1.Controls.Add(Me.Label1)
@@ -55,29 +55,6 @@ Partial Class Form_Bayar_Hutang
         Me.PanelControl1.Name = "PanelControl1"
         Me.PanelControl1.Size = New System.Drawing.Size(638, 92)
         Me.PanelControl1.TabIndex = 1
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(5, 53)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(45, 13)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Tanggal"
-        '
-        'tbnamasupplier
-        '
-        Me.tbnamasupplier.Location = New System.Drawing.Point(132, 11)
-        Me.tbnamasupplier.Name = "tbnamasupplier"
-        Me.tbnamasupplier.Size = New System.Drawing.Size(195, 21)
-        Me.tbnamasupplier.TabIndex = 2
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(132, 47)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(195, 21)
-        Me.DateTimePicker1.TabIndex = 4
         '
         'btncari
         '
@@ -87,6 +64,29 @@ Partial Class Form_Bayar_Hutang
         Me.btncari.TabIndex = 5
         Me.btncari.Text = "Cari"
         Me.btncari.UseVisualStyleBackColor = True
+        '
+        'dtptanggal
+        '
+        Me.dtptanggal.Location = New System.Drawing.Point(132, 47)
+        Me.dtptanggal.Name = "dtptanggal"
+        Me.dtptanggal.Size = New System.Drawing.Size(195, 21)
+        Me.dtptanggal.TabIndex = 4
+        '
+        'tbnamasupplier
+        '
+        Me.tbnamasupplier.Location = New System.Drawing.Point(132, 11)
+        Me.tbnamasupplier.Name = "tbnamasupplier"
+        Me.tbnamasupplier.Size = New System.Drawing.Size(195, 21)
+        Me.tbnamasupplier.TabIndex = 2
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(5, 53)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(45, 13)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Tanggal"
         '
         'btnmasukharga
         '
@@ -126,7 +126,7 @@ Partial Class Form_Bayar_Hutang
     Friend WithEvents PanelControl1 As DevExpress.XtraEditors.PanelControl
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents tbnamasupplier As System.Windows.Forms.TextBox
-    Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents dtptanggal As System.Windows.Forms.DateTimePicker
     Friend WithEvents btncari As System.Windows.Forms.Button
     Friend WithEvents btnmasukharga As System.Windows.Forms.Button
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
