@@ -87,7 +87,7 @@ Public Class Formpembelian
     Private Sub btn_supplier_Click(sender As Object, e As EventArgs) Handles btn_supplier.Click
         Formsupplier.pilihsupplier = True
         Formsupplier.ShowDialog()
-        tb_kodesupplier.Text = Formsupplier.itemtest
+        tb_kodesupplier.Text = Formsupplier.suppliertest
         Try
             dt2 = New DataTable
             query = "select supplierid from supplier where supplierid = '" + tb_kodesupplier.Text + "'"

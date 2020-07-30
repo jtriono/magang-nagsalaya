@@ -6,7 +6,7 @@ Public Class Formsupplier
     Dim query As String
     Dim tampungsupplier As New DataTable
     Dim dscustomer As New DataSet
-    Public itemtest As String
+    Public suppliertest As String
     Public pilihsupplier As Boolean = False
     Dim pilihdgv As String
 
@@ -44,7 +44,7 @@ Public Class Formsupplier
 
     Private Sub dgvsupplier_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvsupplier.CellContentDoubleClick
         If pilihsupplier = True Then
-            itemtest = dgvsupplier.Rows(e.RowIndex).Cells(0).Value.ToString
+            suppliertest = dgvsupplier.Rows(e.RowIndex).Cells(0).Value.ToString
             pilihsupplier = False
             Me.Close()
 

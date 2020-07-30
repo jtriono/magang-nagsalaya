@@ -61,6 +61,7 @@ Partial Class Formpenjualan
         Me.cbsatuan = New System.Windows.Forms.ComboBox()
         Me.btncari = New System.Windows.Forms.Button()
         Me.tbhargadisc = New System.Windows.Forms.TextBox()
+        Me.buttonpilihcustomer = New System.Windows.Forms.Button()
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl1.SuspendLayout()
         CType(Me.dgvdetailbarang, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -86,6 +87,7 @@ Partial Class Formpenjualan
         '
         'PanelControl1
         '
+        Me.PanelControl1.Controls.Add(Me.buttonpilihcustomer)
         Me.PanelControl1.Controls.Add(Me.tbno_nota)
         Me.PanelControl1.Controls.Add(Me.dtpjatuh_tempo)
         Me.PanelControl1.Controls.Add(Me.Label6)
@@ -127,6 +129,7 @@ Partial Class Formpenjualan
         '
         'tbkode_cust
         '
+        Me.tbkode_cust.Enabled = False
         Me.tbkode_cust.Location = New System.Drawing.Point(126, 87)
         Me.tbkode_cust.Name = "tbkode_cust"
         Me.tbkode_cust.Size = New System.Drawing.Size(121, 21)
@@ -413,6 +416,15 @@ Partial Class Formpenjualan
         Me.tbhargadisc.Text = "0"
         Me.tbhargadisc.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
+        'buttonpilihcustomer
+        '
+        Me.buttonpilihcustomer.Location = New System.Drawing.Point(251, 87)
+        Me.buttonpilihcustomer.Name = "buttonpilihcustomer"
+        Me.buttonpilihcustomer.Size = New System.Drawing.Size(31, 21)
+        Me.buttonpilihcustomer.TabIndex = 25
+        Me.buttonpilihcustomer.Text = "V"
+        Me.buttonpilihcustomer.UseVisualStyleBackColor = True
+        '
         'Formpenjualan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -496,4 +508,5 @@ Partial Class Formpenjualan
     Friend WithEvents cbsatuan As System.Windows.Forms.ComboBox
     Friend WithEvents btncari As System.Windows.Forms.Button
     Friend WithEvents tbhargadisc As System.Windows.Forms.TextBox
+    Friend WithEvents buttonpilihcustomer As System.Windows.Forms.Button
 End Class

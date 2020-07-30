@@ -361,4 +361,9 @@ Public Class Formpenjualan
 
     End Sub
     
+    Private Sub buttonpilihcustomer_Click(sender As Object, e As EventArgs) Handles buttonpilihcustomer.Click
+        Formcustomer.pilihcustomer = True
+        Formcustomer.ShowDialog()
+        tbkode_cust.Text = Formcustomer.customertest
+    End Sub
 End Class

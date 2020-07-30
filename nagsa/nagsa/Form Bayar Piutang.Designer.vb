@@ -25,6 +25,7 @@ Partial Class Form_Bayar_Piutang
         Me.Label1 = New System.Windows.Forms.Label()
         Me.tbnamacust = New System.Windows.Forms.TextBox()
         Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
+        Me.Buttonpilihcustomer = New System.Windows.Forms.Button()
         Me.btncari = New System.Windows.Forms.Button()
         Me.dtptanggal = New System.Windows.Forms.DateTimePicker()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -46,6 +47,7 @@ Partial Class Form_Bayar_Piutang
         '
         'tbnamacust
         '
+        Me.tbnamacust.Enabled = False
         Me.tbnamacust.Location = New System.Drawing.Point(114, 13)
         Me.tbnamacust.Name = "tbnamacust"
         Me.tbnamacust.Size = New System.Drawing.Size(195, 21)
@@ -53,6 +55,7 @@ Partial Class Form_Bayar_Piutang
         '
         'PanelControl1
         '
+        Me.PanelControl1.Controls.Add(Me.Buttonpilihcustomer)
         Me.PanelControl1.Controls.Add(Me.btncari)
         Me.PanelControl1.Controls.Add(Me.dtptanggal)
         Me.PanelControl1.Controls.Add(Me.Label2)
@@ -62,6 +65,15 @@ Partial Class Form_Bayar_Piutang
         Me.PanelControl1.Name = "PanelControl1"
         Me.PanelControl1.Size = New System.Drawing.Size(638, 88)
         Me.PanelControl1.TabIndex = 2
+        '
+        'Buttonpilihcustomer
+        '
+        Me.Buttonpilihcustomer.Location = New System.Drawing.Point(315, 13)
+        Me.Buttonpilihcustomer.Name = "Buttonpilihcustomer"
+        Me.Buttonpilihcustomer.Size = New System.Drawing.Size(94, 23)
+        Me.Buttonpilihcustomer.TabIndex = 5
+        Me.Buttonpilihcustomer.Text = "Pilih Customer"
+        Me.Buttonpilihcustomer.UseVisualStyleBackColor = True
         '
         'btncari
         '
@@ -76,7 +88,7 @@ Partial Class Form_Bayar_Piutang
         '
         Me.dtptanggal.Location = New System.Drawing.Point(114, 47)
         Me.dtptanggal.Name = "dtptanggal"
-        Me.dtptanggal.Size = New System.Drawing.Size(195, 21)
+        Me.dtptanggal.Size = New System.Drawing.Size(295, 21)
         Me.dtptanggal.TabIndex = 3
         '
         'Label2
@@ -130,4 +142,5 @@ Partial Class Form_Bayar_Piutang
     Friend WithEvents btncari As System.Windows.Forms.Button
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents btnmasukharga As System.Windows.Forms.Button
+    Friend WithEvents Buttonpilihcustomer As System.Windows.Forms.Button
 End Class

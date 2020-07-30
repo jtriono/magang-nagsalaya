@@ -39,4 +39,10 @@ Public Class Form_Bayar_Hutang
         pilih = DataGridView1.Rows(e.RowIndex).Cells(0).Value.ToString
         simpandetail = DataGridView1.CurrentRow.Index
     End Sub
+
+    Private Sub buttonpilihsupplier_Click(sender As Object, e As EventArgs) Handles buttonpilihsupplier.Click
+        Formsupplier.pilihsupplier = True
+        Formsupplier.ShowDialog()
+        tbnamasupplier.Text = Formsupplier.suppliertest
+    End Sub
 End Class

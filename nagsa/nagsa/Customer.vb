@@ -6,6 +6,9 @@ Public Class Formcustomer
     Dim query As String
     Dim tampungcustomer As New DataTable
     Dim pilihdgv As String
+    Public customertest As String
+    Public pilihcustomer As Boolean = False
+
     Private Sub bttambah_Click(sender As Object, e As EventArgs) Handles bttambah.Click
         Formtambahcust.ShowDialog()
     End Sub
@@ -52,5 +55,14 @@ Public Class Formcustomer
 
     Private Sub dgvcustomer_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvcustomer.CellContentClick
         pilihdgv = dgvcustomer.Rows(e.RowIndex).Cells(0).Value.ToString
+    End Sub
+
+    Private Sub dgvcustomer_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvcustomer.CellContentDoubleClick
+        If pilihcustomer = True Then
+            customertest = dgvcustomer.Rows(e.RowIndex).Cells(0).Value.ToString
+            pilihcustomer = False
+            Me.Close()
+       
+        End If
     End Sub
 End Class

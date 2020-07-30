@@ -34,6 +34,7 @@ Partial Class Formsupplier
         'dgvsupplier
         '
         Me.dgvsupplier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvsupplier.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.dgvsupplier.Location = New System.Drawing.Point(12, 57)
         Me.dgvsupplier.Name = "dgvsupplier"
         Me.dgvsupplier.Size = New System.Drawing.Size(607, 236)

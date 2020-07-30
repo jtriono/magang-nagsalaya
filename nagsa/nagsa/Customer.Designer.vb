@@ -33,6 +33,7 @@ Partial Class Formcustomer
         'dgvcustomer
         '
         Me.dgvcustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvcustomer.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.dgvcustomer.Location = New System.Drawing.Point(29, 52)
         Me.dgvcustomer.Name = "dgvcustomer"
         Me.dgvcustomer.Size = New System.Drawing.Size(572, 203)

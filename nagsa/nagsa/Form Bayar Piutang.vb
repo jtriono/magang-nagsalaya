@@ -39,4 +39,11 @@ Public Class Form_Bayar_Piutang
         pilih = DataGridView1.Rows(e.RowIndex).Cells(0).Value.ToString
         simpandetail = DataGridView1.CurrentRow.Index
     End Sub
+
+    
+    Private Sub Buttonpilihcustomer_Click(sender As Object, e As EventArgs) Handles Buttonpilihcustomer.Click
+        Formcustomer.pilihcustomer = True
+        Formcustomer.ShowDialog()
+        tbnamacust.Text = Formcustomer.customertest
+    End Sub
 End Class

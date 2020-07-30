@@ -109,3 +109,8 @@ C:\Users\windows\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\obj\Debug\Windows
 C:\Users\windows\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.Form_Bayar_Hutang.resources
 C:\Users\windows\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.Nominal_bayar_hutang.resources
 C:\Users\windows\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.Nominal_bayar_piutang.resources
+C:\Users\Jeffrin\Desktop\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.Form_Bayar_Piutang.resources
+C:\Users\Jeffrin\Desktop\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.Form_Bayar_Hutang.resources
+C:\Users\Jeffrin\Desktop\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.Nominal_bayar_hutang.resources
+C:\Users\Jeffrin\Desktop\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.Nominal_bayar_piutang.resources
+C:\Users\Jeffrin\Desktop\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.Tanda_Terima.resources

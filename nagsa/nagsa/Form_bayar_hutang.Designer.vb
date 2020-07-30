@@ -24,6 +24,7 @@ Partial Class Form_Bayar_Hutang
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
+        Me.buttonpilihsupplier = New System.Windows.Forms.Button()
         Me.btncari = New System.Windows.Forms.Button()
         Me.dtptanggal = New System.Windows.Forms.DateTimePicker()
         Me.tbnamasupplier = New System.Windows.Forms.TextBox()
@@ -46,6 +47,7 @@ Partial Class Form_Bayar_Hutang
         '
         'PanelControl1
         '
+        Me.PanelControl1.Controls.Add(Me.buttonpilihsupplier)
         Me.PanelControl1.Controls.Add(Me.btncari)
         Me.PanelControl1.Controls.Add(Me.dtptanggal)
         Me.PanelControl1.Controls.Add(Me.tbnamasupplier)
@@ -55,6 +57,15 @@ Partial Class Form_Bayar_Hutang
         Me.PanelControl1.Name = "PanelControl1"
         Me.PanelControl1.Size = New System.Drawing.Size(638, 92)
         Me.PanelControl1.TabIndex = 1
+        '
+        'buttonpilihsupplier
+        '
+        Me.buttonpilihsupplier.Location = New System.Drawing.Point(333, 11)
+        Me.buttonpilihsupplier.Name = "buttonpilihsupplier"
+        Me.buttonpilihsupplier.Size = New System.Drawing.Size(75, 23)
+        Me.buttonpilihsupplier.TabIndex = 6
+        Me.buttonpilihsupplier.Text = "Pilih Supplier"
+        Me.buttonpilihsupplier.UseVisualStyleBackColor = True
         '
         'btncari
         '
@@ -69,11 +80,12 @@ Partial Class Form_Bayar_Hutang
         '
         Me.dtptanggal.Location = New System.Drawing.Point(132, 47)
         Me.dtptanggal.Name = "dtptanggal"
-        Me.dtptanggal.Size = New System.Drawing.Size(195, 21)
+        Me.dtptanggal.Size = New System.Drawing.Size(276, 21)
         Me.dtptanggal.TabIndex = 4
         '
         'tbnamasupplier
         '
+        Me.tbnamasupplier.Enabled = False
         Me.tbnamasupplier.Location = New System.Drawing.Point(132, 11)
         Me.tbnamasupplier.Name = "tbnamasupplier"
         Me.tbnamasupplier.Size = New System.Drawing.Size(195, 21)
@@ -130,4 +142,5 @@ Partial Class Form_Bayar_Hutang
     Friend WithEvents btncari As System.Windows.Forms.Button
     Friend WithEvents btnmasukharga As System.Windows.Forms.Button
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents buttonpilihsupplier As System.Windows.Forms.Button
 End Class
