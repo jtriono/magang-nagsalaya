@@ -360,4 +360,67 @@ Public Class Formpembelian
     Private Sub dgv_barangbeli_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_barangbeli.CellContentClick
         pilih = dgv_barangbeli.Rows(e.RowIndex).Cells(0).Value.ToString
     End Sub
+
+    Private Sub btnsimpanhutang_Click(sender As Object, e As EventArgs) Handles btnsimpanhutang.Click
+        If tb_kodesupplier.Text = "" Then
+            MessageBox.Show("Lengkapi data terlebih dahulu")
+        Else
+            Try
+                dt = New DataTable
+                query = "insert into hutang values('" + tb_nonota.Text + "','" + tb_kodesupplier.Text + "','" + tb_totalharga.Text + "',' - ',0)"
+                connect.Open()
+                command = New MySqlCommand(query, connect)
+                command.ExecuteNonQuery()
+                connect.Close()
+                MessageBox.Show("Data Berhasil Masuk")
+
+                dt = New DataTable
+                query = "insert into pembelian values('" + tb_nonota.Text + "','" + dtptanggal.Value.ToString("yyyy-MM-dd") + "','" + tb_kodesupplier.Text + "','" + dtp_jt.Value.ToString("yyyy-MM-dd") + "','" + tb_totalharga.Text + "',0,0)"
+                connect.Open()
+                command = New MySqlCommand(query, connect)
+                command.ExecuteNonQuery()
+                connect.Close()
+                MessageBox.Show("Data Berhasil Masuk")
+
+                autogenerate = ""
+                dt = New DataTable
+                query = "select no_nota_pembelian from pembelian"
+                command = New MySqlCommand(query, connect)
+                adapter = New MySqlDataAdapter(command)
+                adapter.Fill(dt)
+                If dt.Rows.Count < 10 Then
+                    autogenerate = autogenerate + "000000" + (dt.Rows.Count + 1).ToString
+                ElseIf dt.Rows.Count < 100 Then
+                    autogenerate = autogenerate + "00000" + (dt.Rows.Count + 1).ToString
+                ElseIf dt.Rows.Count < 1000 Then
+                    autogenerate = autogenerate + "0000" + (dt.Rows.Count + 1).ToString
+                ElseIf dt.Rows.Count < 10000 Then
+                    autogenerate = autogenerate + "000" + (dt.Rows.Count + 1).ToString
+                ElseIf dt.Rows.Count < 100000 Then
+                    autogenerate = autogenerate + "00" + (dt.Rows.Count + 1).ToString
+                ElseIf dt.Rows.Count < 1000000 Then
+                    autogenerate = autogenerate + "0" + (dt.Rows.Count + 1).ToString
+                End If
+                tb_nonota.Text = autogenerate
+                tb_totalharga.Text = "0"
+                tb_kodesupplier.Text = ""
+                dtp_jt.Value = DateTime.Now
+                dtptanggal.Value = DateTime.Now
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+
+            Try
+                dt3.Clear()
+                query = "select * from detail_pembelian where no_nota_pembelian = '" + tb_nonota.Text + "' and `delete` = 0"
+                adapter = New MySqlDataAdapter(query, connect)
+                adapter = New MySqlDataAdapter(command)
+                adapter.Fill(dt3)
+                dgv_barangbeli.DataSource = dt3
+            Catch ex As Exception
+                MsgBox(ex.Message)
+                connect.Close()
+            End Try
+        End If
+    End Sub
 End Class

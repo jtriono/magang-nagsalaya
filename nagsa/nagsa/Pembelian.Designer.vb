@@ -59,6 +59,8 @@ Partial Class Formpembelian
         Me.cb_satuan = New System.Windows.Forms.ComboBox()
         Me.tbhargadisc = New System.Windows.Forms.TextBox()
         Me.btncari = New System.Windows.Forms.Button()
+        Me.btnprint = New System.Windows.Forms.Button()
+        Me.btnsimpanhutang = New System.Windows.Forms.Button()
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl1.SuspendLayout()
         CType(Me.dgv_barangbeli, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -349,7 +351,7 @@ Partial Class Formpembelian
         '
         'btn_koreksi
         '
-        Me.btn_koreksi.Location = New System.Drawing.Point(812, 584)
+        Me.btn_koreksi.Location = New System.Drawing.Point(101, 584)
         Me.btn_koreksi.Name = "btn_koreksi"
         Me.btn_koreksi.Size = New System.Drawing.Size(75, 53)
         Me.btn_koreksi.TabIndex = 33
@@ -391,11 +393,31 @@ Partial Class Formpembelian
         Me.btncari.Text = "V"
         Me.btncari.UseVisualStyleBackColor = True
         '
+        'btnprint
+        '
+        Me.btnprint.Location = New System.Drawing.Point(827, 584)
+        Me.btnprint.Name = "btnprint"
+        Me.btnprint.Size = New System.Drawing.Size(75, 53)
+        Me.btnprint.TabIndex = 38
+        Me.btnprint.Text = "Print Nota"
+        Me.btnprint.UseVisualStyleBackColor = True
+        '
+        'btnsimpanhutang
+        '
+        Me.btnsimpanhutang.Location = New System.Drawing.Point(741, 584)
+        Me.btnsimpanhutang.Name = "btnsimpanhutang"
+        Me.btnsimpanhutang.Size = New System.Drawing.Size(75, 53)
+        Me.btnsimpanhutang.TabIndex = 39
+        Me.btnsimpanhutang.Text = "Simpan Hutang"
+        Me.btnsimpanhutang.UseVisualStyleBackColor = True
+        '
         'Formpembelian
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(995, 660)
+        Me.Controls.Add(Me.btnsimpanhutang)
+        Me.Controls.Add(Me.btnprint)
         Me.Controls.Add(Me.btncari)
         Me.Controls.Add(Me.tbhargadisc)
         Me.Controls.Add(Me.cb_satuan)
@@ -472,4 +494,6 @@ Partial Class Formpembelian
     Friend WithEvents cb_satuan As System.Windows.Forms.ComboBox
     Friend WithEvents tbhargadisc As System.Windows.Forms.TextBox
     Friend WithEvents btncari As System.Windows.Forms.Button
+    Friend WithEvents btnprint As System.Windows.Forms.Button
+    Friend WithEvents btnsimpanhutang As System.Windows.Forms.Button
 End Class

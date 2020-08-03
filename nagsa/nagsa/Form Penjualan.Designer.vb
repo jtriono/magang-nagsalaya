@@ -25,6 +25,7 @@ Partial Class Formpenjualan
         Me.Label1 = New System.Windows.Forms.Label()
         Me.tbtotalharga = New System.Windows.Forms.TextBox()
         Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
+        Me.buttonpilihcustomer = New System.Windows.Forms.Button()
         Me.tbno_nota = New System.Windows.Forms.TextBox()
         Me.dtpjatuh_tempo = New System.Windows.Forms.DateTimePicker()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -61,7 +62,7 @@ Partial Class Formpenjualan
         Me.cbsatuan = New System.Windows.Forms.ComboBox()
         Me.btncari = New System.Windows.Forms.Button()
         Me.tbhargadisc = New System.Windows.Forms.TextBox()
-        Me.buttonpilihcustomer = New System.Windows.Forms.Button()
+        Me.btnsimpanpiutang = New System.Windows.Forms.Button()
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl1.SuspendLayout()
         CType(Me.dgvdetailbarang, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -102,6 +103,15 @@ Partial Class Formpenjualan
         Me.PanelControl1.Name = "PanelControl1"
         Me.PanelControl1.Size = New System.Drawing.Size(1026, 150)
         Me.PanelControl1.TabIndex = 2
+        '
+        'buttonpilihcustomer
+        '
+        Me.buttonpilihcustomer.Location = New System.Drawing.Point(251, 87)
+        Me.buttonpilihcustomer.Name = "buttonpilihcustomer"
+        Me.buttonpilihcustomer.Size = New System.Drawing.Size(31, 21)
+        Me.buttonpilihcustomer.TabIndex = 25
+        Me.buttonpilihcustomer.Text = "V"
+        Me.buttonpilihcustomer.UseVisualStyleBackColor = True
         '
         'tbno_nota
         '
@@ -356,7 +366,7 @@ Partial Class Formpenjualan
         '
         'btnprint
         '
-        Me.btnprint.Location = New System.Drawing.Point(848, 590)
+        Me.btnprint.Location = New System.Drawing.Point(865, 590)
         Me.btnprint.Name = "btnprint"
         Me.btnprint.Size = New System.Drawing.Size(81, 47)
         Me.btnprint.TabIndex = 26
@@ -374,7 +384,7 @@ Partial Class Formpenjualan
         '
         'btnkoreksi
         '
-        Me.btnkoreksi.Location = New System.Drawing.Point(741, 590)
+        Me.btnkoreksi.Location = New System.Drawing.Point(109, 590)
         Me.btnkoreksi.Name = "btnkoreksi"
         Me.btnkoreksi.Size = New System.Drawing.Size(82, 47)
         Me.btnkoreksi.TabIndex = 28
@@ -416,20 +426,21 @@ Partial Class Formpenjualan
         Me.tbhargadisc.Text = "0"
         Me.tbhargadisc.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
-        'buttonpilihcustomer
+        'btnsimpanpiutang
         '
-        Me.buttonpilihcustomer.Location = New System.Drawing.Point(251, 87)
-        Me.buttonpilihcustomer.Name = "buttonpilihcustomer"
-        Me.buttonpilihcustomer.Size = New System.Drawing.Size(31, 21)
-        Me.buttonpilihcustomer.TabIndex = 25
-        Me.buttonpilihcustomer.Text = "V"
-        Me.buttonpilihcustomer.UseVisualStyleBackColor = True
+        Me.btnsimpanpiutang.Location = New System.Drawing.Point(778, 590)
+        Me.btnsimpanpiutang.Name = "btnsimpanpiutang"
+        Me.btnsimpanpiutang.Size = New System.Drawing.Size(81, 47)
+        Me.btnsimpanpiutang.TabIndex = 32
+        Me.btnsimpanpiutang.Text = "Simpan Piutang"
+        Me.btnsimpanpiutang.UseVisualStyleBackColor = True
         '
         'Formpenjualan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1051, 665)
+        Me.Controls.Add(Me.btnsimpanpiutang)
         Me.Controls.Add(Me.tbhargadisc)
         Me.Controls.Add(Me.btncari)
         Me.Controls.Add(Me.cbsatuan)
@@ -509,4 +520,5 @@ Partial Class Formpenjualan
     Friend WithEvents btncari As System.Windows.Forms.Button
     Friend WithEvents tbhargadisc As System.Windows.Forms.TextBox
     Friend WithEvents buttonpilihcustomer As System.Windows.Forms.Button
+    Friend WithEvents btnsimpanpiutang As System.Windows.Forms.Button
 End Class
