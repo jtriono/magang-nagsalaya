@@ -15,7 +15,7 @@ Public Class Nominal_bayar_piutang
 
     Private Sub btnbayar_Click(sender As Object, e As EventArgs) Handles btnbayar.Click
         Try
-            query = "update from piutang set lunas = 1, tanggal_pelunasan = '" + Form_Bayar_Piutang.dtptanggal + "' where total_harga = '" + Form_Bayar_Piutang.pilih + "' lunas = 0"
+            query = "update piutang set lunas = 1, tanggal_pelunasan = '" + Form_Bayar_Piutang.dtptanggal.Value.ToString + "' where total_harga = '" + Form_Bayar_Piutang.simpanharga + "' and lunas = 0"
             connect.Open()
             command = New MySqlCommand(query, connect)
             command.ExecuteNonQuery()

@@ -11,7 +11,7 @@ Public Class Form_Bayar_Hutang
     Public simpanharga As String
 
     Private Sub btnmasukharga_Click(sender As Object, e As EventArgs) Handles btnmasukharga.Click
-        simpanharga = dt2.Rows(simpandetail).Item(2)
+        simpanharga = dt.Rows(simpandetail).Item(2)
 
         Nominal_bayar_hutang.ShowDialog()
     End Sub
