@@ -31,7 +31,6 @@ Partial Class Formutama
         Me.btnbarang = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.KToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TandaTerimaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReturPenjualanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReturnPembelianToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MasterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -141,16 +140,10 @@ Partial Class Formutama
         '
         'KToolStripMenuItem
         '
-        Me.KToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TandaTerimaToolStripMenuItem, Me.ReturPenjualanToolStripMenuItem, Me.ReturnPembelianToolStripMenuItem})
+        Me.KToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReturPenjualanToolStripMenuItem, Me.ReturnPembelianToolStripMenuItem})
         Me.KToolStripMenuItem.Name = "KToolStripMenuItem"
         Me.KToolStripMenuItem.Size = New System.Drawing.Size(26, 20)
         Me.KToolStripMenuItem.Text = "K"
-        '
-        'TandaTerimaToolStripMenuItem
-        '
-        Me.TandaTerimaToolStripMenuItem.Name = "TandaTerimaToolStripMenuItem"
-        Me.TandaTerimaToolStripMenuItem.Size = New System.Drawing.Size(168, 22)
-        Me.TandaTerimaToolStripMenuItem.Text = "Tanda Terima"
         '
         'ReturPenjualanToolStripMenuItem
         '
@@ -174,13 +167,13 @@ Partial Class Formutama
         'DataSuppliersToolStripMenuItem
         '
         Me.DataSuppliersToolStripMenuItem.Name = "DataSuppliersToolStripMenuItem"
-        Me.DataSuppliersToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
+        Me.DataSuppliersToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
         Me.DataSuppliersToolStripMenuItem.Text = "Data Suppliers"
         '
         'DataCustomerToolStripMenuItem
         '
         Me.DataCustomerToolStripMenuItem.Name = "DataCustomerToolStripMenuItem"
-        Me.DataCustomerToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
+        Me.DataCustomerToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
         Me.DataCustomerToolStripMenuItem.Text = "Data Customers"
         '
         'HutangPiutangToolStripMenuItem
@@ -391,7 +384,6 @@ Partial Class Formutama
     Friend WithEvents btnbarang As System.Windows.Forms.Button
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents KToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents TandaTerimaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ReturPenjualanToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ReturnPembelianToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MasterToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem

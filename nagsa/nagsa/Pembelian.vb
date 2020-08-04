@@ -367,7 +367,7 @@ Public Class Formpembelian
         Else
             Try
                 dt = New DataTable
-                query = "insert into hutang values('" + tb_nonota.Text + "','" + tb_kodesupplier.Text + "','" + tb_totalharga.Text + "',' - ',0)"
+                query = "insert into hutang values('" + tb_nonota.Text + "','" + tb_kodesupplier.Text + "','" + tb_totalharga.Text + "','" + dtptanggal.Value + "',0)"
                 connect.Open()
                 command = New MySqlCommand(query, connect)
                 command.ExecuteNonQuery()

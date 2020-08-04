@@ -6,11 +6,14 @@ Public Class Form_Bayar_Hutang
     Dim query As String
     Public pilih As String
     Dim dt As New DataTable
-    Dim dt2 As New DataTable
     Dim simpandetail As String
     Public simpanharga As String
+    Public simpannota As String
+    Public simpannama As String
 
     Private Sub btnmasukharga_Click(sender As Object, e As EventArgs) Handles btnmasukharga.Click
+        simpannota = dt.Rows(simpandetail).Item(0)
+        simpannama = dt.Rows(simpandetail).Item(1)
         simpanharga = dt.Rows(simpandetail).Item(2)
 
         Nominal_bayar_hutang.ShowDialog()

@@ -373,7 +373,7 @@ Public Class Formpenjualan
         Else
             Try
                 dt = New DataTable
-                query = "insert into piutang values('" + tbno_nota.Text + "','" + tbkode_cust.Text + "','" + tbtotalharga.Text + "',' - ',0)"
+                query = "insert into piutang values('" + tbno_nota.Text + "','" + tbkode_cust.Text + "','" + tbtotalharga.Text + "','" + dtppilihtanggal.Value + "',0)"
                 connect.Open()
                 command = New MySqlCommand(query, connect)
                 command.ExecuteNonQuery()

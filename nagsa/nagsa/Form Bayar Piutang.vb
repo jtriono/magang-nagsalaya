@@ -6,12 +6,16 @@ Public Class Form_Bayar_Piutang
     Dim query As String
     Public pilih As String
     Dim dt As New DataTable
-    Dim dt2 As New DataTable
     Dim simpandetail As String
     Public simpanharga As String
+    Public simpannota As String
+    Public simpannama As String
+
 
     Private Sub btnmasukharga_Click(sender As Object, e As EventArgs) Handles btnmasukharga.Click
-        simpanharga = dt2.Rows(simpandetail).Item(2)
+        simpannota = dt.Rows(simpandetail).Item(0)
+        simpannama = dt.Rows(simpandetail).Item(1)
+        simpanharga = dt.Rows(simpandetail).Item(2)
 
         Nominal_bayar_piutang.ShowDialog()
     End Sub
@@ -24,7 +28,7 @@ Public Class Form_Bayar_Piutang
     Private Sub btncari_Click(sender As Object, e As EventArgs) Handles btncari.Click
         Try
             dt.Clear()
-            query = "select no_nota_penjualan,nama_cust,total_harga from piutang where nama_cust = '" + tbnamacust.Text + "' and lunas = 0"
+            query = "select no_nota_penjualan,nama_cust,total_harga,tanggal_transaksi from piutang where nama_cust = '" + tbnamacust.Text + "' and lunas = 0"
             command = New MySqlCommand(query, connect)
             adapter = New MySqlDataAdapter(command)
             adapter.Fill(dt)
