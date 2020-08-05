@@ -60,4 +60,8 @@
     Private Sub BayarHutangSupplierToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BayarHutangSupplierToolStripMenuItem.Click
         Form_Bayar_Hutang.ShowDialog()
     End Sub
+
+    Private Sub UsernamePasswordToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UsernamePasswordToolStripMenuItem.Click
+        tambah_user.ShowDialog()
+    End Sub
 End Class

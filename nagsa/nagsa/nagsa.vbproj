@@ -215,6 +215,12 @@
     <Compile Include="Tambah Barang.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="tambah_user.Designer.vb">
+      <DependentUpon>tambah_user.vb</DependentUpon>
+    </Compile>
+    <Compile Include="tambah_user.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Tanda Terima.Designer.vb">
       <DependentUpon>Tanda Terima.vb</DependentUpon>
     </Compile>
@@ -277,6 +283,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tambah Barang.resx">
       <DependentUpon>Tambah Barang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tambah_user.resx">
+      <DependentUpon>tambah_user.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tanda Terima.resx">
       <DependentUpon>Tanda Terima.vb</DependentUpon>

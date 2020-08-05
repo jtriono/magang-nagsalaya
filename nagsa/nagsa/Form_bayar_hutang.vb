@@ -27,7 +27,7 @@ Public Class Form_Bayar_Hutang
     Private Sub btncari_Click(sender As Object, e As EventArgs) Handles btncari.Click
         Try
             dt.Clear()
-            query = "select no_nota_pembelian,nama_supplier,total_harga from hutang where nama_supplier = '" + tbnamasupplier.Text + "' and lunas = 0"
+            query = "select no_nota_pembelian,nama_supplier,total_harga,tanggal_transaksi from hutang where nama_supplier = '" + tbnamasupplier.Text + "' and lunas = 0"
             command = New MySqlCommand(query, connect)
             adapter = New MySqlDataAdapter(command)
             adapter.Fill(dt)
