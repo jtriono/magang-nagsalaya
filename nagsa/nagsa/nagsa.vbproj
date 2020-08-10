@@ -73,6 +73,8 @@
     <Reference Include="DevExpress.XtraRichEdit.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeList.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraVerticalGrid.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -83,6 +85,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -103,6 +106,16 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="apotikbarangDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>apotikbarangDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="apotikDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>apotikDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Barang.Designer.vb">
       <DependentUpon>Barang.vb</DependentUpon>
     </Compile>
@@ -125,6 +138,18 @@
       <DependentUpon>Form Penjualan.vb</DependentUpon>
     </Compile>
     <Compile Include="Form Penjualan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formreportpenjualan.Designer.vb">
+      <DependentUpon>Formreportpenjualan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formreportpenjualan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formreportbarang.Designer.vb">
+      <DependentUpon>Formreportbarang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formreportbarang.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formtambahcust.Designer.vb">
@@ -241,6 +266,12 @@
     <EmbeddedResource Include="Form Penjualan.resx">
       <DependentUpon>Form Penjualan.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formreportbarang.resx">
+      <DependentUpon>Formreportbarang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formreportpenjualan.resx">
+      <DependentUpon>Formreportpenjualan.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formtambahcust.resx">
       <DependentUpon>Formtambahcust.vb</DependentUpon>
     </EmbeddedResource>
@@ -272,6 +303,8 @@
     <EmbeddedResource Include="Pembelian.resx">
       <DependentUpon>Pembelian.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
     <EmbeddedResource Include="Retur Pembelian.resx">
       <DependentUpon>Retur Pembelian.vb</DependentUpon>
     </EmbeddedResource>
@@ -292,6 +325,28 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="apotikbarangDataSet.xsc">
+      <DependentUpon>apotikbarangDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="apotikbarangDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>apotikbarangDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="apotikbarangDataSet.xss">
+      <DependentUpon>apotikbarangDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="apotikDataSet.xsc">
+      <DependentUpon>apotikDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="apotikDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>apotikDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="apotikDataSet.xss">
+      <DependentUpon>apotikDataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

@@ -64,4 +64,12 @@
     Private Sub UsernamePasswordToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UsernamePasswordToolStripMenuItem.Click
         tambah_user.ShowDialog()
     End Sub
+
+    Private Sub KartuStokBarangToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles KartuStokBarangToolStripMenuItem.Click
+        Formreportbarang.ShowDialog()
+    End Sub
+
+    Private Sub SemuaBarangToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles SemuaBarangToolStripMenuItem1.Click
+        Formreportpenjualan.ShowDialog()
+    End Sub
 End Class
