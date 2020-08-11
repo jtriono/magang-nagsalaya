@@ -126,3 +126,4 @@ C:\Users\windows\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\obj\Debug\Windows
 C:\Users\windows\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.Formreportpenjualan.resources
 C:\Users\windows\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\obj\Debug\RdlCompile.cache
 C:\Users\windows\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\obj\Debug\RdlCompile.compiled
+C:\Users\windows\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.Print_Menu_Penjualan.resources

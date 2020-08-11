@@ -430,4 +430,8 @@ Public Class Formpenjualan
             End Try
         End If
     End Sub
+
+    Private Sub btnprint_Click(sender As Object, e As EventArgs) Handles btnprint.Click
+        Print_Menu_Penjualan.ShowDialog()
+    End Sub
 End Class
