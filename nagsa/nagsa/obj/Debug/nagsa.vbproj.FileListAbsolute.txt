@@ -127,3 +127,11 @@ C:\Users\windows\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\obj\Debug\Windows
 C:\Users\windows\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\obj\Debug\RdlCompile.cache
 C:\Users\windows\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\obj\Debug\RdlCompile.compiled
 C:\Users\windows\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.Print_Menu_Penjualan.resources
+C:\Users\Jeffrin\Desktop\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.Print_Menu_Pembelian.resources
+C:\Users\Jeffrin\Desktop\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.Print_Menu_Penjualan.resources
+C:\Users\Jeffrin\Desktop\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.formreporthutang.resources
+C:\Users\Jeffrin\Desktop\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.Formreportpiutang.resources
+C:\Users\Jeffrin\Desktop\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.Formreportsupplier.resources
+C:\Users\Jeffrin\Desktop\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.Formreportcustomer.resources
+C:\Users\Jeffrin\Desktop\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.Formreportjualperbarang.resources
+C:\Users\Jeffrin\Desktop\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.Formreportjualpercust.resources

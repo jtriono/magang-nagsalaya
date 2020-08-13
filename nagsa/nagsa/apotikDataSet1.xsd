@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="apotikDataSet1" targetNamespace="http://tempuri.org/apotikDataSet1.xsd" xmlns:mstns="http://tempuri.org/apotikDataSet1.xsd" xmlns="http://tempuri.org/apotikDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="apotikConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="apotikConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsApplication1.My.MySettings.GlobalReference.Default.apotikConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="penjualanlengkapTableAdapter" GeneratorDataComponentClassName="penjualanlengkapTableAdapter" Name="penjualanlengkap" UserDataComponentName="penjualanlengkapTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="apotikConnectionString (MySettings)" DbObjectName="apotik.penjualanlengkap" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `kode_barang`, `no_nota_penjualan`, `batch`, `expired_date`, `satuan`, `harga_jual`, `jumlah_barang`, `discount_percent`, `total_harga`, `nama_barang`, `delete`, `retur`, `no_pajak`, `tanggal_penjualan`, `kode_customer`, `tanggal_jt_penjualan`, `total_harga_penjualan`, `hapus` FROM `apotik`.`penjualanlengkap`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="kode_barang" DataSetColumn="kode_barang" />
+              <Mapping SourceColumn="no_nota_penjualan" DataSetColumn="no_nota_penjualan" />
+              <Mapping SourceColumn="batch" DataSetColumn="batch" />
+              <Mapping SourceColumn="expired_date" DataSetColumn="expired_date" />
+              <Mapping SourceColumn="satuan" DataSetColumn="satuan" />
+              <Mapping SourceColumn="harga_jual" DataSetColumn="harga_jual" />
+              <Mapping SourceColumn="jumlah_barang" DataSetColumn="jumlah_barang" />
+              <Mapping SourceColumn="discount_percent" DataSetColumn="discount_percent" />
+              <Mapping SourceColumn="total_harga" DataSetColumn="total_harga" />
+              <Mapping SourceColumn="nama_barang" DataSetColumn="nama_barang" />
+              <Mapping SourceColumn="delete" DataSetColumn="delete" />
+              <Mapping SourceColumn="retur" DataSetColumn="retur" />
+              <Mapping SourceColumn="no_pajak" DataSetColumn="no_pajak" />
+              <Mapping SourceColumn="tanggal_penjualan" DataSetColumn="tanggal_penjualan" />
+              <Mapping SourceColumn="kode_customer" DataSetColumn="kode_customer" />
+              <Mapping SourceColumn="tanggal_jt_penjualan" DataSetColumn="tanggal_jt_penjualan" />
+              <Mapping SourceColumn="total_harga_penjualan" DataSetColumn="total_harga_penjualan" />
+              <Mapping SourceColumn="hapus" DataSetColumn="hapus" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="apotikDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="apotikDataSet1" msprop:Generator_UserDSName="apotikDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="penjualanlengkap" msprop:Generator_TableClassName="penjualanlengkapDataTable" msprop:Generator_TableVarName="tablepenjualanlengkap" msprop:Generator_TablePropName="penjualanlengkap" msprop:Generator_RowDeletingName="penjualanlengkapRowDeleting" msprop:Generator_RowChangingName="penjualanlengkapRowChanging" msprop:Generator_RowEvHandlerName="penjualanlengkapRowChangeEventHandler" msprop:Generator_RowDeletedName="penjualanlengkapRowDeleted" msprop:Generator_UserTableName="penjualanlengkap" msprop:Generator_RowChangedName="penjualanlengkapRowChanged" msprop:Generator_RowEvArgName="penjualanlengkapRowChangeEvent" msprop:Generator_RowClassName="penjualanlengkapRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="kode_barang" msprop:Generator_ColumnVarNameInTable="columnkode_barang" msprop:Generator_ColumnPropNameInRow="kode_barang" msprop:Generator_ColumnPropNameInTable="kode_barangColumn" msprop:Generator_UserColumnName="kode_barang">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="no_nota_penjualan" msprop:Generator_ColumnVarNameInTable="columnno_nota_penjualan" msprop:Generator_ColumnPropNameInRow="no_nota_penjualan" msprop:Generator_ColumnPropNameInTable="no_nota_penjualanColumn" msprop:Generator_UserColumnName="no_nota_penjualan">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="batch" msprop:Generator_ColumnVarNameInTable="columnbatch" msprop:Generator_ColumnPropNameInRow="batch" msprop:Generator_ColumnPropNameInTable="batchColumn" msprop:Generator_UserColumnName="batch">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="expired_date" msprop:Generator_ColumnVarNameInTable="columnexpired_date" msprop:Generator_ColumnPropNameInRow="expired_date" msprop:Generator_ColumnPropNameInTable="expired_dateColumn" msprop:Generator_UserColumnName="expired_date" type="xs:dateTime" />
+              <xs:element name="satuan" msprop:Generator_ColumnVarNameInTable="columnsatuan" msprop:Generator_ColumnPropNameInRow="satuan" msprop:Generator_ColumnPropNameInTable="satuanColumn" msprop:Generator_UserColumnName="satuan">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="harga_jual" msprop:Generator_ColumnVarNameInTable="columnharga_jual" msprop:Generator_ColumnPropNameInRow="harga_jual" msprop:Generator_ColumnPropNameInTable="harga_jualColumn" msprop:Generator_UserColumnName="harga_jual" type="xs:unsignedInt" />
+              <xs:element name="jumlah_barang" msprop:Generator_ColumnVarNameInTable="columnjumlah_barang" msprop:Generator_ColumnPropNameInRow="jumlah_barang" msprop:Generator_ColumnPropNameInTable="jumlah_barangColumn" msprop:Generator_UserColumnName="jumlah_barang" type="xs:unsignedInt" />
+              <xs:element name="discount_percent" msprop:Generator_ColumnVarNameInTable="columndiscount_percent" msprop:Generator_ColumnPropNameInRow="discount_percent" msprop:Generator_ColumnPropNameInTable="discount_percentColumn" msprop:Generator_UserColumnName="discount_percent" type="xs:unsignedInt" />
+              <xs:element name="total_harga" msprop:Generator_ColumnVarNameInTable="columntotal_harga" msprop:Generator_ColumnPropNameInRow="total_harga" msprop:Generator_ColumnPropNameInTable="total_hargaColumn" msprop:Generator_UserColumnName="total_harga" type="xs:unsignedInt" />
+              <xs:element name="nama_barang" msprop:Generator_ColumnVarNameInTable="columnnama_barang" msprop:Generator_ColumnPropNameInRow="nama_barang" msprop:Generator_ColumnPropNameInTable="nama_barangColumn" msprop:Generator_UserColumnName="nama_barang">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="delete" msprop:Generator_ColumnVarNameInTable="columndelete" msprop:Generator_ColumnPropNameInRow="delete" msprop:Generator_ColumnPropNameInTable="deleteColumn" msprop:Generator_UserColumnName="delete" type="xs:unsignedInt" />
+              <xs:element name="retur" msprop:Generator_ColumnVarNameInTable="columnretur" msprop:Generator_ColumnPropNameInRow="retur" msprop:Generator_ColumnPropNameInTable="returColumn" msprop:Generator_UserColumnName="retur" type="xs:unsignedInt" />
+              <xs:element name="no_pajak" msprop:Generator_ColumnVarNameInTable="columnno_pajak" msprop:Generator_ColumnPropNameInRow="no_pajak" msprop:Generator_ColumnPropNameInTable="no_pajakColumn" msprop:Generator_UserColumnName="no_pajak">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tanggal_penjualan" msprop:Generator_ColumnVarNameInTable="columntanggal_penjualan" msprop:Generator_ColumnPropNameInRow="tanggal_penjualan" msprop:Generator_ColumnPropNameInTable="tanggal_penjualanColumn" msprop:Generator_UserColumnName="tanggal_penjualan" type="xs:dateTime" />
+              <xs:element name="kode_customer" msprop:Generator_ColumnVarNameInTable="columnkode_customer" msprop:Generator_ColumnPropNameInRow="kode_customer" msprop:Generator_ColumnPropNameInTable="kode_customerColumn" msprop:Generator_UserColumnName="kode_customer">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tanggal_jt_penjualan" msprop:Generator_ColumnVarNameInTable="columntanggal_jt_penjualan" msprop:Generator_ColumnPropNameInRow="tanggal_jt_penjualan" msprop:Generator_ColumnPropNameInTable="tanggal_jt_penjualanColumn" msprop:Generator_UserColumnName="tanggal_jt_penjualan" type="xs:dateTime" />
+              <xs:element name="total_harga_penjualan" msprop:Generator_ColumnVarNameInTable="columntotal_harga_penjualan" msprop:Generator_ColumnPropNameInRow="total_harga_penjualan" msprop:Generator_ColumnPropNameInTable="total_harga_penjualanColumn" msprop:Generator_UserColumnName="total_harga_penjualan" type="xs:int" />
+              <xs:element name="hapus" msprop:Generator_ColumnVarNameInTable="columnhapus" msprop:Generator_ColumnPropNameInRow="hapus" msprop:Generator_ColumnPropNameInTable="hapusColumn" msprop:Generator_UserColumnName="hapus" type="xs:unsignedInt" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

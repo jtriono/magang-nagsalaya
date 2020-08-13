@@ -140,6 +140,36 @@
     <Compile Include="Form Penjualan.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formreportjualperbarang.Designer.vb">
+      <DependentUpon>Formreportjualperbarang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formreportjualperbarang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formreportcustomer.Designer.vb">
+      <DependentUpon>Formreportcustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formreportcustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formreportjualpercust.Designer.vb">
+      <DependentUpon>Formreportjualpercust.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formreportjualpercust.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formreportpiutang.Designer.vb">
+      <DependentUpon>Formreportpiutang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formreportpiutang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formreporthutang.Designer.vb">
+      <DependentUpon>formreporthutang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formreporthutang.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formreportpenjualan.Designer.vb">
       <DependentUpon>Formreportpenjualan.vb</DependentUpon>
     </Compile>
@@ -150,6 +180,12 @@
       <DependentUpon>Formreportbarang.vb</DependentUpon>
     </Compile>
     <Compile Include="Formreportbarang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formreportsupplier.Designer.vb">
+      <DependentUpon>Formreportsupplier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formreportsupplier.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formtambahcust.Designer.vb">
@@ -281,8 +317,26 @@
     <EmbeddedResource Include="Formreportbarang.resx">
       <DependentUpon>Formreportbarang.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formreportcustomer.resx">
+      <DependentUpon>Formreportcustomer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formreporthutang.resx">
+      <DependentUpon>formreporthutang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formreportjualperbarang.resx">
+      <DependentUpon>Formreportjualperbarang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formreportjualpercust.resx">
+      <DependentUpon>Formreportjualpercust.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formreportpenjualan.resx">
       <DependentUpon>Formreportpenjualan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formreportpiutang.resx">
+      <DependentUpon>Formreportpiutang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formreportsupplier.resx">
+      <DependentUpon>Formreportsupplier.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formtambahcust.resx">
       <DependentUpon>Formtambahcust.vb</DependentUpon>
@@ -322,9 +376,15 @@
       <DependentUpon>Print Menu Penjualan.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report10.rdlc" />
+    <EmbeddedResource Include="Report11.rdlc" />
     <EmbeddedResource Include="Report2.rdlc" />
     <EmbeddedResource Include="Report3.rdlc" />
     <EmbeddedResource Include="Report5.rdlc" />
+    <EmbeddedResource Include="Report6.rdlc" />
+    <EmbeddedResource Include="Report7.rdlc" />
+    <EmbeddedResource Include="Report8.rdlc" />
+    <EmbeddedResource Include="Report9.rdlc" />
     <EmbeddedResource Include="Retur Pembelian.resx">
       <DependentUpon>Retur Pembelian.vb</DependentUpon>
     </EmbeddedResource>

@@ -72,4 +72,28 @@
     Private Sub SemuaBarangToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles SemuaBarangToolStripMenuItem1.Click
         Formreportpenjualan.ShowDialog()
     End Sub
+
+    Private Sub HutangSupplierToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HutangSupplierToolStripMenuItem.Click
+        formreporthutang.ShowDialog()
+    End Sub
+
+    Private Sub PiutangPelangganToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PiutangPelangganToolStripMenuItem.Click
+        Formreportpiutang.ShowDialog()
+    End Sub
+
+    Private Sub DaftarSupplierToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DaftarSupplierToolStripMenuItem.Click
+        Formreportsupplier.ShowDialog()
+    End Sub
+
+    Private Sub DaftarCustomerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DaftarCustomerToolStripMenuItem.Click
+        Formreportcustomer.ShowDialog()
+    End Sub
+
+    Private Sub PerBarangToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles PerBarangToolStripMenuItem1.Click
+        Formreportjualperbarang.ShowDialog()
+    End Sub
+
+    Private Sub PerCustomerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PerCustomerToolStripMenuItem.Click
+        Formreportjualpercust.ShowDialog()
+    End Sub
 End Class
