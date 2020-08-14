@@ -128,6 +128,12 @@
     <Compile Include="Customer.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Detail Stok.Designer.vb">
+      <DependentUpon>Detail Stok.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Detail Stok.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form Bayar Piutang.Designer.vb">
       <DependentUpon>Form Bayar Piutang.vb</DependentUpon>
     </Compile>
@@ -307,6 +313,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Customer.resx">
       <DependentUpon>Customer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detail Stok.resx">
+      <DependentUpon>Detail Stok.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form Bayar Piutang.resx">
       <DependentUpon>Form Bayar Piutang.vb</DependentUpon>

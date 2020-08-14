@@ -96,4 +96,8 @@
     Private Sub PerCustomerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PerCustomerToolStripMenuItem.Click
         Formreportjualpercust.ShowDialog()
     End Sub
+
+    Private Sub DetailStokToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DetailStokToolStripMenuItem.Click
+        Detail_Stok.ShowDialog()
+    End Sub
 End Class

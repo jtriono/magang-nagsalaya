@@ -247,19 +247,19 @@ Partial Class Formutama
         'PerBarangToolStripMenuItem1
         '
         Me.PerBarangToolStripMenuItem1.Name = "PerBarangToolStripMenuItem1"
-        Me.PerBarangToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.PerBarangToolStripMenuItem1.Size = New System.Drawing.Size(150, 22)
         Me.PerBarangToolStripMenuItem1.Text = "Per-Barang"
         '
         'SemuaBarangToolStripMenuItem1
         '
         Me.SemuaBarangToolStripMenuItem1.Name = "SemuaBarangToolStripMenuItem1"
-        Me.SemuaBarangToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.SemuaBarangToolStripMenuItem1.Size = New System.Drawing.Size(150, 22)
         Me.SemuaBarangToolStripMenuItem1.Text = "Semua Barang"
         '
         'PerCustomerToolStripMenuItem
         '
         Me.PerCustomerToolStripMenuItem.Name = "PerCustomerToolStripMenuItem"
-        Me.PerCustomerToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PerCustomerToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.PerCustomerToolStripMenuItem.Text = "Per-Customer"
         '
         'DaftarSupplierToolStripMenuItem
