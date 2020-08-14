@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="apotikDataSetview" targetNamespace="http://tempuri.org/apotikDataSetview.xsd" xmlns:mstns="http://tempuri.org/apotikDataSetview.xsd" xmlns="http://tempuri.org/apotikDataSetview.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="apotikConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="apotikConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsApplication1.My.MySettings.GlobalReference.Default.apotikConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="nota_pembelianTableAdapter" GeneratorDataComponentClassName="nota_pembelianTableAdapter" Name="nota_pembelian" UserDataComponentName="nota_pembelianTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="apotikConnectionString (MySettings)" DbObjectName="apotik.nota_pembelian" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `no_nota_pembelian`, `tanggal_pembelian`, `kode_supplier`, `tanggal_jt_pembelian`, `total_harga_pembelian`, `kode_barang_pembelian`, `nama_barang`, `batch_pembelian`, `expired_date`, `harga_beli`, `jumlah_barang`, `discount_percent`, `total_harga`, `delete`, `Hapus`, `retur` FROM `apotik`.`nota_pembelian`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="no_nota_pembelian" DataSetColumn="no_nota_pembelian" />
+              <Mapping SourceColumn="tanggal_pembelian" DataSetColumn="tanggal_pembelian" />
+              <Mapping SourceColumn="kode_supplier" DataSetColumn="kode_supplier" />
+              <Mapping SourceColumn="tanggal_jt_pembelian" DataSetColumn="tanggal_jt_pembelian" />
+              <Mapping SourceColumn="total_harga_pembelian" DataSetColumn="total_harga_pembelian" />
+              <Mapping SourceColumn="kode_barang_pembelian" DataSetColumn="kode_barang_pembelian" />
+              <Mapping SourceColumn="nama_barang" DataSetColumn="nama_barang" />
+              <Mapping SourceColumn="batch_pembelian" DataSetColumn="batch_pembelian" />
+              <Mapping SourceColumn="expired_date" DataSetColumn="expired_date" />
+              <Mapping SourceColumn="harga_beli" DataSetColumn="harga_beli" />
+              <Mapping SourceColumn="jumlah_barang" DataSetColumn="jumlah_barang" />
+              <Mapping SourceColumn="discount_percent" DataSetColumn="discount_percent" />
+              <Mapping SourceColumn="total_harga" DataSetColumn="total_harga" />
+              <Mapping SourceColumn="delete" DataSetColumn="delete" />
+              <Mapping SourceColumn="Hapus" DataSetColumn="Hapus" />
+              <Mapping SourceColumn="retur" DataSetColumn="retur" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="nota_penjualanTableAdapter" GeneratorDataComponentClassName="nota_penjualanTableAdapter" Name="nota_penjualan" UserDataComponentName="nota_penjualanTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="apotikConnectionString (MySettings)" DbObjectName="apotik.nota_penjualan" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `no_nota_penjualan`, `no_pajak`, `tanggal_penjualan`, `kode_customer`, `tanggal_jt_penjualan`, `total_harga_penjualan`, `kode_barang`, `nama_barang`, `batch`, `expired_date`, `harga_jual`, `jumlah_barang`, `discount_percent`, `total_harga`, `delete`, `Hapus`, `retur` FROM `apotik`.`nota_penjualan`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="no_nota_penjualan" DataSetColumn="no_nota_penjualan" />
+              <Mapping SourceColumn="no_pajak" DataSetColumn="no_pajak" />
+              <Mapping SourceColumn="tanggal_penjualan" DataSetColumn="tanggal_penjualan" />
+              <Mapping SourceColumn="kode_customer" DataSetColumn="kode_customer" />
+              <Mapping SourceColumn="tanggal_jt_penjualan" DataSetColumn="tanggal_jt_penjualan" />
+              <Mapping SourceColumn="total_harga_penjualan" DataSetColumn="total_harga_penjualan" />
+              <Mapping SourceColumn="kode_barang" DataSetColumn="kode_barang" />
+              <Mapping SourceColumn="nama_barang" DataSetColumn="nama_barang" />
+              <Mapping SourceColumn="batch" DataSetColumn="batch" />
+              <Mapping SourceColumn="expired_date" DataSetColumn="expired_date" />
+              <Mapping SourceColumn="harga_jual" DataSetColumn="harga_jual" />
+              <Mapping SourceColumn="jumlah_barang" DataSetColumn="jumlah_barang" />
+              <Mapping SourceColumn="discount_percent" DataSetColumn="discount_percent" />
+              <Mapping SourceColumn="total_harga" DataSetColumn="total_harga" />
+              <Mapping SourceColumn="delete" DataSetColumn="delete" />
+              <Mapping SourceColumn="Hapus" DataSetColumn="Hapus" />
+              <Mapping SourceColumn="retur" DataSetColumn="retur" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="nota_retur_beliTableAdapter" GeneratorDataComponentClassName="nota_retur_beliTableAdapter" Name="nota_retur_beli" UserDataComponentName="nota_retur_beliTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="apotikConnectionString (MySettings)" DbObjectName="apotik.nota_retur_beli" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `no_retur_pembelian`, `tanggal_retur_pembelian`, `kode_supplier`, `no_nota_pembelian`, `totalharga_retur_pembelian`, `kode_barang`, `nama_barang`, `batch`, `expired_date`, `harga_beli`, `jumlah_barang`, `discount_percent`, `total_harga`, `delete`, `retur` FROM `apotik`.`nota_retur_beli`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="no_retur_pembelian" DataSetColumn="no_retur_pembelian" />
+              <Mapping SourceColumn="tanggal_retur_pembelian" DataSetColumn="tanggal_retur_pembelian" />
+              <Mapping SourceColumn="kode_supplier" DataSetColumn="kode_supplier" />
+              <Mapping SourceColumn="no_nota_pembelian" DataSetColumn="no_nota_pembelian" />
+              <Mapping SourceColumn="totalharga_retur_pembelian" DataSetColumn="totalharga_retur_pembelian" />
+              <Mapping SourceColumn="kode_barang" DataSetColumn="kode_barang" />
+              <Mapping SourceColumn="nama_barang" DataSetColumn="nama_barang" />
+              <Mapping SourceColumn="batch" DataSetColumn="batch" />
+              <Mapping SourceColumn="expired_date" DataSetColumn="expired_date" />
+              <Mapping SourceColumn="harga_beli" DataSetColumn="harga_beli" />
+              <Mapping SourceColumn="jumlah_barang" DataSetColumn="jumlah_barang" />
+              <Mapping SourceColumn="discount_percent" DataSetColumn="discount_percent" />
+              <Mapping SourceColumn="total_harga" DataSetColumn="total_harga" />
+              <Mapping SourceColumn="delete" DataSetColumn="delete" />
+              <Mapping SourceColumn="retur" DataSetColumn="retur" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="nota_retur_jualTableAdapter" GeneratorDataComponentClassName="nota_retur_jualTableAdapter" Name="nota_retur_jual" UserDataComponentName="nota_retur_jualTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="apotikConnectionString (MySettings)" DbObjectName="apotik.nota_retur_jual" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `no_retur_penjualan`, `tanggal_retur_penjualan`, `kode_cust`, `no_nota_penjualan`, `totalharga_retur_penjualan`, `kode_barang`, `nama_barang`, `batch`, `expired_date`, `harga_jual`, `jumlah_barang`, `discount_percent`, `total_harga`, `delete`, `retur` FROM `apotik`.`nota_retur_jual`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="no_retur_penjualan" DataSetColumn="no_retur_penjualan" />
+              <Mapping SourceColumn="tanggal_retur_penjualan" DataSetColumn="tanggal_retur_penjualan" />
+              <Mapping SourceColumn="kode_cust" DataSetColumn="kode_cust" />
+              <Mapping SourceColumn="no_nota_penjualan" DataSetColumn="no_nota_penjualan" />
+              <Mapping SourceColumn="totalharga_retur_penjualan" DataSetColumn="totalharga_retur_penjualan" />
+              <Mapping SourceColumn="kode_barang" DataSetColumn="kode_barang" />
+              <Mapping SourceColumn="nama_barang" DataSetColumn="nama_barang" />
+              <Mapping SourceColumn="batch" DataSetColumn="batch" />
+              <Mapping SourceColumn="expired_date" DataSetColumn="expired_date" />
+              <Mapping SourceColumn="harga_jual" DataSetColumn="harga_jual" />
+              <Mapping SourceColumn="jumlah_barang" DataSetColumn="jumlah_barang" />
+              <Mapping SourceColumn="discount_percent" DataSetColumn="discount_percent" />
+              <Mapping SourceColumn="total_harga" DataSetColumn="total_harga" />
+              <Mapping SourceColumn="delete" DataSetColumn="delete" />
+              <Mapping SourceColumn="retur" DataSetColumn="retur" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="print_detail_stokTableAdapter" GeneratorDataComponentClassName="print_detail_stokTableAdapter" Name="print_detail_stok" UserDataComponentName="print_detail_stokTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="apotikConnectionString (MySettings)" DbObjectName="apotik.print_detail_stok" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `no_nota`, `kode_barang`, `nama_barang`, `batch`, `expired_date`, `jumlah_barang`, `tanggal`, `keterangan`, `status`, `no_nota_pembelian`, `tanggal_pembelian`, `kode_supplier`, `tanggal_jt_pembelian`, `total_harga_pembelian`, `status_pembelian`, `no_nota_penjualan`, `tanggal_penjualan`, `kode_customer`, `tanggal_jt_penjualan`, `total_harga_penjualan`, `status_penjualan` FROM `apotik`.`print_detail_stok`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="no_nota" DataSetColumn="no_nota" />
+              <Mapping SourceColumn="kode_barang" DataSetColumn="kode_barang" />
+              <Mapping SourceColumn="nama_barang" DataSetColumn="nama_barang" />
+              <Mapping SourceColumn="batch" DataSetColumn="batch" />
+              <Mapping SourceColumn="expired_date" DataSetColumn="expired_date" />
+              <Mapping SourceColumn="jumlah_barang" DataSetColumn="jumlah_barang" />
+              <Mapping SourceColumn="tanggal" DataSetColumn="tanggal" />
+              <Mapping SourceColumn="keterangan" DataSetColumn="keterangan" />
+              <Mapping SourceColumn="status" DataSetColumn="status" />
+              <Mapping SourceColumn="no_nota_pembelian" DataSetColumn="no_nota_pembelian" />
+              <Mapping SourceColumn="tanggal_pembelian" DataSetColumn="tanggal_pembelian" />
+              <Mapping SourceColumn="kode_supplier" DataSetColumn="kode_supplier" />
+              <Mapping SourceColumn="tanggal_jt_pembelian" DataSetColumn="tanggal_jt_pembelian" />
+              <Mapping SourceColumn="total_harga_pembelian" DataSetColumn="total_harga_pembelian" />
+              <Mapping SourceColumn="status_pembelian" DataSetColumn="status_pembelian" />
+              <Mapping SourceColumn="no_nota_penjualan" DataSetColumn="no_nota_penjualan" />
+              <Mapping SourceColumn="tanggal_penjualan" DataSetColumn="tanggal_penjualan" />
+              <Mapping SourceColumn="kode_customer" DataSetColumn="kode_customer" />
+              <Mapping SourceColumn="tanggal_jt_penjualan" DataSetColumn="tanggal_jt_penjualan" />
+              <Mapping SourceColumn="total_harga_penjualan" DataSetColumn="total_harga_penjualan" />
+              <Mapping SourceColumn="status_penjualan" DataSetColumn="status_penjualan" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="apotikDataSetview" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="apotikDataSetview" msprop:Generator_UserDSName="apotikDataSetview">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="nota_pembelian" msprop:Generator_TableClassName="nota_pembelianDataTable" msprop:Generator_TableVarName="tablenota_pembelian" msprop:Generator_TablePropName="nota_pembelian" msprop:Generator_RowDeletingName="nota_pembelianRowDeleting" msprop:Generator_RowChangingName="nota_pembelianRowChanging" msprop:Generator_RowEvHandlerName="nota_pembelianRowChangeEventHandler" msprop:Generator_RowDeletedName="nota_pembelianRowDeleted" msprop:Generator_UserTableName="nota_pembelian" msprop:Generator_RowChangedName="nota_pembelianRowChanged" msprop:Generator_RowEvArgName="nota_pembelianRowChangeEvent" msprop:Generator_RowClassName="nota_pembelianRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="no_nota_pembelian" msprop:Generator_ColumnVarNameInTable="columnno_nota_pembelian" msprop:Generator_ColumnPropNameInRow="no_nota_pembelian" msprop:Generator_ColumnPropNameInTable="no_nota_pembelianColumn" msprop:Generator_UserColumnName="no_nota_pembelian">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tanggal_pembelian" msprop:Generator_ColumnVarNameInTable="columntanggal_pembelian" msprop:Generator_ColumnPropNameInRow="tanggal_pembelian" msprop:Generator_ColumnPropNameInTable="tanggal_pembelianColumn" msprop:Generator_UserColumnName="tanggal_pembelian" type="xs:dateTime" />
+              <xs:element name="kode_supplier" msprop:Generator_ColumnVarNameInTable="columnkode_supplier" msprop:Generator_ColumnPropNameInRow="kode_supplier" msprop:Generator_ColumnPropNameInTable="kode_supplierColumn" msprop:Generator_UserColumnName="kode_supplier">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tanggal_jt_pembelian" msprop:Generator_ColumnVarNameInTable="columntanggal_jt_pembelian" msprop:Generator_ColumnPropNameInRow="tanggal_jt_pembelian" msprop:Generator_ColumnPropNameInTable="tanggal_jt_pembelianColumn" msprop:Generator_UserColumnName="tanggal_jt_pembelian" type="xs:dateTime" />
+              <xs:element name="total_harga_pembelian" msprop:Generator_ColumnVarNameInTable="columntotal_harga_pembelian" msprop:Generator_ColumnPropNameInRow="total_harga_pembelian" msprop:Generator_ColumnPropNameInTable="total_harga_pembelianColumn" msprop:Generator_UserColumnName="total_harga_pembelian" type="xs:unsignedInt" />
+              <xs:element name="kode_barang_pembelian" msprop:Generator_ColumnVarNameInTable="columnkode_barang_pembelian" msprop:Generator_ColumnPropNameInRow="kode_barang_pembelian" msprop:Generator_ColumnPropNameInTable="kode_barang_pembelianColumn" msprop:Generator_UserColumnName="kode_barang_pembelian">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nama_barang" msprop:Generator_ColumnVarNameInTable="columnnama_barang" msprop:Generator_ColumnPropNameInRow="nama_barang" msprop:Generator_ColumnPropNameInTable="nama_barangColumn" msprop:Generator_UserColumnName="nama_barang">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="batch_pembelian" msprop:Generator_ColumnVarNameInTable="columnbatch_pembelian" msprop:Generator_ColumnPropNameInRow="batch_pembelian" msprop:Generator_ColumnPropNameInTable="batch_pembelianColumn" msprop:Generator_UserColumnName="batch_pembelian">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="expired_date" msprop:Generator_ColumnVarNameInTable="columnexpired_date" msprop:Generator_ColumnPropNameInRow="expired_date" msprop:Generator_ColumnPropNameInTable="expired_dateColumn" msprop:Generator_UserColumnName="expired_date" type="xs:dateTime" />
+              <xs:element name="harga_beli" msprop:Generator_ColumnVarNameInTable="columnharga_beli" msprop:Generator_ColumnPropNameInRow="harga_beli" msprop:Generator_ColumnPropNameInTable="harga_beliColumn" msprop:Generator_UserColumnName="harga_beli" type="xs:unsignedInt" />
+              <xs:element name="jumlah_barang" msprop:Generator_ColumnVarNameInTable="columnjumlah_barang" msprop:Generator_ColumnPropNameInRow="jumlah_barang" msprop:Generator_ColumnPropNameInTable="jumlah_barangColumn" msprop:Generator_UserColumnName="jumlah_barang" type="xs:unsignedInt" />
+              <xs:element name="discount_percent" msprop:Generator_ColumnVarNameInTable="columndiscount_percent" msprop:Generator_ColumnPropNameInRow="discount_percent" msprop:Generator_ColumnPropNameInTable="discount_percentColumn" msprop:Generator_UserColumnName="discount_percent" type="xs:unsignedInt" />
+              <xs:element name="total_harga" msprop:Generator_ColumnVarNameInTable="columntotal_harga" msprop:Generator_ColumnPropNameInRow="total_harga" msprop:Generator_ColumnPropNameInTable="total_hargaColumn" msprop:Generator_UserColumnName="total_harga" type="xs:unsignedInt" />
+              <xs:element name="delete" msprop:Generator_ColumnVarNameInTable="columndelete" msprop:Generator_ColumnPropNameInRow="delete" msprop:Generator_ColumnPropNameInTable="deleteColumn" msprop:Generator_UserColumnName="delete" type="xs:unsignedInt" />
+              <xs:element name="Hapus" msprop:Generator_ColumnVarNameInTable="columnHapus" msprop:Generator_ColumnPropNameInRow="Hapus" msprop:Generator_ColumnPropNameInTable="HapusColumn" msprop:Generator_UserColumnName="Hapus" type="xs:unsignedInt" />
+              <xs:element name="retur" msprop:Generator_ColumnVarNameInTable="columnretur" msprop:Generator_ColumnPropNameInRow="retur" msprop:Generator_ColumnPropNameInTable="returColumn" msprop:Generator_UserColumnName="retur" type="xs:unsignedInt" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="nota_penjualan" msprop:Generator_TableClassName="nota_penjualanDataTable" msprop:Generator_TableVarName="tablenota_penjualan" msprop:Generator_TablePropName="nota_penjualan" msprop:Generator_RowDeletingName="nota_penjualanRowDeleting" msprop:Generator_RowChangingName="nota_penjualanRowChanging" msprop:Generator_RowEvHandlerName="nota_penjualanRowChangeEventHandler" msprop:Generator_RowDeletedName="nota_penjualanRowDeleted" msprop:Generator_UserTableName="nota_penjualan" msprop:Generator_RowChangedName="nota_penjualanRowChanged" msprop:Generator_RowEvArgName="nota_penjualanRowChangeEvent" msprop:Generator_RowClassName="nota_penjualanRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="no_nota_penjualan" msprop:Generator_ColumnVarNameInTable="columnno_nota_penjualan" msprop:Generator_ColumnPropNameInRow="no_nota_penjualan" msprop:Generator_ColumnPropNameInTable="no_nota_penjualanColumn" msprop:Generator_UserColumnName="no_nota_penjualan">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="no_pajak" msprop:Generator_ColumnVarNameInTable="columnno_pajak" msprop:Generator_ColumnPropNameInRow="no_pajak" msprop:Generator_ColumnPropNameInTable="no_pajakColumn" msprop:Generator_UserColumnName="no_pajak">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tanggal_penjualan" msprop:Generator_ColumnVarNameInTable="columntanggal_penjualan" msprop:Generator_ColumnPropNameInRow="tanggal_penjualan" msprop:Generator_ColumnPropNameInTable="tanggal_penjualanColumn" msprop:Generator_UserColumnName="tanggal_penjualan" type="xs:dateTime" />
+              <xs:element name="kode_customer" msprop:Generator_ColumnVarNameInTable="columnkode_customer" msprop:Generator_ColumnPropNameInRow="kode_customer" msprop:Generator_ColumnPropNameInTable="kode_customerColumn" msprop:Generator_UserColumnName="kode_customer">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tanggal_jt_penjualan" msprop:Generator_ColumnVarNameInTable="columntanggal_jt_penjualan" msprop:Generator_ColumnPropNameInRow="tanggal_jt_penjualan" msprop:Generator_ColumnPropNameInTable="tanggal_jt_penjualanColumn" msprop:Generator_UserColumnName="tanggal_jt_penjualan" type="xs:dateTime" />
+              <xs:element name="total_harga_penjualan" msprop:Generator_ColumnVarNameInTable="columntotal_harga_penjualan" msprop:Generator_ColumnPropNameInRow="total_harga_penjualan" msprop:Generator_ColumnPropNameInTable="total_harga_penjualanColumn" msprop:Generator_UserColumnName="total_harga_penjualan" type="xs:int" />
+              <xs:element name="kode_barang" msprop:Generator_ColumnVarNameInTable="columnkode_barang" msprop:Generator_ColumnPropNameInRow="kode_barang" msprop:Generator_ColumnPropNameInTable="kode_barangColumn" msprop:Generator_UserColumnName="kode_barang">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nama_barang" msprop:Generator_ColumnVarNameInTable="columnnama_barang" msprop:Generator_ColumnPropNameInRow="nama_barang" msprop:Generator_ColumnPropNameInTable="nama_barangColumn" msprop:Generator_UserColumnName="nama_barang">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="batch" msprop:Generator_ColumnVarNameInTable="columnbatch" msprop:Generator_ColumnPropNameInRow="batch" msprop:Generator_ColumnPropNameInTable="batchColumn" msprop:Generator_UserColumnName="batch">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="expired_date" msprop:Generator_ColumnVarNameInTable="columnexpired_date" msprop:Generator_ColumnPropNameInRow="expired_date" msprop:Generator_ColumnPropNameInTable="expired_dateColumn" msprop:Generator_UserColumnName="expired_date" type="xs:dateTime" />
+              <xs:element name="harga_jual" msprop:Generator_ColumnVarNameInTable="columnharga_jual" msprop:Generator_ColumnPropNameInRow="harga_jual" msprop:Generator_ColumnPropNameInTable="harga_jualColumn" msprop:Generator_UserColumnName="harga_jual" type="xs:unsignedInt" />
+              <xs:element name="jumlah_barang" msprop:Generator_ColumnVarNameInTable="columnjumlah_barang" msprop:Generator_ColumnPropNameInRow="jumlah_barang" msprop:Generator_ColumnPropNameInTable="jumlah_barangColumn" msprop:Generator_UserColumnName="jumlah_barang" type="xs:unsignedInt" />
+              <xs:element name="discount_percent" msprop:Generator_ColumnVarNameInTable="columndiscount_percent" msprop:Generator_ColumnPropNameInRow="discount_percent" msprop:Generator_ColumnPropNameInTable="discount_percentColumn" msprop:Generator_UserColumnName="discount_percent" type="xs:unsignedInt" />
+              <xs:element name="total_harga" msprop:Generator_ColumnVarNameInTable="columntotal_harga" msprop:Generator_ColumnPropNameInRow="total_harga" msprop:Generator_ColumnPropNameInTable="total_hargaColumn" msprop:Generator_UserColumnName="total_harga" type="xs:unsignedInt" />
+              <xs:element name="delete" msprop:Generator_ColumnVarNameInTable="columndelete" msprop:Generator_ColumnPropNameInRow="delete" msprop:Generator_ColumnPropNameInTable="deleteColumn" msprop:Generator_UserColumnName="delete" type="xs:unsignedInt" />
+              <xs:element name="Hapus" msprop:Generator_ColumnVarNameInTable="columnHapus" msprop:Generator_ColumnPropNameInRow="Hapus" msprop:Generator_ColumnPropNameInTable="HapusColumn" msprop:Generator_UserColumnName="Hapus" type="xs:unsignedInt" />
+              <xs:element name="retur" msprop:Generator_ColumnVarNameInTable="columnretur" msprop:Generator_ColumnPropNameInRow="retur" msprop:Generator_ColumnPropNameInTable="returColumn" msprop:Generator_UserColumnName="retur" type="xs:unsignedInt" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="nota_retur_beli" msprop:Generator_TableClassName="nota_retur_beliDataTable" msprop:Generator_TableVarName="tablenota_retur_beli" msprop:Generator_TablePropName="nota_retur_beli" msprop:Generator_RowDeletingName="nota_retur_beliRowDeleting" msprop:Generator_RowChangingName="nota_retur_beliRowChanging" msprop:Generator_RowEvHandlerName="nota_retur_beliRowChangeEventHandler" msprop:Generator_RowDeletedName="nota_retur_beliRowDeleted" msprop:Generator_UserTableName="nota_retur_beli" msprop:Generator_RowChangedName="nota_retur_beliRowChanged" msprop:Generator_RowEvArgName="nota_retur_beliRowChangeEvent" msprop:Generator_RowClassName="nota_retur_beliRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="no_retur_pembelian" msprop:Generator_ColumnVarNameInTable="columnno_retur_pembelian" msprop:Generator_ColumnPropNameInRow="no_retur_pembelian" msprop:Generator_ColumnPropNameInTable="no_retur_pembelianColumn" msprop:Generator_UserColumnName="no_retur_pembelian">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tanggal_retur_pembelian" msprop:Generator_ColumnVarNameInTable="columntanggal_retur_pembelian" msprop:Generator_ColumnPropNameInRow="tanggal_retur_pembelian" msprop:Generator_ColumnPropNameInTable="tanggal_retur_pembelianColumn" msprop:Generator_UserColumnName="tanggal_retur_pembelian" type="xs:dateTime" />
+              <xs:element name="kode_supplier" msprop:Generator_ColumnVarNameInTable="columnkode_supplier" msprop:Generator_ColumnPropNameInRow="kode_supplier" msprop:Generator_ColumnPropNameInTable="kode_supplierColumn" msprop:Generator_UserColumnName="kode_supplier">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="no_nota_pembelian" msprop:Generator_ColumnVarNameInTable="columnno_nota_pembelian" msprop:Generator_ColumnPropNameInRow="no_nota_pembelian" msprop:Generator_ColumnPropNameInTable="no_nota_pembelianColumn" msprop:Generator_UserColumnName="no_nota_pembelian">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="totalharga_retur_pembelian" msprop:Generator_ColumnVarNameInTable="columntotalharga_retur_pembelian" msprop:Generator_ColumnPropNameInRow="totalharga_retur_pembelian" msprop:Generator_ColumnPropNameInTable="totalharga_retur_pembelianColumn" msprop:Generator_UserColumnName="totalharga_retur_pembelian" type="xs:unsignedInt" />
+              <xs:element name="kode_barang" msprop:Generator_ColumnVarNameInTable="columnkode_barang" msprop:Generator_ColumnPropNameInRow="kode_barang" msprop:Generator_ColumnPropNameInTable="kode_barangColumn" msprop:Generator_UserColumnName="kode_barang">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nama_barang" msprop:Generator_ColumnVarNameInTable="columnnama_barang" msprop:Generator_ColumnPropNameInRow="nama_barang" msprop:Generator_ColumnPropNameInTable="nama_barangColumn" msprop:Generator_UserColumnName="nama_barang">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="batch" msprop:Generator_ColumnVarNameInTable="columnbatch" msprop:Generator_ColumnPropNameInRow="batch" msprop:Generator_ColumnPropNameInTable="batchColumn" msprop:Generator_UserColumnName="batch">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="expired_date" msprop:Generator_ColumnVarNameInTable="columnexpired_date" msprop:Generator_ColumnPropNameInRow="expired_date" msprop:Generator_ColumnPropNameInTable="expired_dateColumn" msprop:Generator_UserColumnName="expired_date" type="xs:dateTime" />
+              <xs:element name="harga_beli" msprop:Generator_ColumnVarNameInTable="columnharga_beli" msprop:Generator_ColumnPropNameInRow="harga_beli" msprop:Generator_ColumnPropNameInTable="harga_beliColumn" msprop:Generator_UserColumnName="harga_beli" type="xs:unsignedInt" />
+              <xs:element name="jumlah_barang" msprop:Generator_ColumnVarNameInTable="columnjumlah_barang" msprop:Generator_ColumnPropNameInRow="jumlah_barang" msprop:Generator_ColumnPropNameInTable="jumlah_barangColumn" msprop:Generator_UserColumnName="jumlah_barang" type="xs:unsignedInt" />
+              <xs:element name="discount_percent" msprop:Generator_ColumnVarNameInTable="columndiscount_percent" msprop:Generator_ColumnPropNameInRow="discount_percent" msprop:Generator_ColumnPropNameInTable="discount_percentColumn" msprop:Generator_UserColumnName="discount_percent" type="xs:unsignedInt" />
+              <xs:element name="total_harga" msprop:Generator_ColumnVarNameInTable="columntotal_harga" msprop:Generator_ColumnPropNameInRow="total_harga" msprop:Generator_ColumnPropNameInTable="total_hargaColumn" msprop:Generator_UserColumnName="total_harga" type="xs:unsignedInt" />
+              <xs:element name="delete" msprop:Generator_ColumnVarNameInTable="columndelete" msprop:Generator_ColumnPropNameInRow="delete" msprop:Generator_ColumnPropNameInTable="deleteColumn" msprop:Generator_UserColumnName="delete" type="xs:unsignedInt" />
+              <xs:element name="retur" msprop:Generator_ColumnVarNameInTable="columnretur" msprop:Generator_ColumnPropNameInRow="retur" msprop:Generator_ColumnPropNameInTable="returColumn" msprop:Generator_UserColumnName="retur" type="xs:unsignedInt" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="nota_retur_jual" msprop:Generator_TableClassName="nota_retur_jualDataTable" msprop:Generator_TableVarName="tablenota_retur_jual" msprop:Generator_TablePropName="nota_retur_jual" msprop:Generator_RowDeletingName="nota_retur_jualRowDeleting" msprop:Generator_RowChangingName="nota_retur_jualRowChanging" msprop:Generator_RowEvHandlerName="nota_retur_jualRowChangeEventHandler" msprop:Generator_RowDeletedName="nota_retur_jualRowDeleted" msprop:Generator_UserTableName="nota_retur_jual" msprop:Generator_RowChangedName="nota_retur_jualRowChanged" msprop:Generator_RowEvArgName="nota_retur_jualRowChangeEvent" msprop:Generator_RowClassName="nota_retur_jualRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="no_retur_penjualan" msprop:Generator_ColumnVarNameInTable="columnno_retur_penjualan" msprop:Generator_ColumnPropNameInRow="no_retur_penjualan" msprop:Generator_ColumnPropNameInTable="no_retur_penjualanColumn" msprop:Generator_UserColumnName="no_retur_penjualan">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tanggal_retur_penjualan" msprop:Generator_ColumnVarNameInTable="columntanggal_retur_penjualan" msprop:Generator_ColumnPropNameInRow="tanggal_retur_penjualan" msprop:Generator_ColumnPropNameInTable="tanggal_retur_penjualanColumn" msprop:Generator_UserColumnName="tanggal_retur_penjualan" type="xs:dateTime" />
+              <xs:element name="kode_cust" msprop:Generator_ColumnVarNameInTable="columnkode_cust" msprop:Generator_ColumnPropNameInRow="kode_cust" msprop:Generator_ColumnPropNameInTable="kode_custColumn" msprop:Generator_UserColumnName="kode_cust">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="no_nota_penjualan" msprop:Generator_ColumnVarNameInTable="columnno_nota_penjualan" msprop:Generator_ColumnPropNameInRow="no_nota_penjualan" msprop:Generator_ColumnPropNameInTable="no_nota_penjualanColumn" msprop:Generator_UserColumnName="no_nota_penjualan">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="totalharga_retur_penjualan" msprop:Generator_ColumnVarNameInTable="columntotalharga_retur_penjualan" msprop:Generator_ColumnPropNameInRow="totalharga_retur_penjualan" msprop:Generator_ColumnPropNameInTable="totalharga_retur_penjualanColumn" msprop:Generator_UserColumnName="totalharga_retur_penjualan" type="xs:unsignedInt" />
+              <xs:element name="kode_barang" msprop:Generator_ColumnVarNameInTable="columnkode_barang" msprop:Generator_ColumnPropNameInRow="kode_barang" msprop:Generator_ColumnPropNameInTable="kode_barangColumn" msprop:Generator_UserColumnName="kode_barang">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nama_barang" msprop:Generator_ColumnVarNameInTable="columnnama_barang" msprop:Generator_ColumnPropNameInRow="nama_barang" msprop:Generator_ColumnPropNameInTable="nama_barangColumn" msprop:Generator_UserColumnName="nama_barang">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="batch" msprop:Generator_ColumnVarNameInTable="columnbatch" msprop:Generator_ColumnPropNameInRow="batch" msprop:Generator_ColumnPropNameInTable="batchColumn" msprop:Generator_UserColumnName="batch">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="expired_date" msprop:Generator_ColumnVarNameInTable="columnexpired_date" msprop:Generator_ColumnPropNameInRow="expired_date" msprop:Generator_ColumnPropNameInTable="expired_dateColumn" msprop:Generator_UserColumnName="expired_date" type="xs:dateTime" />
+              <xs:element name="harga_jual" msprop:Generator_ColumnVarNameInTable="columnharga_jual" msprop:Generator_ColumnPropNameInRow="harga_jual" msprop:Generator_ColumnPropNameInTable="harga_jualColumn" msprop:Generator_UserColumnName="harga_jual" type="xs:unsignedInt" />
+              <xs:element name="jumlah_barang" msprop:Generator_ColumnVarNameInTable="columnjumlah_barang" msprop:Generator_ColumnPropNameInRow="jumlah_barang" msprop:Generator_ColumnPropNameInTable="jumlah_barangColumn" msprop:Generator_UserColumnName="jumlah_barang" type="xs:unsignedInt" />
+              <xs:element name="discount_percent" msprop:Generator_ColumnVarNameInTable="columndiscount_percent" msprop:Generator_ColumnPropNameInRow="discount_percent" msprop:Generator_ColumnPropNameInTable="discount_percentColumn" msprop:Generator_UserColumnName="discount_percent" type="xs:unsignedInt" />
+              <xs:element name="total_harga" msprop:Generator_ColumnVarNameInTable="columntotal_harga" msprop:Generator_ColumnPropNameInRow="total_harga" msprop:Generator_ColumnPropNameInTable="total_hargaColumn" msprop:Generator_UserColumnName="total_harga" type="xs:unsignedInt" />
+              <xs:element name="delete" msprop:Generator_ColumnVarNameInTable="columndelete" msprop:Generator_ColumnPropNameInRow="delete" msprop:Generator_ColumnPropNameInTable="deleteColumn" msprop:Generator_UserColumnName="delete" type="xs:unsignedInt" />
+              <xs:element name="retur" msprop:Generator_ColumnVarNameInTable="columnretur" msprop:Generator_ColumnPropNameInRow="retur" msprop:Generator_ColumnPropNameInTable="returColumn" msprop:Generator_UserColumnName="retur" type="xs:unsignedInt" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="print_detail_stok" msprop:Generator_TableClassName="print_detail_stokDataTable" msprop:Generator_TableVarName="tableprint_detail_stok" msprop:Generator_TablePropName="print_detail_stok" msprop:Generator_RowDeletingName="print_detail_stokRowDeleting" msprop:Generator_RowChangingName="print_detail_stokRowChanging" msprop:Generator_RowEvHandlerName="print_detail_stokRowChangeEventHandler" msprop:Generator_RowDeletedName="print_detail_stokRowDeleted" msprop:Generator_UserTableName="print_detail_stok" msprop:Generator_RowChangedName="print_detail_stokRowChanged" msprop:Generator_RowEvArgName="print_detail_stokRowChangeEvent" msprop:Generator_RowClassName="print_detail_stokRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="no_nota" msprop:Generator_ColumnVarNameInTable="columnno_nota" msprop:Generator_ColumnPropNameInRow="no_nota" msprop:Generator_ColumnPropNameInTable="no_notaColumn" msprop:Generator_UserColumnName="no_nota">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="kode_barang" msprop:Generator_ColumnVarNameInTable="columnkode_barang" msprop:Generator_ColumnPropNameInRow="kode_barang" msprop:Generator_ColumnPropNameInTable="kode_barangColumn" msprop:Generator_UserColumnName="kode_barang">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nama_barang" msprop:Generator_ColumnVarNameInTable="columnnama_barang" msprop:Generator_ColumnPropNameInRow="nama_barang" msprop:Generator_ColumnPropNameInTable="nama_barangColumn" msprop:Generator_UserColumnName="nama_barang">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="batch" msprop:Generator_ColumnVarNameInTable="columnbatch" msprop:Generator_ColumnPropNameInRow="batch" msprop:Generator_ColumnPropNameInTable="batchColumn" msprop:Generator_UserColumnName="batch">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="expired_date" msprop:Generator_ColumnVarNameInTable="columnexpired_date" msprop:Generator_ColumnPropNameInRow="expired_date" msprop:Generator_ColumnPropNameInTable="expired_dateColumn" msprop:Generator_UserColumnName="expired_date">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="jumlah_barang" msprop:Generator_ColumnVarNameInTable="columnjumlah_barang" msprop:Generator_ColumnPropNameInRow="jumlah_barang" msprop:Generator_ColumnPropNameInTable="jumlah_barangColumn" msprop:Generator_UserColumnName="jumlah_barang">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tanggal" msprop:Generator_ColumnVarNameInTable="columntanggal" msprop:Generator_ColumnPropNameInRow="tanggal" msprop:Generator_ColumnPropNameInTable="tanggalColumn" msprop:Generator_UserColumnName="tanggal">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="keterangan" msprop:Generator_ColumnVarNameInTable="columnketerangan" msprop:Generator_ColumnPropNameInRow="keterangan" msprop:Generator_ColumnPropNameInTable="keteranganColumn" msprop:Generator_UserColumnName="keterangan">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="status" msprop:Generator_ColumnVarNameInTable="columnstatus" msprop:Generator_ColumnPropNameInRow="status" msprop:Generator_ColumnPropNameInTable="statusColumn" msprop:Generator_UserColumnName="status" type="xs:unsignedInt" />
+              <xs:element name="no_nota_pembelian" msprop:Generator_ColumnVarNameInTable="columnno_nota_pembelian" msprop:Generator_ColumnPropNameInRow="no_nota_pembelian" msprop:Generator_ColumnPropNameInTable="no_nota_pembelianColumn" msprop:Generator_UserColumnName="no_nota_pembelian">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tanggal_pembelian" msprop:Generator_ColumnVarNameInTable="columntanggal_pembelian" msprop:Generator_ColumnPropNameInRow="tanggal_pembelian" msprop:Generator_ColumnPropNameInTable="tanggal_pembelianColumn" msprop:Generator_UserColumnName="tanggal_pembelian" type="xs:dateTime" />
+              <xs:element name="kode_supplier" msprop:Generator_ColumnVarNameInTable="columnkode_supplier" msprop:Generator_ColumnPropNameInRow="kode_supplier" msprop:Generator_ColumnPropNameInTable="kode_supplierColumn" msprop:Generator_UserColumnName="kode_supplier">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tanggal_jt_pembelian" msprop:Generator_ColumnVarNameInTable="columntanggal_jt_pembelian" msprop:Generator_ColumnPropNameInRow="tanggal_jt_pembelian" msprop:Generator_ColumnPropNameInTable="tanggal_jt_pembelianColumn" msprop:Generator_UserColumnName="tanggal_jt_pembelian" type="xs:dateTime" />
+              <xs:element name="total_harga_pembelian" msprop:Generator_ColumnVarNameInTable="columntotal_harga_pembelian" msprop:Generator_ColumnPropNameInRow="total_harga_pembelian" msprop:Generator_ColumnPropNameInTable="total_harga_pembelianColumn" msprop:Generator_UserColumnName="total_harga_pembelian" type="xs:unsignedInt" />
+              <xs:element name="status_pembelian" msprop:Generator_ColumnVarNameInTable="columnstatus_pembelian" msprop:Generator_ColumnPropNameInRow="status_pembelian" msprop:Generator_ColumnPropNameInTable="status_pembelianColumn" msprop:Generator_UserColumnName="status_pembelian" type="xs:unsignedInt" />
+              <xs:element name="no_nota_penjualan" msprop:Generator_ColumnVarNameInTable="columnno_nota_penjualan" msprop:Generator_ColumnPropNameInRow="no_nota_penjualan" msprop:Generator_ColumnPropNameInTable="no_nota_penjualanColumn" msprop:Generator_UserColumnName="no_nota_penjualan">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tanggal_penjualan" msprop:Generator_ColumnVarNameInTable="columntanggal_penjualan" msprop:Generator_ColumnPropNameInRow="tanggal_penjualan" msprop:Generator_ColumnPropNameInTable="tanggal_penjualanColumn" msprop:Generator_UserColumnName="tanggal_penjualan" type="xs:dateTime" />
+              <xs:element name="kode_customer" msprop:Generator_ColumnVarNameInTable="columnkode_customer" msprop:Generator_ColumnPropNameInRow="kode_customer" msprop:Generator_ColumnPropNameInTable="kode_customerColumn" msprop:Generator_UserColumnName="kode_customer">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tanggal_jt_penjualan" msprop:Generator_ColumnVarNameInTable="columntanggal_jt_penjualan" msprop:Generator_ColumnPropNameInRow="tanggal_jt_penjualan" msprop:Generator_ColumnPropNameInTable="tanggal_jt_penjualanColumn" msprop:Generator_UserColumnName="tanggal_jt_penjualan" type="xs:dateTime" />
+              <xs:element name="total_harga_penjualan" msprop:Generator_ColumnVarNameInTable="columntotal_harga_penjualan" msprop:Generator_ColumnPropNameInRow="total_harga_penjualan" msprop:Generator_ColumnPropNameInTable="total_harga_penjualanColumn" msprop:Generator_UserColumnName="total_harga_penjualan" type="xs:int" />
+              <xs:element name="status_penjualan" msprop:Generator_ColumnVarNameInTable="columnstatus_penjualan" msprop:Generator_ColumnPropNameInRow="status_penjualan" msprop:Generator_ColumnPropNameInTable="status_penjualanColumn" msprop:Generator_UserColumnName="status_penjualan" type="xs:unsignedInt" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:nota_pembelian" />
+      <xs:field xpath="mstns:no_nota_pembelian" />
+    </xs:unique>
+    <xs:unique name="nota_penjualan_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:nota_penjualan" />
+      <xs:field xpath="mstns:no_nota_penjualan" />
+    </xs:unique>
+    <xs:unique name="nota_retur_beli_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:nota_retur_beli" />
+      <xs:field xpath="mstns:no_retur_pembelian" />
+    </xs:unique>
+    <xs:unique name="nota_retur_jual_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:nota_retur_jual" />
+      <xs:field xpath="mstns:no_retur_penjualan" />
+    </xs:unique>
+    <xs:unique name="print_detail_stok_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:print_detail_stok" />
+      <xs:field xpath="mstns:no_nota_pembelian" />
+      <xs:field xpath="mstns:no_nota_penjualan" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

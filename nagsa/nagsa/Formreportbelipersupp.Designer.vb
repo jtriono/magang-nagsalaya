@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Formreportpenjualan
+Partial Class Formreportbelipersupp
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -24,18 +24,19 @@ Partial Class Formreportpenjualan
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Me.penjualanBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.pembelianBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.apotikDataSet = New WindowsApplication1.apotikDataSet()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.penjualanTableAdapter = New WindowsApplication1.apotikDataSetTableAdapters.penjualanTableAdapter()
-        CType(Me.penjualanBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pembelianTableAdapter = New WindowsApplication1.apotikDataSetTableAdapters.pembelianTableAdapter()
+        Me.Button1 = New System.Windows.Forms.Button()
+        CType(Me.pembelianBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.apotikDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'penjualanBindingSource
+        'pembelianBindingSource
         '
-        Me.penjualanBindingSource.DataMember = "penjualan"
-        Me.penjualanBindingSource.DataSource = Me.apotikDataSet
+        Me.pembelianBindingSource.DataMember = "pembelian"
+        Me.pembelianBindingSource.DataSource = Me.apotikDataSet
         '
         'apotikDataSet
         '
@@ -44,34 +45,45 @@ Partial Class Formreportpenjualan
         '
         'ReportViewer1
         '
-        ReportDataSource1.Name = "DataSetpenjualan"
-        ReportDataSource1.Value = Me.penjualanBindingSource
+        ReportDataSource1.Name = "DataSet1"
+        ReportDataSource1.Value = Me.pembelianBindingSource
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
-        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "WindowsApplication1.Report2.rdlc"
-        Me.ReportViewer1.Location = New System.Drawing.Point(12, 12)
+        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "WindowsApplication1.Report14.rdlc"
+        Me.ReportViewer1.Location = New System.Drawing.Point(13, 13)
         Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.Size = New System.Drawing.Size(707, 408)
+        Me.ReportViewer1.Size = New System.Drawing.Size(721, 319)
         Me.ReportViewer1.TabIndex = 0
         '
-        'penjualanTableAdapter
+        'pembelianTableAdapter
         '
-        Me.penjualanTableAdapter.ClearBeforeFill = True
+        Me.pembelianTableAdapter.ClearBeforeFill = True
         '
-        'Formreportpenjualan
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(659, 43)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 1
+        Me.Button1.Text = "Supplier"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Formreportbelipersupp
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(749, 423)
+        Me.ClientSize = New System.Drawing.Size(775, 361)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ReportViewer1)
-        Me.Name = "Formreportpenjualan"
-        Me.Text = "Laporan Penjualan"
-        CType(Me.penjualanBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Name = "Formreportbelipersupp"
+        Me.Text = "Formreportbelipersupp"
+        CType(Me.pembelianBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.apotikDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
-    Friend WithEvents penjualanBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents pembelianBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents apotikDataSet As WindowsApplication1.apotikDataSet
-    Friend WithEvents penjualanTableAdapter As WindowsApplication1.apotikDataSetTableAdapters.penjualanTableAdapter
+    Friend WithEvents pembelianTableAdapter As WindowsApplication1.apotikDataSetTableAdapters.pembelianTableAdapter
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

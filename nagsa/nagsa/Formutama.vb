@@ -100,4 +100,24 @@
     Private Sub DetailStokToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DetailStokToolStripMenuItem.Click
         Detail_Stok.ShowDialog()
     End Sub
+
+    Private Sub SemuaBarangToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SemuaBarangToolStripMenuItem.Click
+        formreportpembelian.ShowDialog()
+    End Sub
+
+    Private Sub PerBarangToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PerBarangToolStripMenuItem.Click
+        Formreportbeliperbarang.ShowDialog()
+    End Sub
+
+    Private Sub PerSupplierToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PerSupplierToolStripMenuItem.Click
+        Formreportbelipersupp.ShowDialog()
+    End Sub
+
+    Private Sub ReturPenjualanHarianToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReturPenjualanHarianToolStripMenuItem.Click
+        Formreportreturjualharian.ShowDialog()
+    End Sub
+
+    Private Sub ReturPembelianHarianToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReturPembelianHarianToolStripMenuItem.Click
+        formreportreturbeliharian.ShowDialog()
+    End Sub
 End Class

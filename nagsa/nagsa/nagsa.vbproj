@@ -116,6 +116,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>apotikDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="apotikDataSetview.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>apotikDataSetview.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Barang.Designer.vb">
       <DependentUpon>Barang.vb</DependentUpon>
     </Compile>
@@ -144,6 +149,24 @@
       <DependentUpon>Form Penjualan.vb</DependentUpon>
     </Compile>
     <Compile Include="Form Penjualan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formreportbeliperbarang.Designer.vb">
+      <DependentUpon>Formreportbeliperbarang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formreportbeliperbarang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formreportbelipersupp.Designer.vb">
+      <DependentUpon>Formreportbelipersupp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formreportbelipersupp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formreportpembelian.Designer.vb">
+      <DependentUpon>formreportpembelian.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formreportpembelian.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formreportjualperbarang.Designer.vb">
@@ -192,6 +215,18 @@
       <DependentUpon>Formreportsupplier.vb</DependentUpon>
     </Compile>
     <Compile Include="Formreportsupplier.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formreportreturjualharian.Designer.vb">
+      <DependentUpon>Formreportreturjualharian.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formreportreturjualharian.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formreportreturbeliharian.Designer.vb">
+      <DependentUpon>formreportreturbeliharian.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formreportreturbeliharian.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formtambahcust.Designer.vb">
@@ -326,6 +361,15 @@
     <EmbeddedResource Include="Formreportbarang.resx">
       <DependentUpon>Formreportbarang.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formreportbeliperbarang.resx">
+      <DependentUpon>Formreportbeliperbarang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formreportbelipersupp.resx">
+      <DependentUpon>Formreportbelipersupp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formreportpembelian.resx">
+      <DependentUpon>formreportpembelian.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formreportcustomer.resx">
       <DependentUpon>Formreportcustomer.vb</DependentUpon>
     </EmbeddedResource>
@@ -344,8 +388,14 @@
     <EmbeddedResource Include="Formreportpiutang.resx">
       <DependentUpon>Formreportpiutang.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formreportreturjualharian.resx">
+      <DependentUpon>Formreportreturjualharian.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formreportsupplier.resx">
       <DependentUpon>Formreportsupplier.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formreportreturbeliharian.resx">
+      <DependentUpon>formreportreturbeliharian.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formtambahcust.resx">
       <DependentUpon>Formtambahcust.vb</DependentUpon>
@@ -387,6 +437,11 @@
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Report10.rdlc" />
     <EmbeddedResource Include="Report11.rdlc" />
+    <EmbeddedResource Include="Report12.rdlc" />
+    <EmbeddedResource Include="Report13.rdlc" />
+    <EmbeddedResource Include="Report14.rdlc" />
+    <EmbeddedResource Include="Report15.rdlc" />
+    <EmbeddedResource Include="Report16.rdlc" />
     <EmbeddedResource Include="Report2.rdlc" />
     <EmbeddedResource Include="Report3.rdlc" />
     <EmbeddedResource Include="Report5.rdlc" />
@@ -435,6 +490,17 @@
     </None>
     <None Include="apotikDataSet.xss">
       <DependentUpon>apotikDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="apotikDataSetview.xsc">
+      <DependentUpon>apotikDataSetview.xsd</DependentUpon>
+    </None>
+    <None Include="apotikDataSetview.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>apotikDataSetview.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="apotikDataSetview.xss">
+      <DependentUpon>apotikDataSetview.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
