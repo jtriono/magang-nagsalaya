@@ -312,4 +312,19 @@ Public Class Retur_Pembelian
             MsgBox(ex.Message)
         End Try
     End Sub
+
+    Private Sub btnprint_Click(sender As Object, e As EventArgs) Handles btnprint.Click
+        Try
+            dt = New DataTable
+            query = "insert into retur_pembelian values('" + tbno_nota.Text + "','" + dtppilihtanggal.Value.ToString("yyyy-MM-dd") + "','" + tbkode_supplier.Text + "','" + tbtotalharga.Text + "',0,'" + tbnopembelian.Text + "')"
+            connect.Open()
+            command = New MySqlCommand(query, connect)
+            command.ExecuteNonQuery()
+            connect.Close()
+            MessageBox.Show("Data Berhasil Masuk")
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+        Print_Nota_Retur_Beli.ShowDialog()
+    End Sub
 End Class

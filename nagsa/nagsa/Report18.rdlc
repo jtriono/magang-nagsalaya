@@ -43,7 +43,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>kode barang pembelian</Value>
+                              <Value>kode barang</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -115,7 +115,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>batch pembelian</Value>
+                              <Value>batch</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -329,14 +329,14 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="kode_barang_pembelian">
+                    <Textbox Name="kode_barang">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!kode_barang_pembelian.Value</Value>
+                              <Value>=Fields!kode_barang.Value</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <Color>#4d4d4d</Color>
@@ -346,7 +346,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>kode_barang_pembelian</rd:DefaultName>
+                      <rd:DefaultName>kode_barang</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>#e5e5e5</Color>
@@ -395,14 +395,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="batch_pembelian">
+                    <Textbox Name="batch">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!batch_pembelian.Value</Value>
+                              <Value>=Fields!batch.Value</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <Color>#4d4d4d</Color>
@@ -412,7 +412,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>batch_pembelian</rd:DefaultName>
+                      <rd:DefaultName>batch</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>#e5e5e5</Color>
@@ -633,29 +633,29 @@
   <Width>7.87402in</Width>
   <Page>
     <PageHeader>
-      <Height>2.69875cm</Height>
+      <Height>2.59292cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
-        <Textbox Name="no_nota_pembelian">
+        <Textbox Name="no_retur_pembelian">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>No Nota: </Value>
+                  <Value>No Retur: </Value>
                   <Style />
                 </TextRun>
                 <TextRun>
-                  <Value>=First(Fields!no_nota_pembelian.Value, "DataSet1")</Value>
+                  <Value>=First(Fields!no_retur_pembelian.Value, "DataSet1")</Value>
                   <Style />
                 </TextRun>
               </TextRuns>
               <Style />
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>no_nota_pembelian</rd:DefaultName>
+          <rd:DefaultName>no_retur_pembelian</rd:DefaultName>
           <Left>0cm</Left>
           <Height>0.6cm</Height>
           <Width>6.23062cm</Width>
@@ -669,7 +669,7 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Textbox Name="tanggal_pembelian">
+        <Textbox Name="tanggal_retur_pembelian">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
@@ -680,17 +680,17 @@
                   <Style />
                 </TextRun>
                 <TextRun>
-                  <Value>=First(Fields!tanggal_pembelian.Value, "DataSet1")</Value>
+                  <Value>=First(Fields!tanggal_retur_pembelian.Value, "DataSet1")</Value>
                   <Style />
                 </TextRun>
               </TextRuns>
               <Style />
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>tanggal_pembelian</rd:DefaultName>
-          <Left>13.95458cm</Left>
+          <rd:DefaultName>tanggal_retur_pembelian</rd:DefaultName>
+          <Left>13.12016cm</Left>
           <Height>0.6cm</Height>
-          <Width>6.04542cm</Width>
+          <Width>6.87984cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -722,8 +722,9 @@
           </Paragraphs>
           <rd:DefaultName>kode_supplier</rd:DefaultName>
           <Top>0.77639cm</Top>
+          <Left>0cm</Left>
           <Height>0.6cm</Height>
-          <Width>6.23063cm</Width>
+          <Width>5cm</Width>
           <ZIndex>2</ZIndex>
           <Style>
             <Border>
@@ -735,28 +736,29 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Textbox Name="tanggal_jt_pembelian">
+        <Textbox Name="no_nota_pembelian">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Tanggal Jatuh Tempo: </Value>
+                  <Value>No Nota: </Value>
                   <Style />
                 </TextRun>
                 <TextRun>
-                  <Value>=First(Fields!tanggal_jt_pembelian.Value, "DataSet1")</Value>
+                  <Value>=First(Fields!no_nota_pembelian.Value, "DataSet1")</Value>
                   <Style />
                 </TextRun>
               </TextRuns>
               <Style />
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>tanggal_jt_pembelian</rd:DefaultName>
+          <rd:DefaultName>no_nota_pembelian</rd:DefaultName>
           <Top>1.55278cm</Top>
+          <Left>0cm</Left>
           <Height>0.6cm</Height>
-          <Width>8.98229cm</Width>
+          <Width>6.23062cm</Width>
           <ZIndex>3</ZIndex>
           <Style>
             <Border>
@@ -776,11 +778,11 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>2.01083cm</Height>
+      <Height>1.98438cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
-        <Textbox Name="total_harga_pembelian">
+        <Textbox Name="totalharga_retur_pembelian">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
@@ -791,18 +793,18 @@
                   <Style />
                 </TextRun>
                 <TextRun>
-                  <Value>=Sum(Fields!total_harga_pembelian.Value, "DataSet1")</Value>
+                  <Value>=Sum(Fields!totalharga_retur_pembelian.Value, "DataSet1")</Value>
                   <Style />
                 </TextRun>
               </TextRuns>
               <Style />
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>total_harga_pembelian</rd:DefaultName>
-          <Top>0.7112cm</Top>
-          <Left>14.46953cm</Left>
+          <rd:DefaultName>totalharga_retur_pembelian</rd:DefaultName>
+          <Top>0.68474cm</Top>
+          <Left>14.44438cm</Left>
           <Height>0.6cm</Height>
-          <Width>5.53047cm</Width>
+          <Width>5.55562cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -836,7 +838,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>68310031-baba-4e9f-acd6-ede4668f978a</rd:DataSourceID>
+      <rd:DataSourceID>ff645dca-ff70-4027-b1ba-93a203e88001</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -846,36 +848,36 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="no_nota_pembelian">
-          <DataField>no_nota_pembelian</DataField>
+        <Field Name="no_retur_pembelian">
+          <DataField>no_retur_pembelian</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="tanggal_pembelian">
-          <DataField>tanggal_pembelian</DataField>
+        <Field Name="tanggal_retur_pembelian">
+          <DataField>tanggal_retur_pembelian</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
         <Field Name="kode_supplier">
           <DataField>kode_supplier</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="tanggal_jt_pembelian">
-          <DataField>tanggal_jt_pembelian</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
+        <Field Name="no_nota_pembelian">
+          <DataField>no_nota_pembelian</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="total_harga_pembelian">
-          <DataField>total_harga_pembelian</DataField>
+        <Field Name="totalharga_retur_pembelian">
+          <DataField>totalharga_retur_pembelian</DataField>
           <rd:TypeName>System.UInt32</rd:TypeName>
         </Field>
-        <Field Name="kode_barang_pembelian">
-          <DataField>kode_barang_pembelian</DataField>
+        <Field Name="kode_barang">
+          <DataField>kode_barang</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="nama_barang">
           <DataField>nama_barang</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="batch_pembelian">
-          <DataField>batch_pembelian</DataField>
+        <Field Name="batch">
+          <DataField>batch</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="expired_date">
@@ -902,10 +904,6 @@
           <DataField>delete</DataField>
           <rd:TypeName>System.UInt32</rd:TypeName>
         </Field>
-        <Field Name="Hapus">
-          <DataField>Hapus</DataField>
-          <rd:TypeName>System.UInt32</rd:TypeName>
-        </Field>
         <Field Name="retur">
           <DataField>retur</DataField>
           <rd:TypeName>System.UInt32</rd:TypeName>
@@ -914,13 +912,13 @@
       <rd:DataSetInfo>
         <rd:DataSetName>apotikDataSetview</rd:DataSetName>
         <rd:SchemaPath>C:\Users\windows\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\apotikDataSetview.xsd</rd:SchemaPath>
-        <rd:TableName>nota_pembelian</rd:TableName>
+        <rd:TableName>nota_retur_beli</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>nota_pembelianTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>nota_retur_beliTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>a78367db-ab8c-4196-9a22-de82114c60c2</rd:ReportID>
+  <rd:ReportID>7453bc4c-3ac4-4f87-b6b8-aec8b45af4b2</rd:ReportID>
 </Report>

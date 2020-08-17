@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Formpenjualan
-    Dim connect As New MySqlConnection("server=localhost;uid=root;pwd=;database=apotik;port=3306")
+    Dim connect As New MySqlConnection("server=localhost;uid=root;pwd=admin;database=apotik;port=3306")
     Dim command As New MySqlCommand
     Dim adapter As New MySqlDataAdapter
     Dim query As String
@@ -432,6 +432,22 @@ Public Class Formpenjualan
     End Sub
 
     Private Sub btnprint_Click(sender As Object, e As EventArgs) Handles btnprint.Click
-        Print_Menu_Penjualan.ShowDialog()
+        If tbkode_cust.Text = "" Or tbno_pajak.Text = "" Then
+            MessageBox.Show("Lengkapi data terlebih dahulu")
+        Else
+
+            Try
+                dt = New DataTable
+                query = "insert into penjualan values('" + tbno_nota.Text + "','" + tbno_pajak.Text + "','" + dtppilihtanggal.Value.ToString("yyyy-MM-dd") + "','" + tbkode_cust.Text + "','" + dtpjatuh_tempo.Value.ToString("yyyy-MM-dd").ToString + "','" + tbtotalharga.Text + "',0)"
+                connect.Open()
+                command = New MySqlCommand(query, connect)
+                command.ExecuteNonQuery()
+                connect.Close()
+                MessageBox.Show("Data Berhasil Masuk")
+                Print_Menu_Penjualan.ShowDialog()
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        End If
     End Sub
 End Class

@@ -5,9 +5,6 @@ Public Class Formreportreturjualharian
     Dim adapt As New MySqlDataAdapter
     Dim query As String
     Dim datevalue As String
-    Private Sub Formreportreturjualharian_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 
     Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker1.ValueChanged
         datevalue = DateTimePicker1.Value.Date.ToString("yyyy-MM-dd")

@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Formpembelian
-    Dim connect As New MySqlConnection("server=localhost;uid=root;pwd=;database=apotik;port=3306")
+    Dim connect As New MySqlConnection("server=localhost;uid=root;pwd=admin;database=apotik;port=3306")
     Dim command As New MySqlCommand
     Dim adapter As New MySqlDataAdapter
     Dim query As String
@@ -422,5 +422,20 @@ Public Class Formpembelian
                 connect.Close()
             End Try
         End If
+    End Sub
+
+    Private Sub btnprint_Click(sender As Object, e As EventArgs) Handles btnprint.Click
+        Try
+            dt = New DataTable
+            query = "insert into pembelian values('" + tb_nonota.Text + "','" + dtptanggal.Value.ToString("yyyy-MM-dd") + "','" + tb_kodesupplier.Text + "','" + dtp_jt.Value.ToString("yyyy-MM-dd") + "','" + tb_totalharga.Text + "',0)"
+            connect.Open()
+            command = New MySqlCommand(query, connect)
+            command.ExecuteNonQuery()
+            connect.Close()
+            MessageBox.Show("Data Berhasil Masuk")
+        Catch ex As Exception
+            connect.Close()
+        End Try
+        Print_Menu_Pembelian.ShowDialog()
     End Sub
 End Class

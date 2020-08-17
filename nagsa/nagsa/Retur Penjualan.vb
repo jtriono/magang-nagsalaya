@@ -314,4 +314,19 @@ Public Class Retur_Penjualan
             MsgBox(ex.Message)
         End Try
     End Sub
+
+    Private Sub btnprint_Click(sender As Object, e As EventArgs) Handles btnprint.Click
+        Try
+            dt = New DataTable
+            query = "insert into retur_penjualan values('" + tbno_nota.Text + "','" + dtppilihtanggal.Value.ToString("yyyy-MM-dd") + "','" + tbkode_cust.Text + "','" + tbtotalharga.Text + "',0,'" + tbnopenjualan.Text + "')"
+            connect.Open()
+            command = New MySqlCommand(query, connect)
+            command.ExecuteNonQuery()
+            connect.Close()
+            MessageBox.Show("Data Berhasil Masuk")
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+        Print_Nota_Retur_Jual.ShowDialog()
+    End Sub
 End Class

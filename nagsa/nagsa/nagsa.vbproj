@@ -305,6 +305,18 @@
     <Compile Include="Print Menu Penjualan.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Print Nota Retur Beli.Designer.vb">
+      <DependentUpon>Print Nota Retur Beli.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Print Nota Retur Beli.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Print Nota Retur Jual.Designer.vb">
+      <DependentUpon>Print Nota Retur Jual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Print Nota Retur Jual.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Retur Pembelian.Designer.vb">
       <DependentUpon>Retur Pembelian.vb</DependentUpon>
     </Compile>
@@ -434,6 +446,12 @@
     <EmbeddedResource Include="Print Menu Penjualan.resx">
       <DependentUpon>Print Menu Penjualan.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Print Nota Retur Beli.resx">
+      <DependentUpon>Print Nota Retur Beli.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print Nota Retur Jual.resx">
+      <DependentUpon>Print Nota Retur Jual.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Report10.rdlc" />
     <EmbeddedResource Include="Report11.rdlc" />
@@ -442,6 +460,8 @@
     <EmbeddedResource Include="Report14.rdlc" />
     <EmbeddedResource Include="Report15.rdlc" />
     <EmbeddedResource Include="Report16.rdlc" />
+    <EmbeddedResource Include="Report17.rdlc" />
+    <EmbeddedResource Include="Report18.rdlc" />
     <EmbeddedResource Include="Report2.rdlc" />
     <EmbeddedResource Include="Report3.rdlc" />
     <EmbeddedResource Include="Report5.rdlc" />

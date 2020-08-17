@@ -1,16 +1,17 @@
 ﻿Imports MySql.Data.MySqlClient
-Public Class Print_Menu_Pembelian
+Public Class Print_Nota_Retur_Beli
     Dim conn As New MySqlConnection("server=localhost;uid=root;pwd=admin;database=apotik")
     Dim comm As New MySqlCommand
     Dim adapt As New MySqlDataAdapter
     Dim query As String
-    Private Sub Print_Menu_Pembelian_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        query = "select * from nota_pembelian where no_nota_pembelian ='" + Formpembelian.tb_nonota.Text.ToString + "' and `delete`=0"
-        Me.apotikDataSetview.Clear()
+    Dim datevalue As String
+
+    Private Sub Print_Nota_Retur_Beli_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        query = "select * from nota_retur_beli where `delete`= 0 and retur = 1 and no_retur_pembelian='" + Retur_Pembelian.tbno_nota.Text + "'"
         conn.Open()
         comm = New MySqlCommand(query, conn)
         adapt.SelectCommand = comm
-        adapt.Fill(Me.apotikDataSetview.nota_pembelian)
+        adapt.Fill(Me.apotikDataSetview.nota_retur_beli)
         comm.Dispose()
         adapt.Dispose()
         conn.Close()
