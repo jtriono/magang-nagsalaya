@@ -156,3 +156,5 @@ C:\Users\windows\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\obj\Debug\Windows
 C:\Users\windows\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.formreportreturbeliharian.resources
 C:\Users\windows\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.Print_Nota_Retur_Jual.resources
 C:\Users\windows\Documents\GitHub\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.Print_Nota_Retur_Beli.resources
+C:\Users\Jeffrin\Desktop\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.Print_Nota_Retur_Beli.resources
+C:\Users\Jeffrin\Desktop\magang-nagsalaya\nagsa\nagsa\obj\Debug\WindowsApplication1.Print_Nota_Retur_Jual.resources
