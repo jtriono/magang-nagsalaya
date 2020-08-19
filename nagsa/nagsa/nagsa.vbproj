@@ -116,6 +116,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>apotikDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="apotikDataSetdetstok.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>apotikDataSetdetstok.xsd</DependentUpon>
+    </Compile>
     <Compile Include="apotikDataSetview.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -149,6 +154,12 @@
       <DependentUpon>Form Penjualan.vb</DependentUpon>
     </Compile>
     <Compile Include="Form Penjualan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formreportjualpertgl.Designer.vb">
+      <DependentUpon>Formreportjualpertgl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formreportjualpertgl.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formreportbeliperbarang.Designer.vb">
@@ -379,6 +390,9 @@
     <EmbeddedResource Include="Formreportbelipersupp.resx">
       <DependentUpon>Formreportbelipersupp.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formreportjualpertgl.resx">
+      <DependentUpon>Formreportjualpertgl.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formreportpembelian.resx">
       <DependentUpon>formreportpembelian.vb</DependentUpon>
     </EmbeddedResource>
@@ -510,6 +524,17 @@
     </None>
     <None Include="apotikDataSet.xss">
       <DependentUpon>apotikDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="apotikDataSetdetstok.xsc">
+      <DependentUpon>apotikDataSetdetstok.xsd</DependentUpon>
+    </None>
+    <None Include="apotikDataSetdetstok.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>apotikDataSetdetstok.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="apotikDataSetdetstok.xss">
+      <DependentUpon>apotikDataSetdetstok.xsd</DependentUpon>
     </None>
     <None Include="apotikDataSetview.xsc">
       <DependentUpon>apotikDataSetview.xsd</DependentUpon>

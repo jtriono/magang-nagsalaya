@@ -120,4 +120,12 @@
     Private Sub ReturPembelianHarianToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReturPembelianHarianToolStripMenuItem.Click
         formreportreturbeliharian.ShowDialog()
     End Sub
+
+    Private Sub PembelianPerTanggalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PembelianPerTanggalToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub PenjualanPertanggalPPnToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PenjualanPertanggalPPnToolStripMenuItem.Click
+        Formreportjualpertgl.ShowDialog()
+    End Sub
 End Class
