@@ -164,4 +164,8 @@ Public Class Detail_Stok
     Private Sub dgv1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv1.CellContentClick
         pilih = dgv1.Rows(e.RowIndex).Cells(0).Value.ToString
     End Sub
+
+    Private Sub btnprint_Click(sender As Object, e As EventArgs) Handles btnprint.Click
+        Print_Detail_Stok.ShowDialog()
+    End Sub
 End Class
