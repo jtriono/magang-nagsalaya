@@ -156,6 +156,18 @@
     <Compile Include="Form Penjualan.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formreportbelipernota.Designer.vb">
+      <DependentUpon>Formreportbelipernota.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formreportbelipernota.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formreportbelipertgl.Designer.vb">
+      <DependentUpon>Formreportbelipertgl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formreportbelipertgl.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formreportjualpertgl.Designer.vb">
       <DependentUpon>Formreportjualpertgl.vb</DependentUpon>
     </Compile>
@@ -393,8 +405,14 @@
     <EmbeddedResource Include="Formreportbeliperbarang.resx">
       <DependentUpon>Formreportbeliperbarang.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formreportbelipernota.resx">
+      <DependentUpon>Formreportbelipernota.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formreportbelipersupp.resx">
       <DependentUpon>Formreportbelipersupp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formreportbelipertgl.resx">
+      <DependentUpon>Formreportbelipertgl.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formreportjualpertgl.resx">
       <DependentUpon>Formreportjualpertgl.vb</DependentUpon>
@@ -487,6 +505,9 @@
     <EmbeddedResource Include="Report18.rdlc" />
     <EmbeddedResource Include="Report19.rdlc" />
     <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report20.rdlc" />
+    <EmbeddedResource Include="Report21.rdlc" />
+    <EmbeddedResource Include="Report22.rdlc" />
     <EmbeddedResource Include="Report3.rdlc" />
     <EmbeddedResource Include="Report5.rdlc" />
     <EmbeddedResource Include="Report6.rdlc" />

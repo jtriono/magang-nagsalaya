@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
-Public Class formreportreturbeliharian
-    Dim conn As New MySqlConnection("server=localhost;uid=root;pwd=;database=apotik")
+Public Class Formreportbelipertgl
+    Dim conn As New MySqlConnection("server=localhost;uid=root;pwd=admin;database=apotik")
     Dim comm As New MySqlCommand
     Dim adapt As New MySqlDataAdapter
     Dim query As String
@@ -10,11 +10,11 @@ Public Class formreportreturbeliharian
         datevalue = DateTimePicker1.Value.Date.ToString("yyyy-MM-dd")
         datevalue = datevalue.Replace("/", "-")
         MessageBox.Show(datevalue)
-        query = "select * from nota_retur_beli where `delete`=0 and tanggal_retur_pembelian='" + datevalue + "'"
+        query = "select * from pembelian where tanggal_pembelian = '" + datevalue + "' and `delete` = 0"
         conn.Open()
         comm = New MySqlCommand(query, conn)
         adapt.SelectCommand = comm
-        adapt.Fill(Me.apotikDataSetview.nota_retur_beli)
+        adapt.Fill(Me.apotikDataSet.pembelian)
         comm.Dispose()
         adapt.Dispose()
         conn.Close()
