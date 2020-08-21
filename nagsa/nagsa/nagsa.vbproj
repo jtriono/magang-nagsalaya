@@ -508,6 +508,7 @@
     <EmbeddedResource Include="Report20.rdlc" />
     <EmbeddedResource Include="Report21.rdlc" />
     <EmbeddedResource Include="Report22.rdlc" />
+    <EmbeddedResource Include="Report23.rdlc" />
     <EmbeddedResource Include="Report3.rdlc" />
     <EmbeddedResource Include="Report5.rdlc" />
     <EmbeddedResource Include="Report6.rdlc" />

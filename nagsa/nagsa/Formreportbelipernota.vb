@@ -18,4 +18,6 @@ Public Class Formreportbelipernota
         conn.Close()
         Me.ReportViewer1.RefreshReport()
     End Sub
+
+    
 End Class

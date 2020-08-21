@@ -25,19 +25,34 @@ Partial Class Formreportbelipernota
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Me.detail_pembelianBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.apotikDataSet = New WindowsApplication1.apotikDataSet()
+        Me.pembelianBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Label1 = New System.Windows.Forms.Label()
         Me.tbnota = New System.Windows.Forms.TextBox()
         Me.btncari = New System.Windows.Forms.Button()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.apotikDataSet = New WindowsApplication1.apotikDataSet()
-        Me.detail_pembelianBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.detail_pembelianTableAdapter = New WindowsApplication1.apotikDataSetTableAdapters.detail_pembelianTableAdapter()
-        Me.pembelianBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.pembelianTableAdapter = New WindowsApplication1.apotikDataSetTableAdapters.pembelianTableAdapter()
-        CType(Me.apotikDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.detail_pembelianBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.apotikDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pembelianBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'detail_pembelianBindingSource
+        '
+        Me.detail_pembelianBindingSource.DataMember = "detail_pembelian"
+        Me.detail_pembelianBindingSource.DataSource = Me.apotikDataSet
+        '
+        'apotikDataSet
+        '
+        Me.apotikDataSet.DataSetName = "apotikDataSet"
+        Me.apotikDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'pembelianBindingSource
+        '
+        Me.pembelianBindingSource.DataMember = "pembelian"
+        Me.pembelianBindingSource.DataSource = Me.apotikDataSet
         '
         'Label1
         '
@@ -78,24 +93,9 @@ Partial Class Formreportbelipernota
         Me.ReportViewer1.Size = New System.Drawing.Size(734, 354)
         Me.ReportViewer1.TabIndex = 3
         '
-        'apotikDataSet
-        '
-        Me.apotikDataSet.DataSetName = "apotikDataSet"
-        Me.apotikDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'detail_pembelianBindingSource
-        '
-        Me.detail_pembelianBindingSource.DataMember = "detail_pembelian"
-        Me.detail_pembelianBindingSource.DataSource = Me.apotikDataSet
-        '
         'detail_pembelianTableAdapter
         '
         Me.detail_pembelianTableAdapter.ClearBeforeFill = True
-        '
-        'pembelianBindingSource
-        '
-        Me.pembelianBindingSource.DataMember = "pembelian"
-        Me.pembelianBindingSource.DataSource = Me.apotikDataSet
         '
         'pembelianTableAdapter
         '
@@ -112,8 +112,8 @@ Partial Class Formreportbelipernota
         Me.Controls.Add(Me.Label1)
         Me.Name = "Formreportbelipernota"
         Me.Text = "Formreportbelipernota"
-        CType(Me.apotikDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.detail_pembelianBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.apotikDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pembelianBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

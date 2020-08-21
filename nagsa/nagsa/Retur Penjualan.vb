@@ -14,7 +14,7 @@ Public Class Retur_Penjualan
     Dim dt4 As New DataTable
     Dim dt5 As New DataTable
     Dim numtakenout As String
-    Dim pilih As String
+    Public pilih As String
     Dim masuk As String
     Dim simpandetail As String
 
@@ -116,7 +116,7 @@ Public Class Retur_Penjualan
 
         Try
             dt.Clear()
-            harga = "select sum(total_harga) from detail_penjualan where no_nota_penjualan = '" + tbnopenjualan.Text + "' and `delete` = 0 and retur = 1"
+            harga = "select sum(total_harga) from detail_retur_jual where no_nota_penjualan = '" + tbnopenjualan.Text + "' and `delete` = 0 and retur = 1"
             command = New MySqlCommand(harga, connect)
             adapter = New MySqlDataAdapter(command)
             adapter.Fill(dt)
@@ -126,7 +126,7 @@ Public Class Retur_Penjualan
 
         Try
             dt5.Clear()
-            query = "select * from detail_penjualan where no_nota_penjualan = '" + tbnopenjualan.Text + "' and `delete` = 0 and retur = 1"
+            query = "select * from detail_retur_jual where no_nota_penjualan = '" + tbnopenjualan.Text + "' and `delete` = 0 and retur = 1"
             command = New MySqlCommand(query, connect)
             adapter = New MySqlDataAdapter(command)
             adapter.Fill(dt5)
@@ -253,7 +253,7 @@ Public Class Retur_Penjualan
 
     Private Sub btnhapus_Click(sender As Object, e As EventArgs) Handles btnhapus.Click
         dt = New DataTable
-        query = "update detail_penjualan set retur = 0 where kode_barang = '" + pilih + "'"
+        query = "update detail_penjualan set retur = 0 where kode_barang = '" + pilih + "' and no_nota_penjualan='" + tbnopenjualan.Text + "'"
         If MessageBox.Show("Yakin akan melakukan delete?", "Konfirmasi", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
             connect.Open()
             command = New MySqlCommand(query, connect)
@@ -277,7 +277,7 @@ Public Class Retur_Penjualan
 
 
             dt3.Clear()
-        query = "select * from detail_penjualan where no_nota_penjualan = '" + tbnopenjualan.Text + "' and `delete` = 0 and retur = 1"
+        query = "select * from detail_retur_jual where no_nota_penjualan = '" + tbnopenjualan.Text + "' and `delete` = 0 and retur = 1"
             command = New MySqlCommand(query, connect)
             adapter = New MySqlDataAdapter(command)
             adapter.Fill(dt3)
