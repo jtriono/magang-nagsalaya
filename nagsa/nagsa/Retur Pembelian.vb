@@ -14,7 +14,7 @@ Public Class Retur_Pembelian
     Dim dt4 As New DataTable
     Dim dt5 As New DataTable
     Dim numtakenout As String
-    Dim pilih As String
+    Public pilih As String
     Dim masuk As String
     Dim simpandetail As String
 

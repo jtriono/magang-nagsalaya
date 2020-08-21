@@ -6,7 +6,7 @@ Public Class Formreportbelipernota
     Dim query As String
     Dim textvalue As String
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btncari.Click
+    Private Sub btncari_Click(sender As Object, e As EventArgs) Handles btncari.Click
         textvalue = tbnota.Text
         query = "select * from detail_pembelian dp, pembelian p where p.no_nota_pembelian = dp.no_nota_pembelian and p.no_nota_pembelian = '" + textvalue + "' and p.`delete` = 0"
         conn.Open()

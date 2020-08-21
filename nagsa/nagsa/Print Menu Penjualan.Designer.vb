@@ -28,8 +28,11 @@ Partial Class Print_Menu_Penjualan
         Me.apotikDataSet = New WindowsApplication1.apotikDataSet()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.penjualanTableAdapter = New WindowsApplication1.apotikDataSetTableAdapters.penjualanTableAdapter()
+        Me.detail_penjualanBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.detail_penjualanTableAdapter = New WindowsApplication1.apotikDataSetTableAdapters.detail_penjualanTableAdapter()
         CType(Me.penjualanBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.apotikDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.detail_penjualanBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'penjualanBindingSource
@@ -45,9 +48,9 @@ Partial Class Print_Menu_Penjualan
         'ReportViewer1
         '
         ReportDataSource1.Name = "DataSet1"
-        ReportDataSource1.Value = Me.penjualanBindingSource
+        ReportDataSource1.Value = Me.detail_penjualanBindingSource
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
-        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "WindowsApplication1.Report3.rdlc"
+        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "WindowsApplication1.Report25.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(12, 12)
         Me.ReportViewer1.Name = "ReportViewer1"
         Me.ReportViewer1.Size = New System.Drawing.Size(751, 380)
@@ -56,6 +59,15 @@ Partial Class Print_Menu_Penjualan
         'penjualanTableAdapter
         '
         Me.penjualanTableAdapter.ClearBeforeFill = True
+        '
+        'detail_penjualanBindingSource
+        '
+        Me.detail_penjualanBindingSource.DataMember = "detail_penjualan"
+        Me.detail_penjualanBindingSource.DataSource = Me.apotikDataSet
+        '
+        'detail_penjualanTableAdapter
+        '
+        Me.detail_penjualanTableAdapter.ClearBeforeFill = True
         '
         'Print_Menu_Penjualan
         '
@@ -67,6 +79,7 @@ Partial Class Print_Menu_Penjualan
         Me.Text = "Print_Menu_Penjualan"
         CType(Me.penjualanBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.apotikDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.detail_penjualanBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -74,4 +87,6 @@ Partial Class Print_Menu_Penjualan
     Friend WithEvents penjualanBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents apotikDataSet As WindowsApplication1.apotikDataSet
     Friend WithEvents penjualanTableAdapter As WindowsApplication1.apotikDataSetTableAdapters.penjualanTableAdapter
+    Friend WithEvents detail_penjualanBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents detail_penjualanTableAdapter As WindowsApplication1.apotikDataSetTableAdapters.detail_penjualanTableAdapter
 End Class
