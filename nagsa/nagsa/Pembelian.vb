@@ -74,7 +74,7 @@ Public Class Formpembelian
 
         Try
             dt.Clear()
-            harga = "select sum(total_harga) from detail_penjualan where no_nota_pembelian = '" + tb_nonota.Text + "' and  `delete` = 0"
+            harga = "select sum(total_harga) from detail_pembelian where no_nota_pembelian = '" + tb_nonota.Text + "' and  `delete` = 0"
             command = New MySqlCommand(harga, connect)
             adapter = New MySqlDataAdapter(command)
             adapter.Fill(dt)
@@ -103,7 +103,7 @@ Public Class Formpembelian
     Private Sub btnsimpan_Click(sender As Object, e As EventArgs) Handles btnsimpan.Click
         Try
             dt = New DataTable
-            query = "insert into pembelian values('" + tb_nonota.Text + "','" + dtptanggal.Value.ToString("yyyy-MM-dd") + "','" + tb_kodesupplier.Text + "','" + dtp_jt.Value.ToString("yyyy-MM-dd") + "','" + tb_totalharga.Text + "',0,0)"
+            query = "insert into pembelian values('" + tb_nonota.Text + "','" + dtptanggal.Value.ToString("yyyy-MM-dd") + "','" + tb_kodesupplier.Text + "','" + dtp_jt.Value.ToString("yyyy-MM-dd") + "','" + tb_totalharga.Text + "',0)"
             connect.Open()
             command = New MySqlCommand(query, connect)
             command.ExecuteNonQuery()
@@ -141,7 +141,7 @@ Public Class Formpembelian
         Try
             dt3.Clear()
             query = "select * from detail_pembelian where no_nota_pembelian = '" + tb_nonota.Text + "' and `delete` = 0"
-            adapter = New MySqlDataAdapter(query, connect)
+            command = New MySqlCommand(query, connect)
             adapter = New MySqlDataAdapter(command)
             adapter.Fill(dt3)
             dgv_barangbeli.DataSource = dt3

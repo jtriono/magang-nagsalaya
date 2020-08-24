@@ -23,51 +23,32 @@ Partial Class Print_Nota_Retur_Beli
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ReportDataSource3 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Dim ReportDataSource4 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Me.nota_retur_beliBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.apotikDataSetview = New WindowsApplication1.apotikDataSetview()
+        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.nota_retur_beliTableAdapter = New WindowsApplication1.apotikDataSetviewTableAdapters.nota_retur_beliTableAdapter()
         Me.apotikDataSet = New WindowsApplication1.apotikDataSet()
         Me.detail_retur_beliBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.detail_retur_beliTableAdapter = New WindowsApplication1.apotikDataSetTableAdapters.detail_retur_beliTableAdapter()
         Me.retur_pembelianBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.retur_pembelianTableAdapter = New WindowsApplication1.apotikDataSetTableAdapters.retur_pembelianTableAdapter()
-        CType(Me.nota_retur_beliBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.apotikDataSetview, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.apotikDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.detail_retur_beliBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.retur_pembelianBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'nota_retur_beliBindingSource
-        '
-        Me.nota_retur_beliBindingSource.DataMember = "nota_retur_beli"
-        Me.nota_retur_beliBindingSource.DataSource = Me.apotikDataSetview
-        '
-        'apotikDataSetview
-        '
-        Me.apotikDataSetview.DataSetName = "apotikDataSetview"
-        Me.apotikDataSetview.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'ReportViewer1
         '
-        ReportDataSource3.Name = "DataSet1"
-        ReportDataSource3.Value = Me.detail_retur_beliBindingSource
-        ReportDataSource4.Name = "DataSet2"
-        ReportDataSource4.Value = Me.retur_pembelianBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource3)
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource4)
+        ReportDataSource1.Name = "DataSet1"
+        ReportDataSource1.Value = Me.detail_retur_beliBindingSource
+        ReportDataSource2.Name = "DataSet2"
+        ReportDataSource2.Value = Me.retur_pembelianBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource2)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "WindowsApplication1.Report24.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(13, 13)
         Me.ReportViewer1.Name = "ReportViewer1"
         Me.ReportViewer1.Size = New System.Drawing.Size(756, 375)
         Me.ReportViewer1.TabIndex = 0
-        '
-        'nota_retur_beliTableAdapter
-        '
-        Me.nota_retur_beliTableAdapter.ClearBeforeFill = True
         '
         'apotikDataSet
         '
@@ -100,8 +81,6 @@ Partial Class Print_Nota_Retur_Beli
         Me.Controls.Add(Me.ReportViewer1)
         Me.Name = "Print_Nota_Retur_Beli"
         Me.Text = "Print_Nota_Retur_Beli"
-        CType(Me.nota_retur_beliBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.apotikDataSetview, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.apotikDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.detail_retur_beliBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.retur_pembelianBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -109,12 +88,9 @@ Partial Class Print_Nota_Retur_Beli
 
     End Sub
     Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
-    Friend WithEvents nota_retur_beliBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents apotikDataSetview As WindowsApplication1.apotikDataSetview
-    Friend WithEvents nota_retur_beliTableAdapter As WindowsApplication1.apotikDataSetviewTableAdapters.nota_retur_beliTableAdapter
     Friend WithEvents detail_retur_beliBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents apotikDataSet As WindowsApplication1.apotikDataSet
-    Friend WithEvents retur_pembelianBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents detail_retur_beliTableAdapter As WindowsApplication1.apotikDataSetTableAdapters.detail_retur_beliTableAdapter
+    Friend WithEvents retur_pembelianBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents retur_pembelianTableAdapter As WindowsApplication1.apotikDataSetTableAdapters.retur_pembelianTableAdapter
 End Class

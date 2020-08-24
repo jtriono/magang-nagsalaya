@@ -116,7 +116,7 @@ Public Class Retur_Pembelian
 
         Try
             dt.Clear()
-            harga = "select sum(total_harga) from detail_pembelian where no_nota_pembelian = '" + tbnopembelian.Text + "' and `delete` = 0 and retur = 1"
+            harga = "select sum(total_harga) from detail_retur_beli where no_nota_pembelian = '" + tbnopembelian.Text + "' and `delete` = 0 and retur = 1"
             command = New MySqlCommand(harga, connect)
             adapter = New MySqlDataAdapter(command)
             adapter.Fill(dt)
@@ -127,7 +127,7 @@ Public Class Retur_Pembelian
 
         Try
             dt5.Clear()
-            query = "select * from detail_pembelian where no_nota_pembelian = '" + tbnopembelian.Text + "' and `delete` = 0 and retur = 1"
+            query = "select * from detail_retur_beli where no_nota_pembelian = '" + tbnopembelian.Text + "' and `delete` = 0 and retur = 1"
             command = New MySqlCommand(query, connect)
             adapter = New MySqlDataAdapter(command)
             adapter.Fill(dt5)
@@ -138,7 +138,7 @@ Public Class Retur_Pembelian
 
         Try
             dt3.Clear()
-            query = "select * from detail_pembelian where no_nota_pembelian ='" + tbnopembelian.Text + "' and `delete` = 0 and retur = 0"
+            query = "select * from detail_retur_beli where no_nota_pembelian ='" + tbnopembelian.Text + "' and `delete` = 0 and retur = 0"
             command = New MySqlCommand(query, connect)
             adapter = New MySqlDataAdapter(command)
             adapter.Fill(dt3)
