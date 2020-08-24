@@ -156,6 +156,12 @@
     <Compile Include="Form Penjualan.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formcarinotabeli.Designer.vb">
+      <DependentUpon>Formcarinotabeli.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formcarinotabeli.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formreportbelipernota.Designer.vb">
       <DependentUpon>Formreportbelipernota.vb</DependentUpon>
     </Compile>
@@ -398,6 +404,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form Penjualan.resx">
       <DependentUpon>Form Penjualan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formcarinotabeli.resx">
+      <DependentUpon>Formcarinotabeli.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formreportbarang.resx">
       <DependentUpon>Formreportbarang.vb</DependentUpon>

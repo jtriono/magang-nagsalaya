@@ -28,9 +28,6 @@ Partial Class Formreportbelipernota
         Me.detail_pembelianBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.apotikDataSet = New WindowsApplication1.apotikDataSet()
         Me.pembelianBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.tbnota = New System.Windows.Forms.TextBox()
-        Me.btncari = New System.Windows.Forms.Button()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.detail_pembelianTableAdapter = New WindowsApplication1.apotikDataSetTableAdapters.detail_pembelianTableAdapter()
         Me.pembelianTableAdapter = New WindowsApplication1.apotikDataSetTableAdapters.pembelianTableAdapter()
@@ -54,31 +51,6 @@ Partial Class Formreportbelipernota
         Me.pembelianBindingSource.DataMember = "pembelian"
         Me.pembelianBindingSource.DataSource = Me.apotikDataSet
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(13, 13)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(51, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Cari Nota"
-        '
-        'tbnota
-        '
-        Me.tbnota.Location = New System.Drawing.Point(70, 10)
-        Me.tbnota.Name = "tbnota"
-        Me.tbnota.Size = New System.Drawing.Size(125, 20)
-        Me.tbnota.TabIndex = 1
-        '
-        'btncari
-        '
-        Me.btncari.Location = New System.Drawing.Point(210, 8)
-        Me.btncari.Name = "btncari"
-        Me.btncari.Size = New System.Drawing.Size(75, 23)
-        Me.btncari.TabIndex = 2
-        Me.btncari.Text = "Cari"
-        Me.btncari.UseVisualStyleBackColor = True
-        '
         'ReportViewer1
         '
         ReportDataSource1.Name = "DataSet1"
@@ -88,9 +60,9 @@ Partial Class Formreportbelipernota
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource2)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "WindowsApplication1.Report22.rdlc"
-        Me.ReportViewer1.Location = New System.Drawing.Point(12, 37)
+        Me.ReportViewer1.Location = New System.Drawing.Point(12, 12)
         Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.Size = New System.Drawing.Size(734, 354)
+        Me.ReportViewer1.Size = New System.Drawing.Size(734, 379)
         Me.ReportViewer1.TabIndex = 3
         '
         'detail_pembelianTableAdapter
@@ -107,21 +79,14 @@ Partial Class Formreportbelipernota
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(758, 403)
         Me.Controls.Add(Me.ReportViewer1)
-        Me.Controls.Add(Me.btncari)
-        Me.Controls.Add(Me.tbnota)
-        Me.Controls.Add(Me.Label1)
         Me.Name = "Formreportbelipernota"
         Me.Text = "Formreportbelipernota"
         CType(Me.detail_pembelianBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.apotikDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pembelianBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents tbnota As System.Windows.Forms.TextBox
-    Friend WithEvents btncari As System.Windows.Forms.Button
     Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents detail_pembelianBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents apotikDataSet As WindowsApplication1.apotikDataSet

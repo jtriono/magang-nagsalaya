@@ -25,6 +25,9 @@ Public Class Print_Menu_Pembelian
         Dim paramharga As New ReportParameter("totalharga", Formpembelian.tb_totalharga.Text.ToString)
         ReportViewer1.LocalReport.SetParameters(paramharga)
 
+        Dim paramtgl As New ReportParameter("tgl", Formutama.dtpwaktu.Value.ToString)
+        ReportViewer1.LocalReport.SetParameters(paramtgl)
+
         Me.ReportViewer1.RefreshReport()
     End Sub
 End Class

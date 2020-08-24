@@ -633,7 +633,7 @@
   <Width>7.87402in</Width>
   <Page>
     <PageHeader>
-      <Height>2.54cm</Height>
+      <Height>2.11667cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -652,10 +652,9 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox17</rd:DefaultName>
-          <Top>1.26682cm</Top>
           <Left>8.14599cm</Left>
           <Height>0.6cm</Height>
-          <Width>5.41042cm</Width>
+          <Width>4.35401cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -666,25 +665,29 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Textbox Name="no_retur_penjualan">
+        <Textbox Name="no_nota_penjualan">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=First(Fields!no_retur_penjualan.Value, "DataSet2")</Value>
+                  <Value>No Nota: </Value>
+                  <Style />
+                </TextRun>
+                <TextRun>
+                  <Value>=First(Fields!no_nota_penjualan.Value, "DataSet1")</Value>
                   <Style />
                 </TextRun>
               </TextRuns>
               <Style />
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>no_retur_penjualan</rd:DefaultName>
-          <Top>0.47307cm</Top>
-          <Left>1.0287cm</Left>
+          <rd:DefaultName>no_nota_penjualan</rd:DefaultName>
+          <Top>0.89641cm</Top>
+          <Left>0.0762cm</Left>
           <Height>0.6cm</Height>
-          <Width>2.5cm</Width>
+          <Width>4.48438cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -696,25 +699,29 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Textbox Name="tanggal_retur_penjualan">
+        <Textbox Name="Textbox6">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=First(Fields!tanggal_retur_penjualan.Value, "DataSet2")</Value>
+                  <Value>Tanggal: </Value>
+                  <Style />
+                </TextRun>
+                <TextRun>
+                  <Value>=Parameters!tgl.Value</Value>
                   <Style />
                 </TextRun>
               </TextRuns>
               <Style />
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>tanggal_retur_penjualan</rd:DefaultName>
-          <Top>1.31974cm</Top>
-          <Left>1.0287cm</Left>
+          <rd:DefaultName>Textbox6</rd:DefaultName>
+          <Top>0.89641cm</Top>
+          <Left>14.69542cm</Left>
           <Height>0.6cm</Height>
-          <Width>2.5cm</Width>
+          <Width>5.30458cm</Width>
           <ZIndex>2</ZIndex>
           <Style>
             <Border>
@@ -734,7 +741,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>2.54cm</Height>
+      <Height>1.82562cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -745,7 +752,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Total Harga</Value>
+                  <Value>Total Harga: </Value>
                   <Style />
                 </TextRun>
                 <TextRun>
@@ -758,9 +765,9 @@
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
           <Top>0.65828cm</Top>
-          <Left>12.5cm</Left>
+          <Left>14.69542cm</Left>
           <Height>0.6cm</Height>
-          <Width>6.03058cm</Width>
+          <Width>5.30458cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -905,6 +912,10 @@
   </DataSets>
   <ReportParameters>
     <ReportParameter Name="paramtotalharga">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="tgl">
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>

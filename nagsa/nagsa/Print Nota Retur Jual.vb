@@ -20,6 +20,9 @@ Public Class Print_Nota_Retur_Jual
         Dim totalparam As New ReportParameter("paramtotalharga", Retur_Penjualan.tbtotalharga.Text.ToString)
         ReportViewer1.LocalReport.SetParameters(totalparam)
 
+        Dim paramtgl As New ReportParameter("tgl", Formutama.dtpwaktu.Value.ToString)
+        ReportViewer1.LocalReport.SetParameters(paramtgl)
+
         Me.ReportViewer1.RefreshReport()
     End Sub
 

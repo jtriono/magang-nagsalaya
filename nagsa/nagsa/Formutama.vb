@@ -130,6 +130,6 @@
     End Sub
 
     Private Sub PembelianPerNotaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PembelianPerNotaToolStripMenuItem.Click
-        Formreportbelipernota.ShowDialog()
+        Formcarinotabeli.ShowDialog()
     End Sub
 End Class
