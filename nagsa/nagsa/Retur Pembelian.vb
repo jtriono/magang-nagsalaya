@@ -137,8 +137,8 @@ Public Class Retur_Pembelian
         End Try
 
         Try
-            dt3.Clear()
-            query = "select * from detail_retur_beli where no_nota_pembelian ='" + tbnopembelian.Text + "' and `delete` = 0 and retur = 0"
+            dt3 = New DataTable
+            query = "select * from detail_pembelian where no_nota_pembelian ='" + tbnopembelian.Text + "' and `delete` = 0 and retur = 0"
             command = New MySqlCommand(query, connect)
             adapter = New MySqlDataAdapter(command)
             adapter.Fill(dt3)

@@ -27,7 +27,7 @@ Public Class Print_Nota_Retur_Jual
     End Sub
 
     Private Sub Print_Nota_Retur_Jual_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        query = "update detail_retur_jual set `delete`=1 where no_nota_penjualan='" + Retur_Penjualan.tbnopenjualan.Text.ToString + "' and kode_barang='" + Retur_Penjualan.pilih + "'"
+        query = "update detail_retur_jual d,retur_penjualan r set d.`delete`=1 where d.no_nota_penjualan=r.no_nota_penjualan and no_retur_penjualan='" + Retur_Penjualan.tbno_nota.Text.ToString + "'"
         conn.Open()
         comm = New MySqlCommand(query, conn)
         comm.ExecuteNonQuery()

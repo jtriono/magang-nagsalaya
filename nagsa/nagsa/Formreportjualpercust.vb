@@ -1,4 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports Microsoft.Reporting.WinForms
 Public Class Formreportjualpercust
     Dim conn As New MySqlConnection("server=localhost;uid=root;pwd=;database=apotik")
     Dim comm As New MySqlCommand
@@ -15,6 +16,8 @@ Public Class Formreportjualpercust
         comm.Dispose()
         adapt.Dispose()
         conn.Close()
+        Dim paramtgl As New ReportParameter("tgl", Formutama.dtpwaktu.Value.ToString)
+        ReportViewer1.LocalReport.SetParameters(paramtgl)
         Me.ReportViewer1.RefreshReport()
     End Sub
 
@@ -31,6 +34,8 @@ Public Class Formreportjualpercust
         comm.Dispose()
         adapt.Dispose()
         conn.Close()
+        Dim paramtgl As New ReportParameter("tgl", Formutama.dtpwaktu.Value.ToString)
+        ReportViewer1.LocalReport.SetParameters(paramtgl)
         Me.ReportViewer1.RefreshReport()
     End Sub
 End Class

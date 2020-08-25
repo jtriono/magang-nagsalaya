@@ -24,14 +24,24 @@ Partial Class Formreportjualpercust
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.apotikDataSet = New WindowsApplication1.apotikDataSet()
         Me.penjualanBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.apotikDataSet = New WindowsApplication1.apotikDataSet()
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.penjualanTableAdapter = New WindowsApplication1.apotikDataSetTableAdapters.penjualanTableAdapter()
         Me.btcaricust = New System.Windows.Forms.Button()
-        CType(Me.apotikDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.penjualanBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.apotikDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'penjualanBindingSource
+        '
+        Me.penjualanBindingSource.DataMember = "penjualan"
+        Me.penjualanBindingSource.DataSource = Me.apotikDataSet
+        '
+        'apotikDataSet
+        '
+        Me.apotikDataSet.DataSetName = "apotikDataSet"
+        Me.apotikDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ReportViewer1
         '
@@ -41,18 +51,8 @@ Partial Class Formreportjualpercust
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "WindowsApplication1.Report11.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(13, 12)
         Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.Size = New System.Drawing.Size(701, 297)
+        Me.ReportViewer1.Size = New System.Drawing.Size(712, 297)
         Me.ReportViewer1.TabIndex = 0
-        '
-        'apotikDataSet
-        '
-        Me.apotikDataSet.DataSetName = "apotikDataSet"
-        Me.apotikDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'penjualanBindingSource
-        '
-        Me.penjualanBindingSource.DataMember = "penjualan"
-        Me.penjualanBindingSource.DataSource = Me.apotikDataSet
         '
         'penjualanTableAdapter
         '
@@ -76,8 +76,8 @@ Partial Class Formreportjualpercust
         Me.Controls.Add(Me.ReportViewer1)
         Me.Name = "Formreportjualpercust"
         Me.Text = "Formreportjualpercust"
-        CType(Me.apotikDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.penjualanBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.apotikDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

@@ -51,7 +51,7 @@ Partial Class Formreportbelipersupp
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "WindowsApplication1.Report14.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(13, 13)
         Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.Size = New System.Drawing.Size(721, 319)
+        Me.ReportViewer1.Size = New System.Drawing.Size(757, 319)
         Me.ReportViewer1.TabIndex = 0
         '
         'pembelianTableAdapter
@@ -60,7 +60,7 @@ Partial Class Formreportbelipersupp
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(659, 43)
+        Me.Button1.Location = New System.Drawing.Point(688, 44)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 1
