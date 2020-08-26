@@ -55,7 +55,12 @@ Public Class Nominal_bayar_hutang
     End Sub
 
     Private Sub tbinputbayar_TextChanged(sender As Object, e As EventArgs) Handles tbinputbayar.TextChanged
-        harga = 0
-        harga = (CInt(tbharga.Text) - CInt(tbinputbayar.Text))
+        Try
+            harga = 0
+            harga = (CInt(tbharga.Text) - CInt(tbinputbayar.Text))
+        Catch ex As Exception
+
+        End Try
+        
     End Sub
 End Class
