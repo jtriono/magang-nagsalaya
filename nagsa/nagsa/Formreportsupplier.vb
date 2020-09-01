@@ -1,7 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports Microsoft.Reporting.WinForms
 Public Class Formreportsupplier
-    Dim conn As New MySqlConnection("server=localhost;uid=root;pwd=;database=apotik")
+    Dim conn As New MySqlConnection("server=localhost;uid=root;pwd=admin;database=apotik")
     Dim comm As New MySqlCommand
     Dim adapt As New MySqlDataAdapter
     Dim query As String

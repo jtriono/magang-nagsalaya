@@ -1,0 +1,607 @@
+-- MySQL Administrator dump 1.4
+--
+-- ------------------------------------------------------
+-- Server version	5.0.18-nt
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+--
+-- Create schema apotik
+--
+
+CREATE DATABASE IF NOT EXISTS apotik;
+USE apotik;
+
+--
+-- Temporary table structure for view `nota_pembelian`
+--
+DROP TABLE IF EXISTS `nota_pembelian`;
+DROP VIEW IF EXISTS `nota_pembelian`;
+CREATE TABLE `nota_pembelian` (
+  `no_nota_pembelian` varchar(45),
+  `tanggal_pembelian` datetime,
+  `kode_supplier` varchar(45),
+  `tanggal_jt_pembelian` datetime,
+  `total_harga_pembelian` int(10) unsigned,
+  `kode_barang_pembelian` varchar(45),
+  `nama_barang` varchar(45),
+  `batch_pembelian` varchar(45),
+  `expired_date` datetime,
+  `harga_beli` int(10) unsigned,
+  `jumlah_barang` int(10) unsigned,
+  `discount_percent` int(10) unsigned,
+  `total_harga` int(10) unsigned,
+  `delete` int(10) unsigned,
+  `Hapus` int(10) unsigned,
+  `retur` int(10) unsigned
+);
+
+--
+-- Temporary table structure for view `nota_penjualan`
+--
+DROP TABLE IF EXISTS `nota_penjualan`;
+DROP VIEW IF EXISTS `nota_penjualan`;
+CREATE TABLE `nota_penjualan` (
+  `no_nota_penjualan` varchar(45),
+  `no_pajak` varchar(45),
+  `tanggal_penjualan` datetime,
+  `kode_customer` varchar(45),
+  `tanggal_jt_penjualan` datetime,
+  `total_harga_penjualan` int(11),
+  `kode_barang` varchar(45),
+  `nama_barang` varchar(45),
+  `batch` varchar(45),
+  `expired_date` datetime,
+  `harga_jual` int(10) unsigned,
+  `jumlah_barang` int(10) unsigned,
+  `discount_percent` int(10) unsigned,
+  `total_harga` int(10) unsigned,
+  `delete` int(10) unsigned,
+  `Hapus` int(10) unsigned,
+  `retur` int(10) unsigned
+);
+
+--
+-- Temporary table structure for view `nota_retur_beli`
+--
+DROP TABLE IF EXISTS `nota_retur_beli`;
+DROP VIEW IF EXISTS `nota_retur_beli`;
+CREATE TABLE `nota_retur_beli` (
+  `no_retur_pembelian` varchar(45),
+  `tanggal_retur_pembelian` datetime,
+  `kode_supplier` varchar(45),
+  `no_nota_pembelian` varchar(45),
+  `totalharga_retur_pembelian` int(10) unsigned,
+  `kode_barang` varchar(45),
+  `nama_barang` varchar(45),
+  `batch` varchar(45),
+  `expired_date` datetime,
+  `harga_beli` int(10) unsigned,
+  `jumlah_barang` int(10) unsigned,
+  `discount_percent` int(10) unsigned,
+  `total_harga` int(10) unsigned,
+  `delete` int(10) unsigned,
+  `retur` int(10) unsigned
+);
+
+--
+-- Temporary table structure for view `nota_retur_jual`
+--
+DROP TABLE IF EXISTS `nota_retur_jual`;
+DROP VIEW IF EXISTS `nota_retur_jual`;
+CREATE TABLE `nota_retur_jual` (
+  `no_retur_penjualan` varchar(45),
+  `tanggal_retur_penjualan` datetime,
+  `kode_cust` varchar(45),
+  `no_nota_penjualan` varchar(45),
+  `totalharga_retur_penjualan` int(10) unsigned,
+  `kode_barang` varchar(45),
+  `nama_barang` varchar(45),
+  `batch` varchar(45),
+  `expired_date` datetime,
+  `harga_jual` int(10) unsigned,
+  `jumlah_barang` int(10) unsigned,
+  `discount_percent` int(10) unsigned,
+  `total_harga` int(10) unsigned,
+  `delete` int(10) unsigned,
+  `retur` int(10) unsigned
+);
+
+--
+-- Temporary table structure for view `print_detail_stok`
+--
+DROP TABLE IF EXISTS `print_detail_stok`;
+DROP VIEW IF EXISTS `print_detail_stok`;
+CREATE TABLE `print_detail_stok` (
+  `no_nota` varchar(45),
+  `kode_barang` varchar(45),
+  `nama_barang` varchar(45),
+  `batch` varchar(45),
+  `expired_date` varchar(45),
+  `jumlah_barang` varchar(45),
+  `tanggal` varchar(45),
+  `keterangan` varchar(45),
+  `status` int(10) unsigned,
+  `no_nota_pembelian` varchar(45),
+  `tanggal_pembelian` datetime,
+  `kode_supplier` varchar(45),
+  `tanggal_jt_pembelian` datetime,
+  `total_harga_pembelian` int(10) unsigned,
+  `status_pembelian` int(10) unsigned,
+  `no_nota_penjualan` varchar(45),
+  `tanggal_penjualan` datetime,
+  `kode_customer` varchar(45),
+  `tanggal_jt_penjualan` datetime,
+  `total_harga_penjualan` int(11),
+  `status_penjualan` int(10) unsigned
+);
+
+--
+-- Definition of table `barang`
+--
+
+DROP TABLE IF EXISTS `barang`;
+CREATE TABLE `barang` (
+  `itemid` varchar(45) NOT NULL,
+  `nama` varchar(45) NOT NULL,
+  `hargabeli` int(10) unsigned NOT NULL,
+  `hargajual` int(10) unsigned NOT NULL,
+  `stokakhir` int(10) unsigned NOT NULL,
+  `nobatch` varchar(45) NOT NULL,
+  `expiredate` varchar(45) NOT NULL,
+  `satuan` varchar(45) NOT NULL,
+  `delete` varchar(45) NOT NULL,
+  PRIMARY KEY  (`itemid`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `barang`
+--
+
+/*!40000 ALTER TABLE `barang` DISABLE KEYS */;
+/*!40000 ALTER TABLE `barang` ENABLE KEYS */;
+
+
+--
+-- Definition of table `bayar_hutang`
+--
+
+DROP TABLE IF EXISTS `bayar_hutang`;
+CREATE TABLE `bayar_hutang` (
+  `no_nota_pembelian` varchar(45) NOT NULL,
+  `nama_supplier` varchar(45) NOT NULL,
+  `total_bayar` int(10) unsigned NOT NULL,
+  `tanggal_bayar` varchar(45) NOT NULL,
+  `delete` int(10) unsigned NOT NULL default '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `bayar_hutang`
+--
+
+/*!40000 ALTER TABLE `bayar_hutang` DISABLE KEYS */;
+/*!40000 ALTER TABLE `bayar_hutang` ENABLE KEYS */;
+
+
+--
+-- Definition of table `bayar_piutang`
+--
+
+DROP TABLE IF EXISTS `bayar_piutang`;
+CREATE TABLE `bayar_piutang` (
+  `no_nota_penjualan` varchar(45) NOT NULL,
+  `nama_cust` varchar(45) NOT NULL,
+  `total_bayar` int(10) unsigned NOT NULL,
+  `tanggal_bayar` varchar(45) NOT NULL,
+  `delete` int(10) unsigned NOT NULL default '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `bayar_piutang`
+--
+
+/*!40000 ALTER TABLE `bayar_piutang` DISABLE KEYS */;
+/*!40000 ALTER TABLE `bayar_piutang` ENABLE KEYS */;
+
+
+--
+-- Definition of table `customer`
+--
+
+DROP TABLE IF EXISTS `customer`;
+CREATE TABLE `customer` (
+  `customerid` varchar(45) NOT NULL,
+  `nama` varchar(45) NOT NULL,
+  `alamat` varchar(45) NOT NULL,
+  `kota` varchar(45) NOT NULL,
+  `telpon` varchar(45) NOT NULL,
+  `npwp` varchar(45) NOT NULL,
+  `delete` varchar(45) NOT NULL,
+  PRIMARY KEY  (`customerid`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `customer`
+--
+
+/*!40000 ALTER TABLE `customer` DISABLE KEYS */;
+/*!40000 ALTER TABLE `customer` ENABLE KEYS */;
+
+
+--
+-- Definition of table `detail_pembelian`
+--
+
+DROP TABLE IF EXISTS `detail_pembelian`;
+CREATE TABLE `detail_pembelian` (
+  `kode_barang_pembelian` varchar(45) NOT NULL,
+  `no_nota_pembelian` varchar(45) NOT NULL,
+  `batch_pembelian` varchar(45) NOT NULL,
+  `expired_date` datetime NOT NULL,
+  `satuan` varchar(45) NOT NULL,
+  `harga_beli` int(10) unsigned NOT NULL,
+  `jumlah_barang` int(10) unsigned NOT NULL,
+  `discount_percent` int(10) unsigned NOT NULL,
+  `total_harga` int(10) unsigned NOT NULL,
+  `nama_barang` varchar(45) NOT NULL,
+  `delete` int(10) unsigned NOT NULL default '0',
+  `retur` int(10) unsigned NOT NULL default '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `detail_pembelian`
+--
+
+/*!40000 ALTER TABLE `detail_pembelian` DISABLE KEYS */;
+/*!40000 ALTER TABLE `detail_pembelian` ENABLE KEYS */;
+
+
+--
+-- Definition of table `detail_penjualan`
+--
+
+DROP TABLE IF EXISTS `detail_penjualan`;
+CREATE TABLE `detail_penjualan` (
+  `kode_barang` varchar(45) NOT NULL,
+  `no_nota_penjualan` varchar(45) NOT NULL,
+  `batch` varchar(45) NOT NULL,
+  `expired_date` datetime NOT NULL,
+  `satuan` varchar(45) NOT NULL,
+  `harga_jual` int(10) unsigned NOT NULL,
+  `jumlah_barang` int(10) unsigned NOT NULL,
+  `discount_percent` int(10) unsigned NOT NULL,
+  `total_harga` int(10) unsigned NOT NULL,
+  `nama_barang` varchar(45) NOT NULL,
+  `delete` int(10) unsigned NOT NULL default '0',
+  `retur` int(10) unsigned NOT NULL default '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `detail_penjualan`
+--
+
+/*!40000 ALTER TABLE `detail_penjualan` DISABLE KEYS */;
+/*!40000 ALTER TABLE `detail_penjualan` ENABLE KEYS */;
+
+
+--
+-- Definition of table `detail_retur_beli`
+--
+
+DROP TABLE IF EXISTS `detail_retur_beli`;
+CREATE TABLE `detail_retur_beli` (
+  `kode_barang` varchar(45) NOT NULL,
+  `no_nota_pembelian` varchar(45) NOT NULL,
+  `batch` varchar(45) NOT NULL,
+  `expired_date` datetime NOT NULL,
+  `satuan` varchar(45) NOT NULL,
+  `harga_beli` int(10) unsigned NOT NULL,
+  `jumlah_barang` int(10) unsigned NOT NULL,
+  `discount_percent` int(10) unsigned NOT NULL,
+  `total_harga` int(10) unsigned NOT NULL,
+  `nama_barang` varchar(45) NOT NULL,
+  `delete` int(10) unsigned NOT NULL default '0',
+  `retur` int(10) unsigned NOT NULL default '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `detail_retur_beli`
+--
+
+/*!40000 ALTER TABLE `detail_retur_beli` DISABLE KEYS */;
+/*!40000 ALTER TABLE `detail_retur_beli` ENABLE KEYS */;
+
+
+--
+-- Definition of table `detail_retur_jual`
+--
+
+DROP TABLE IF EXISTS `detail_retur_jual`;
+CREATE TABLE `detail_retur_jual` (
+  `kode_barang` varchar(45) NOT NULL,
+  `no_nota_penjualan` varchar(45) NOT NULL,
+  `batch` varchar(45) NOT NULL,
+  `expired_date` datetime NOT NULL,
+  `satuan` varchar(45) NOT NULL,
+  `harga_jual` int(10) unsigned NOT NULL,
+  `jumlah_barang` int(10) unsigned NOT NULL,
+  `discount_percent` int(10) unsigned NOT NULL,
+  `total_harga` int(10) unsigned NOT NULL,
+  `nama_barang` varchar(45) NOT NULL,
+  `delete` int(10) unsigned NOT NULL default '0',
+  `retur` int(10) unsigned NOT NULL default '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `detail_retur_jual`
+--
+
+/*!40000 ALTER TABLE `detail_retur_jual` DISABLE KEYS */;
+/*!40000 ALTER TABLE `detail_retur_jual` ENABLE KEYS */;
+
+
+--
+-- Definition of table `detail_stok`
+--
+
+DROP TABLE IF EXISTS `detail_stok`;
+CREATE TABLE `detail_stok` (
+  `kode_barang` varchar(45) NOT NULL,
+  `nama_barang` varchar(45) NOT NULL,
+  `batch` varchar(45) NOT NULL,
+  `expired_date` varchar(45) NOT NULL,
+  `jumlah_barang` varchar(45) NOT NULL,
+  `tanggal` varchar(45) NOT NULL,
+  `keterangan` varchar(45) NOT NULL,
+  `delete` int(10) unsigned NOT NULL default '0',
+  `no_nota` varchar(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `detail_stok`
+--
+
+/*!40000 ALTER TABLE `detail_stok` DISABLE KEYS */;
+/*!40000 ALTER TABLE `detail_stok` ENABLE KEYS */;
+
+
+--
+-- Definition of table `hutang`
+--
+
+DROP TABLE IF EXISTS `hutang`;
+CREATE TABLE `hutang` (
+  `no_nota_pembelian` varchar(45) NOT NULL,
+  `nama_supplier` varchar(45) NOT NULL,
+  `total_harga` int(10) unsigned NOT NULL,
+  `tanggal_transaksi` varchar(45) NOT NULL,
+  `lunas` int(10) unsigned NOT NULL default '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `hutang`
+--
+
+/*!40000 ALTER TABLE `hutang` DISABLE KEYS */;
+/*!40000 ALTER TABLE `hutang` ENABLE KEYS */;
+
+
+--
+-- Definition of table `pembelian`
+--
+
+DROP TABLE IF EXISTS `pembelian`;
+CREATE TABLE `pembelian` (
+  `no_nota_pembelian` varchar(45) NOT NULL,
+  `tanggal_pembelian` datetime NOT NULL,
+  `kode_supplier` varchar(45) NOT NULL,
+  `tanggal_jt_pembelian` datetime NOT NULL,
+  `total_harga_pembelian` int(10) unsigned NOT NULL,
+  `delete` int(10) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`no_nota_pembelian`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `pembelian`
+--
+
+/*!40000 ALTER TABLE `pembelian` DISABLE KEYS */;
+/*!40000 ALTER TABLE `pembelian` ENABLE KEYS */;
+
+
+--
+-- Definition of table `penjualan`
+--
+
+DROP TABLE IF EXISTS `penjualan`;
+CREATE TABLE `penjualan` (
+  `no_nota_penjualan` varchar(45) NOT NULL,
+  `no_pajak` varchar(45) NOT NULL,
+  `tanggal_penjualan` datetime NOT NULL,
+  `kode_customer` varchar(45) NOT NULL,
+  `tanggal_jt_penjualan` datetime NOT NULL,
+  `total_harga_penjualan` int(11) NOT NULL,
+  `delete` int(10) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`no_nota_penjualan`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `penjualan`
+--
+
+/*!40000 ALTER TABLE `penjualan` DISABLE KEYS */;
+/*!40000 ALTER TABLE `penjualan` ENABLE KEYS */;
+
+
+--
+-- Definition of table `piutang`
+--
+
+DROP TABLE IF EXISTS `piutang`;
+CREATE TABLE `piutang` (
+  `no_nota_penjualan` varchar(45) NOT NULL,
+  `nama_cust` varchar(45) NOT NULL,
+  `total_harga` int(10) unsigned NOT NULL,
+  `tanggal_transaksi` varchar(45) NOT NULL,
+  `lunas` int(10) unsigned NOT NULL default '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `piutang`
+--
+
+/*!40000 ALTER TABLE `piutang` DISABLE KEYS */;
+/*!40000 ALTER TABLE `piutang` ENABLE KEYS */;
+
+
+--
+-- Definition of table `retur_pembelian`
+--
+
+DROP TABLE IF EXISTS `retur_pembelian`;
+CREATE TABLE `retur_pembelian` (
+  `no_retur_pembelian` varchar(45) NOT NULL,
+  `tanggal_retur_pembelian` datetime NOT NULL,
+  `kode_supplier` varchar(45) NOT NULL,
+  `totalharga_retur_pembelian` int(10) unsigned NOT NULL,
+  `delete` int(10) unsigned NOT NULL default '0',
+  `no_nota_pembelian` varchar(45) NOT NULL,
+  PRIMARY KEY  (`no_retur_pembelian`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `retur_pembelian`
+--
+
+/*!40000 ALTER TABLE `retur_pembelian` DISABLE KEYS */;
+/*!40000 ALTER TABLE `retur_pembelian` ENABLE KEYS */;
+
+
+--
+-- Definition of table `retur_penjualan`
+--
+
+DROP TABLE IF EXISTS `retur_penjualan`;
+CREATE TABLE `retur_penjualan` (
+  `no_retur_penjualan` varchar(45) NOT NULL,
+  `tanggal_retur_penjualan` datetime NOT NULL,
+  `kode_cust` varchar(45) NOT NULL,
+  `totalharga_retur_penjualan` int(10) unsigned NOT NULL,
+  `delete` int(10) unsigned NOT NULL default '0',
+  `no_nota_penjualan` varchar(45) NOT NULL,
+  PRIMARY KEY  (`no_retur_penjualan`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `retur_penjualan`
+--
+
+/*!40000 ALTER TABLE `retur_penjualan` DISABLE KEYS */;
+/*!40000 ALTER TABLE `retur_penjualan` ENABLE KEYS */;
+
+
+--
+-- Definition of table `supplier`
+--
+
+DROP TABLE IF EXISTS `supplier`;
+CREATE TABLE `supplier` (
+  `supplierid` varchar(45) NOT NULL,
+  `nama` varchar(45) NOT NULL,
+  `alamat` varchar(45) NOT NULL,
+  `kota` varchar(45) NOT NULL,
+  `telpon` varchar(45) NOT NULL,
+  `utang` varchar(45) NOT NULL,
+  `delete` varchar(45) NOT NULL,
+  PRIMARY KEY  (`supplierid`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `supplier`
+--
+
+/*!40000 ALTER TABLE `supplier` DISABLE KEYS */;
+/*!40000 ALTER TABLE `supplier` ENABLE KEYS */;
+
+
+--
+-- Definition of table `userid`
+--
+
+DROP TABLE IF EXISTS `userid`;
+CREATE TABLE `userid` (
+  `username` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  `level` varchar(45) NOT NULL,
+  `delete` int(10) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `userid`
+--
+
+/*!40000 ALTER TABLE `userid` DISABLE KEYS */;
+INSERT INTO `userid` (`username`,`password`,`level`,`delete`) VALUES 
+ ('MOKO','1234','Supervisor',0);
+/*!40000 ALTER TABLE `userid` ENABLE KEYS */;
+
+
+--
+-- Definition of view `nota_pembelian`
+--
+
+DROP TABLE IF EXISTS `nota_pembelian`;
+DROP VIEW IF EXISTS `nota_pembelian`;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `nota_pembelian` AS select `p`.`no_nota_pembelian` AS `no_nota_pembelian`,`p`.`tanggal_pembelian` AS `tanggal_pembelian`,`p`.`kode_supplier` AS `kode_supplier`,`p`.`tanggal_jt_pembelian` AS `tanggal_jt_pembelian`,`p`.`total_harga_pembelian` AS `total_harga_pembelian`,`dp`.`kode_barang_pembelian` AS `kode_barang_pembelian`,`dp`.`nama_barang` AS `nama_barang`,`dp`.`batch_pembelian` AS `batch_pembelian`,`dp`.`expired_date` AS `expired_date`,`dp`.`harga_beli` AS `harga_beli`,`dp`.`jumlah_barang` AS `jumlah_barang`,`dp`.`discount_percent` AS `discount_percent`,`dp`.`total_harga` AS `total_harga`,`p`.`delete` AS `delete`,`dp`.`delete` AS `Hapus`,`dp`.`retur` AS `retur` from (`pembelian` `p` join `detail_pembelian` `dp`) where (`p`.`no_nota_pembelian` = `dp`.`no_nota_pembelian`);
+
+--
+-- Definition of view `nota_penjualan`
+--
+
+DROP TABLE IF EXISTS `nota_penjualan`;
+DROP VIEW IF EXISTS `nota_penjualan`;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `nota_penjualan` AS select `p`.`no_nota_penjualan` AS `no_nota_penjualan`,`p`.`no_pajak` AS `no_pajak`,`p`.`tanggal_penjualan` AS `tanggal_penjualan`,`p`.`kode_customer` AS `kode_customer`,`p`.`tanggal_jt_penjualan` AS `tanggal_jt_penjualan`,`p`.`total_harga_penjualan` AS `total_harga_penjualan`,`dp`.`kode_barang` AS `kode_barang`,`dp`.`nama_barang` AS `nama_barang`,`dp`.`batch` AS `batch`,`dp`.`expired_date` AS `expired_date`,`dp`.`harga_jual` AS `harga_jual`,`dp`.`jumlah_barang` AS `jumlah_barang`,`dp`.`discount_percent` AS `discount_percent`,`dp`.`total_harga` AS `total_harga`,`p`.`delete` AS `delete`,`dp`.`delete` AS `Hapus`,`dp`.`retur` AS `retur` from (`penjualan` `p` join `detail_penjualan` `dp`) where (`p`.`no_nota_penjualan` = `dp`.`no_nota_penjualan`);
+
+--
+-- Definition of view `nota_retur_beli`
+--
+
+DROP TABLE IF EXISTS `nota_retur_beli`;
+DROP VIEW IF EXISTS `nota_retur_beli`;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `nota_retur_beli` AS select `rp`.`no_retur_pembelian` AS `no_retur_pembelian`,`rp`.`tanggal_retur_pembelian` AS `tanggal_retur_pembelian`,`rp`.`kode_supplier` AS `kode_supplier`,`rp`.`no_nota_pembelian` AS `no_nota_pembelian`,`rp`.`totalharga_retur_pembelian` AS `totalharga_retur_pembelian`,`drb`.`kode_barang` AS `kode_barang`,`drb`.`nama_barang` AS `nama_barang`,`drb`.`batch` AS `batch`,`drb`.`expired_date` AS `expired_date`,`drb`.`harga_beli` AS `harga_beli`,`drb`.`jumlah_barang` AS `jumlah_barang`,`drb`.`discount_percent` AS `discount_percent`,`drb`.`total_harga` AS `total_harga`,`rp`.`delete` AS `delete`,`drb`.`retur` AS `retur` from (`retur_pembelian` `rp` join `detail_retur_beli` `drb`) where (`rp`.`no_nota_pembelian` = `drb`.`no_nota_pembelian`);
+
+--
+-- Definition of view `nota_retur_jual`
+--
+
+DROP TABLE IF EXISTS `nota_retur_jual`;
+DROP VIEW IF EXISTS `nota_retur_jual`;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `nota_retur_jual` AS select `rp`.`no_retur_penjualan` AS `no_retur_penjualan`,`rp`.`tanggal_retur_penjualan` AS `tanggal_retur_penjualan`,`rp`.`kode_cust` AS `kode_cust`,`rp`.`no_nota_penjualan` AS `no_nota_penjualan`,`rp`.`totalharga_retur_penjualan` AS `totalharga_retur_penjualan`,`drj`.`kode_barang` AS `kode_barang`,`drj`.`nama_barang` AS `nama_barang`,`drj`.`batch` AS `batch`,`drj`.`expired_date` AS `expired_date`,`drj`.`harga_jual` AS `harga_jual`,`drj`.`jumlah_barang` AS `jumlah_barang`,`drj`.`discount_percent` AS `discount_percent`,`drj`.`total_harga` AS `total_harga`,`rp`.`delete` AS `delete`,`drj`.`retur` AS `retur` from (`retur_penjualan` `rp` join `detail_retur_jual` `drj`) where (`rp`.`no_nota_penjualan` = `drj`.`no_nota_penjualan`);
+
+--
+-- Definition of view `print_detail_stok`
+--
+
+DROP TABLE IF EXISTS `print_detail_stok`;
+DROP VIEW IF EXISTS `print_detail_stok`;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `print_detail_stok` AS select `ds`.`no_nota` AS `no_nota`,`ds`.`kode_barang` AS `kode_barang`,`ds`.`nama_barang` AS `nama_barang`,`ds`.`batch` AS `batch`,`ds`.`expired_date` AS `expired_date`,`ds`.`jumlah_barang` AS `jumlah_barang`,`ds`.`tanggal` AS `tanggal`,`ds`.`keterangan` AS `keterangan`,`ds`.`delete` AS `status`,`b`.`no_nota_pembelian` AS `no_nota_pembelian`,`b`.`tanggal_pembelian` AS `tanggal_pembelian`,`b`.`kode_supplier` AS `kode_supplier`,`b`.`tanggal_jt_pembelian` AS `tanggal_jt_pembelian`,`b`.`total_harga_pembelian` AS `total_harga_pembelian`,`b`.`delete` AS `status_pembelian`,`j`.`no_nota_penjualan` AS `no_nota_penjualan`,`j`.`tanggal_penjualan` AS `tanggal_penjualan`,`j`.`kode_customer` AS `kode_customer`,`j`.`tanggal_jt_penjualan` AS `tanggal_jt_penjualan`,`j`.`total_harga_penjualan` AS `total_harga_penjualan`,`j`.`delete` AS `status_penjualan` from ((`detail_stok` `ds` join `penjualan` `j`) join `pembelian` `b`) where ((`ds`.`no_nota` = `b`.`no_nota_pembelian`) and (`ds`.`no_nota` = `j`.`no_nota_penjualan`));
+
+
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

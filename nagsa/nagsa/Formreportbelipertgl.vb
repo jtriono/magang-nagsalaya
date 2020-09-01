@@ -20,5 +20,4 @@ Public Class Formreportbelipertgl
         conn.Close()
         Me.ReportViewer1.RefreshReport()
     End Sub
-
 End Class
